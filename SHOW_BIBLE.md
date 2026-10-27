@@ -10,10 +10,10 @@ Observed implementation and intended experience are recorded separately.
 | Project | [Math4MLBook](https://github.com/archipelagoing/Math4MLBook) |
 | Working title | Mathematical Foundations of Machine Learning |
 | Premise | A beautiful, rigorous, readable textbook that develops the course's weekly slides into a complete learning experience. |
-| Current stage | Lectures 1–4 implemented; four numbered topic/review pages each, with practice and explained answers beside the relevant material. |
-| Canonical branch | `main`; Lecture 3 verified live; Lecture 4 is local and not deployed. |
+| Current stage | Lectures 1–6 implemented; four numbered topic/review pages each, with practice and explained answers beside the relevant material. |
+| Canonical branch | `main`; Lecture 4 committed in f395bc4; Lectures 5–6 are local and not deployed. |
 | Decision maker | Repository owner; final title and aesthetic preferences remain adjustable. |
-| Last verified | 2026-10-27: local strict build and arithmetic checks; current browser evidence is in the lecture review records. Lecture 3 live URL verified; Lecture 4 remains local. |
+| Last verified | 2026-10-27: local strict build and arithmetic checks; current browser evidence is in the lecture review records. Lecture 3 live URL previously verified; Lectures 5–6 remain local. |
 | Start here | [AGENTS.md](AGENTS.md) → current contract here → [rubricatm.md](rubricatm.md) → [todoSimple.md](todoSimple.md). |
 
 ## Current authoring contract
@@ -36,7 +36,10 @@ instructions for repository agents are in [AGENTS.md](AGENTS.md).
   matrices/products → TL;DR. Lecture 2 — systems/elimination → determinants/geometry
   → inverses/invertibility → TL;DR. Lecture 3 — spaces/subspaces → complete solutions/
   rank → independence/span/basis → TL;DR. Lecture 4 — orthogonality/projections →
-  subspaces/least squares → orthonormal bases/Gram–Schmidt → TL;DR. Maintain lecture order within and across pages.
+  subspaces/least squares → orthonormal bases/Gram–Schmidt → TL;DR. Lecture 5 —
+  eigenvalues/diagonalization → SVD → reduction/recommendations/final exercises →
+  TL;DR. Lecture 6 — statistics/PCA geometry → compute principal components →
+  scaling/applications/pitfalls → TL;DR. Maintain lecture order within and across pages.
 - Preserve section/concept/problem/solution anchors when relocating content.
   Keep source banks as included fragments rather than extra reader pages.
 - End with a dedicated TL;DR: core formulas **with conditions**, selection cues,
@@ -81,21 +84,21 @@ instructions for repository agents are in [AGENTS.md](AGENTS.md).
 
 **Promise.** The book respects the slides' substance and teaching order while giving the reader enough explanation to study without attending the lecture. Color and illustration clarify mathematics; every important conclusion has a reason.
 
-**Initial scope.** Weeks 1–5 and their supporting homework, recitations, worksheets, and midterm materials. Statistics and PCA appear in the midterm topic list and must be accounted for explicitly. Later course units, accounts, grading systems, and a custom application platform are outside the first milestone.
+**Authorized scope.** Weeks 1–6 and their supporting homework, recitations, worksheets, and midterm materials. The owner extended chapter work to Week 6; its supplied PCA deck now provides the explicit statistics/PCA destination required by the midterm topic list. Later course units, accounts, grading systems, and a custom application platform are outside the first milestone.
 
 ## 2. Canon: what exists today
 
 | Area | Observed state | Evidence | Caveat |
 | --- | --- | --- | --- |
-| Book | Lectures 1–4, four numbered topic/review pages each with integrated practice and answers. | `book/lecture1/`, `book/lecture2/`, `book/lecture3/`, `book/lecture4/`, `book/_toc.yml` | Week 5, statistics/PCA and cumulative exam preparation remain unfinished. |
-| Lectures | Five PDF decks, 191 PDF pages in total. | `resources/lectures/` | Counts include title pages and progressive reveals; these are not 191 distinct lessons. |
+| Book | Lectures 1–6, four numbered topic/review pages each with integrated practice and answers. | `book/lecture1/`, `book/lecture2/`, `book/lecture3/`, `book/lecture4/`, `book/lecture5/`, `book/lecture6/`, `book/_toc.yml` | Cumulative exam preparation remains unfinished; Week 8 is not authored. |
+| Lectures | Nine PDFs, 335 pages counting the duplicate PCA copy; eight distinct decks. Lectures 1–6 cover 230 unique source pages. | `resources/lectures/` | The two 39-page PCA PDFs are identical; later Week 8 decks (35/31 pages) are not authored or fully reviewed. Counts include titles/reveals. |
 | Supporting materials | Six homework/worksheet/recitation PDFs; seven exam PDFs and a topic list. | `resources/HW/`, `resources/practiceExams/` | Inventory and text extraction completed; full mathematical and visual review remains. |
-| Build stack | Python 3.12, pinned TeachBooks/Jupyter Book v1 and sphinx-design; clean strict local build. | `requirements.txt`, `authoring/lecture4-review.md` | MathJax uses a CDN; Lecture 4 is not deployed. |
-| Visual implementation | Shared textbook palette, light/dark styles, 17 original active SVGs, printable checkpoint answers. | `book/_static/textbook.css`, `book/figures/lecture1/` | Representative browser checks, not a full accessibility audit. |
-| Automation | Reusable TeachBooks deployment workflow triggered by book/config changes and manual dispatch. | `.github/workflows/call-deploy-book.yml` | Run 40546720462 succeeded for 718e1b7; Lecture 3 URL verified HTTP 200 on 2026-10-27. Lecture 4 remains local. |
+| Build stack | Python 3.12, pinned TeachBooks/Jupyter Book v1 and sphinx-design; clean strict local build. | `requirements.txt`, `authoring/lecture6-review.md` | MathJax uses a CDN; Week 6 is not deployed. |
+| Visual implementation | Shared textbook palette, light/dark styles, 30 original active SVGs plus two credited empirical images, printable checkpoint answers. | `book/_static/textbook.css`, `book/figures/lecture1/` | Representative browser checks, not a full accessibility audit. |
+| Automation | Reusable TeachBooks deployment workflow triggered by book/config changes and manual dispatch. | `.github/workflows/call-deploy-book.yml` | Run 40546720462 succeeded for 718e1b7; Lecture 3 URL verified HTTP 200 on 2026-10-27. Lecture 4 publication not rechecked; Lectures 5–6 remain local. |
 | Project identity | Working title, point/view mark, repository links, reader guide, setup README, chapter navigation. | `README.md`, `book/_config.yml`, `book/_toc.yml` | Final human author credit and publication URL remain to be settled. |
 
-**Known source limitations.** `Recitation1_Solutions.pdf` and `PT1_f22Sol.pdf` yielded no non-whitespace text with `pdftotext -layout`; inspect their pages visually or with OCR before relying on their contents. Extractable PDFs can still contain diagrams and handwritten annotations that text extraction misses. The Week 5 extracted text covers eigendecomposition and SVD but does not mention statistics or PCA; check the visual source and supporting materials before choosing where to add a clearly identified supplement.
+**Known source limitations.** `Recitation1_Solutions.pdf` and `PT1_f22Sol.pdf` yielded no non-whitespace text with `pdftotext -layout`; inspect their pages visually or with OCR before relying on their contents. Extractable PDFs can still contain diagrams and handwritten annotations that text extraction misses. All 44 Week 5 pages have now been visually inspected, including handwritten page 22; the deck does not teach statistics or PCA. The newly supplied Week 6 deck now teaches those exam topics; its source map is in `authoring/lecture6-coverage.md`. Comprehensive supporting-exam review remains open.
 
 ## 3. The world and its rules
 
@@ -268,9 +271,9 @@ Apply the A-level preparation standard above to every chapter. Use at least one 
 | 3 | `WK3_VectorSpaces_SLE_Rank.pdf`, 1–35 | Vector spaces and subspaces; column/null spaces and four fundamental subspaces; complete solutions to `Ax=b`; rank, independence, span, basis, dimension, and change of basis. |
 | 4 | `WK4_Orthogonality_and_Projections.pdf`, 1–28 | Orthogonality and the four subspaces; projections onto lines/subspaces; least squares and normal equations; orthonormal bases; Gram–Schmidt, including independence assumptions. |
 | 5 | `WK5_Matrix_Decomposition.pdf`, 1–44 | Linear transformations; eigenvalues/eigenvectors; diagonalization and its conditions; spectral theorem; full/reduced/truncated SVD; dimensionality reduction and the recommendation example with its modeling limitations. |
-| Coverage bridge | `MidtermTopics.md`; exact supporting pages to map | Mean, variance, standard deviation, covariance, and principal component analysis. Confirm source coverage; add a labeled supplement after the necessary Week 5 prerequisites if no supplied explanation exists. |
+| 6 | `WK6_PCA.pdf`, 1–39 (duplicate copy preserved) | Mean, variance, standard deviation, covariance; PCA objective/eigenvectors, scores, explained variance, scaling, reconstruction, genetics/eigenfaces and failure cases. |
 
-These ranges identify whole decks, not a completed section-level source audit. In particular, PCA is a topic-list requirement, not a confirmed Week 5 lecture topic.
+These inventory ranges identify whole decks. Section-level audits for all six delivered chapters are in `authoring/lectureN-coverage.md`. PCA remains outside the Week 5 deck and is now fully taught from the Week 6 source.
 
 ### Flow: Learn a weekly chapter
 
@@ -278,7 +281,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 - **Path:** Objectives → explanation and examples → checkpoints → synthesis → practice and solutions.
 - **Success:** Reader can explain the central ideas and solve a new representative problem.
 - **Recovery:** Link prerequisite concepts, provide hints, explain common errors, and expose worked solutions.
-- **Implementation/status:** Lectures 1–4 (full decks) implement this route in four website pages each; Lecture 5 and cumulative review remain unfinished.
+- **Implementation/status:** Lectures 1–6 implement this route in four website pages each, including statistics/PCA; cumulative review remains unfinished.
 
 ### Flow: Review for the midterm
 
@@ -294,7 +297,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 - **Path:** Read source pages and relevant problems → draft → check mathematics → render → inspect → update source notes and checklist.
 - **Success:** Section meets the shared chapter standard and builds with valid references.
 - **Recovery:** Keep unreadable source pages and unresolved mathematical discrepancies explicitly open.
-- **Implementation/status:** Workflow implemented for Lectures 1–4; Lecture 5 remains planned.
+- **Implementation/status:** Workflow implemented for Lectures 1–6; cumulative review remains planned.
 
 ## 7. Continuity ledger
 
@@ -314,9 +317,9 @@ These ranges identify whole decks, not a completed section-level source audit. I
 | Horizon | Outcome | Evidence of done |
 | --- | --- | --- |
 | Now | Complete planning documents in the requested order. | Project-specific bible, weighted baseline rubric, and actionable checklist. |
-| Next | Owner/student review of Lecture 4; continue the source map and Lecture 5. | Improve the validated chapter pattern and continue in weekly order. |
-| Then | Week 5 built and reviewed. | All five chapters satisfy the same rubric and source coverage requirements. |
-| Then | Close statistics/PCA and midterm coverage gaps; integrate review. | Each topic and representative practice type maps to a verified section. |
+| Next | Owner/student review of Lecture 6; complete cumulative exam preparation. | Statistics/PCA taught from its source deck; fresh integrated assessment maps all midterm skills. |
+| Then | Review feedback and remaining preparation gaps across all five chapters. | Verified revisions and fresh independent practice where still needed. |
+| Then | Finish supporting-exam mapping and remaining practice gaps. | Each topic and representative practice type maps to verified instruction and independent assessment. |
 | Later | Publication-ready navigation, identity, attribution, accessibility, and delivery. | Successful build, rendered review, and separately authorized deployment verification. |
 
 **Parking lot.** Dedicated print/PDF edition, richer interactive figures, executable demonstrations, and later course units. These do not delay a complete initial textbook.
@@ -450,3 +453,27 @@ example. Selected worksheet/recitation tasks and a fresh mixed rehearsal are
 mapped in [the coverage audit](authoring/lecture4-coverage.md);
 [the review record](authoring/lecture4-review.md) owns verification evidence.
 Lecture 5 and cumulative exam preparation are still open; no learner grade is claimed.
+
+## Lecture 5 delivery · 2026-10-27
+
+All 44 Week 5 PDF pages, including the handwritten positive-definite example
+and both final in-class exercises, map to Parts A–J across four numbered pages.
+The chapter has 15 highlighted worked examples, ten checkpoints, six original
+SVGs and 28 integrated questions, with a fresh mixed rehearsal and TL;DR.
+Full/compact SVD conventions, diagonalization conditions and missing-rating
+limitations are explicit; all source matrices and complete rating/feature tables
+are included for website-only reading. See [coverage](authoring/lecture5-coverage.md)
+and [review](authoring/lecture5-review.md). Statistics/PCA and cumulative exam
+assessment remain open. Local work is not a publication or learner-outcome claim.
+
+## Lecture 6 delivery · 2026-10-27
+
+The owner supplied and requested Week 6. All 39 PCA pages are taught in Parts A–L
+on four numbered reader pages, with 15 highlighted examples, twelve checkpoints,
+28 integrated questions, seven original SVGs and two unchanged credited source
+images. The full source student computation, statistics, standardized reconstruction,
+centered-SVD bridge, genetics/eigenfaces and all three failure cases are included
+for standalone reading. [Coverage](authoring/lecture6-coverage.md) and
+[verification](authoring/lecture6-review.md) own the evidence. This closes the
+previous statistics/PCA teaching gap; cumulative mock/blueprint, earlier preparation
+gaps and learner outcomes remain open. Week 8 resources remain outside this task.

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="450" viewBox="0 0 1080 450" role="img" aria-labelledby="title desc">
+<title id="title">Retained squared length plus residual error equals the total</title><desc id="desc">Vector (2,1) projects onto the horizontal unit direction to (2,0); residual (0,1) is perpendicular. A second panel shows an elongated downward cloud, its long/short orthogonal axes and perpendicular projection segments onto the long axis.</desc>
+<rect width="1080" height="450" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >Retained squared length plus residual error equals the total</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<path d="M70 320 H340" fill="none" stroke="#3975DB" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M70 320 V140" fill="none" stroke="#3975DB" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="348" y="327" class="small" >x</text>
+<text x="75" y="131" class="small" >y</text>
+<path d="M70 320 L250 230" fill="none" stroke="#C91E70" stroke-width="2.5" marker-end="url(#pink)"/>
+<path d="M70 320 L250 320" fill="none" stroke="#357D22" stroke-width="2.5" marker-end="url(#green)"/>
+<path d="M250 320 V230" fill="none" stroke="#3975DB" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M238 320 v-12 h12" fill="none" stroke="#543124" stroke-width="1" />
+<text x="125" y="199" class="small" >x = (2, 1)</text>
+<text x="168" y="350" class="small" >projection (2, 0)</text>
+<text x="270" y="261" class="small" >error (0, 1)</text>
+<text x="52" y="390" class="label" >5 = 4 + 1</text>
+<path d="M660 110 L920 370" fill="none" stroke="#C91E70" stroke-width="2.5" marker-end="url(#pink)"/>
+<path d="M790 240 L865 165" fill="none" stroke="#357D22" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="932" y="365" class="small" >long</text>
+<text x="868" y="154" class="small" >short</text>
+<circle cx="688" cy="122" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M688 122 L680 130" fill="none" stroke="#357D22" stroke-width="1.5" />
+<circle cx="691" cy="169" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M691 169 L705 155" fill="none" stroke="#357D22" stroke-width="1.5" />
+<circle cx="746" cy="154" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M746 154 L725 175" fill="none" stroke="#357D22" stroke-width="1.5" />
+<circle cx="751" cy="219" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M751 219 L760 210" fill="none" stroke="#357D22" stroke-width="1.5" />
+<circle cx="812" cy="238" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M812 238 L800 250" fill="none" stroke="#357D22" stroke-width="1.5" />
+<circle cx="796" cy="294" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M796 294 L820 270" fill="none" stroke="#357D22" stroke-width="1.5" />
+<circle cx="873" cy="297" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M873 297 L860 310" fill="none" stroke="#357D22" stroke-width="1.5" />
+<circle cx="880" cy="346" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M880 346 L888 338" fill="none" stroke="#357D22" stroke-width="1.5" />
+<text x="580" y="416" class="small" >Choose the long axis for the cloud, not just for one point.</text>
+</svg>

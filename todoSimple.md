@@ -33,8 +33,8 @@ craft material remains historical/reference work. This revision is local.
 1. Review the completed Lecture 1 reading experience and gather reader feedback (§4).
 2. Complete the remaining source/notation map, including visual-only supporting
    PDFs and statistics/PCA (§2).
-3. Review the complete Lecture 4 and its cheat sheet (§7), then build Week 5
-   and close midterm coverage (§§8–9).
+3. Review the complete Week 6 PCA chapter and its cheat sheet; close cumulative
+   midterm assessment and remaining preparation gaps (§9).
 
 ## 1. Define the project
 
@@ -393,28 +393,55 @@ course-wide exam mapping and learner outcomes remain open. Not pushed or publish
 
 ## 8. Week 5 — Eigenvalues and matrix decompositions
 
-- [ ] Develop transformation geometry, eigenvalues/eigenvectors, characteristic
+- [x] Develop transformation geometry, eigenvalues/eigenvectors, characteristic
   equations, eigenspaces, and checked computation methods.
-- [ ] Explain diagonalization conditions and counterexamples; state the real
+- [x] Explain diagonalization conditions and counterexamples; state the real
   symmetric spectral theorem with its assumptions.
-- [ ] Develop SVD with correct dimensions, singular values/vectors, relationship
+- [x] Develop SVD with correct dimensions, singular values/vectors, relationship
   to `A^T A`, and full/reduced/truncated forms.
-- [ ] Explain dimensionality reduction and the recommendation example, identifying
+- [x] Explain dimensionality reduction and the recommendation example, identifying
   the difference between complete-matrix SVD and prediction with missing ratings.
-- [ ] Integrate diagrams, checkpoints, pitfalls, chapter synthesis, graded practice,
+- [x] Integrate diagrams, checkpoints, pitfalls, chapter synthesis, graded practice,
   hints, and independently checked solutions.
-- [ ] Meet the chapter definition of done, including repeated/zero eigenvalue and
+- [x] Meet the chapter definition of done, including repeated/zero eigenvalue and
   rectangular/rank-deficient cases where relevant.
 
-Progress: Primary deck has 44 pages. Do not label statistics/PCA as taught in this
-deck without source evidence; the bridge is tracked separately in §9.
+Progress: All 44 pages map to ten ordered parts on four numbered pages, including
+handwritten p.22 and final exercises pp.43–44. Fifteen highlighted examples,
+ten checkpoints, six reproducible diagrams, 28 integrated questions, fresh mixed
+practice and a TL;DR are delivered locally. See `authoring/lecture5-coverage.md`
+and `authoring/lecture5-review.md`. Complete source tables, corrected conditions,
+full/compact SVD, zero/defective/tied cases and selected worksheet alignment are
+included. Statistics/PCA is now taught from the supplied Week 6 source below. No publication
+or learner grade is claimed.
+
+## Week 6 — Statistics and principal component analysis
+
+- [x] Review all 39 PDF pages; identify and preserve the identical duplicate copy.
+- [x] Teach mean, sample variance/standard deviation, covariance and data orientation.
+- [x] Derive PCA projection/reconstruction objectives, covariance eigendirections and
+  the centered-SVD relation with explicit normalization and failure conditions.
+- [x] Develop the full student dataset, scores, 98.7% variance fraction, reconstructed
+  rows and exact error; distinguish variance from SSE and average squared error.
+- [x] Include the scaling workflow, relevant diagrams, credited genetics/eigenface
+  source figures, all three failure cases, practice, explained answers and TL;DR.
+- [x] Check calculations, strict build, desktop/phone, actual sidebar, keyboard,
+  dark theme and print; update the source/review records.
+
+Progress: Four numbered reader pages, twelve ordered parts, fifteen worked examples,
+28 integrated questions, a fresh mixed rehearsal and dedicated cheat sheet are
+implemented locally. Seven original SVGs and two source-extracted empirical figures
+support standalone reading. See `authoring/lecture6-coverage.md` and
+`authoring/lecture6-review.md`. The statistics/PCA teaching gap is resolved;
+cumulative exam preparation and actual learner readiness remain unverified.
+No commit, push or publication performed; Week 8 is outside this chapter request.
 
 ## 9. Close coverage gaps and integrate midterm review
 
-- [ ] Implement the statistics/PCA destination identified in §2: define data
+- [x] Implement the statistics/PCA destination identified in §2: define data
   orientation, centering, mean, variance, standard deviation, covariance, and the
   connection between PCA and SVD; state normalization conventions.
-- [ ] Add checked examples and exercises for that bridge and label material added
+- [x] Add checked examples and exercises for that bridge and label material added
   beyond the lecture decks.
 - [ ] Create a topic-to-section review guide covering every midterm topic.
 - [ ] Integrate representative homework, recitation, and exam problem styles with
@@ -424,9 +451,10 @@ deck without source evidence; the bridge is tracked separately in §9.
 - [ ] Audit the coverage map: no exam topic or required learning objective is left
   without a teaching destination and appropriate practice.
 
-Progress: The gap is documented, not resolved. Initial practice-exam extraction
-reveals conceptual true/false reasoning as well as computational tasks; review
-should prepare students for both.
+Progress: Week 6 now resolves the statistics/PCA teaching gap using a supplied
+lecture deck, with checked practice and explicit editorial extensions. The global
+exam blueprint, supporting-exam mapping and cumulative mock remain unfinished;
+review must include conceptual true/false reasoning and computation.
 
 - [ ] Build a skill-by-skill exam blueprint linking instruction, examples, independent
   practice, and readiness checks; distinguish past-exam evidence from predictions.

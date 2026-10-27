@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="430" viewBox="0 0 1080 430" role="img" aria-labelledby="title desc">
+<title id="title">Many measured entries can vary in only a few directions</title><desc id="desc">A 300 by 300 RGB image becomes 270000 numerical features in one row. A three-feature cloud near a plane has two dominant within-plane directions and smaller perpendicular deviations.</desc>
+<rect width="1080" height="430" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >Many measured entries can vary in only a few directions</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="30" y="95" class="label" >One image → one observation row</text>
+<rect x="50" y="130" width="47" height="47" fill="#FF4FA3"/>
+<rect x="100" y="130" width="47" height="47" fill="#8DEB42"/>
+<rect x="150" y="130" width="47" height="47" fill="#FFF0A6"/>
+<rect x="200" y="130" width="47" height="47" fill="#C4D9FA"/>
+<rect x="50" y="180" width="47" height="47" fill="#8DEB42"/>
+<rect x="100" y="180" width="47" height="47" fill="#FFF0A6"/>
+<rect x="150" y="180" width="47" height="47" fill="#C4D9FA"/>
+<rect x="200" y="180" width="47" height="47" fill="#FF4FA3"/>
+<rect x="50" y="230" width="47" height="47" fill="#FFF0A6"/>
+<rect x="100" y="230" width="47" height="47" fill="#C4D9FA"/>
+<rect x="150" y="230" width="47" height="47" fill="#FF4FA3"/>
+<rect x="200" y="230" width="47" height="47" fill="#8DEB42"/>
+<text x="285" y="157" class="small" >300 × 300 × 3</text>
+<text x="285" y="203" class="small" >= 270,000 entries</text>
+<text x="30" y="326" class="small" >Fixed order: R, G, B, then the next pixel.</text>
+<text x="570" y="95" class="small" >Three features; approximately a plane</text>
+<polygon points="595,282 875,160 1010,246 735,370" fill="#EFF9E7" stroke="#357D22"/>
+<circle cx="620.0" cy="288.0" r="4" fill="#C91E70"/>
+<circle cx="666.0" cy="252.0" r="4" fill="#C91E70"/>
+<circle cx="712.0" cy="248.0" r="4" fill="#C91E70"/>
+<circle cx="758.0" cy="212.0" r="4" fill="#C91E70"/>
+<circle cx="804.0" cy="208.0" r="4" fill="#C91E70"/>
+<circle cx="642.5" cy="288.25" r="4" fill="#C91E70"/>
+<circle cx="688.5" cy="284.25" r="4" fill="#C91E70"/>
+<circle cx="734.5" cy="248.25" r="4" fill="#C91E70"/>
+<circle cx="780.5" cy="244.25" r="4" fill="#C91E70"/>
+<circle cx="826.5" cy="208.25" r="4" fill="#C91E70"/>
+<circle cx="665.0" cy="320.5" r="4" fill="#C91E70"/>
+<circle cx="711.0" cy="284.5" r="4" fill="#C91E70"/>
+<circle cx="757.0" cy="280.5" r="4" fill="#C91E70"/>
+<circle cx="803.0" cy="244.5" r="4" fill="#C91E70"/>
+<circle cx="849.0" cy="240.5" r="4" fill="#C91E70"/>
+<circle cx="687.5" cy="320.75" r="4" fill="#C91E70"/>
+<circle cx="733.5" cy="316.75" r="4" fill="#C91E70"/>
+<circle cx="779.5" cy="280.75" r="4" fill="#C91E70"/>
+<circle cx="825.5" cy="276.75" r="4" fill="#C91E70"/>
+<circle cx="871.5" cy="240.75" r="4" fill="#C91E70"/>
+<path d="M760 270 L880 215" fill="none" stroke="#C91E70" stroke-width="2.5" marker-end="url(#pink)"/>
+<path d="M760 270 L810 307" fill="none" stroke="#357D22" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="25" y="399" class="small" >The pixel array and point cloud are schematics; fewer coordinates trade detail for a measured approximation.</text>
+</svg>

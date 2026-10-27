@@ -41,3 +41,23 @@ parts:
         title: Page 3 · Orthonormal bases & Gram–Schmidt
       - file: lecture4/cheatsheet
         title: Page 4 · TL;DR cheat sheet
+  - caption: Lecture 5 · Matrix decompositions
+    chapters:
+      - file: lecture5/index
+        title: Page 1 · Eigenvalues & diagonalization
+      - file: lecture5/svd
+        title: Page 2 · Singular value decomposition
+      - file: lecture5/applications
+        title: Page 3 · Reduction & recommendations
+      - file: lecture5/cheatsheet
+        title: Page 4 · TL;DR cheat sheet
+  - caption: Lecture 6 · Statistics and PCA
+    chapters:
+      - file: lecture6/index
+        title: Page 1 · Statistics & PCA geometry
+      - file: lecture6/principal-components
+        title: Page 2 · Compute principal components
+      - file: lecture6/applications
+        title: Page 3 · Scaling, applications & pitfalls
+      - file: lecture6/cheatsheet
+        title: Page 4 · TL;DR cheat sheet

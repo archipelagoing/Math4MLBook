@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="505" viewBox="0 0 1080 505" role="img" aria-labelledby="title desc">
+<title id="title">Changing a direction versus preserving its line</title><desc id="desc">Left: matrix [2,-1;1,2] maps (2,3) to (1,8). Right: [2,1;2,3] maps (1,2) to (4,8), on the same line. Both panels use equal coordinate scales.</desc>
+<rect width="1080" height="505" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >Changing a direction versus preserving its line</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="60" y="91" class="label" >A = [2, −1; 1, 2]</text>
+<path d="M95 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="95" y="413" class="small" text-anchor="middle">0</text>
+<path d="M127 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="127" y="413" class="small" text-anchor="middle">1</text>
+<path d="M159 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="159" y="413" class="small" text-anchor="middle">2</text>
+<path d="M191 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="191" y="413" class="small" text-anchor="middle">3</text>
+<path d="M223 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="223" y="413" class="small" text-anchor="middle">4</text>
+<path d="M255 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="255" y="413" class="small" text-anchor="middle">5</text>
+<path d="M95 358 H255" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M95 326 H255" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M95 294 H255" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M95 262 H255" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="83" y="267" class="small" text-anchor="end">4</text>
+<path d="M95 230 H255" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M95 198 H255" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M95 166 H255" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M95 134 H255" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M95 390 H270" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M95 390 V120" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="277" y="395" class="small" >x</text>
+<text x="90" y="111" class="small" >y</text>
+<path d="M95 390 L127 134" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green)"/>
+<path d="M95 390 L159 294" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<text x="171" y="302" class="small" >v = (2, 3)</text>
+<text x="143" y="126" class="small" >output = (1, 8)</text>
+<text x="600" y="91" class="label" >B = [2, 1; 2, 3]</text>
+<path d="M635 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="635" y="413" class="small" text-anchor="middle">0</text>
+<path d="M667 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="667" y="413" class="small" text-anchor="middle">1</text>
+<path d="M699 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="699" y="413" class="small" text-anchor="middle">2</text>
+<path d="M731 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="731" y="413" class="small" text-anchor="middle">3</text>
+<path d="M763 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="763" y="413" class="small" text-anchor="middle">4</text>
+<path d="M795 134 V390" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="795" y="413" class="small" text-anchor="middle">5</text>
+<path d="M635 358 H795" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M635 326 H795" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M635 294 H795" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M635 262 H795" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="623" y="267" class="small" text-anchor="end">4</text>
+<path d="M635 230 H795" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M635 198 H795" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M635 166 H795" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M635 134 H795" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M635 390 H810" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M635 390 V120" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="817" y="395" class="small" >x</text>
+<text x="630" y="111" class="small" >y</text>
+<path d="M635 390 L763 134" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green)"/>
+<path d="M635 390 L667 326" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<text x="679" y="334" class="small" >v = (1, 2)</text>
+<text x="779" y="126" class="small" >output = (4, 8)</text>
+<text x="45" y="452" class="small" >Different coordinate ratios: no common λ.</text>
+<text x="585" y="452" class="small" >Output = 4v: one preserved line.</text>
+<text x="25" y="489" class="small" >Source vectors and products from PDF pages 3–8. Green: output. Pink: input.</text>
+</svg>

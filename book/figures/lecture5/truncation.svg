@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="480" viewBox="0 0 1080 480" role="img" aria-labelledby="title desc">
+<title id="title">Keep k directions; reconstruct the original outer shape</title><desc id="desc">A compact exact matrix factorization has inner size r. Truncation keeps k columns of U and V and k diagonal strengths. The row-coordinate table Z has m by k entries, while its reconstruction remains m by n.</desc>
+<rect width="1080" height="480" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >Keep k directions; reconstruct the original outer shape</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<rect x="25" y="150" width="210" height="150" rx="10" fill="#FFF0F6" stroke="#3975DB" stroke-width="2"/>
+<text x="130.0" y="204" class="title" text-anchor="middle">Uₖ</text>
+<text x="130.0" y="264" class="label" text-anchor="middle">m × k</text>
+<text x="259" y="230" class="title" >×</text>
+<rect x="295" y="150" width="180" height="150" rx="10" fill="#EFF9E7" stroke="#3975DB" stroke-width="2"/>
+<text x="385.0" y="204" class="title" text-anchor="middle">Σₖ</text>
+<text x="385.0" y="264" class="label" text-anchor="middle">k × k</text>
+<text x="499" y="230" class="title" >×</text>
+<rect x="540" y="150" width="210" height="150" rx="10" fill="#FFF0F6" stroke="#3975DB" stroke-width="2"/>
+<text x="645.0" y="204" class="title" text-anchor="middle">Vₖᵀ</text>
+<text x="645.0" y="264" class="label" text-anchor="middle">k × n</text>
+<text x="774" y="230" class="title" >=</text>
+<rect x="825" y="150" width="225" height="150" rx="10" fill="#EFF9E7" stroke="#3975DB" stroke-width="2"/>
+<text x="937.5" y="204" class="title" text-anchor="middle">Rₖ</text>
+<text x="937.5" y="264" class="label" text-anchor="middle">m × n</text>
+<text x="25" y="100" class="small" >A = Uᵣ Σᵣ Vᵣᵀ  →  keep the first k terms, with k ≤ r</text>
+<text x="30" y="365" class="label" >Smaller coordinates: Z = R Vₖ = Uₖ Σₖ, size m × k.</text>
+<text x="30" y="417" class="small" >Squared Frobenius error = sum of squared discarded singular values.</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="450" viewBox="0 0 1000 450" role="img" aria-labelledby="title desc">
+<title id="title">Same total variance, different coordinate directions</title><desc id="desc">Two stacked bars both total 152. Original feature variances are 52 and 100; principal-coordinate variances are 150 and 2. Retaining PC1 keeps 150/152, about 98.7 percent.</desc>
+<rect width="1000" height="450" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >Same total variance, different coordinate directions</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<rect x="160" y="264.2" width="200" height="85.8" fill="#8DEB42" stroke="#543124"/>
+<text x="260" y="312.09999999999997" class="label" text-anchor="middle">Study: 52</text>
+<rect x="160" y="99.19999999999999" width="200" height="165.0" fill="#C4D9FA" stroke="#543124"/>
+<text x="260" y="186.7" class="label" text-anchor="middle">Exam: 100</text>
+<text x="260" y="82" class="label" text-anchor="middle">Total: 152</text>
+<rect x="610" y="102.5" width="200" height="247.5" fill="#8DEB42" stroke="#543124"/>
+<text x="710" y="231.25" class="label" text-anchor="middle">PC1: 150</text>
+<rect x="610" y="99.2" width="200" height="3.3" fill="#C4D9FA" stroke="#543124"/>
+<text x="825" y="104.2" class="small" >PC2: 2</text>
+<path d="M810 101.2 h10" fill="none" stroke="#3975DB" stroke-width="1" />
+<text x="710" y="82" class="label" text-anchor="middle">Total: 152</text>
+<text x="160" y="388" class="label" >Original axes</text>
+<text x="600" y="388" class="label" >Principal axes</text>
+<text x="25" y="430" class="small" >PC1 retains 150 / 152 = 75 / 76 ≈ 98.7%; PC2 contains the remaining variance.</text>
+</svg>

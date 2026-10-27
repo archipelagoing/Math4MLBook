@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="520" viewBox="0 0 1080 520" role="img" aria-labelledby="title desc">
+<title id="title">Factor dimensions: full and compact are both exact</title><desc id="desc">Full A m by n equals U m by m, Sigma m by n and V transpose n by n. Compact rank-r factors have dimensions m by r, r by r and r by n. Full U and V are orthogonal; compact columns are orthonormal.</desc>
+<rect width="1080" height="520" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >Factor dimensions: full and compact are both exact</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="92" class="label" >Full SVD</text>
+<rect x="25" y="125" width="225" height="90" rx="12" fill="#FFF0F6" stroke="#3975DB"/>
+<text x="42" y="177" class="label" >A: m × n</text>
+<text x="262" y="177" class="label" >=</text>
+<rect x="290" y="125" width="225" height="90" rx="12" fill="#EFF9E7" stroke="#3975DB"/>
+<text x="307" y="177" class="label" >U: m × m</text>
+<text x="527" y="177" class="label" >×</text>
+<rect x="555" y="125" width="225" height="90" rx="12" fill="#FFF0F6" stroke="#3975DB"/>
+<text x="572" y="177" class="label" >Σ: m × n</text>
+<text x="792" y="177" class="label" >×</text>
+<rect x="820" y="125" width="225" height="90" rx="12" fill="#EFF9E7" stroke="#3975DB"/>
+<text x="837" y="177" class="label" >Vᵀ: n × n</text>
+<text x="25" y="292" class="label" >Compact SVD</text>
+<rect x="25" y="325" width="225" height="90" rx="12" fill="#FFF0F6" stroke="#3975DB"/>
+<text x="42" y="377" class="label" >A: m × n</text>
+<text x="262" y="377" class="label" >=</text>
+<rect x="290" y="325" width="225" height="90" rx="12" fill="#EFF9E7" stroke="#3975DB"/>
+<text x="307" y="377" class="label" >Uᵣ: m × r</text>
+<text x="527" y="377" class="label" >×</text>
+<rect x="555" y="325" width="225" height="90" rx="12" fill="#FFF0F6" stroke="#3975DB"/>
+<text x="572" y="377" class="label" >Σᵣ: r × r</text>
+<text x="792" y="377" class="label" >×</text>
+<rect x="820" y="325" width="225" height="90" rx="12" fill="#EFF9E7" stroke="#3975DB"/>
+<text x="837" y="377" class="label" >Vᵣᵀ: r × n</text>
+<text x="25" y="476" class="small" >r = rank(A). Compact Σ contains only positive strengths. Do not invert rectangular compact factors.</text>
+</svg>

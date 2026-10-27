@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img" aria-labelledby="title desc">
+<title id="title">A stretch keeps two eigenlines; a 45° turn keeps none</title><desc id="desc">Two equally scaled coordinate panels show the original square with dashed outline. Under diag(1,2) it becomes a vertical rectangle; under a 45 degree rotation it becomes a diamond. Axis unit vectors stay on their lines only for the stretch.</desc>
+<rect width="1080" height="470" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >A stretch keeps two eigenlines; a 45° turn keeps none</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="90" y="95" class="label" >D = diag(1, 2)</text>
+<polygon points="193,337 327,337 327,203 193,203" fill="none" stroke="#3975DB" stroke-width="2" stroke-dasharray="5 5"/>
+<polygon points="193,404 327,404 327,136 193,136" fill="#EFF9E7" stroke="#357D22" stroke-width="2"/>
+<path d="M100 270 H430" fill="none" stroke="#3975DB" stroke-width="1" marker-end="url(#arrow)"/>
+<path d="M260 420 V110" fill="none" stroke="#3975DB" stroke-width="1" marker-end="url(#arrow)"/>
+<path d="M260 270 L327 270" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<path d="M260 270 L260 136" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<text x="433" y="275" class="small" >x</text>
+<text x="270" y="140" class="small" >y</text>
+<text x="630" y="95" class="label" >R: 45° counterclockwise</text>
+<polygon points="733,337 867,337 867,203 733,203" fill="none" stroke="#3975DB" stroke-width="2" stroke-dasharray="5 5"/>
+<polygon points="800.0,364.75230867899734 894.7523086789973,270.0 800.0,175.24769132100263 705.2476913210027,270.0" fill="#EFF9E7" stroke="#357D22" stroke-width="2"/>
+<path d="M640 270 H970" fill="none" stroke="#3975DB" stroke-width="1" marker-end="url(#arrow)"/>
+<path d="M800 420 V110" fill="none" stroke="#3975DB" stroke-width="1" marker-end="url(#arrow)"/>
+<path d="M800 270 L847.3761543394987 222.62384566050133" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<path d="M800 270 L752.6238456605013 222.62384566050133" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<text x="973" y="275" class="small" >x</text>
+<text x="810" y="140" class="small" >y</text>
+<text x="70" y="437" class="small" >Eigenvalues 1 and 2; axes stay on their lines.</text>
+<text x="605" y="437" class="small" >No nonzero real vector stays on its line.</text>
+</svg>

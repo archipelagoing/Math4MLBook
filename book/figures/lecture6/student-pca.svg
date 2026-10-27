@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="490" viewBox="0 0 1080 490" role="img" aria-labelledby="title desc">
+<title id="title">One component for the three source students</title><desc id="desc">Original student rows (10,90),(6,80),(20,100) center at (12,90). A centered plot shows the points and their perpendicular projections onto direction (5,7)/sqrt74, with equal x and y coordinate scales.</desc>
+<rect width="1080" height="490" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >One component for the three source students</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="30" y="100" class="label" >Mean: (12, 90)</text>
+<text x="30" y="155" class="small" >Centered rows:</text>
+<text x="50" y="202" class="small" >(−2, 0)</text>
+<text x="50" y="241" class="small" >(−6, −10)</text>
+<text x="50" y="280" class="small" >(8, 10)</text>
+<text x="30" y="365" class="small" >Unit loading: (5, 7) / √74</text>
+<path d="M596 255 H934" fill="none" stroke="#3975DB" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M765 411 V99" fill="none" stroke="#3975DB" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="942" y="262" class="small" >Δstudy</text>
+<text x="770" y="90" class="small" >Δexam</text>
+<path d="M665 395 L865 115" fill="none" stroke="#3975DB" stroke-width="2" />
+<path d="M739 255 L756.2162162162163 267.2972972972973" fill="none" stroke="#357D22" stroke-width="2" />
+<circle cx="739" cy="255" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M756.2162162162163 259.2972972972973 L764.2162162162163 267.2972972972973 L756.2162162162163 275.2972972972973 L748.2162162162163 267.2972972972973 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="749" y="271" class="small" >1</text>
+<path d="M687 385 L677.1621621621622 377.97297297297297" fill="none" stroke="#357D22" stroke-width="2" />
+<circle cx="687" cy="385" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M677.1621621621622 369.97297297297297 L685.1621621621622 377.97297297297297 L677.1621621621622 385.97297297297297 L669.1621621621622 377.97297297297297 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="697" y="401" class="small" >2</text>
+<path d="M869 125 L861.6216216216217 119.72972972972974" fill="none" stroke="#357D22" stroke-width="2" />
+<circle cx="869" cy="125" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M861.6216216216217 111.72972972972974 L869.6216216216217 119.72972972972974 L861.6216216216217 127.72972972972974 L853.6216216216217 119.72972972972974 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="879" y="141" class="small" >3</text>
+<text x="30" y="451" class="small" >Pink circles: centered originals. Green diamonds: nearest points on the PC1 line.</text>
+</svg>

@@ -72,6 +72,8 @@ source coverage, clarity, and useful practice matter as much as appearance.
   - Lecture 2: systems/elimination → determinants/geometry → inverses/invertibility → TL;DR.
   - Lecture 3: spaces/subspaces → complete solutions/rank → independence/span/basis → TL;DR.
   - Lecture 4: orthogonality/projections → subspaces/least squares → orthonormal bases/Gram–Schmidt → TL;DR.
+  - Lecture 5: eigenvalues/diagonalization → SVD → reduction/recommendations/final in-class exercises → TL;DR.
+  - Lecture 6: statistics/PCA geometry → compute principal components → scaling/applications/pitfalls → TL;DR.
 - Keep problem IDs, solution IDs, and concept anchors stable when moving content.
   Use MyST references so destinations follow the moved labels. Avoid stale direct
   links to source-only practice/solution fragments.

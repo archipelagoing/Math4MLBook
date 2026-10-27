@@ -9,7 +9,7 @@ Git history preserves older assessments.
 **Project:** [Math4MLBook](https://github.com/archipelagoing/Math4MLBook), working title
 *Mathematical Foundations of Machine Learning*.
 
-**Intended reader:** A student learning the course's first five weeks independently,
+**Intended reader:** A student learning the course's first six weeks independently,
 consolidating lectures, or preparing for the midterm.
 
 **Core job:** Understand, explain, and apply the mathematics taught in the supplied
@@ -17,7 +17,7 @@ resources well enough to target an A on the exam: solve unfamiliar conceptual an
 
 **Best credible version:** A coherent professional textbook develops the weekly
 slides into connected exposition, precise definitions and results, instructive
-proofs, labeled mathematical figures, and fully explained examples. Five weekly
+proofs, labeled mathematical figures, and fully explained examples. Six weekly
 chapters build on one another and include graduated practice with checked solutions.
 Statistics and PCA from the midterm topic list have explicit learning destinations,
 with supplements identified where the lecture sources do not cover them. A warm,
@@ -32,7 +32,7 @@ assessed skill. The book must bridge the gap between understanding an example an
 solving a fresh problem independently. Actual student performance is separate from
 editorial completeness; record it only when observed or reported.
 
-**Boundaries:** Initial coverage is Weeks 1–5 plus necessary bridges and midterm
+**Boundaries:** Authorized coverage is Weeks 1–6 plus necessary bridges and midterm
 review. A new application framework, accounts, grading platform, later course
 units, and sophisticated interactive demonstrations are not completion requirements.
 A standalone typeset PDF is a later goal; usable browser print is in scope.
@@ -154,70 +154,56 @@ checks, blockers, and whether comparisons use the same target and weights.
 
 ## Latest assessment
 
-**Date:** 2026-10-27. **Base commit:** `718e1b7`, with local Lecture 4 implementation.
+**Date:** 2026-10-27. **Base commit:** `f395bc4`, with the existing local Lecture 5
+work preserved and new Week 6 content. No commit, push or publication performed.
+The owner extended authoring to the newly supplied 39-page PCA deck. Its second
+PDF is an identical copy, not a separate lecture; later Week 8 resources are not
+counted as taught.
 
-**Current format:** Lecture 1 retains its 12 sections and 24 exercises. Lecture 2
-now covers **all 36 PDF pages** in 14 lettered parts A–N, following lecture order.
-It has 17 worked examples with highlighted numbered steps, 14 checkpoints,
-a dedicated TL;DR cheat sheet and 26 exercises with expandable solutions.
-Its four numbered reader pages are systems/elimination, determinants/geometry,
-inverses/invertibility, and TL;DR. Practice and expandable answers are integrated
-by topic. Lecture 1 likewise uses vectors, geometry, matrices and TL;DR. The earlier systems-only scope is superseded.
-Lecture 3 now covers all 35 PDF pages in 11 ordered parts with 16 worked
-examples, 28 questions, four diagrams and a mixed independent rehearsal.
-Lecture 4 now covers all 28 PDF pages in 11 ordered parts with 14 stepwise worked
-examples, six original diagrams, 28 integrated questions, selected worksheet/
-recitation alignment and a fresh mixed rehearsal. Lecture 5, the statistics/PCA
-bridge and cumulative exam assessment remain open.
+**Delivered:** Lectures 1–6 have four numbered topic/review pages each. Week 6
+closes the prior statistics/PCA teaching gap with full source coverage, mean,
+variance/standard deviation, covariance, objective/eigenvector derivation, complete
+student scores/reconstruction, scaling, genetics/eigenfaces and failure cases.
+The book now has 70 sections/parts with checkpoints, 89 numbered worked examples,
+162 integrated questions, 30 original SVG diagrams and two credited empirical
+source images. All six lectures finish with method-focused cheat sheets.
 
-The provisional whole-book score remains **56.25/100** under the same broad score
-bands and weights. Four covered lecture decks strengthen delivered coverage, but
-five-week completion, independent review and student outcomes are not established.
+The provisional whole-book score remains **71.25/100**, in the same score bands
+and weights as the prior assessment. Resolving statistics/PCA strengthens the
+coverage, correctness and exposition evidence; a comprehensive exam blueprint,
+cumulative mock assessment, remaining Lecture 2 practice tasks, independent expert
+review and actual student outcomes are still not established. This is an editorial
+assessment, not an A-grade prediction or a claim that later supplied decks are done.
 
-| Criterion | Weight | Score / 4 | Contribution | Current evidence and limits |
+| Criterion | Weight | Score / 4 | Contribution | Evidence and limits |
 | --- | ---: | ---: | ---: | --- |
-| Weekly coverage and source fidelity | 20 | 2 | 10 | Lectures 1–4 have specific source audits, including Week 4 projection/fit/Gram–Schmidt data and conditions. Week 5, statistics/PCA and the full exam blueprint remain open. |
-| Mathematical correctness and precision | 20 | 2 | 10 | Exact systems, determinants, cofactor arrays, both inverse products, dimensions/conditions and parameter families checked. Independent expert review and later material remain open. |
-| Exposition and learning progression | 20 | 2 | 10 | 48 learning sections/parts across Lectures 1–4. Highlighted steps explain operations and checks; later-week progression remains open. |
-| Practice and assessment | 15 | 2 | 7.5 | 106 exercises with explained answers/revision links and 48 checkpoints; Lecture 3 adds fresh variants, selected supporting-problem mapping and a scored mixed rehearsal. All four TL;DR pages support review. Cumulative timed assessment and learner outcomes remain open. |
-| Visual design and accessibility | 15 | 3 | 11.25 | Shared readable palette, 17 active diagrams, blue step labels, yellow results, red pitfalls, mobile/desktop and keyboard/print checks. Full accessibility audit remains open. |
-| Build integrity and reproducibility | 5 | 4 | 5 | Strict build, 95 Lecture 1, 98 Lecture 2, 223 Lecture 3 and 409 Lecture 4 checks, reproducible diagrams and browser scripts. Lecture 3 verified live; Lecture 4 remains local. |
-| Editorial completeness and delivery | 5 | 2 | 2.5 | Four numbered sidebar pages per lecture, integrated practice/answers, root AGENTS.md, current show-bible contract, source notes and review maps. Later chapters, final credits and publication remain open. |
-| **Total** | **100** | | **56.25** | |
+| Weekly coverage and source fidelity | 20 | 3 | 15 | Full source audits through Week 6, including all 39 PCA pages and the statistics requirements. Comprehensive supporting-exam/skill blueprint remains open; Week 8 is outside this task. |
+| Mathematical correctness and precision | 20 | 3 | 15 | Six checkers pass. Week 6 verifies exact covariance/eigenvectors, projections, score variance, reconstructions, normalization, standardized metric, zero/tied/outlier cases and source data. Independent expert review remains open. |
+| Exposition and learning progression | 20 | 3 | 15 | Six connected chapters, 70 sections/parts, 89 highlighted examples, complete source figures/data and six cheat sheets. Learner comprehension feedback and cumulative synthesis remain needed. |
+| Practice and assessment | 15 | 2 | 7.5 | 162 questions with explanations and diagnostic revision/retry links, fresh mixed rehearsals through Week 6, and selected supporting-question mapping. The full mock/blueprint and existing Lecture 2 fresh-variant tasks remain incomplete. |
+| Visual design and accessibility | 15 | 3 | 11.25 | 30 original diagrams and two credited source figures, semantic highlights, desktop/phone, keyboard, dark and print evidence. Full accessibility and learner testing remain open. |
+| Build integrity and reproducibility | 5 | 4 | 5 | Strict build; 95/98/223/409/632/646 checks for Lectures 1–6; browser scripts, SVG generators and reproducible source-image extraction. Live publication is separate. |
+| Editorial completeness and delivery | 5 | 2 | 2.5 | Numbered sidebar, integrated practice banks, current agent rules, source/review records and statistics/PCA destination. Final credits, cumulative assessment and current publication remain open. |
+| **Total** | **100** | | **71.25** | |
 
-**Verification:** [Lecture 1 record](authoring/lecture1-review.md) and
-[Lecture 2 record](authoring/lecture2-review.md), plus the current
-[Lecture 3 record](authoring/lecture3-review.md) and
-[Lecture 4 record](authoring/lecture4-review.md). Each browser review passes
-10 page/viewport checks, inspecting actual numbered sidebar labels and topic-based
-practice allocation. All answers can be keyboard-opened and all local article
-links resolve. No math errors, JavaScript errors or page-wide overflow were found,
-including with answers expanded on phones. Local success does not confirm the live site.
+**Evidence:** [Lecture 1](authoring/lecture1-review.md),
+[Lecture 2](authoring/lecture2-review.md), [Lecture 3](authoring/lecture3-review.md),
+[Lecture 4](authoring/lecture4-review.md), [Lecture 5](authoring/lecture5-review.md),
+[Lecture 6](authoring/lecture6-review.md). Week 6 passes ten desktop/phone cases
+and 196 local article links/assets, with no MathJax, exposed-TeX, JavaScript or
+page-wide-overflow errors, including all 28 expanded answers. Lecture 5 regression
+passes ten cases and 189 links/assets with the six-lecture sidebar. Source and
+original figures, representative worked steps, dark theme and all three print
+pages were inspected. Transient disk-space failures in the regression tooling
+were resolved by using /tmp for Chromium temporary files; no source data was removed.
 
-**Next improvements:** Gather comprehension feedback; continue remaining weekly
-chapters; complete supporting-problem and official exam topic mapping. Apply the
-full-deck, source-order, highlighted-step and TL;DR standard to subsequent work.
+**Preserved open audit:** [Lecture 2 assessment](authoring/lecture2-assessment.md)
+records repeated matrices in Problems 20/22/24/25; fresh determinant/inverse variants
+and a mixed check remain needed. Earlier chapters have not all received a new
+slides-closed audit during Week 6. Editorial practice timing and thresholds do
+not establish official exam rules, a course A cutoff or demonstrated readiness.
 
-**Lecture 2 completion audit, 2026-10-27:** [Chapter assessment](authoring/lecture2-assessment.md)
-distinguishes complete slide coverage from incomplete exam-readiness preparation.
-Problems 20, 22, 24 and 25 repeat worked matrices; fresh determinant/inverse
-variants and a mixed independent check remain needed. Supporting homework/exam
-question mapping is still open. The 98-check arithmetic run and strict build
-passed again. The provisional score above remains a whole-book score, not a
-chapter grade; full A-level preparation is not declared complete.
-
-**Lecture 3 evidence:** [Coverage](authoring/lecture3-coverage.md) and
-[verification](authoring/lecture3-review.md) document the full source chapter,
-source corrections and supporting-problem links. Ten new desktop/mobile checks
-and 239 local article links pass. Fresh practice and a transparent mixed check
-address the preparation weaknesses identified in the Lecture 2 audit, without
-claiming that student readiness or whole-course exam alignment has been demonstrated.
-The earlier Lecture 2 audit and its remaining tasks are unchanged.
-
-**Lecture 4 evidence:** [Coverage](authoring/lecture4-coverage.md) and
-[verification](authoring/lecture4-review.md) record the full deck, source-order
-teaching, independent arithmetic, browser/print inspection, and selected worksheet
-and recitation alignment. The whole-book score remains in the same provisional
-bands: four lectures do not establish all-five-week coverage, expert review, a
-complete exam blueprint or actual student readiness. The prior Lecture 2 audit
-and its remaining preparation tasks are unchanged.
+**Next priorities:** Complete the course-wide skill/problem blueprint and a fresh
+cumulative mock; address Lecture 2’s remaining practice gaps; gather comprehension
+feedback. Author later weeks only when requested, following the same full-source
+and standalone-reading rules.

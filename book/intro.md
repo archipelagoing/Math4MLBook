@@ -42,6 +42,24 @@ record states what a view reveals and what it leaves out.
 4. [Page 4 · TL;DR cheat sheet](lecture4/cheatsheet.md).
 :::
 
+:::{admonition} Lecture 5 · Matrix decompositions
+:class: key-result
+
+1. [Page 1 · Eigenvalues and diagonalization](lecture5/index.md) — Parts A–E, including the handwritten spectral example.
+2. [Page 2 · Singular value decomposition](lecture5/svd.md) — Parts F–G, factor shapes and checked computations.
+3. [Page 3 · Reduction and recommendations](lecture5/applications.md) — Parts H–J, the complete source tables, final in-class exercises and mixed practice.
+4. [Page 4 · TL;DR cheat sheet](lecture5/cheatsheet.md).
+:::
+
+:::{admonition} Lecture 6 · Statistics and PCA
+:class: key-result
+
+1. [Page 1 · Statistics and PCA geometry](lecture6/index.md) — Parts A–E, means, spread, covariance and geometric motivation.
+2. [Page 2 · Compute principal components](lecture6/principal-components.md) — Parts F–I, the objective, complete source calculation and variance budget.
+3. [Page 3 · Scaling, applications and pitfalls](lecture6/applications.md) — Parts J–L, preprocessing, genetics/eigenface figures, failure cases and mixed practice.
+4. [Page 4 · TL;DR cheat sheet](lecture6/cheatsheet.md).
+:::
+
 Each lecture uses at most **four reading pages, including exercises and solutions**.
 Each lecture has four numbered topic links in the left sidebar. Practice and
 expandable explained answers appear after the relevant material, not on separate
@@ -54,4 +72,4 @@ example, cover its solution, and reproduce the reasoning before trying a new pro
 Lecture 1 develops Erisa Terolli's CS 556 Week 1 slides in `resources/`.
 {ref}`Source notes <w1-source-notes>` identify original material and added constructions.
 Lecture 2 develops the complete Week 2 slide deck.
-{ref}`Source notes <w2-source-notes>` map all lecture parts and distinguish source material from editorial additions. Lecture 3 develops all 35 Week 3 PDF pages; {ref}`its source notes <w3-source-notes>` record corrections and supporting-problem links. Lecture 4 develops all 28 Week 4 PDF pages; {ref}`its source notes <w4-source-notes>` distinguish source examples, supporting questions and clarifications. Lecture 5 remains in preparation.
+{ref}`Source notes <w2-source-notes>` map all lecture parts and distinguish source material from editorial additions. Lecture 3 develops all 35 Week 3 PDF pages; {ref}`its source notes <w3-source-notes>` record corrections and supporting-problem links. Lecture 4 develops all 28 Week 4 PDF pages; {ref}`its source notes <w4-source-notes>` distinguish source examples, supporting questions and clarifications. Lecture 5 develops all 44 Week 5 PDF pages; {ref}`its source notes <w5-source-notes>` identify source clarifications. Lecture 6 now develops all 39 PCA pages; {ref}`its source notes <w6-source-notes>` identify complete statistics/PCA coverage and the remaining cumulative exam work.

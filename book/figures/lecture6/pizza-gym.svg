@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="425" viewBox="0 0 1080 425" role="img" aria-labelledby="title desc">
+<title id="title">Center → use long and short axes → retain one coordinate</title><desc id="desc">Toy pizza/gym counts (1,5),(2,4),(3,3),(4,2),(5,1) form a line. Centering at (3,3) gives scores along (1,-1)/sqrt2 with zero perpendicular scores; the retained one-dimensional scores are minus 2sqrt2, minus sqrt2, zero, sqrt2, 2sqrt2.</desc>
+<rect width="1080" height="425" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >Center → use long and short axes → retain one coordinate</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="93" class="small" >1. Raw paired counts</text>
+<text x="395" y="93" class="small" >2. Centered directions</text>
+<text x="770" y="93" class="small" >3. Retained score</text>
+<path d="M55 320 H277" fill="none" stroke="#3975DB" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M55 320 V135" fill="none" stroke="#3975DB" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="285" y="327" class="small" >Pizza</text>
+<text x="60" y="126" class="small" >Gym</text>
+<circle cx="92" cy="135" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="129" cy="172" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="166" cy="209" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="203" cy="246" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="240" cy="283" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M430 230 H670" fill="none" stroke="#3975DB" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M550 350 V110" fill="none" stroke="#3975DB" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="678" y="237" class="small" >x</text>
+<text x="555" y="101" class="small" >y</text>
+<circle cx="490" cy="170" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="520" cy="200" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="550" cy="230" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="580" cy="260" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="610" cy="290" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M550 230 L630 310" fill="none" stroke="#C91E70" stroke-width="2.5" marker-end="url(#pink)"/>
+<path d="M550 230 L600 180" fill="none" stroke="#357D22" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="600" y="334" class="small" >q₁</text>
+<text x="600" y="163" class="small" >q₂</text>
+<path d="M780 240 H1040" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="795" cy="240" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<text x="795" y="277" class="small" text-anchor="middle">−2√2</text>
+<circle cx="847" cy="240" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<text x="847" y="277" class="small" text-anchor="middle">−√2</text>
+<circle cx="899" cy="240" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<text x="899" y="277" class="small" text-anchor="middle">0</text>
+<circle cx="951" cy="240" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<text x="951" y="277" class="small" text-anchor="middle">√2</text>
+<circle cx="1003" cy="240" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<text x="1003" y="277" class="small" text-anchor="middle">2√2</text>
+<text x="770" y="320" class="small" >Short-direction scores are all 0.</text>
+<text x="25" y="399" class="small" >Declared toy observations; the source scatter is noisy and has no supplied raw coordinates.</text>
+</svg>

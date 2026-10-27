@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="640" viewBox="0 0 1080 640" role="img" aria-labelledby="title desc">
+<title id="title">The complete preprocessing and reconstruction path</title><desc id="desc">Six panels follow the exact toy rows (1,10),(2,20),(3,30): raw values, centering at (2,20), scaling by (1,10), selecting orthogonal standardized axes, projection onto their leading axis, and undoing scaling and centering to recover original rows.</desc>
+<rect width="1080" height="640" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="40" class="title" >The complete preprocessing and reconstruction path</text>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<rect x="25" y="85" width="330" height="235" rx="10" fill="white" stroke="#E3D4CA"/>
+<text x="37" y="115" class="label" >1. Raw data</text>
+<path d="M70 285 H310" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M110 135 V295" fill="none" stroke="#3975DB" stroke-width="1" />
+<circle cx="140" cy="235" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="170" cy="185" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="200" cy="135" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<rect x="380" y="85" width="330" height="235" rx="10" fill="white" stroke="#E3D4CA"/>
+<text x="392" y="115" class="label" >2. Center</text>
+<path d="M425 220 H665" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M540 135 V295" fill="none" stroke="#3975DB" stroke-width="1" />
+<circle cx="500" cy="280" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="540" cy="220" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="580" cy="160" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<rect x="735" y="85" width="330" height="235" rx="10" fill="white" stroke="#E3D4CA"/>
+<text x="747" y="115" class="label" >3. Standardize</text>
+<path d="M780 220 H1020" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M895 135 V295" fill="none" stroke="#3975DB" stroke-width="1" />
+<circle cx="850" cy="265" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="895" cy="220" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="940" cy="175" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<rect x="25" y="350" width="330" height="235" rx="10" fill="white" stroke="#E3D4CA"/>
+<text x="37" y="380" class="label" >4. Find axes</text>
+<path d="M70 485 H310" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M185 400 V560" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M125 545 L245 425" fill="none" stroke="#C91E70" stroke-width="2.5" marker-end="url(#pink)"/>
+<path d="M185 485 L230 530" fill="none" stroke="#357D22" stroke-width="2.5" marker-end="url(#green)"/>
+<circle cx="140" cy="530" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="185" cy="485" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<circle cx="230" cy="440" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<rect x="380" y="350" width="330" height="235" rx="10" fill="white" stroke="#E3D4CA"/>
+<text x="392" y="380" class="label" >5. Project</text>
+<path d="M425 485 H665" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M540 400 V560" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M480 545 L600 425" fill="none" stroke="#C91E70" stroke-width="2.5" marker-end="url(#pink)"/>
+<path d="M540 485 L585 530" fill="none" stroke="#357D22" stroke-width="2.5" marker-end="url(#green)"/>
+<path d="M495 522 L503 530 L495 538 L487 530 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<path d="M540 477 L548 485 L540 493 L532 485 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<path d="M585 432 L593 440 L585 448 L577 440 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<rect x="735" y="350" width="330" height="235" rx="10" fill="white" stroke="#E3D4CA"/>
+<text x="747" y="380" class="label" >6. Restore units</text>
+<path d="M780 550 H1020" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M820 400 V560" fill="none" stroke="#3975DB" stroke-width="1" />
+<path d="M850 492 L858 500 L850 508 L842 500 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<path d="M880 442 L888 450 L880 458 L872 450 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<path d="M910 392 L918 400 L910 408 L902 400 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="25" y="626" class="small" >Toy data have zero discarded variance; scaling makes their raw slope 10 become standardized slope 1.</text>
+</svg>
