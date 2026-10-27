@@ -511,6 +511,24 @@ independent domain or mathematical review.
 Still open: exact supporting problem references, complete chapter proofs and fresh
 transfer bank, formal edge-case development, image-only lecture review, rendered
 figures and accessibility, qualified independent review, and observed learner
-transfer. No physical demonstration, measured dataset, chapter build, student grade,
-or empirical effectiveness result is claimed. A complete editorial blueprint is
+transfer. No physical demonstration, measured dataset, student grade,
+or empirical effectiveness result is claimed. The first chapter is now built; later
+chapter passages and whole-course review remain unfinished. A complete editorial blueprint is
 not a completed textbook or evidence that a student is ready for the exam.
+
+## 10. Lecture 1 implementation
+
+The [first chapter](../../../book/lecture1/index.md) now uses this canon directly:
+
+| Mechanism | Manuscript destination |
+| --- | --- |
+| Ordered section counts; knit/purl operation records | [Vectors](../../../book/lecture1/vectors.md) |
+| Uniform/alternating repeat directions; plain/increase effects | [Combinations](../../../book/lecture1/combinations.md) |
+| Dot products, normalization, and orthogonality in count-record geometry | [Geometry](../../../book/lecture1/geometry.md) |
+| Four sampler rows, index roles, special matrices, and trace | [Matrices](../../../book/lecture1/matrices.md) |
+| Consumed/produced ledger, grouped section summaries, and composition | [Products](../../../book/lecture1/products.md) |
+| Transfer beyond the craft and fully explained answers | [Practice](../../../book/lecture1/practice.md), [solutions](../../../book/lecture1/solutions.md) |
+
+[Review evidence](../../../authoring/lecture1-review.md) records checked arithmetic,
+figures and browser output. Later-week mechanisms in this canon remain editorial
+plans. These count diagrams are not loop-accurate technique instruction.

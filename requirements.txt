@@ -1,5 +1,4 @@
-# first list the packages you wish to download from PyPI
-teachbooks # depends on jupyter-book v1
-
-# Our favourite Sphinx extensions in one line, replace with individual extensions if you prefer some extensions not to be included (https://github.com/TeachBooks/TeachBooks-Favourites)
-git+https://github.com/TeachBooks/TeachBooks-Favourites
+# Tested with Python 3.12; TeachBooks uses Jupyter Book v1.
+teachbooks==0.2.5
+jupyter-book==1.0.4.post1
+sphinx-design==0.7.0

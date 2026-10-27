@@ -154,64 +154,48 @@ checks, blockers, and whether comparisons use the same target and weights.
 
 ## Latest assessment
 
-**Date:** 2026-10-26.  
-**Commit:** `6657df146cf1bfa98d515d6f192ce16aa6d0d806` (`main`).  
-**Local changes:** The three planning templates are being populated in this working
-tree; this assessment gives no implementation credit for their planned chapters.  
-**Status:** Provisional source-inspection baseline. No book build, rendered review,
-full source visual audit, or independent mathematical audit performed.  
-**Target version:** Initial five-week professional textbook, clarified on 2026-10-26
-to require A-level exam preparation. Weights unchanged; this is the new target
-baseline. Implementation remains the inspected scaffold, with no new readiness evidence.  
-**Total:** **10/100 provisional**, with correctness, rendered accessibility, build
-execution, and deployment outcomes unverified as described below.
+**Date:** 2026-10-26.
+**Base commit:** `b1e21f70c9921e91c386f6836f3717498b14da06`; assessment includes
+uncommitted Lecture 1 manuscript, design, build configuration, checks, and documentation.
+**Status:** First locally validated chapter. Same five-week target and weights as
+the initial 10/100 baseline; this is not a student grade or an exam-readiness score.
+**Total:** **56.25/100**, provisional whole-book assessment. The full exam-readiness
+gate remains unmet because later weeks and cumulative/timed practice are absent.
 
 | Criterion | Weight | Score / 4 | Contribution | Evidence and included work | Missing / unknown |
 | --- | ---: | ---: | ---: | --- | --- |
-| Weekly coverage and source fidelity | 20 | 1 | 5 | Five lecture PDFs and supporting materials exist in `resources/`; deck topics and page counts inspected by text extraction. | No weekly chapters or section-level source map; statistics/PCA placement unresolved. |
-| Mathematical correctness and precision | 20 | 0 provisional | 0 | `book/some_content/overview.md` is filler; `book/intro.md` is a template welcome. | Intended mathematical exposition absent. Source answers and visual-only annotations are unverified, not established incorrect. |
-| Exposition and learning progression | 20 | 0 | 0 | `book/_toc.yml` organizes template content and authoring tutorials. | No course learning path, explanatory weekly sections, objectives, or textbook synthesis. |
-| Practice and assessment | 15 | 0 | 0 | Homework and exam PDFs exist; `book/exercises/` contains template authoring exercises. | Course practice and checked solutions are not integrated into the reader-facing book. |
-| Visual design and accessibility | 15 | 1 provisional | 3.75 | Theme configuration, template logos, and `book/_static/attribution.css` provide an initial presentation scaffold. | Textbook styling/figures absent; theme usability, contrast, mobile, keyboard, dark mode, and print unverified. |
-| Build integrity and reproducibility | 5 | 1 provisional | 1.25 | `requirements.txt`, `_config.yml`, `_toc.yml`, and `.github/workflows/call-deploy-book.yml` exist. | Build tools unavailable on inspected PATH; install, successful build, warning baseline, and CI results unverified. |
-| Editorial completeness and delivery | 5 | 0 | 0 | Project files and template credits/license exist. | Title/author/URLs, reader navigation, source-specific attribution, and README remain template-oriented; live delivery unknown. |
-| **Total** | **100** | | **10** | | |
+| Weekly coverage and source fidelity | 20 | 2 | 10 | `book/lecture1/source-notes.md`: complete Week 1 deck map and attributed added exposition. | Weeks 2–5, exact supporting-problem mapping, statistics/PCA gap, complete exam blueprint. |
+| Mathematical correctness and precision | 20 | 2 | 10 | Five teaching sections and 24 solutions; 67 recomputation/pairing/figure checks; source image spot checks; hypotheses and derivations reviewed. | Independent reviewer absent; later-week mathematics not authored or audited. |
+| Exposition and learning progression | 20 | 2 | 10 | Objectives, connected craft examples, formal definitions, derivations, method cues, five checkpoints, synthesis and transfer. | Later chapter progression and observed learning effectiveness unverified. |
+| Practice and assessment | 15 | 2 | 7.5 | 24 graduated problems with explained answers, six optional synthesis hints, objective mapping and readiness prompts. | Whole-exam skill coverage, timed mock exam, scoring guide, reader performance. |
+| Visual design and accessibility | 15 | 3 | 11.25 | Custom palette/typography, four SVGs, all reader pages checked at desktop/mobile widths, representative dark/print checks, keyboard answers, explicit contrast pairs. | Full assistive-technology audit, later-week figures, owner/reader aesthetic feedback. |
+| Build integrity and reproducibility | 5 | 4 | 5 | Isolated Python 3.12 setup, pinned direct dependencies, README instructions, clean TeachBooks and strict Jupyter Book builds, valid references/assets. | Hosted CI/deployment unverified; MathJax depends on CDN access. |
+| Editorial completeness and delivery | 5 | 2 | 2.5 | Working identity, reader navigation, source notes, setup guide, chapter conventions and review record. | Final human author credit, whole-book notation/credits, publication and full course coverage. |
+| **Total** | **100** | | **56.25** | | |
 
-**Checks performed:**
+**Checks performed:** [Lecture 1 review record](authoring/lecture1-review.md) gives
+source pages, objective-to-practice mapping, checked calculations, dependency
+versions, browser results, contrast pairs, and limitations. The original scaffold
+had one warning; the current reader book builds without warnings. Browser checks
+covered 11 pages at 1440/390 pixels, with 456 rendered math expressions per viewport,
+no MathJax errors, no page-wide overflow, and no JavaScript errors. Practice links
+use valid MyST references. Keyboard checkpoint answers and print expansion work.
+The geometry diagram now uses equal unit scales in its orthonormal coordinates.
 
-- Enumerated repository files and inspected book navigation, introduction,
-  configuration, stylesheet, requirements, workflow, and planning templates.
-- Extracted all 18 source PDFs using `pdftotext -layout` into temporary files outside
-  the repository. The five lecture decks contain 48, 36, 35, 28, and 44 pages.
-  This is a topic inventory, not a complete mathematical or diagram review.
-- Compared extracted Week 5 topics with `MidtermTopics.md`: the list includes
-  statistics/PCA, while their terms were not present in the extracted Week 5 text.
-- Found no non-whitespace extracted content in `Recitation1_Solutions.pdf` or
-  `PT1_f22Sol.pdf`; their actual page content remains to be reviewed visually.
-- Checked CLI availability: neither `teachbooks` nor `jupyter-book` was on PATH.
-  Dependencies were not installed for this documentation-only task.
-- Did not run a build, execute notebook content, inspect a browser, or verify deployment.
-
-**Critical gaps:** The main reader outcome is unavailable because weekly textbook
-chapters are absent. The midterm scope gap and visual-only source pages require
-explicit review during authoring. No mathematical failure or deployment failure
-is claimed without verification.
+**Critical gaps:** The book is not complete midterm preparation. Weeks 2–5,
+statistics/PCA placement, visual-only supporting PDFs, cumulative/timed assessment,
+and exact homework/exam mapping remain open. No student outcome, independent
+craft execution, independent math review, or live deployment is claimed.
 
 **Top three next improvements:**
 
-1. **Map sources and establish notation.** Every weekly topic and exam topic gets
-   a planned destination with exact PDF pages/problem references; unreadable pages
-   and statistics/PCA gaps are resolved or explicitly tracked. See checklist §2.
-2. **Build a complete Week 1 chapter and shared visual pattern.** It teaches every
-   Week 1 topic with checked examples, meaningful figures, checkpoints, practice,
-   and explained solutions. A local build and desktop/mobile/print inspection
-   establish a reusable chapter standard. See checklist §§3–4.
-3. **Extend that standard through Weeks 2–5 and close exam coverage.** Each chapter
-   meets the bible's definition of done and all midterm topics map to a learning
-   section and practice. See checklist §§5–9.
+1. Review the first chapter with the owner/student and correct any confusing
+   explanation or visual; gather evidence from unaided formal problems (§4).
+2. Complete the source/notation map and author Lecture 2 using the checked chapter
+   pattern, then continue in weekly order (§§2, 5–8).
+3. Close exam coverage with cumulative practice, a timed mock exam, explained
+   scoring, and targeted revision paths (§§9–10).
 
-**Change since previous assessment:** First project-specific assessment; the generic
-template contained no usable prior scores. Future comparisons must use these same
-weights and disclose differences in verification depth. The A-level commission
-clarifies the target and strengthens acceptance criteria on 2026-10-26; the unchanged
-10/100 scaffold baseline is not a measured improvement or student-readiness score.
+**Change since previous assessment:** +46.25 points against the same weights.
+Credit now rests on a real first chapter and local verification, replacing the
+source/template-only baseline. This gain does not establish an A-level outcome.

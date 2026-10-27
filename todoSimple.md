@@ -1,10 +1,9 @@
 # Math4MLBook TODO
 
-Last updated: 2026-10-26. The course resources and TeachBooks scaffold are present.
-The show bible and rubric now define the textbook target; this checklist translates
-them into ordered work. Weekly textbook chapters, custom design, and a successful
-local build have not yet been completed or verified. This pass prepares the three
-planning documents only; the implementation backlog remains unfinished.
+Last updated: 2026-10-26. Lecture 1 is drafted and locally built with the craft
+backbone, shared styling, four diagrams, and 24 explained practice problems.
+See [review evidence](authoring/lecture1-review.md). Weeks 2–5 and whole-exam
+preparation remain unfinished; no publication or student outcome is claimed.
 
 ## Maintenance instructions
 
@@ -24,18 +23,11 @@ planning documents only; the implementation backlog remains unfinished.
 
 ## Next steps
 
-1. Complete the detailed source map and notation conventions (§2), including the
-   visual-only PDFs and statistics/PCA coverage gap.
-2. Verify an isolated local build and establish shared reading styles (§3).
-3. Build and inspect a complete Week 1 chapter (§4); refine the chapter pattern
-   before proceeding through Weeks 2–5.
-4. Complete the remaining weekly chapters in order (§§5–8), then close the midterm
-   coverage map (§9).
-
-The broad weekly sequence and proposed design direction are ready. Exact
-section/page mapping, rendered appearance, and mathematical verification remain
-implementation work. No chapter writing or site publication is included in this
-planning pass.
+1. Review the completed Lecture 1 reading experience and gather reader feedback (§4).
+2. Complete the remaining source/notation map, including visual-only supporting
+   PDFs and statistics/PCA (§2).
+3. Carry the established craft-centered chapter pattern into Lecture 2 (§5), then
+   proceed through Weeks 3–5 and close midterm coverage (§§6–9).
 
 ## 1. Define the project
 
@@ -243,7 +235,7 @@ remaining chapter, illustration, review, and learner-validation tasks.
   formal transfer/feedback, visual rules, implementation order, and acceptance criteria.
 - [x] Link the guide from the analogy index and show bible; verify local links,
   topic anchors and the fresh formal transfer example.
-- [ ] Implement the strategy through a complete Week 1 chapter, inspect its rendered
+- [x] Implement the strategy through a complete Week 1 chapter, inspect its rendered
   output, and test fresh formal problems before repeating the pattern.
 
 Historical progress, 2026-10-26: Initially proposed shadows as the mathematical
@@ -276,59 +268,58 @@ Progress, 2026-10-26: The earlier shadow-led proposal is superseded. Yarn now ca
 the mathematics as well as the book's identity. The same swatch supports bases,
 projection, SVD and PCA; the crochet motif supports a specific permutation/eigenvector
 example. These are checked mathematical constructions and a generated schematic,
-not physical pattern execution, completed chapters, or measured learning outcomes.
+not physical pattern execution or measured learning outcomes. Lecture 1 now implements
+the count-record backbone; its review is recorded below.
 
 ## 3. Establish the book and visual foundation
 
-- [ ] Create an isolated Python environment, install the repository requirements,
+- [x] Create an isolated Python environment, install the repository requirements,
   verify the CLI, and record a reproducible local build command.
-- [ ] Build the existing scaffold and record a warning/error baseline before
+- [x] Build the existing scaffold and record a warning/error baseline before
   substantial changes; identify dependency or configuration issues.
-- [ ] Replace template identity, repository links, base URL, and opening page with
+- [x] Replace template identity, repository links, base URL, and opening page with
   the textbook's working identity and an accurate reader guide.
-- [ ] Replace reader navigation with the planned weekly structure; remove template
+- [x] Replace reader navigation with the available textbook chapters; remove template
   tutorials from reader navigation while retaining useful authoring references.
-- [ ] Implement shared typography, spacing, palette, light/dark tokens, and named
+- [x] Implement shared typography, spacing, palette, light/dark tokens, and named
   teaching components from the bible; verify stylesheet loading.
-- [ ] Establish mathematical figure conventions: axes, labels, line styles,
+- [x] Establish mathematical figure conventions: axes, labels, line styles,
   captions, alt text, and reproducible vector/plot sources.
-- [ ] Provide useful search, chapter/section navigation, visible keyboard focus,
+- [x] Provide useful search, chapter/section navigation, visible keyboard focus,
   controlled equation overflow, and printable solutions.
 
-Progress: `requirements.txt`, `book/_config.yml`, `book/_toc.yml`, and the deployment
-workflow exist. No build executed; `teachbooks` and `jupyter-book` were absent from
-the inspected PATH. The existing template enables notebook execution “off” and
-image inversion; any new notebook calculations or colored diagrams need explicit
-verification. The bible's palette and typography remain proposals. On 2026-10-26,
-the owner refined the cute palette to hot pink (`#FF4FA3`), bright green
-(`#8DEB42`), warm caramel brown (`#A5633D`), and yellow on blush paper with
-deep warm cocoa text (`#543124`). Structural accents use blue (`#3975DB`). Red is reserved for attention cues; yellow highlights
-important material. Calculated light-palette contrast now supports deep pink
-(`#C91E70`) and leaf green (`#357D22`) foregrounds plus cocoa text on pale
-pink/green panels; exact ratios and usage rules are in the bible. Rendered
-contrast, interaction-state, and dark-theme checks remain part of implementation.
+Progress: Python 3.12 environment installed; the original template built with one
+warning. Lecture 1 now has a clean strict build, textbook identity/navigation,
+shared light/dark styles, reproducible SVGs, keyboard-accessible checkpoint answers,
+local math/diagram overflow, and printable explanations. Build versions and browser
+results are in [the review record](authoring/lecture1-review.md). Template authoring
+sources are retained outside reader navigation; unpublished weeks are not empty stubs.
 
 ## 4. Week 1 — Vectors and matrices
 
-- [ ] Draft a chapter opener, prerequisites, objectives, and a section sequence
+- [x] Draft a chapter opener, prerequisites, objectives, and a section sequence
   mapped to `WK1_ Vectors and Matrices.pdf`.
-- [ ] Develop vector representation, addition/scaling, linear combinations, dot
+- [x] Develop vector representation, addition/scaling, linear combinations, dot
   product and angles, norm, and normalization into connected prose.
-- [ ] Develop matrix dimensions, diagonal/identity/symmetric matrices, addition,
+- [x] Develop matrix dimensions, diagonal/identity/symmetric/skew-symmetric matrices, addition,
   scaling, transpose, trace, matrix-vector and matrix-matrix products/properties.
-- [ ] Add complete checked examples for the major methods, including dimension
+- [x] Add complete checked examples for the major methods, including dimension
   checks, zero-vector limitations, and noncommutativity where relevant.
-- [ ] Create labeled figures connecting vector geometry and matrix operations to
+- [x] Create labeled figures connecting vector geometry and matrix operations to
   their equations; include useful, prerequisite-appropriate ML interpretation.
-- [ ] Add conceptual checkpoints, common pitfalls, summary, graduated practice,
+- [x] Add conceptual checkpoints, common pitfalls, summary, graduated practice,
   hints, and independently checked solutions aligned to objectives.
-- [ ] Verify source coverage, mathematics, references, and build output; inspect
+- [x] Verify source coverage, mathematics, references, and build output; inspect
   desktop, narrow viewport, dark theme, keyboard use, and browser print.
-- [ ] Refine the shared chapter pattern from the rendered result and update the
+- [x] Refine the shared chapter pattern from the rendered result and update the
   bible/rubric/checklist to match verified implementation.
 
-Progress: Scope mapped at whole-deck level (48 pages); no Week 1 manuscript or
-rendered prototype yet. This is the first complete editorial and visual milestone.
+Progress: The complete first-deck scope is developed in [Lecture 1](book/lecture1/index.md),
+with page-level attribution, four SVG diagrams, five checkpoints, 24 explained problems,
+and six optional synthesis hints. 67 numerical/structural checks and a strict build
+pass; 11 pages were checked at desktop/mobile widths, plus representative dark/print
+views and keyboard access. See [review evidence](authoring/lecture1-review.md).
+Independent reviewer and learner-performance evidence remain open, as do later weeks.
 
 ## 5. Week 2 — Systems, determinants, and inverses
 
@@ -447,7 +438,7 @@ source/template baseline and explicitly identifies unverified outcomes.
 
 ## 11. Prepare delivery and final polish
 
-- [ ] Replace the template README with actual setup/build instructions and a reader
+- [x] Replace the template README with actual setup/build instructions and a reader
   guide; align title, author credit, favicon, metadata, and navigation.
 - [ ] Complete source/figure credits and confirm applicable permissions/attribution
   before public distribution; retain existing license notices appropriately.

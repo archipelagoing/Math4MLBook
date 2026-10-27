@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="530" viewBox="0 0 860 530" role="img" aria-labelledby="title desc">
+<title id="title">Uniform and alternating record directions</title><desc id="desc">A two-axis plot of repeat coordinates. The same row r is alpha=2 beta=1 in the unnormalized e,a basis, or 4,2 in the normalized q0,q1 basis. The axes are mathematical record directions, not fabric dimensions.</desc>
+<rect width="860" height="530" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}.number{font-size:25px;text-anchor:middle}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="38" class="title" >Uniform and alternating record directions</text>
+<path d="M98 90 V440" stroke="#E3D8D0" stroke-width="1"/>
+<text x="98" y="312" class="small" text-anchor="middle">0</text>
+<path d="M163 90 V440" stroke="#E3D8D0" stroke-width="1"/>
+<text x="163" y="312" class="small" text-anchor="middle">1</text>
+<path d="M228 90 V440" stroke="#E3D8D0" stroke-width="1"/>
+<text x="228" y="312" class="small" text-anchor="middle">2</text>
+<path d="M293 90 V440" stroke="#E3D8D0" stroke-width="1"/>
+<text x="293" y="312" class="small" text-anchor="middle">3</text>
+<path d="M358 90 V440" stroke="#E3D8D0" stroke-width="1"/>
+<text x="358" y="312" class="small" text-anchor="middle">4</text>
+<path d="M423 90 V440" stroke="#E3D8D0" stroke-width="1"/>
+<text x="423" y="312" class="small" text-anchor="middle">5</text>
+<path d="M488 90 V440" stroke="#E3D8D0" stroke-width="1"/>
+<text x="488" y="312" class="small" text-anchor="middle">6</text>
+<path d="M60 414 H650" stroke="#E3D8D0" stroke-width="1"/>
+<path d="M60 349 H650" stroke="#E3D8D0" stroke-width="1"/>
+<path d="M60 219 H650" stroke="#E3D8D0" stroke-width="1"/>
+<path d="M60 154 H650" stroke="#E3D8D0" stroke-width="1"/>
+<path d="M60 284 H690" stroke="#3975DB" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<path d="M98 450 V76" stroke="#3975DB" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<path d="M98 284 L358 154" stroke="#C91E70" stroke-width="3.5"/>
+<circle cx="358" cy="154" r="6" fill="#C91E70"/>
+<text x="376" y="159" class="label" >r</text>
+<path d="M98 284 L358 414" stroke="#357D22" stroke-width="3.5"/>
+<circle cx="358" cy="414" r="6" fill="#357D22"/>
+<text x="376" y="419" class="label" >s</text>
+<path d="M358 154 V414" stroke="#3975DB" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="710" y="290" class="label" >q₀</text>
+<text x="110" y="81" class="label" >q₁</text>
+<text x="440" y="114" class="label" >r = (4, 2) in q-coordinates</text>
+<text x="440" y="147" class="label" >s = (4, −2) in q-coordinates</text>
+<text x="440" y="185" class="small" >q₀ = e/2,  q₁ = a/2</text>
+<text x="25" y="490" class="small" >Squared length of r: 4² + 2² = 20. This is record-space geometry.</text>
+</svg>

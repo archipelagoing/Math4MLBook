@@ -10,10 +10,10 @@ Observed implementation and intended experience are recorded separately.
 | Project | [Math4MLBook](https://github.com/archipelagoing/Math4MLBook) |
 | Working title | Mathematical Foundations of Machine Learning |
 | Premise | A beautiful, rigorous, readable textbook that develops the course's weekly slides into a complete learning experience. |
-| Current stage | Source collection and planning; the reader-facing book remains a TeachBooks template. |
-| Canonical branch | `main`; inspected at `6657df146cf1bfa98d515d6f192ce16aa6d0d806`. No release verified. |
+| Current stage | Lecture 1 implemented and locally checked; Weeks 2–5 remain to be written. |
+| Canonical branch | `main`; working tree based on `b1e21f70c9921e91c386f6836f3717498b14da06`. No release verified. |
 | Decision maker | Repository owner; final title and aesthetic preferences remain adjustable. |
-| Last verified | 2026-10-26, local source inspection; no rendered build or live deployment verified. |
+| Last verified | 2026-10-26: local strict build and Lecture 1 desktop/mobile/dark/print checks; live deployment unverified. |
 | Start here | This file → [rubricatm.md](rubricatm.md) → [todoSimple.md](todoSimple.md); implementation in `book/`, course sources in `resources/`. |
 
 ## 1. The premise
@@ -48,13 +48,13 @@ Observed implementation and intended experience are recorded separately.
 
 | Area | Observed state | Evidence | Caveat |
 | --- | --- | --- | --- |
-| Book | Template welcome, sample content, sample notebook, and authoring exercises. | `book/intro.md`, `book/some_content/`, `book/_toc.yml` | Weekly textbook chapters are absent. |
+| Book | Lecture 1: five teaching sections, synthesis, 24 explained problems, source notes. | `book/lecture1/`, `book/_toc.yml` | Weeks 2–5 and cumulative exam preparation remain unfinished. |
 | Lectures | Five PDF decks, 191 PDF pages in total. | `resources/lectures/` | Counts include title pages and progressive reveals; these are not 191 distinct lessons. |
 | Supporting materials | Six homework/worksheet/recitation PDFs; seven exam PDFs and a topic list. | `resources/HW/`, `resources/practiceExams/` | Inventory and text extraction completed; full mathematical and visual review remains. |
-| Build stack | TeachBooks, Jupyter Book v1 dependency, MyST/Sphinx configuration, and TeachBooks-Favourites. | `requirements.txt`, `book/_config.yml` | `teachbooks` and `jupyter-book` were not found on the inspected shell's PATH. |
-| Visual implementation | Template logos and a small attribution stylesheet. | `book/figures/`, `book/_static/attribution.css` | The visual system below is planned, not implemented. |
+| Build stack | Python 3.12, pinned TeachBooks/Jupyter Book v1 and sphinx-design; clean strict local build. | `requirements.txt`, `authoring/lecture1-review.md` | MathJax uses a CDN; deployment is unverified. |
+| Visual implementation | Shared craft palette, light/dark styles, four original SVGs, printable checkpoint answers. | `book/_static/textbook.css`, `book/figures/lecture1/` | Representative browser checks, not a full accessibility audit. |
 | Automation | Reusable TeachBooks deployment workflow triggered by book/config changes and manual dispatch. | `.github/workflows/call-deploy-book.yml` | Successful runs and GitHub Pages availability unverified. |
-| Project identity | README, title, author, repository URL, base URL, and navigation still contain template content. | `README.md`, `book/_config.yml`, `book/_toc.yml` | Must be replaced during implementation. |
+| Project identity | Working title, yarn mark, repository links, reader guide, setup README, chapter navigation. | `README.md`, `book/_config.yml`, `book/_toc.yml` | Final human author credit and publication URL remain to be settled. |
 
 **Known source limitations.** `Recitation1_Solutions.pdf` and `PT1_f22Sol.pdf` yielded no non-whitespace text with `pdftotext -layout`; inspect their pages visually or with OCR before relying on their contents. Extractable PDFs can still contain diagrams and handwritten annotations that text extraction misses. The Week 5 extracted text covers eigendecomposition and SVD but does not mention statistics or PCA; check the visual source and supporting materials before choosing where to add a clearly identified supplement.
 
@@ -208,7 +208,7 @@ Keep hot pink and bright green as vivid accents and figure fills. Use deep pink 
 
 **Interaction.** Offer weekly navigation, section contents, previous/next links, search, keyboard-visible focus, and collapsible solutions where supported. Core explanations and exercises must remain readable without interactive code. On small screens, keep navigation manageable and contain wide equations locally rather than overflowing the page. Print must expose essential content and preserve figure labels in grayscale.
 
-**Signature moments.** A weekly “What you will understand” opener; a diagram connected directly to its algebra; a closing concept map or synthesis followed by graduated practice. All are planned. No textbook screenshots or approved visual prototype yet exist.
+**Signature moments.** A weekly “What you will understand” opener; a diagram connected directly to its algebra; a closing concept map or synthesis followed by graduated practice. Lecture 1 implements these components; its rendered prototype and checks are recorded in [the review](authoring/lecture1-review.md). Owner aesthetic approval and learner feedback remain open.
 
 ## 6. Chapter architecture and weekly content
 
@@ -276,7 +276,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 | Horizon | Outcome | Evidence of done |
 | --- | --- | --- |
 | Now | Complete planning documents in the requested order. | Project-specific bible, weighted baseline rubric, and actionable checklist. |
-| Next | Source map, notation reference, reproducible build, and Week 1 editorial/visual prototype. | Readable rendered chapter with checked examples, practice, and reusable styles. |
+| Next | Owner/student review of Lecture 1; remaining source map and Lecture 2. | Improve the validated chapter pattern and continue in weekly order. |
 | Then | Weeks 2–5 built and reviewed in order. | All five chapters satisfy the same rubric and source coverage requirements. |
 | Then | Close statistics/PCA and midterm coverage gaps; integrate review. | Each topic and representative practice type maps to a verified section. |
 | Later | Publication-ready navigation, identity, attribution, accessibility, and delivery. | Successful build, rendered review, and separately authorized deployment verification. |
@@ -315,3 +315,5 @@ Update canon only after implementation and verification. Keep the roadmap in syn
 | 2026-10-26 | Organized analogy systems into per-theme folders, centralized PDF pages in course-map.md, moved development history to verification/, and standardized all six rubrics as unscored evidence ledgers. |
 | 2026-10-26 | Added the three-role teaching strategy: shadows for formal structure, light for targeted contrasts, yarn for recurring narrative and concrete checks, with all-topic allocation and an implementation sequence. |
 | 2026-10-26 | Strengthened knitting/crochet as the formal teaching backbone using repeated colorwork, uniform/alternating pattern geometry, marked crochet sectors, chart SVD and centered PCA; shadows/light are optional support. |
+
+**Lecture 1 implementation, 2026-10-26.** [Review record](authoring/lecture1-review.md) documents source coverage, numerical checks, rendered checks, and limits. Later-week plans remain plans.
