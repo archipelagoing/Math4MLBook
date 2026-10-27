@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="460" viewBox="0 0 1050 460" role="img" aria-labelledby="title desc">
+<title id="title">Closure is a test, not a shape impression</title><desc id="desc">A line y=x through zero contains (1,1) and its negative (-1,-1). A first-quadrant region contains (1,1) but not its negative.</desc>
+<rect width="1050" height="460" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<defs><marker id="pink-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker><marker id="green-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="40" class="title" >Closure is a test, not a shape impression</text>
+<text x="65" y="88" class="label" >Line through zero: y = x</text>
+<path d="M130 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M130 365 H370" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="130" y="267" class="small" text-anchor="middle">-2</text>
+<path d="M190 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M130 305 H370" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="190" y="267" class="small" text-anchor="middle">-1</text>
+<path d="M250 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M130 245 H370" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="250" y="267" class="small" text-anchor="middle">0</text>
+<path d="M310 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M130 185 H370" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="310" y="267" class="small" text-anchor="middle">1</text>
+<path d="M370 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M130 125 H370" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="370" y="267" class="small" text-anchor="middle">2</text>
+<path d="M130 245 H383" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M250 365 V112" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="392" y="250" class="small" >x</text>
+<text x="245" y="100" class="small" >y</text>
+<path d="M130 365 L370 125" fill="none" stroke="#3975DB" stroke-width="2" stroke-dasharray="5 5"/>
+<path d="M250 245 L310 185" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink-arrow)"/>
+<path d="M250 245 L190 305" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green-arrow)"/>
+<text x="320" y="175" class="small" >v</text>
+<text x="145" y="310" class="small" >−v</text>
+<text x="80" y="410" class="small" >Both remain in the line.</text>
+<text x="590" y="88" class="label" >First quadrant: x ≥ 0, y ≥ 0</text>
+<rect x="775" y="125" width="120" height="120" fill="#FFF0A6"/>
+<path d="M655 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M655 365 H895" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="655" y="267" class="small" text-anchor="middle">-2</text>
+<path d="M715 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M655 305 H895" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="715" y="267" class="small" text-anchor="middle">-1</text>
+<path d="M775 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M655 245 H895" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="775" y="267" class="small" text-anchor="middle">0</text>
+<path d="M835 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M655 185 H895" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="835" y="267" class="small" text-anchor="middle">1</text>
+<path d="M895 125 V365" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M655 125 H895" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="895" y="267" class="small" text-anchor="middle">2</text>
+<path d="M655 245 H908" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M775 365 V112" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="917" y="250" class="small" >x</text>
+<text x="770" y="100" class="small" >y</text>
+<path d="M775 245 L835 185" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink-arrow)"/>
+<path d="M775 245 L715 305" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green-arrow)" stroke-dasharray="7 5"/>
+<text x="845" y="180" class="small" >v: inside</text>
+<text x="622" y="336" class="small" >−v: outside</text>
+<text x="590" y="410" class="small" >Negative scaling leaves the set.</text>
+<text x="25" y="446" class="small" >The shaded quadrant is only the portion shown. Coordinates extend beyond the drawing.</text>
+</svg>

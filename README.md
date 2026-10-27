@@ -7,12 +7,12 @@ Each lecture has four **numbered topic pages in the left sidebar**, grouped unde
 its lecture title. Practice and expandable explained solutions follow the relevant
 topic on the same page. They are not separate sidebar destinations.
 
-| Page | Lecture 1 | Lecture 2 |
-| --- | --- | --- |
-| 1 | [Vectors and combinations](book/lecture1/index.md) | [Systems and elimination](book/lecture2/index.md) |
-| 2 | [Dot products and geometry](book/lecture1/geometry.md) | [Determinants and geometry](book/lecture2/elimination.md) |
-| 3 | [Matrices and products](book/lecture1/matrix-guide.md) | [Inverses and invertibility](book/lecture2/inverses.md) |
-| 4 | [TL;DR cheat sheet](book/lecture1/cheatsheet.md) | [TL;DR cheat sheet](book/lecture2/cheatsheet.md) |
+| Page | Lecture 1 | Lecture 2 | Lecture 3 |
+| --- | --- | --- | --- |
+| 1 | [Vectors and combinations](book/lecture1/index.md) | [Systems and elimination](book/lecture2/index.md) | [Spaces and subspaces](book/lecture3/index.md) |
+| 2 | [Dot products and geometry](book/lecture1/geometry.md) | [Determinants and geometry](book/lecture2/elimination.md) | [Complete solutions and rank](book/lecture3/solutions-rank.md) |
+| 3 | [Matrices and products](book/lecture1/matrix-guide.md) | [Inverses and invertibility](book/lecture2/inverses.md) | [Independence, span and basis](book/lecture3/basis.md) |
+| 4 | [TL;DR cheat sheet](book/lecture1/cheatsheet.md) | [TL;DR cheat sheet](book/lecture2/cheatsheet.md) | [TL;DR cheat sheet](book/lecture3/cheatsheet.md) |
 
 Lecture 1 retains 12 learning sections and 24 exercises. Lecture 2 covers all 36
 PDF pages in Parts A–N, with 17 numbered stepwise examples and 26 exercises.
@@ -20,7 +20,10 @@ Source banks `practice.md` and `solutions.md` are included by topic, preserving
 problem and solution IDs while placing answers directly below their questions.
 TL;DR pages collect formulas/conditions, method recipes and checked examples.
 The four-page cap concerns website navigation, not physical print sheets.
-Weeks 3–5 and cumulative exam preparation remain unfinished.
+Lecture 3 covers all 35 PDF pages with 16 worked examples, four diagrams and
+28 checked practice questions, including fresh variants, mapped recitation tasks
+and a mixed readiness check. Meaningful source corrections are explicit.
+Weeks 4–5 and cumulative exam preparation remain unfinished.
 
 Start agent work with [AGENTS.md](AGENTS.md), then the
 [current contract in the show bible](SHOW_BIBLE.md#current-authoring-contract).
@@ -45,7 +48,7 @@ configured CDN, so equation rendering requires an internet connection.
 
 ## Author and check
 
-Chapter sources are MyST Markdown in `book/lecture1/` and `book/lecture2/`; reader navigation is in
+Chapter sources are MyST Markdown in `book/lecture1/`, `book/lecture2/`, and `book/lecture3/`; reader navigation is in
 `book/_toc.yml`, and shared styling is in `book/_static/textbook.css`.
 
 ```sh
@@ -53,6 +56,8 @@ python tools/build_lecture1_figures.py
 python tools/check_lecture1.py
 python tools/build_lecture2_figures.py
 python tools/check_lecture2.py
+python tools/build_lecture3_figures.py
+python tools/check_lecture3.py
 jupyter-book build book --all --warningiserror --keep-going
 ```
 

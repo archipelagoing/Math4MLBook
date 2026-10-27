@@ -24,6 +24,15 @@ record states what a view reveals and what it leaves out.
 4. [Page 4 · TL;DR cheat sheet](lecture2/cheatsheet.md).
 :::
 
+:::{admonition} Lecture 3 · Spaces, rank, and basis
+:class: key-result
+
+1. [Page 1 · Spaces and subspaces](lecture3/index.md) — Parts A–E, with the four fundamental spaces.
+2. [Page 2 · Complete solutions and rank](lecture3/solutions-rank.md) — Parts F–G, including the handwritten systems.
+3. [Page 3 · Independence, span, and basis](lecture3/basis.md) — Parts H–K, coordinates and a mixed readiness check.
+4. [Page 4 · TL;DR cheat sheet](lecture3/cheatsheet.md).
+:::
+
 Each lecture uses at most **four reading pages, including exercises and solutions**.
 Each lecture has four numbered topic links in the left sidebar. Practice and
 expandable explained answers appear after the relevant material, not on separate
@@ -36,4 +45,4 @@ example, cover its solution, and reproduce the reasoning before trying a new pro
 Lecture 1 develops Erisa Terolli's CS 556 Week 1 slides in `resources/`.
 {ref}`Source notes <w1-source-notes>` identify original material and added constructions.
 Lecture 2 develops the complete Week 2 slide deck.
-{ref}`Source notes <w2-source-notes>` map all lecture parts and distinguish source material from editorial additions. Later chapters are not yet available.
+{ref}`Source notes <w2-source-notes>` map all lecture parts and distinguish source material from editorial additions. Lecture 3 develops all 35 Week 3 PDF pages; {ref}`its source notes <w3-source-notes>` record corrections and supporting-problem links. Lectures 4–5 are not yet available.

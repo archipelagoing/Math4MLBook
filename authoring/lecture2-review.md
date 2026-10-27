@@ -56,3 +56,14 @@ exam-cutoff compliance, or a live-site deployment. Supporting homework and exam
 blueprint mapping remain separate work. MathJax uses its configured CDN. The
 cheat sheet is one website page; print output is not constrained to one physical
 sheet and is not a dedicated typeset edition.
+
+## Numbered-navigation verification · 2026-10-27
+
+The strict build and current browser checks pass. The browser inspected the real
+left-sidebar captions/Page 1–4 labels and the topic allocation of questions and
+answers, not just the Markdown route. All original examples and solution IDs
+remain available; answers were keyboard-opened and all were expanded for mobile
+overflow checking. Desktop and mobile screenshots were visually reviewed.
+
+This run covered 10 page/viewport combinations and 266 local article
+links/assets, with zero MathJax errors, JavaScript errors or page-wide overflow.

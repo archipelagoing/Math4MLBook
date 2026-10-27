@@ -9,15 +9,18 @@ ROOT=Path(__file__).resolve().parents[1]/'book/_build/html'
 ROUTES={
  1:[('index','Vectors & combinations'),('geometry','Dot products & geometry'),('matrix-guide','Matrices & products'),('cheatsheet','TL;DR cheat sheet')],
  2:[('index','Systems & elimination'),('elimination','Determinants & geometry'),('inverses','Inverses & invertibility'),('cheatsheet','TL;DR cheat sheet')],
+ 3:[('index','Spaces & subspaces'),('solutions-rank','Complete solutions & rank'),('basis','Independence, span & basis'),('cheatsheet','TL;DR cheat sheet')],
 }
 GROUPS={1:[[1,2,3,9,10],[4,5,11,12,18,21],[6,7,8,13,14,15,16,17,19,20,22,23,24],[]],
-        2:[list(range(1,19)),list(range(19,22)),list(range(22,27)),[]]}
-PARTS={1:[3,3,6,0],2:[4,4,6,0]}
+        2:[list(range(1,19)),list(range(19,22)),list(range(22,27)),[]],
+        3:[list(range(1,9)),list(range(9,17)),list(range(17,29)),[]]}
+PARTS={1:[3,3,6,0],2:[4,4,6,0],3:[5,2,4,0]}
+EXAMPLES={1:12,2:17,3:16}
 
 async def review(lecture):
     evidence=Path(f'/tmp/math4ml-navigation/lecture{lecture}');evidence.mkdir(parents=True,exist_ok=True)
     pages=['intro.html']+[f'lecture{lecture}/{file}.html' for file,_ in ROUTES[lecture]]
-    expected_sidebar=['Mathematics, in view']+[f'Page {i} · {title}' for n in (1,2) for i,(_,title) in enumerate(ROUTES[n],1)]
+    expected_sidebar=['Mathematics, in view']+[f'Page {i} · {title}' for n in sorted(ROUTES) for i,(_,title) in enumerate(ROUTES[n],1)]
     reports=[];errors=[];links=0;examples=[]
     async with async_playwright() as p:
         browser=await p.chromium.launch();page=await browser.new_page()
@@ -30,7 +33,7 @@ async def review(lecture):
                 await page.evaluate('MathJax.startup.promise')
                 nav=[x.strip() for x in await page.locator('.bd-sidenav a').all_text_contents()]
                 assert nav==expected_sidebar,(relative,nav)
-                assert await page.locator('.bd-sidebar-primary .caption-text').count()==2
+                assert await page.locator('.bd-sidebar-primary .caption-text').count()==len(ROUTES)
                 if relative!='intro.html':
                     index=pages.index(relative)-1;stem=ROUTES[lecture][index][0]
                     path=page.locator('.lecture-path a')
@@ -64,7 +67,7 @@ async def review(lecture):
                             title=await example.locator('.admonition-title').first.inner_text()
                             match=re.search(fr'{lecture}\.(\d+)',title)
                             if match:examples.append(int(match.group(1)))
-                            if lecture==2:
+                            if lecture in (2,3):
                                 step_labels=await example.locator('.step-label').all_text_contents()
                                 steps=[int(re.search(r'Step (\d+)',x).group(1)) for x in step_labels]
                                 assert len(steps)>=2 and steps==list(range(1,len(steps)+1)),title
@@ -85,7 +88,7 @@ async def review(lecture):
             await page.evaluate('MathJax.startup.promise')
             await page.evaluate("window.dispatchEvent(new Event('beforeprint'))")
             assert await page.locator('article details:not([open])').count()==0
-        assert examples==list(range(1,13 if lecture==1 else 18)),examples
+        assert examples==list(range(1,EXAMPLES[lecture]+1)),examples
         await page.goto((ROOT/f'lecture{lecture}/cheatsheet.html').as_uri())
         await page.evaluate('MathJax.startup.promise')
         await page.evaluate("document.documentElement.dataset.theme='dark'")

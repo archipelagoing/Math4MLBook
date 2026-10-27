@@ -27,8 +27,8 @@ craft material remains historical/reference work. This revision is local.
 1. Review the completed Lecture 1 reading experience and gather reader feedback (§4).
 2. Complete the remaining source/notation map, including visual-only supporting
    PDFs and statistics/PCA (§2).
-3. Review the complete Lecture 2 and its cheat sheet (§5), then proceed through
-   Weeks 3–5 and close midterm coverage (§§6–9).
+3. Review the complete Lecture 3 and its cheat sheet (§6), then proceed through
+   Weeks 4–5 and close midterm coverage (§§7–9).
 
 ## 1. Define the project
 
@@ -346,17 +346,23 @@ integration item above is not marked complete solely from slide coverage.
 
 ## 6. Week 3 — Vector spaces, rank, and bases
 
-- [ ] Develop vector spaces/subspaces with valid examples and counterexamples;
+- [x] Develop vector spaces/subspaces with valid examples and counterexamples;
   connect span, linear independence, bases, and dimension.
-- [ ] Explain the four fundamental subspaces and their ambient dimensions, rank,
+- [x] Explain the four fundamental subspaces and their ambient dimensions, rank,
   pivots/free variables, and complete solutions to `Ax=b`.
-- [ ] Develop coordinate representations and change of basis with an explicit
+- [x] Develop coordinate representations and change of basis with an explicit
   direction convention and verified examples.
-- [ ] Integrate source-mapped figures, worked examples, checkpoints, common
+- [x] Integrate source-mapped figures, worked examples, checkpoints, common
   misconceptions, synthesis, graduated exercises, hints, and checked solutions.
-- [ ] Meet the chapter definition of done and verify dependencies on Weeks 1–2.
+- [x] Meet the chapter definition of done and verify dependencies on Weeks 1–2.
 
-Progress: Primary deck has 35 pages. Textbook sections and practice are not written.
+Progress (2026-10-27): All 35 PDF pages are implemented in Parts A–K, including
+the handwritten systems, 16 stepwise worked examples, four diagrams and a TL;DR.
+The 28 integrated questions include fresh variants, three explicitly mapped
+supporting problems and a four-question mixed rehearsal with editorial timing,
+scoring and diagnostic links. See [coverage](authoring/lecture3-coverage.md) and
+[verification](authoring/lecture3-review.md). Course-level exam mapping, independent
+expert review, student outcomes and live deployment remain separate work.
 
 ## 7. Week 4 — Orthogonality, projections, and least squares
 
@@ -569,3 +575,18 @@ active; they are not requirements for the five-week milestone.
 - [x] Split Lecture 1 into vectors, geometry, matrices and TL;DR; Lecture 2 into systems, determinants, inverses and TL;DR.
 - [x] Include practice and expandable answers immediately below each question on its topic page; preserve all IDs.
 - [x] Keep all source examples and conditions; update welcome/routes and source coverage records.
+
+- [x] Verify actual sidebar labels/order, topic-specific practice and answer links,
+  all preserved examples and anchors, desktop/mobile, keyboard answers, dark mode
+  and print. Strict build, 95 Lecture 1 and 98 Lecture 2 checks pass; each browser
+  run passes ten page/viewport checks. Local publication status remains unchanged.
+
+## Lecture 2 completion audit: remaining readiness work
+
+Slide coverage is complete; full rubric preparation remains open. See
+[the chapter assessment](authoring/lecture2-assessment.md).
+
+- [ ] Add genuinely fresh determinant/inverse transfer problems, including a non-unit determinant.
+- [ ] Add a compact mixed no-hint check with editorial timing/scoring and diagnostic revision links.
+- [ ] Complete the explicit supporting-homework/recitation/practice-exam mapping.
+- [ ] Clarify that the determinant sign factor counts row-swap operations; improve compressed solution explanations.

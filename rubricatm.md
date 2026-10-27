@@ -148,38 +148,58 @@ checks, blockers, and whether comparisons use the same target and weights.
 
 ## Latest assessment
 
-**Date:** 2026-10-27. **Base commit:** `e5b7724`, with local Lecture 2 revisions.
+**Date:** 2026-10-27. **Base commit:** `2d3dad1`, with local Lecture 3 implementation.
 
 **Current format:** Lecture 1 retains its 12 sections and 24 exercises. Lecture 2
 now covers **all 36 PDF pages** in 14 lettered parts A–N, following lecture order.
 It has 17 worked examples with highlighted numbered steps, 14 checkpoints,
 a dedicated TL;DR cheat sheet and 26 exercises with expandable solutions.
-Its four reader pages are systems/elimination, determinants/inverses, TL;DR,
-practice/solutions. The earlier systems-only scope is superseded.
-Weeks 3–5, the statistics/PCA bridge and cumulative exam assessment remain open.
+Its four numbered reader pages are systems/elimination, determinants/geometry,
+inverses/invertibility, and TL;DR. Practice and expandable answers are integrated
+by topic. Lecture 1 likewise uses vectors, geometry, matrices and TL;DR. The earlier systems-only scope is superseded.
+Lecture 3 now covers all 35 PDF pages in 11 ordered parts with 16 worked
+examples, 28 questions, four diagrams and a mixed independent rehearsal.
+Weeks 4–5, the statistics/PCA bridge and cumulative exam assessment remain open.
 
 The provisional whole-book score remains **56.25/100** under the same broad score
-bands and weights. Two complete lecture decks strengthen delivered coverage, but
+bands and weights. Three covered lecture decks strengthen delivered coverage, but
 five-week completion, independent review and student outcomes are not established.
 
 | Criterion | Weight | Score / 4 | Contribution | Current evidence and limits |
 | --- | ---: | ---: | ---: | --- |
-| Weekly coverage and source fidelity | 20 | 2 | 10 | Lectures 1–2 have specific source audits. Full Week 2 determinant/inverse coverage now included; later weeks and exam blueprint remain open. |
+| Weekly coverage and source fidelity | 20 | 2 | 10 | Lectures 1–3 have specific source audits, including handwritten Week 3 systems/corrections. Weeks 4–5 and the full exam blueprint remain open. |
 | Mathematical correctness and precision | 20 | 2 | 10 | Exact systems, determinants, cofactor arrays, both inverse products, dimensions/conditions and parameter families checked. Independent expert review and later material remain open. |
-| Exposition and learning progression | 20 | 2 | 10 | Lecture 1's 12 sections plus Lecture 2's 14 source-ordered parts. Highlighted steps explain operations and checks; later-week progression remains open. |
-| Practice and assessment | 15 | 2 | 7.5 | 50 exercises with explained answers/revision links and 26 checkpoints; Lecture 2 TL;DR supports formula and method review. Cumulative timed assessment and learner outcomes remain open. |
-| Visual design and accessibility | 15 | 3 | 11.25 | Shared readable palette, seven active diagrams, blue step labels, yellow results, red pitfalls, mobile/desktop and keyboard/print checks. Full accessibility audit remains open. |
-| Build integrity and reproducibility | 5 | 4 | 5 | Strict build, 93 Lecture 1 and 95 Lecture 2 checks, reproducible diagrams and browser scripts. Live deployment unverified. |
-| Editorial completeness and delivery | 5 | 2 | 2.5 | Four-page routes, full source notes, cheat sheet/readiness maps and status records. Later chapters, final credits and publication remain open. |
+| Exposition and learning progression | 20 | 2 | 10 | 37 learning sections/parts across Lectures 1–3. Highlighted steps explain operations and checks; later-week progression remains open. |
+| Practice and assessment | 15 | 2 | 7.5 | 78 exercises with explained answers/revision links and 37 checkpoints; Lecture 3 adds fresh variants, selected supporting-problem mapping and a scored mixed rehearsal. All three TL;DR pages support review. Cumulative timed assessment and learner outcomes remain open. |
+| Visual design and accessibility | 15 | 3 | 11.25 | Shared readable palette, 11 active diagrams, blue step labels, yellow results, red pitfalls, mobile/desktop and keyboard/print checks. Full accessibility audit remains open. |
+| Build integrity and reproducibility | 5 | 4 | 5 | Strict build, 95 Lecture 1, 98 Lecture 2 and 223 Lecture 3 checks, reproducible diagrams and browser scripts. Live deployment unverified. |
+| Editorial completeness and delivery | 5 | 2 | 2.5 | Four numbered sidebar pages per lecture, integrated practice/answers, root AGENTS.md, current show-bible contract, source notes and review maps. Later chapters, final credits and publication remain open. |
 | **Total** | **100** | | **56.25** | |
 
 **Verification:** [Lecture 1 record](authoring/lecture1-review.md) and
-[Lecture 2 record](authoring/lecture2-review.md). The current Lecture 2 browser
-review covers 10 page/viewport combinations, 278 local article links/assets,
-all 14 part labels in order, sequential steps in all 17 examples, the six-step
-main example/result panel and 26 solution dropdowns. No math errors, JavaScript
-errors or page-wide overflow were found. Local success does not confirm the live site.
+[Lecture 2 record](authoring/lecture2-review.md), plus the current
+[Lecture 3 record](authoring/lecture3-review.md). Each browser review passes
+10 page/viewport checks, inspecting actual numbered sidebar labels and topic-based
+practice allocation. All answers can be keyboard-opened and all local article
+links resolve. No math errors, JavaScript errors or page-wide overflow were found,
+including with answers expanded on phones. Local success does not confirm the live site.
 
 **Next improvements:** Gather comprehension feedback; continue remaining weekly
 chapters; complete supporting-problem and official exam topic mapping. Apply the
 full-deck, source-order, highlighted-step and TL;DR standard to subsequent work.
+
+**Lecture 2 completion audit, 2026-10-27:** [Chapter assessment](authoring/lecture2-assessment.md)
+distinguishes complete slide coverage from incomplete exam-readiness preparation.
+Problems 20, 22, 24 and 25 repeat worked matrices; fresh determinant/inverse
+variants and a mixed independent check remain needed. Supporting homework/exam
+question mapping is still open. The 98-check arithmetic run and strict build
+passed again. The provisional score above remains a whole-book score, not a
+chapter grade; full A-level preparation is not declared complete.
+
+**Lecture 3 evidence:** [Coverage](authoring/lecture3-coverage.md) and
+[verification](authoring/lecture3-review.md) document the full source chapter,
+source corrections and supporting-problem links. Ten new desktop/mobile checks
+and 239 local article links pass. Fresh practice and a transparent mixed check
+address the preparation weaknesses identified in the Lecture 2 audit, without
+claiming that student readiness or whole-course exam alignment has been demonstrated.
+The earlier Lecture 2 audit and its remaining tasks are unchanged.

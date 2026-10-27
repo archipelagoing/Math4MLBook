@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="510" viewBox="0 0 1050 510" role="img" aria-labelledby="title desc">
+<title id="title">Two views make the four spaces tangible</title><desc id="desc">O maps R3 input points to R2 front readings; H maps R3 to R4 stacked readings. Input cards list row and null spaces, output cards list column and left null spaces.</desc>
+<rect width="1050" height="510" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<defs><marker id="pink-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker><marker id="green-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="40" class="title" >Two views make the four spaces tangible</text>
+<rect x="25" y="100" width="355" height="153" rx="12" fill="#FFF0F6" stroke="#3975DB" stroke-width="1.5"/>
+<text x="41" y="134" class="small" >Input: ℝ³</text>
+<text x="41" y="177" class="small" >Row space: XY coordinate plane</text>
+<text x="41" y="220" class="small" >Null space: all (0, 0, t)</text>
+<rect x="565" y="100" width="460" height="153" rx="12" fill="#EFF9E7" stroke="#3975DB" stroke-width="1.5"/>
+<text x="581" y="134" class="small" >Output: ℝ²</text>
+<text x="581" y="177" class="small" >Column space: every screen pair</text>
+<text x="581" y="220" class="small" >Left null space: {0}</text>
+<text x="398" y="137" class="small" >O: front view</text>
+<path d="M395 174 H547" fill="none" stroke="#3975DB" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="25" y="300" width="355" height="153" rx="12" fill="#FFF0F6" stroke="#3975DB" stroke-width="1.5"/>
+<text x="41" y="334" class="small" >Input: ℝ³</text>
+<text x="41" y="377" class="small" >Row space: all ℝ³</text>
+<text x="41" y="420" class="small" >Null space: {0}</text>
+<rect x="565" y="300" width="460" height="153" rx="12" fill="#EFF9E7" stroke="#3975DB" stroke-width="1.5"/>
+<text x="581" y="334" class="small" >Output: ℝ⁴</text>
+<text x="581" y="377" class="small" >Column space: b2 = b3</text>
+<text x="581" y="420" class="small" >Left null: span of (0, 1, −1, 0)</text>
+<text x="398" y="337" class="small" >H: stacked views</text>
+<path d="M395 374 H547" fill="none" stroke="#3975DB" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="25" y="487" class="small" >Input changes versus output compatibility: different spaces answer different questions.</text>
+</svg>

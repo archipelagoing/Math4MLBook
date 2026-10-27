@@ -21,3 +21,13 @@ parts:
         title: Page 3 · Inverses & invertibility
       - file: lecture2/cheatsheet
         title: Page 4 · TL;DR cheat sheet
+  - caption: Lecture 3 · Spaces, rank, and basis
+    chapters:
+      - file: lecture3/index
+        title: Page 1 · Spaces & subspaces
+      - file: lecture3/solutions-rank
+        title: Page 2 · Complete solutions & rank
+      - file: lecture3/basis
+        title: Page 3 · Independence, span & basis
+      - file: lecture3/cheatsheet
+        title: Page 4 · TL;DR cheat sheet

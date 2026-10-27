@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="480" viewBox="0 0 1050 480" role="img" aria-labelledby="title desc">
+<title id="title">Same screen vector, different coefficient labels</title><desc id="desc">Fixed X,Y axes show b1=(3,1), b2=(1,1). The partial 1.5b1=(4.5,1.5), then adding 0.5b2=(0.5,0.5), reaches x=(5,2).</desc>
+<rect width="1050" height="480" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<defs><marker id="pink-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker><marker id="green-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="40" class="title" >Same screen vector, different coefficient labels</text>
+<path d="M80 125 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="80" y="363" class="small" text-anchor="middle">0</text>
+<path d="M145 125 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="145" y="363" class="small" text-anchor="middle">1</text>
+<path d="M210 125 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="210" y="363" class="small" text-anchor="middle">2</text>
+<path d="M275 125 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="275" y="363" class="small" text-anchor="middle">3</text>
+<path d="M340 125 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="340" y="363" class="small" text-anchor="middle">4</text>
+<path d="M405 125 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="405" y="363" class="small" text-anchor="middle">5</text>
+<path d="M470 125 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="470" y="363" class="small" text-anchor="middle">6</text>
+<path d="M80 340 H470" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="65" y="345" class="small" text-anchor="end">0</text>
+<path d="M80 275 H470" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="65" y="280" class="small" text-anchor="end">1</text>
+<path d="M80 210 H470" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="65" y="215" class="small" text-anchor="end">2</text>
+<path d="M80 145 H470" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="65" y="150" class="small" text-anchor="end">3</text>
+<path d="M80 340 H490" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M80 340 V110" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="495" y="345" class="small" >X</text>
+<text x="72" y="100" class="small" >Y</text>
+<path d="M80 340 L275 275" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink-arrow)"/>
+<path d="M80 340 L145 275" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green-arrow)"/>
+<text x="282" y="298" class="small" >b1 = (3, 1)</text>
+<text x="101" y="257" class="small" >b2 = (1, 1)</text>
+<path d="M80 340 L372.5 242.5" fill="none" stroke="#C91E70" stroke-width="2" stroke-dasharray="6 5"/>
+<path d="M372.5 242.5 L405 210" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green-arrow)"/>
+<circle cx="405" cy="210" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<text x="417" y="201" class="small" >(5, 2)</text>
+<text x="565" y="145" class="small" >Basis columns: (3, 1), (1, 1)</text>
+<text x="565" y="204" class="label" >New coefficients: (3/2, 1/2)</text>
+<text x="565" y="253" class="label" >Natural coordinates: (5, 2)</text>
+<text x="565" y="306" class="small" >3/2 b1 + 1/2 b2 reaches the same point.</text>
+<text x="25" y="415" class="small" >Solid arrows: basis directions. Dashed leg: 3/2 b1. Final green leg: 1/2 b2.</text>
+<text x="25" y="451" class="small" >Coordinates change; the calibrated origin and the screen mark stay fixed.</text>
+</svg>

@@ -159,3 +159,14 @@ open. Knitting/crochet examples are count constructions, not physically executed
 patterns or loop-accurate technique instruction. Qualified independent math/craft
 review and evidence of student transfer remain outstanding. Publication, live
 GitHub Pages behavior, and a polished standalone PDF edition were not verified.
+
+## Numbered-navigation verification · 2026-10-27
+
+The strict build and current browser checks pass. The browser inspected the real
+left-sidebar captions/Page 1–4 labels and the topic allocation of questions and
+answers, not just the Markdown route. All original examples and solution IDs
+remain available; answers were keyboard-opened and all were expanded for mobile
+overflow checking. Desktop and mobile screenshots were visually reviewed.
+
+This run covered 10 page/viewport combinations and 268 local article
+links/assets, with zero MathJax errors, JavaScript errors or page-wide overflow.

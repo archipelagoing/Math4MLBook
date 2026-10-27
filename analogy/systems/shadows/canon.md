@@ -346,3 +346,19 @@ with the same fixed origin: det(C)=1 and C inverse=[1,-1;-1,2]. It preserves
 screen area and can be undone. This is distinct from O's R3-to-R2 observation
 and does not recover hidden depth. The lecture's original determinant and inverse
 matrices remain formal examples; their interpretation does not change H's dimensions.
+
+## Week 3 integration · 2026-10-27
+
+The [new chapter](../../../book/lecture3/index.md) implements spaces, subspaces,
+all four fundamental spaces, complete solutions, rank, independence, span, basis
+and coordinate changes. O/H remain unchanged: for O, rank 2, row space XY,
+N(O)=span(eZ), C(O)=R2, and N(O transpose)={0}; for H, rank 3, row space R3,
+N(H)={0}, C(H)={b:b2=b3}, and N(H transpose)=span((0,1,−1,0)).
+
+The source's page-34 ordered basis columns are (3,1) and (1,1). Coefficients
+(3/2,1/2) reconstruct the same natural-coordinate screen vector (5,2), with
+B inverse=1/2[1,−1;−1,3]. Axes/origin and the observed mark are fixed; a
+nonorthonormal coefficient norm is not the screen's Euclidean norm. The null-space
+and complete-solution slide matrices are formal algebra examples, not silently
+redefined view maps. Four original diagrams and the chapter's formal checks
+support the implementation; no physical demonstration or student outcome is claimed.

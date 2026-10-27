@@ -59,13 +59,13 @@ replace the formulas or proofs. Preserve every distinct lecture example, includi
 examples with no analogy. Keep four website pages maximum per lecture, including
 exercises and solutions; use numbered sections within them.
 
-For Lecture 1, the route is:
+For Lecture 1, the topic route is:
 
 - Sections 1.1–1.6: coordinates, displacement arithmetic, profile combinations,
   dot products, norms/unit directions, and angles in the declared record space.
 - Sections 1.7–1.12: configuration-by-point matrices, special structures,
   entrywise arithmetic, transpose/trace, view maps, matrix products/properties.
-- Exercises/solutions: 24 formal questions with fresh variants, diagnostic feedback,
+- Integrated practice/solutions: 24 formal questions with fresh variants, diagnostic feedback,
   and links back to the method. Problems 1, 15, 16, and 19 now use the point scene.
 
 The four generated SVGs show hidden depth, labeled point profiles, record-space
@@ -109,3 +109,24 @@ The full-deck chapter explicitly distinguishes rectangular views O/H from the
 square screen-coordinate mixing map C=[2,1;1,1]. Det(C)=1 preserves screen area;
 C inverse undoes that mixing. It cannot recover the depth removed by O. Parts
 A–N preserve slide order; the TL;DR page supports subsequent exam review.
+
+**Numbered topic navigation:** Both lectures now have three consecutive topic
+pages followed by a TL;DR page. Lecture 1 separates dot products/geometry from
+vectors/combinations; Lecture 2 separates determinants/geometry from inverses.
+Practice and expandable answers follow the relevant topic. See `AGENTS.md` and
+the current show-bible contract before extending this route.
+
+## Lecture 3 implementation
+
+[Spaces](../book/lecture3/index.md), [complete solutions/rank](../book/lecture3/solutions-rank.md),
+and [basis/coordinates](../book/lecture3/basis.md) now develop the whole Week 3 deck.
+O's hidden Z direction is N(O), its row space is the XY input plane and every
+front pair is attainable. H has no hidden input direction but has the output
+condition b2=b3 and left-null direction (0,1,−1,0). Matched views distinguish
+input freedom from output compatibility without claiming arbitrary solid reconstruction.
+
+The page-34 basis matrix B=[3,1;1,1] is a coordinate-description change on a fixed
+front screen: (3/2,1/2) coefficients represent the same (5,2) screen vector. It does
+not move the point or restore lost depth. Formal course matrices remain explicitly
+separate examples. The chapter includes fresh practice and a mixed rehearsal;
+[source coverage](../authoring/lecture3-coverage.md) records corrections and limits.
