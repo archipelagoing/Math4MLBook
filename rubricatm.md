@@ -148,45 +148,35 @@ checks, blockers, and whether comparisons use the same target and weights.
 
 ## Latest assessment
 
-**Date:** 2026-10-26. **Base commit:** `9d932e0`;
-includes the local teaching-structure revision.
+**Date:** 2026-10-27. **Base commit:** `a8cbdf7`, with local Lecture 2 implementation.
 
-**Current format:** Textbook explanations, diagrams, worked examples, and checkpoint
-answers are restored. Lecture 1 has four website pages: vectors/geometry,
-matrices/products, exercises, solutions. The user's cap includes exercises and
-solutions; it does not limit printed sheets. Every distinct lecture example and
-formula/property is retained. The owner selected shadows; all active prose, exercises,
-solutions and figures now use that lens. The condensed formula-sheet format is superseded.
+**Current format:** Each lecture has at most four website pages including exercises
+and solutions. Lecture 1 retains its 12 sections/24 exercises. Lecture 2 now adds
+8 sections/18 exercises covering Week 2 systems (PDF pp. 1–21). Both use shadows,
+numbered learning sections, worked examples, checkpoints and revision links.
+Determinants/inverses (pp. 22–36), Weeks 3–5 and the statistics/PCA bridge remain open.
 
-The original five-week preparation criteria and weights remain below. The current
-whole-book score is **56.25/100 provisional**; it measures remaining breadth and
-assessment work, not whether the requested shorter format is preferable.
+The provisional whole-book score remains **56.25/100**. Adding a coherent systems
+chapter strengthens the evidence within the current broad score bands; it does
+not establish five-week coverage, independent review or student outcomes.
 
 | Criterion | Weight | Score / 4 | Contribution | Current evidence and limits |
 | --- | ---: | ---: | ---: | --- |
-| Weekly coverage and source fidelity | 20 | 2 | 10 | Lecture 1 key concepts summarized with source attribution; expanded source map retained. Later weeks and complete exam blueprint remain open. |
-| Mathematical correctness and precision | 20 | 2 | 10 | Definitions, conditions, example calculations, and matrix dimensions checked. Full independent review and later-week work remain open. |
-| Exposition and learning progression | 20 | 2 | 10 | Page objectives, 12 numbered sections/worked examples, source references, cosine proof, and method-selection guidance; later-week progression remains open. |
-| Practice and assessment | 15 | 2 | 7.5 | 12 checkpoints and 24 graduated exercises with explained solutions are in the reader route; cumulative/timed practice and student outcomes remain open. |
-| Visual design and accessibility | 15 | 3 | 11.25 | Yellow formulas, red pitfalls, readable palette, mobile and desktop math checks, print layout. Full accessibility audit remains open. |
-| Build integrity and reproducibility | 5 | 4 | 5 | Documented environment, clean strict build, numerical checks, updated browser review script. Live deployment of this revision unverified. |
-| Editorial completeness and delivery | 5 | 2 | 2.5 | Four-page navigation, numbered learning sections, readiness map, and accurate status documents. Later guides, final credits, and publication remain open. |
+| Weekly coverage and source fidelity | 20 | 2 | 10 | Lecture 1 and the Lecture 2 systems portion have specific source audits. Remaining Week 2 topics, later weeks and exam blueprint remain open. |
+| Mathematical correctness and precision | 20 | 2 | 10 | Exact arithmetic, row-operation sequences, dimensions, conditions and parameter families checked. Independent review and later material remain open. |
+| Exposition and learning progression | 20 | 2 | 10 | 20 numbered sections across two chapters with learning goals, examples, checkpoints and recaps; later-week progression remains open. |
+| Practice and assessment | 15 | 2 | 7.5 | 42 exercises with explained solutions, revision/retry links and 20 checkpoints; cumulative exam assessment and learner outcomes remain open. |
+| Visual design and accessibility | 15 | 3 | 11.25 | Shared readable palette, seven active diagrams, desktop/mobile math checks, keyboard checkpoint and print checks. Full accessibility audit remains open. |
+| Build integrity and reproducibility | 5 | 4 | 5 | Strict build, 93 Lecture 1 and 64 Lecture 2 arithmetic/structure checks, reproducible SVG generators, browser review scripts. Live deployment unverified. |
+| Editorial completeness and delivery | 5 | 2 | 2.5 | Four-page routes, source notes, readiness maps and implementation records. Remaining guides, final credits and publication remain open. |
 | **Total** | **100** | | **56.25** | |
 
-**Verification:** See [the current edition note](authoring/lecture1-review.md).
-Strict build passed. All five reader documents are checked at 1440/390 pixels:
-no MathJax errors, page-wide overflow, or JavaScript errors. The retained
-expanded-edition checker still passes 93 numerical/structural/narrative checks, including restored source examples.
+**Verification:** [Lecture 1 record](authoring/lecture1-review.md) and
+[Lecture 2 record](authoring/lecture2-review.md). Lecture 2 browser checks cover
+10 page/viewport combinations and 211 article links/assets, without math errors,
+JavaScript errors or page-wide overflow. Source figures and rendered layout were
+inspected. Local success does not confirm the deployed site.
 
-**Next improvements:** review comprehension of the structured chapter with the student; continue to
-Lecture 2 when authorized; resolve the statistics/PCA and exam coverage gaps.
-Student outcomes and independent review remain unverified.
-
-**Comparison:** The earlier 56.25 assessment applied to the expanded reader route; the first compact edition scored 47.5 before source examples and derivations were restored. The current revision restores the textbook learning sequence within
-four navigation pages, including the practice bank. No new student outcome is claimed.
-
-**Latest structure evidence:** The current 56.25 whole-book assessment keeps the
-same weights. Lecture 1 now implements the show bible's section-level learning
-sequence and all four reading pages; the browser checker verifies its 12 learning
-sections, examples and checkpoints. This is stronger chapter evidence, not a claim
-that the remaining weeks or A-level student outcomes are complete.
+**Next improvements:** Gather reader feedback; complete determinants/inverses,
+remaining weekly chapters, supporting-problem mapping and the exam coverage map.
+Keep future-work completion separate from verified student performance.

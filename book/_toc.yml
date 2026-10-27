@@ -12,3 +12,12 @@ parts:
             title: Exercises
           - file: lecture1/solutions
             title: Solutions
+      - file: lecture2/index
+        title: Lecture 2 · Systems of linear equations
+        sections:
+          - file: lecture2/elimination
+            title: Elimination and echelon forms
+          - file: lecture2/practice
+            title: Exercises
+          - file: lecture2/solutions
+            title: Solutions

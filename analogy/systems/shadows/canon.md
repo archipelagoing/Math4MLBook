@@ -325,3 +325,18 @@ The four active diagrams are `shadow-views.svg`, `shadow-profiles.svg`,
 [the figure builder](../../../tools/build_lecture1_figures.py).
 The [chapter review](../../../authoring/lecture1-review.md) records checks. No
 physical demonstration, outside review, or student effectiveness result is claimed.
+
+## Week 2 systems integration · 2026-10-27
+
+The [systems page](../../../book/lecture2/index.md) and
+[elimination page](../../../book/lecture2/elimination.md) now implement the exact
+reconstruction route. Front (2,3) with side (3,4) yields (2,3,4). The repeated
+Y row reduces to zero while every coordinate still has a pivot: unique does not
+require every row to be independent. Front alone leaves (2,3,t). Conflicting
+front (2,2) and side (4,4) produce 0=2, not an implicit average. General front
+(a,b), side (c,d) is consistent exactly when b=c, giving unique (a,b,d).
+
+Operations transform equations and their right sides, never the underlying point.
+The chapter includes source-only systems as well as the shared scene; no silhouette
+reconstruction or perspective claim is introduced. Determinants/inverses are not
+yet implemented. See the [source audit](../../../authoring/lecture2-coverage.md).

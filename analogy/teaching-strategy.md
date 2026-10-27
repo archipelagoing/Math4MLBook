@@ -36,7 +36,7 @@ integrality/nonnegativity rules rather than carrying them into the new analogy.
 ## 2. The connected course route
 
 Exact lecture pages remain in the [course map](course-map.md); the canon owns the
-matrices and mechanism boundaries. These later routes are plans, not written chapters.
+matrices and mechanism boundaries. Week 2 systems now has a written chapter; determinants/inverses and the later routes remain plans.
 
 | Course unit | Scene and mathematical purpose |
 | --- | --- |
@@ -95,3 +95,12 @@ and yellow highlights important conclusions.
 [exercises](../book/lecture1/practice.md) and [solutions](../book/lecture1/solutions.md)
 use consistent records. [The review](../authoring/lecture1-review.md) records
 verification. Later-week mechanisms remain plans until their chapters are written.
+
+## Lecture 2 implementation
+
+[Systems](../book/lecture2/index.md) and [elimination](../book/lecture2/elimination.md)
+use O and H to connect prediction to reconstruction, exact consistency, redundancy,
+and missing-coordinate freedom. Matched readings must agree on Y. Row operations
+rewrite constraints without changing the point; they do not create new observations.
+The 18 exercises include symbolic consistency of front (a,b), side (c,d): a unique
+point (a,b,d) exactly when b=c. Determinants/inverses remain future work.

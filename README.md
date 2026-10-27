@@ -16,9 +16,17 @@ results, and an end-of-chapter readiness map. Each solution links to a relevant
 explanation and a retry problem. All distinct lecture examples and
 properties remain; [the coverage audit](authoring/lecture1-coverage.md) maps them
 to the chapter. Each lecture is limited to four website pages including practice
-and solutions. Printed page count is not the navigation limit. Weeks 2–5 remain
-unfinished. The earlier condensed PDF is an archived summary, not the current
+and solutions. Printed page count is not the navigation limit. Lecture 2 now covers systems of linear equations; determinants/inverses and
+Weeks 3–5 remain unfinished. The earlier condensed PDF is an archived summary, not the current
 textbook reading experience.
+
+**Lecture 2 is also four pages:** [Systems and modelling](book/lecture2/index.md),
+[elimination and echelon forms](book/lecture2/elimination.md),
+[18 exercises](book/lecture2/practice.md), and [explained solutions](book/lecture2/solutions.md).
+It covers Week 2 PDF pages 1–21, with eight learning sections/checkpoints, the slide
+systems, Gaussian elimination/back substitution, Gauss–Jordan, REF/RREF, and solution
+classification. [Source audit](authoring/lecture2-coverage.md) and
+[review record](authoring/lecture2-review.md) identify scope and checks.
 
 ## Read locally
 
@@ -38,12 +46,14 @@ configured CDN, so equation rendering requires an internet connection.
 
 ## Author and check
 
-Chapter sources are MyST Markdown in `book/lecture1/`; reader navigation is in
+Chapter sources are MyST Markdown in `book/lecture1/` and `book/lecture2/`; reader navigation is in
 `book/_toc.yml`, and shared styling is in `book/_static/textbook.css`.
 
 ```sh
 python tools/build_lecture1_figures.py
 python tools/check_lecture1.py
+python tools/build_lecture2_figures.py
+python tools/check_lecture2.py
 jupyter-book build book --all --warningiserror --keep-going
 ```
 

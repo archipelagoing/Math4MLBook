@@ -239,7 +239,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 - **Path:** Objectives → explanation and examples → checkpoints → synthesis → practice and solutions.
 - **Success:** Reader can explain the central ideas and solve a new representative problem.
 - **Recovery:** Link prerequisite concepts, provide hints, explain common errors, and expose worked solutions.
-- **Implementation/status:** Lecture 1 implements this route in four website pages; later weekly chapters remain unfinished.
+- **Implementation/status:** Lectures 1 and 2 (systems portion) implement this route in four website pages each; remaining material is unfinished.
 
 ### Flow: Review for the midterm
 
@@ -354,3 +354,12 @@ examples, four diagrams, exercises, solutions, and book branding now use marked
 points and calibrated views. Retain the 12-section teaching structure and four-page
 navigation cap. Other lenses remain available as references; prior craft-centered
 instructions above are historical where they conflict with this decision.
+
+**Lecture 2 systems implementation, 2026-10-27.** The requested Week 2 systems
+material (PDF pp. 1–21) follows the same shadow-led teaching sequence in four
+website pages: systems/modelling, elimination/echelon forms, exercises, solutions.
+Eight numbered sections/checkpoints, three original diagrams, and 18 explained
+practice problems preserve source examples and distinguish Gaussian elimination
+with back substitution from Gauss–Jordan to RREF. Determinants/inverses on
+pp. 22–36 remain open. See [coverage](authoring/lecture2-coverage.md) and
+[review](authoring/lecture2-review.md). Publication and learner outcomes are unverified.

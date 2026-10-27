@@ -27,8 +27,8 @@ craft material remains historical/reference work. This revision is local.
 1. Review the completed Lecture 1 reading experience and gather reader feedback (§4).
 2. Complete the remaining source/notation map, including visual-only supporting
    PDFs and statistics/PCA (§2).
-3. Carry the established craft-centered chapter pattern into Lecture 2 (§5), then
-   proceed through Weeks 3–5 and close midterm coverage (§§6–9).
+3. Review the shadow-led Lecture 2 systems chapter (§5), then finish determinants/
+   inverses, proceed through Weeks 3–5, and close midterm coverage (§§6–9).
 
 ## 1. Define the project
 
@@ -324,9 +324,9 @@ Independent reviewer and learner-performance evidence remain open, as do later w
 
 ## 5. Week 2 — Systems, determinants, and inverses
 
-- [ ] Develop systems, column interpretation, augmented matrices, elementary row
+- [x] Develop systems, column interpretation, augmented matrices, elementary row
   operations, elimination, echelon forms, pivots, and back substitution.
-- [ ] Explain unique/inconsistent/infinitely many solution cases with appropriate
+- [x] Explain unique/inconsistent/infinitely many solution cases with appropriate
   examples, distinguishing a needed row swap from actual singularity.
 - [ ] Develop determinants, expansion/properties, area/volume interpretation,
   invertibility, Gauss–Jordan, and cofactor inverse formulas with assumptions.
@@ -335,7 +335,12 @@ Independent reviewer and learner-performance evidence remain open, as do later w
 - [ ] Meet the chapter definition of done, including independent computations,
   source mapping, a successful build, and rendered inspection.
 
-Progress: Primary deck has 36 pages. Supporting homework contains elimination,
+Progress (2026-10-27): The requested systems portion, PDF pp. 1–21, is built in
+four Lecture 2 pages with eight sections, three diagrams, eight checkpoints and
+18 exercises/solutions. Determinants and inverses (pp. 22–36) remain open; the
+whole Week 2 chapter checklist above is not complete. See
+[coverage](authoring/lecture2-coverage.md) and [verification](authoring/lecture2-review.md).
+Supporting homework contains elimination,
 invertibility, and parameter-dependent systems; exact problem mapping remains open.
 
 ## 6. Week 3 — Vector spaces, rank, and bases

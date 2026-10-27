@@ -42,8 +42,8 @@ async def main():
                             await figure.screenshot(path=f'/tmp/math4ml-shadow-{identifier}.png')
                 if relative == 'lecture1/index.html':
                     await page.screenshot(path=f'/tmp/math4ml-restored-{width}.png')
-                    nav = await page.locator('.bd-sidenav a').all_text_contents()
-                    assert len(nav) == 5, nav  # Home plus four lecture pages.
+                    nav = await page.locator('.bd-sidenav > .toctree-l1.current a').all_text_contents()
+                    assert len(nav) == 4, nav  # Current chapter remains four pages.
                     if width == 1440:
                         await page.locator('#fig-w1-shadows').screenshot(path='/tmp/math4ml-shadow-views-preview.png')
                         checkpoint = page.locator('.bd-article details summary').first

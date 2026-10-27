@@ -1,4 +1,4 @@
-/* Shared teaching styles: light/dark pairs keep the craft palette readable. */
+/* Shared teaching styles: readable light/dark pairs for the textbook palette. */
 html, html[data-theme="light"] {
   --book-paper: #fff9f5;
   --book-ink: #543124;
@@ -129,6 +129,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, figure:focus-visib
 .bd-article div.math { overflow-x: auto; overflow-y: hidden; padding: .2rem .15rem; }
 .bd-article mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .2rem .1rem; }
 .bd-article code { color: var(--book-ink); background: var(--book-definition); border: 0; padding: .12em .28em; border-radius: 4px; font-size: .85em; }
+.bd-article :not(pre) > code, .bd-article :not(pre) > code .pre { white-space: normal; overflow-wrap: anywhere; }
 .bd-article blockquote { border-left: 3px solid var(--book-blue); color: var(--book-ink); padding-left: 1rem; }
 .bd-article ul, .bd-article ol { padding-left: 1.5rem; }
 .bd-article li { margin-bottom: .5rem; }
@@ -156,6 +157,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, figure:focus-visib
   .bd-article figure img { min-width: 0; max-width: 100%; }
   #jb-print-docs-body h1 { font-size: 24pt; }
   #jb-print-docs-body h2 { font-size: 16pt; }
+  #jb-print-docs-body, #jb-print-docs-body .admonition-title,
+  #jb-print-docs-body a { color: #201911 !important; text-shadow: none; }
+  #jb-print-docs-body .admonition { box-shadow: none !important; }
+  .bd-article .admonition > .admonition-title { color: #201911 !important; text-shadow: none !important; }
+  .bd-article .admonition { box-shadow: none !important; }
   .bd-header, .bd-sidebar-primary, .bd-sidebar-secondary, .article-header-buttons, .prev-next-area, .bd-footer, .skip-link { display: none !important; }
   .bd-main, .bd-content, .bd-article-container { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
   .bd-article { font-size: 10.5pt; line-height: 1.5; }
