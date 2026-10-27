@@ -1,450 +1,355 @@
 (w2-elimination-page)=
-# Elimination and echelon forms
+# Determinants and geometry
 
-Elimination replaces a coupled set of equations with a staircase of simpler ones.
-The point is to expose what the equations determine, not merely to manufacture zeros.
+<div class="chapter-kicker">Lecture 2 · Page 2 of 4 · Parts E–H</div>
+
+After solving systems, the lecture asks what a square matrix preserves or collapses.
+Follow determinant definitions, properties, Laplace expansion, and geometric uses
+in PDF pages 22–29. Inverses follow on Page 3.
 
 <nav class="lecture-path" aria-label="Lecture 2 learning path">
-<a href="index.html"><span class="path-number">01</span><span>Systems & modelling</span></a>
-<a href="elimination.html" aria-current="page"><span class="path-number">02</span><span>Elimination & echelon forms</span></a>
-<a href="practice.html"><span class="path-number">03</span><span>Exercises</span></a>
-<a href="solutions.html"><span class="path-number">04</span><span>Solutions</span></a>
+<a href="index.html"><span class="path-number">01</span><span>Systems & elimination</span></a>
+<a href="elimination.html" aria-current="page"><span class="path-number">02</span><span>Determinants & geometry</span></a>
+<a href="inverses.html"><span class="path-number">03</span><span>Inverses & invertibility</span></a>
+<a href="cheatsheet.html"><span class="path-number">04</span><span>TL;DR cheat sheet</span></a>
 </nav>
-
-## Before you begin
-
-Know how to build an augmented matrix and perform the three
-{ref}`elementary row operations <w2-row-operations>`. Keep fractions exact until
-checking the result; decimals can conceal a zero or a contradiction.
-
-:::{admonition} What you will understand
-:class: key-result
-
-1. Recognize REF and RREF, and identify pivots and free variables.
-2. Carry out Gaussian elimination and back substitution.
-3. Continue to RREF using Gauss–Jordan elimination when requested.
-4. Distinguish unique, infinitely many, and no solutions from the reduced equations.
-:::
 
 ::::{div} page-roadmap
 
-**On this page**
+**Continue in lecture order**
 
-- {ref}`2.5 · REF versus RREF <w2-ref>`
-- {ref}`2.6 · Gaussian elimination <w2-gaussian>`
-- {ref}`2.7 · Gauss–Jordan elimination <w2-jordan>`
-- {ref}`2.8 · Read the solution set <w2-solutions>`
+- {ref}`E · Determinants <w2-determinants>`
+- {ref}`F · Determinant properties <w2-det-properties>`
+- {ref}`G · Laplace expansion <w2-laplace>`
+- {ref}`H · Applications <w2-det-applications>`
 ::::
 
-(w2-ref)=
-## 2.5 Row echelon form versus reduced row echelon form
+(w2-determinants)=
+## E · Determinants
 
 ::::{div} section-intro
 
-**Learning goal:** Recognize the stopping forms and explain their extra conditions.
+**Learning goal:** Interpret determinant notation and compute the 2×2 case.
 
-<span class="source-label">Lecture page 8</span>
-
-When are the zeros arranged well enough to solve—and when can you read the answer directly?
+<span class="source-label">Lecture PDF pages 22–23</span>
 ::::
 
-
-### A staircase, then a cleaner staircase
-
-:::{admonition} Definition 2.2 · REF and RREF
+:::{admonition} Definition · Determinant
 :class: definition
 
-A matrix is in **row echelon form (REF)** when:
+The **determinant** assigns a real number to a **square** matrix:
+$\det(A)=|A|$. Vertical bars around a matrix mean determinant, not entrywise
+absolute values. For $2\times2$,
 
-1. All zero rows are below all nonzero rows.
-2. In each successive nonzero row, the first nonzero entry (the **pivot**) lies
-   strictly to the right of the pivot above it.
-3. Entries below every pivot are zero.
-
-It is in **reduced row echelon form (RREF)** when, in addition:
-
-4. Every pivot is 1.
-5. Every pivot is the only nonzero entry in its column—zeros above as well as below.
-
-These definitions apply to rectangular matrices too, including augmented matrices.
+$$\boxed{\det\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc}.$$
 :::
 
-| Test | REF | RREF |
-| --- | --- | --- |
-| Zero rows at bottom; pivots step right | Required | Required |
-| Zeros below pivots | Required | Required |
-| Pivots equal 1 | Optional | Required |
-| Zeros above pivots | Optional | Required |
-| General solution method | Back substitution | Read pivot equations directly |
+A nonzero determinant means the square map preserves enough information to be
+reversed. A zero determinant means it collapses at least one direction. The
+sign records orientation; the absolute value records area/volume scaling.
 
-Every RREF matrix is in REF. The reverse does not follow. REF is not unique;
-different legal choices can give different echelon matrices. RREF is unique for
-a given matrix. We use that fact as a checking aid, without needing its proof here.
-
-:::{admonition} Worked example 2.5 · Classify before calculating
+:::::{admonition} Worked example 2.9 · Compute a 2×2 determinant
 :class: example
 
-$$E=\left[\begin{array}{ccc|c}1&1&3&15\\0&1&1&6\\0&0&-1&-2\end{array}\right].$$
+::::{div} worked-step
 
-Its pivots occupy columns 1, 2, 3, stepping strictly right, with zeros below.
-Thus $E$ is in **REF**. It is **not RREF**: the third pivot is $-1$, and there
-are nonzero entries above pivots in columns 2 and 3. Turning $-1$ into 1 alone
-would still not be enough; those entries above must also be cleared.
+<span class="step-label">Step 1 · Identify the diagonal products</span>
 
-The lecture's displayed matrix is already RREF:
+For $C=\begin{bmatrix}2&1\\1&1\end{bmatrix}$, use $a=2,b=1,c=1,d=1$.
+The products are $ad=2$ and $bc=1$.
+::::
 
-$$B=\begin{bmatrix}1&3&0&0&3\\0&0&1&0&9\\0&0&0&1&4\\0&0&0&0&0\end{bmatrix}.$$
+::::{div} worked-step
 
-The pivots are the 1s in columns **1, 3, 4**, and each is alone in its column.
-The entries 3 in column 2 and 3,9,4 in column 5 are allowed: those are **nonpivot
-columns**. A pivot need not sit on the main diagonal.
+<span class="step-label">Step 2 · Subtract in the correct order</span>
 
-**Check:** inspect pivot columns, not every nonzero entry. $B$ is shown as an
-ordinary matrix; without an augmentation bar we do not assume its last column
-is a right-hand side.
-:::
+$\det(C)=2(1)-1(1)=1$. Because this is nonzero, an inverse exists.
+We will compute it in Parts K and M.
+::::
 
-```{figure} ../figures/lecture2/echelon.svg
-:name: fig-w2-echelon
-:alt: REF matrix rows (1,1,3|15), (0,1,1|6), (0,0,-1|-2) have highlighted staircase pivots. RREF rows (1,0,0|5), (0,1,0|4), (0,0,1|2) have unit pivots and zeros above and below. Labels distinguish constants from variable columns.
+::::{div} key-answer
 
-REF exposes a staircase for back substitution. RREF also normalizes pivots and
-clears above them. The augmented constant column stays attached throughout.
-```
-
+**Keep this result:** $\det(C)=1$. The formula is $ad-bc$, not $ad+bc$.
+::::
+:::::
 
 :::{admonition} Check your understanding
 :class: checkpoint
 
-Is $\begin{bmatrix}0&2&1\\0&0&3\\0&0&0\end{bmatrix}$ in REF? RREF? Does the first column of zeros prevent REF?
+Does a $2\times3$ matrix have a determinant?
 :::
 
 :::{dropdown} Check your reasoning
 
-It is REF: pivots 2 and 3 occur in columns 2 and 3; the zero row is last. It is not RREF because pivots are not 1 and column 3 has a nonzero entry above its pivot. A zero first column is allowed.
+No. The determinant here is defined only for square matrices.
 :::
 
 ::::{div} section-recap
 
-**Keep this:** REF is a staircase; RREF also makes each pivot a lone 1 in its column.
+**Keep this:** Determinant: one number for a square matrix, with zero marking collapse.
 
-**Try it yourself:** {ref}`Problem 9 <w2-p09>` · {ref}`Problem 10 <w2-p10>`.
+**Practice:** {ref}`19 <w2-p19>` · {ref}`22 <w2-p22>`.
 ::::
 
-(w2-gaussian)=
-## 2.6 Gaussian elimination and back substitution
+(w2-det-properties)=
+## F · Basic and derived determinant properties
 
 ::::{div} section-intro
 
-**Learning goal:** Choose nonzero pivots, eliminate below them, and solve upward.
+**Learning goal:** Use determinant rules without losing a sign or scale factor.
 
-<span class="source-label">Lecture pages 6–7 and 9–15</span>
-
-How do repeated X terms become a system that can be solved from the bottom?
+<span class="source-label">Lecture PDF pages 24–25</span>
 ::::
 
+### Basic properties (p. 24)
 
-### The multiplier that cancels an entry
+$\det(I_n)=1$. Swapping two rows reverses the sign. Scaling one row by $t$
+scales the determinant by $t$. It is **linear in one row at a time**, with all
+other rows held fixed:
 
-With nonzero pivot $a$ and an entry $c$ below it, use
+$$\begin{vmatrix}ta&tb\\c&d\end{vmatrix}
+=t\begin{vmatrix}a&b\\c&d\end{vmatrix},$$
+$$\begin{vmatrix}a+a'&b+b'\\c&d\end{vmatrix}
+=\begin{vmatrix}a&b\\c&d\end{vmatrix}
++\begin{vmatrix}a'&b'\\c&d\end{vmatrix}.$$
 
-$$R_i\leftarrow R_i-\frac{c}{a}R_k.$$
+### Derived properties (p. 25)
 
-The targeted entry becomes $c-(c/a)a=0$. In actual arithmetic, $a$ and $c$ are
-entries of the **current** matrix, after preceding operations.
+| Property | What to use |
+| --- | --- |
+| Two equal rows or a zero row | $\det(A)=0$ |
+| Add a multiple of another row | Determinant unchanged |
+| Upper or lower triangular matrix | $\det(A)=\prod_i a_{ii}$ |
+| Same-size square product | $\det(AB)=\det(A)\det(B)$ |
+| Transpose | $\det(A^T)=\det(A)$ |
+| Invertible versus singular | Invertible iff $\det(A)\ne0$; singular iff $\det(A)=0$ |
 
-Work from left to right. If the next pivot position is zero, swap in a lower row
-with a nonzero entry in that column. If none exists, skip that column and look
-right; it can become a free-variable column. Once the staircase is formed, stop
-if REF was requested, or back substitute if the task is to solve.
+The corresponding column statements follow by transposing. For an invertible
+matrix, $\det(A^{-1})=1/\det(A)$ by applying the product rule to $AA^{-1}=I$.
 
-:::{admonition} Worked example 2.6 · The lecture's main system
-:class: example
+:::{admonition} Why row addition leaves the determinant unchanged
+:class: proof
 
-**Given:** $x+y+3z=15$, $x+2y+4z=21$, $x+y+2z=13$.
-
-**Step 1: augment in the order $(x,y,z)$.**
-
-$$M_0=\left[\begin{array}{ccc|c}1&1&3&15\\1&2&4&21\\1&1&2&13\end{array}\right].$$
-
-**Step 2: clear below the first pivot.** Use the unchanged first row for both
-$R_2\leftarrow R_2-R_1$ and $R_3\leftarrow R_3-R_1$:
-
-$$M_1=\left[\begin{array}{ccc|c}1&1&3&15\\0&1&1&6\\0&0&-1&-2\end{array}\right].$$
-
-For example, row 3 is $(1-1,1-1,2-3\mid13-15)$.
-The entry below the second pivot is already zero, so **$M_1$ is REF**.
-
-**Step 3: back substitute from the bottom.**
-
-$$-z=-2\Rightarrow z=2,\qquad y+z=6\Rightarrow y=4,$$
-$$x+y+3z=15\Rightarrow x=15-4-6=5.$$
-
-**Step 4: check the original equations.**
-
-$$5+4+3(2)=15,\quad5+2(4)+4(2)=21,\quad5+4+2(2)=13.$$
-
-Thus $\mathbf x=(5,4,2)^T$. There is a pivot for every unknown and no
-contradiction, so this is the unique solution.
+Linearity splits the changed row into the original row plus a multiple of another
+row. The added determinant has two equal rows, so that added term is zero.
 :::
 
-### A zero in the first position calls for a swap
+:::::{admonition} Worked example 2.10 · Use elimination to compute a determinant
+:class: example
 
-For $2y=4$, $x+y=3$, write
+::::{div} worked-step
 
-$$\left[\begin{array}{cc|c}0&2&4\\1&1&3\end{array}\right]
-\xrightarrow{R_1\leftrightarrow R_2}
-\left[\begin{array}{cc|c}1&1&3\\0&2&4\end{array}\right].$$
+<span class="step-label">Step 1 · Make the coefficient matrix triangular</span>
 
-Back substitution gives $y=2$, $x=1$. The swap repaired the pivot order; it did
-not exchange the meanings of $x$ and $y$. Columns stayed in the declared order.
+For the running system's $A$, subtract row 1 from rows 2 and 3:
 
-:::{admonition} Common pitfall · Do not divide by a zero pivot
+$$A=\begin{bmatrix}1&1&3\\1&2&4\\1&1&2\end{bmatrix}
+\longrightarrow U=\begin{bmatrix}1&1&3\\0&1&1\\0&0&-1\end{bmatrix}.$$
+
+These row additions leave the determinant unchanged. Compute a determinant of
+**$A$**, not of the rectangular augmented array.
+::::
+
+::::{div} worked-step
+
+<span class="step-label">Step 2 · Multiply the diagonal and account for operations</span>
+
+$\det(A)=\det(U)=1\cdot1\cdot(-1)=-1$.
+If you had swapped $s$ rows or scaled rows by nonzero factors $t_1,\ldots,t_k$,
+then $\det(U)=(-1)^s(t_1\cdots t_k)\det(A)$: undo those effects.
+::::
+
+::::{div} key-answer
+
+**Keep this result:** Row addition is determinant-preserving; row swaps and scaling require bookkeeping.
+::::
+:::::
+
+:::{admonition} Pitfall · Not linear in the whole matrix
 :class: pitfall
 
-A zero candidate means **look below or move right**, not “the system has no
-solution.” Use fractions exactly, preserve earlier zeros, and write each row
-operation beside the next matrix. Verify constants as carefully as coefficients.
+In general, $\det(A+B)\ne\det(A)+\det(B)$. Scaling every row gives
+$\det(tA)=t^n\det(A)$ for an $n\times n$ matrix, not merely $t\det(A)$.
+Row operations preserve **solutions** when applied to an augmented system;
+only row addition automatically preserves its coefficient determinant.
 :::
-
 
 :::{admonition} Check your understanding
 :class: checkpoint
 
-In $\left[\begin{array}{cc|c}2&1&5\\6&4&16\end{array}\right]$, which multiple clears the 6? What row results?
+If a row swap gives a triangular matrix with diagonal $2,3,-1$, what was the original determinant?
 :::
 
 :::{dropdown} Check your reasoning
 
-Use $R_2\leftarrow R_2-3R_1$, obtaining $[0,1\mid1]$. Then $y=1$ and $x=2$; the original second equation gives $6(2)+4(1)=16$.
+The triangular determinant is $-6$. One swap reverses the sign, so the original determinant was 6.
 :::
 
 ::::{div} section-recap
 
-**Keep this:** Gaussian elimination clears below pivots; back substitution solves from bottom to top.
+**Keep this:** Track swaps and row scales; then use the triangular diagonal product.
 
-**Try it yourself:** {ref}`Problem 11 <w2-p11>` · {ref}`Problem 12 <w2-p12>` · {ref}`Problem 13 <w2-p13>`.
+**Practice:** {ref}`19 <w2-p19>` · {ref}`20 <w2-p20>`.
 ::::
 
-(w2-jordan)=
-## 2.7 Gauss–Jordan elimination: continue to RREF
+(w2-laplace)=
+## G · Laplace expansion
 
 ::::{div} section-intro
 
-**Learning goal:** Normalize pivots and eliminate above them without changing the solution.
+**Learning goal:** Compute a determinant from correctly signed minors.
 
-<span class="source-label">Lecture pages 12–21</span>
-
-What extra work lets the final matrix state each determined variable directly?
+<span class="source-label">Lecture PDF pages 26–28</span>
 ::::
 
+Delete row $i$ and column $j$ to obtain the submatrix $A_{\widehat i,\widehat j}$.
+Its determinant is the **minor** $M_{ij}$; the signed minor is the **cofactor**
+$C_{ij}=(-1)^{i+j}M_{ij}$. The sign grid begins
+$\begin{bmatrix}+&-&+\\-&+&-\\+&-&+\end{bmatrix}$.
 
-The slides use “Gaussian elimination” for a reduction that continues to RREF.
-To distinguish the endpoints, we call the forward-to-REF stage **Gaussian
-elimination**, and the continuation that clears above pivots **Gauss–Jordan
-elimination**. Match the form requested in the question.
-
-:::{admonition} Worked example 2.7 · Finish the same system
-:class: example
-
-Start from $M_1$ in Example 2.6; no need to repeat the forward stage.
-
-**Step 1: normalize the third pivot**, $R_3\leftarrow-R_3$:
-
-$$M_2=\left[\begin{array}{ccc|c}1&1&3&15\\0&1&1&6\\0&0&1&2\end{array}\right].$$
-
-**Step 2: clear above that pivot**, using $R_1\leftarrow R_1-3R_3$ and
-$R_2\leftarrow R_2-R_3$:
-
-$$M_3=\left[\begin{array}{ccc|c}1&1&0&9\\0&1&0&4\\0&0&1&2\end{array}\right].$$
-
-**Step 3: clear above the second pivot**, $R_1\leftarrow R_1-R_2$:
-
-$$M_4=\left[\begin{array}{ccc|c}1&0&0&5\\0&1&0&4\\0&0&1&2\end{array}\right].$$
-
-The coefficient block is $I_3$. The equations now read $x=5,y=4,z=2$, agreeing
-with back substitution. **Check the endpoint:** unit staircase pivots, zeros above
-and below, and no contradiction. The original-equation check still applies.
-:::
-
-Working from the rightmost pivot upward is convenient: a lower pivot row already
-has zeros in earlier pivot columns, so clearing above it preserves those columns.
-Different legal operation orders may produce different intermediate matrices,
-but the same RREF and solution set.
-
-:::{admonition} Key result 2.2 · Choose an endpoint deliberately
+:::{admonition} Formula · Expand along one fixed row or column
 :class: key-result
 
-**Find REF:** stop at a valid staircase. **Solve by Gaussian elimination:** form
-REF, then back substitute. **Find RREF:** normalize pivots and clear above them too.
-Back substitution and Gauss–Jordan are alternative finishing methods; doing both
-is useful for learning or checking, not a requirement of every problem.
+**Row $i$:** $\displaystyle\det(A)=\sum_{j=1}^n a_{ij}(-1)^{i+j}\det(A_{\widehat i,\widehat j})$.
+
+**Column $j$:** $\displaystyle\det(A)=\sum_{i=1}^n a_{ij}(-1)^{i+j}\det(A_{\widehat i,\widehat j})$.
+
+Choose a row or column with many zeros. Every deleted submatrix is $(n-1)\times(n-1)$.
 :::
 
+:::::{admonition} Worked example 2.11 · The lecture's Laplace expansion (pp. 27–28)
+:class: example
+
+::::{div} worked-step
+
+<span class="step-label">Step 1 · Choose row 1 and its signs</span>
+
+For $D=\begin{bmatrix}1&2&3\\3&1&2\\0&0&1\end{bmatrix}$,
+row 1 has signs $+,-,+$.
+::::
+
+::::{div} worked-step
+
+<span class="step-label">Step 2 · Delete the row and column for each entry</span>
+
+The three minors are
+
+$$M_{11}=\begin{vmatrix}1&2\\0&1\end{vmatrix}=1,\quad
+M_{12}=\begin{vmatrix}3&2\\0&1\end{vmatrix}=3,\quad
+M_{13}=\begin{vmatrix}3&1\\0&0\end{vmatrix}=0.$$
+::::
+
+::::{div} worked-step
+
+<span class="step-label">Step 3 · Multiply entry × signed minor, then add</span>
+
+$\det(D)=1(1)-2(3)+3(0)=-5$.
+Check along row 3 instead: its only nonzero term is
+$1\begin{vmatrix}1&2\\3&1\end{vmatrix}=1-6=-5$.
+::::
+
+::::{div} key-answer
+
+**Keep this result:** $\boxed{\det(D)=-5}$. A sparse row gives the same result with less work.
+::::
+:::::
 
 :::{admonition} Check your understanding
 :class: checkpoint
 
-Is $M_3$ above RREF? Which single operation completes it?
+What sign multiplies the minor at position $(2,3)$?
 :::
 
 :::{dropdown} Check your reasoning
 
-No: the 1 in row 1, column 2 is above the second pivot. $R_1\leftarrow R_1-R_2$ removes it and updates 9 to 5.
+$(-1)^{2+3}=-1$. The cofactor changes the sign of that minor; the minor itself may already be negative.
 :::
 
 ::::{div} section-recap
 
-**Keep this:** RREF adds unit pivots and zeros above; it expresses the same solutions more directly.
+**Keep this:** Fix one row or column; delete, sign, multiply, add.
 
-**Try it yourself:** {ref}`Problem 14 <w2-p14>` · {ref}`Problem 15 <w2-p15>`.
+**Practice:** {ref}`20 <w2-p20>` · {ref}`25 <w2-p25>`.
 ::::
 
-(w2-solutions)=
-## 2.8 Read the whole solution set
+(w2-det-applications)=
+## H · Determinant applications
 
 ::::{div} section-intro
 
-**Learning goal:** Identify consistency and parameterize all free variables.
+**Learning goal:** Connect determinant magnitude to geometry and nonzero determinant to inversion.
 
-<span class="source-label">Lecture page 8 and 21; contrasting solution cases added</span>
-
-What do pivots and zero rows tell us about what the measurements really determine?
+<span class="source-label">Lecture PDF pages 29</span>
 ::::
 
+For a square matrix whose columns are edge vectors, $|\det(A)|$ is the area of
+the spanned parallelogram in 2D or volume of the parallelepiped in 3D. Applied
+to a region, it is the factor by which the linear map scales area or volume.
+The sign distinguishes preserved from reversed orientation.
 
-### Check contradictions before counting free variables
-
-:::{admonition} Key result 2.3 · The three possibilities over the real numbers
-:class: key-result
-
-After reduction of $[A\mid\mathbf b]$:
-
-| What you see | What it means |
-| --- | --- |
-| A row $[0\;\cdots\;0\mid c]$, $c\ne0$ | **No solution:** it requires $0=c$ |
-| No contradiction; every variable column has a pivot | **One solution** |
-| No contradiction; at least one variable column has no pivot | **Infinitely many solutions:** choose free real parameters |
-
-A **pivot variable** corresponds to a pivot in a coefficient column. Other
-variables are **free**. A pivot in the augmented constant column signals a
-contradiction, not a new variable. A zero row $[0\;\cdots\;0\mid0]$ says $0=0$.
-:::
-
-:::{admonition} Worked example 2.8 · A family, not a single guess
+:::::{admonition} Worked example 2.12 · Interpret the lecture determinant geometrically
 :class: example
 
-Suppose reduction gives
+::::{div} worked-step
 
-$$\left[\begin{array}{ccc|c}1&2&0&3\\0&0&1&4\\0&0&0&0\end{array}\right].$$
+<span class="step-label">Step 1 · Use the correct shape and dimension</span>
 
-1. **Test consistency.** No contradictory row appears.
-2. **Locate pivots.** Columns 1 and 3 determine $x$ and $z$; $y$ is free.
-3. **Introduce a parameter:** let $y=t\in\mathbb R$. Then $x=3-2t$ and $z=4$.
-4. **State all solutions:**
+The three columns of $D$ in Part G span a parallelepiped in $\mathbb R^3$,
+not an arbitrary solid or a triangle.
+::::
 
-   $$\mathbf x=\begin{bmatrix}3-2t\\t\\4\end{bmatrix}
-   =\begin{bmatrix}3\\0\\4\end{bmatrix}
-   +t\begin{bmatrix}-2\\1\\0\end{bmatrix},\qquad t\in\mathbb R.$$
+::::{div} worked-step
 
-5. **Check completeness.** Substitution gives $(3-2t)+2t=3$ and $z=4$ for every
-   $t$. Conversely, any solution has some value $y=t$ and must have the displayed
-   $x$ and $z$. Thus no solutions are omitted.
+<span class="step-label">Step 2 · Take the absolute value for volume</span>
 
-The set is a line in unknown-coordinate space. Writing only $(3,0,4)$ would give
-one member and conceal the freedom.
-:::
+Since $\det(D)=-5$, that parallelepiped has volume $5$.
+The negative sign indicates reversed orientation; volume itself is not negative.
+A triangle formed from two 2D edges has area $\tfrac12|\det(A)|$.
+::::
 
-### Redundant and contradictory are different
+::::{div} key-answer
 
-For $x+y=2$ and $2x+2y=4$, subtract twice row 1 from row 2 to get $[0,0\mid0]$.
-The family is $(2-t,t)$, $t\in\mathbb R$. Change the second constant to 5 and
-the same operation gives $[0,0\mid1]$: no solution. In two dimensions these are
-coincident lines versus distinct parallel lines.
+**Keep this result:** Use $|\det|$ for area/volume; keep the sign when orientation matters.
+::::
+:::::
 
-Return to $H$: its repeated Y equation reduces to a zero row when readings agree,
-yet all three coordinate columns still have pivots, so the point is unique.
-With the front view alone, the missing Z pivot makes depth free. With conflicting
-Y readings, a constant-column pivot records inconsistency.
+In the shadow scene, apply $C=\begin{bmatrix}2&1\\1&1\end{bmatrix}$ to a
+front-screen coordinate record. Its determinant 1 preserves screen area, and
+its inverse can undo this coordinate mixing. It cannot recover depth that the
+front view never recorded.
 
-:::{admonition} ML connection · Exact fitting comes before approximate fitting
-:class: connection
-
-A linear model also writes predictions as $A\mathbf x$, with rows for observations
-and columns for adjustable coefficients. Solving $A\mathbf x=\mathbf b$ asks whether
-the predictions can match every target exactly. Redundant observations may add
-no new constraint; conflicting ones can prevent an exact fit. Least squares will
-later define a best approximation. Elimination here does not silently replace an
-inconsistent exact problem with that different objective.
-:::
-
+The second application is **inversion**: an inverse requires $\det(A)\ne0$.
+The inverse formula divides the **adjugate**, not the original matrix, by that
+number. We now build that method in the lecture's order.
 
 :::{admonition} Check your understanding
 :class: checkpoint
 
-Can a system with four equations and three unknowns have a unique solution and a zero row after reduction?
+If a 2D transformation has determinant $-3$, what happens to an area of 4?
 :::
 
 :::{dropdown} Check your reasoning
 
-Yes. The consistent stacked-view system $H$ is exactly this case. Every variable column has a pivot; the fourth equation is redundant. Count pivot columns rather than zero rows alone.
+Its image has area $|-3|\cdot4=12$, and orientation reverses.
 :::
 
 ::::{div} section-recap
 
-**Keep this:** First test consistency; then identify pivots and parameterize every remaining variable.
+**Keep this:** Absolute determinant measures geometric scaling; nonzero determinant permits inversion.
 
-**Try it yourself:** {ref}`Problem 16 <w2-p16>` · {ref}`Problem 17 <w2-p17>` · {ref}`Problem 18 <w2-p18>`.
+**Practice:** {ref}`21 <w2-p21>`.
 ::::
 
-(w2-readiness)=
-## Synthesis and exam readiness
 
-The connected route is **coordinates → predicted readings → simultaneous
-constraints → equivalent simpler equations → solution set → original-data check**.
-Rows describe constraints; columns describe contributions. Elimination simplifies
-the description while retaining the same possible inputs.
+(w2-practice-determinants)=
+## Practice · determinants and geometry
 
-| Skill to demonstrate unaided | Independent practice |
-| --- | --- |
-| Multiply by rows and explain the column combination | {ref}`1 <w2-p01>`, {ref}`2 <w2-p02>` |
-| Translate systems and build augmented matrices | {ref}`3 <w2-p03>`, {ref}`5 <w2-p05>` |
-| Justify legal operations and spot information loss | {ref}`6 <w2-p06>` |
-| Recognize REF/RREF and choose the requested endpoint | {ref}`9 <w2-p09>`, {ref}`10 <w2-p10>`, {ref}`15 <w2-p15>` |
-| Reduce, back substitute, and verify | {ref}`11 <w2-p11>`–{ref}`14 <w2-p14>` |
-| Interpret unique, infinite, and inconsistent cases | {ref}`7 <w2-p07>`, {ref}`8 <w2-p08>`, {ref}`16 <w2-p16>`–{ref}`18 <w2-p18>` |
+Try each problem before opening its explained answer directly below. Problem numbers
+remain stable across the chapter; the questions here follow this page’s topics.
 
-Before moving on, check that you can:
+```{include} practice.md
+:start-after: <!-- determinants:start -->
+:end-before: <!-- determinants:end -->
+```
 
-- [ ] Reproduce a new elimination with every row operation and right side correct.
-- [ ] Explain why REF need not have unit pivots and why RREF may have nonpivot columns.
-- [ ] Handle a zero pivot candidate without dividing by zero.
-- [ ] Give all solutions with parameters, rather than one convenient example.
-- [ ] Distinguish redundancy from contradiction and verify in the original system.
-
-**Independent rehearsal:** try Problems 12, 15, and 18 without notes; then check
-the explanations. A wrong arithmetic step calls for a careful row-by-row retry;
-a wrong solution classification calls for revisiting Section 2.8. This is an
-editorial readiness check, not an official exam cutoff or a grade guarantee.
-
-(w2-source-notes)=
-## Sources, additions, and next steps
-
-This chapter develops Erisa Terolli's CS 556 Week 2 slides,
-`resources/lectures/WK2_SLE_Inverse_Determinants.pdf`, **PDF pages 1–21**
-(page numbers count from the first PDF page). The difference matrix (p. 3),
-two-variable system (p. 4), three-plane system (p. 5), main elimination system
-(pp. 6–7, 9–21), and displayed RREF matrix (p. 8) are retained. Progressive slide
-reveals are combined into complete worked sequences. Missing steps, original
-checks, contrasting solution cases, diagrams, and shadow constructions are
-editorial additions; the formal definitions clarify that row scaling must be nonzero.
-
-The slides' reduction through RREF is retained; our terminology distinguishes
-Gaussian forward elimination from the Gauss–Jordan continuation. These are
-algorithmic stages, not different solution sets.
-
-**Scope:** this is the requested systems-of-equations chapter. Determinants and
-inverses on PDF pages 22–36 are not yet taught here. Week 3 will give names—rank,
-null space, independence—to the freedom and redundancy we can already detect.
-The source audit and verification record are in the repository's
-`authoring/lecture2-coverage.md` and `authoring/lecture2-review.md`.
+**Next:** [Page 3 · Inverses and invertibility](inverses.md).

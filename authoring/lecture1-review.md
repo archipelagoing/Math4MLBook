@@ -1,6 +1,24 @@
 # Lecture 1 editorial and validation record
 
-## Current edition: show-bible teaching structure
+## Current edition · Numbered topic pages
+
+2026-10-27: the sidebar is grouped under Lecture 1 with four explicit numbered
+links: Page 1 vectors/combinations; Page 2 dot products/geometry; Page 3 matrices/
+products; Page 4 TL;DR. The 12 teaching sections and all source mathematics are
+preserved. The 24 questions/answers are included by topic, with each explained
+solution expandable directly below its question. Original labels and retry links
+remain. `practice.md`/`solutions.md` are source banks, not reader pages.
+
+`tools/check_lecture1.py` passes **95** arithmetic/pairing/asset/narrative checks.
+The strict book build passes. `tools/review_lecture1.py` delegates to the shared
+`review_textbook.py`, which checks the actual sidebar labels, per-page section and
+practice allocation, all original example numbers, references and keyboard answers
+at desktop/mobile sizes, with every solution expanded for overflow checks.
+Rendered evidence is recorded under `/tmp/math4ml-navigation/lecture1/`.
+The earlier format-specific review below is historical. No deployment or observed
+student effectiveness is implied by this local reorganization.
+
+## Previous edition: show-bible teaching structure
 
 **Selected scene:** The owner selected shadows to replace knitting/crochet. The
 active welcome, two teaching pages, exercises, solutions, book mark and four SVGs

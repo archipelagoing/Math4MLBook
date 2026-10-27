@@ -1,17 +1,17 @@
 (w1-matrix-guide)=
-# Lecture 1 · Matrices and products
+# Matrices and products
 
-<div class="chapter-kicker">Organize observations, then compare views</div>
+<div class="chapter-kicker">Lecture 1 · Page 3 of 4 · Organize observations, then compare views</div>
 
 One point or one measurement profile gave us a vector. Recording several
 configurations gives a matrix; placing screen-axis responses in its rows gives
 a map from a point to its measurements. Keep those two uses of a matrix distinct.
 
 <nav class="lecture-path" aria-label="Lecture 1 learning path">
-<a href="index.html"><span class="path-number">01</span><span>Vectors & geometry</span></a>
-<a href="matrix-guide.html" aria-current="page"><span class="path-number">02</span><span>Matrices & products</span></a>
-<a href="practice.html"><span class="path-number">03</span><span>Exercises</span></a>
-<a href="solutions.html"><span class="path-number">04</span><span>Solutions</span></a>
+<a href="index.html"><span class="path-number">01</span><span>Vectors & combinations</span></a>
+<a href="geometry.html"><span class="path-number">02</span><span>Dot products & geometry</span></a>
+<a href="matrix-guide.html" aria-current="page"><span class="path-number">03</span><span>Matrices & products</span></a>
+<a href="cheatsheet.html"><span class="path-number">04</span><span>TL;DR cheat sheet</span></a>
 </nav>
 
 :::{admonition} What you will understand
@@ -716,7 +716,7 @@ axes define observation maps. Each map determines what its output can distinguis
 | Matrix arithmetic and products | {ref}`7 <w1-p07>`, {ref}`14 <w1-p14>`, {ref}`15 <w1-p15>`, {ref}`16 <w1-p16>` |
 | Fresh mixed reasoning | {ref}`19–24 <w1-p19>` on the exercises page |
 
-Try the [exercises](practice.md) before consulting [solutions](solutions.md).
+Try the {ref}`practice below <w1-practice-matrices>` before opening its answers.
 For a missed skill, revisit its explanation, retry without the answer, and then
 attempt a changed problem. In Lecture 2, the question becomes: which input x
 produces a given output b in $A\mathbf x=\mathbf b$?
@@ -754,3 +754,16 @@ that moving a coordinate origin is a linear map.
 The synthesis exercises on symmetric/skew parts and trace(AB)=trace(BA) extend the
 lecture using definitions already taught. No physical camera experiment or
 independent learner validation is claimed.
+
+(w1-practice-matrices)=
+## Practice · matrices and products
+
+Try each problem before opening its explained answer directly below. Problem numbers
+remain stable across the chapter; the questions here follow this page’s topics.
+
+```{include} practice.md
+:start-after: <!-- matrices:start -->
+:end-before: <!-- matrices:end -->
+```
+
+**Review:** [Page 4 · TL;DR cheat sheet](cheatsheet.md).

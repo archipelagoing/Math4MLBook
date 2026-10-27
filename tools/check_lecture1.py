@@ -143,14 +143,14 @@ equal(product(O,[[5],[-2],[10]]),[[5],[-2]])
 
 practice=(ROOT/'book/lecture1/practice.md').read_text()
 solutions=(ROOT/'book/lecture1/solutions.md').read_text()
-equal(re.findall(r'^\(w1-p(\d+)\)=',practice,re.M),[f'{n:02}' for n in range(1,25)])
+equal(sorted(re.findall(r'^\(w1-p(\d+)\)=',practice,re.M)),[f'{n:02}' for n in range(1,25)])
 equal(re.findall(r'^\(w1-s(\d+)\)=',solutions,re.M),[f'{n:02}' for n in range(1,25)])
-equal(re.findall(r'<w1-s(\d+)>',practice),[f'{n:02}' for n in range(1,25)])
+equal(sorted(re.findall(r'<w1-s(\d+)>',practice)),[f'{n:02}' for n in range(1,25)])
 # Only active assets are part of this chapter's validation; earlier SVGs are retained.
 for name in ['shadow-views','shadow-profiles','shadow-geometry','shadow-map']:
     import xml.etree.ElementTree as ET
     path=ROOT/'book/figures/lecture1'/f'{name}.svg'
     equal(ET.parse(path).getroot().tag,'{http://www.w3.org/2000/svg}svg')
-for path in [ROOT/'book/intro.md',*[ROOT/'book/lecture1'/f'{name}.md' for name in ['index','matrix-guide','practice','solutions']]]:
+for path in [ROOT/'book/intro.md',*[ROOT/'book/lecture1'/f'{name}.md' for name in ['index','geometry','matrix-guide','cheatsheet','practice','solutions']]]:
     equal(bool(re.search(r'\b(knitting|crochet|stitch|stitches|swatch|sampler|fabric|yarn)\b',path.read_text(),re.I)),False)
 print(f'{checks} Lecture 1 arithmetic, pairing, active-asset, and narrative checks passed.')

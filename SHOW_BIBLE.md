@@ -10,11 +10,43 @@ Observed implementation and intended experience are recorded separately.
 | Project | [Math4MLBook](https://github.com/archipelagoing/Math4MLBook) |
 | Working title | Mathematical Foundations of Machine Learning |
 | Premise | A beautiful, rigorous, readable textbook that develops the course's weekly slides into a complete learning experience. |
-| Current stage | Lecture 1: four website pages, with 12 numbered learning sections, objectives, worked steps, checkpoints, and synthesis. |
-| Canonical branch | `main`; current teaching-structure revision based on `9d932e0`. This local revision is not deployed. |
+| Current stage | Lectures 1–2 implemented; four numbered topic/review pages each, with practice and explained answers beside the relevant material. |
+| Canonical branch | `main`; numbered topic-page revision is local and not deployed. |
 | Decision maker | Repository owner; final title and aesthetic preferences remain adjustable. |
-| Last verified | 2026-10-26: local strict build and Lecture 1 desktop/mobile/dark/print checks; live deployment unverified. |
-| Start here | This file → [rubricatm.md](rubricatm.md) → [todoSimple.md](todoSimple.md); implementation in `book/`, course sources in `resources/`. |
+| Last verified | 2026-10-27: local strict build and arithmetic checks; current browser evidence is in the lecture review records. Live deployment unverified. |
+| Start here | [AGENTS.md](AGENTS.md) → current contract here → [rubricatm.md](rubricatm.md) → [todoSimple.md](todoSimple.md). |
+
+## Current authoring contract
+
+This section is the current instruction source. It supersedes conflicting format,
+analogy, scope and navigation decisions retained below as history. Operational
+instructions for repository agents are in [AGENTS.md](AGENTS.md).
+
+- Cover the entire lecture deck: every mathematical topic, formula, condition,
+  property, distinct example and meaningful annotation. Map source pages and
+  preserve topic order; combine title pages/progressive reveals without omission.
+- Use at most **four website pages per lecture**. Split at consecutive lecture-topic
+  boundaries, not into separate Exercises and Solutions destinations. Put relevant
+  practice and expandable explained answers on the corresponding topic page.
+- The **left sidebar** must group links under a lecture caption, explicitly name
+  **Page 1–4**, and give each page an informative topic title. Keep the sidebar,
+  welcome page, on-page route, and actual content in agreement. Update `_toc.yml`;
+  headings alone do not change the sidebar.
+- Current page routes: Lecture 1 — vectors/combinations → dot products/geometry →
+  matrices/products → TL;DR. Lecture 2 — systems/elimination → determinants/geometry
+  → inverses/invertibility → TL;DR. Maintain lecture order within and across pages.
+- Preserve section/concept/problem/solution anchors when relocating content.
+  Keep source banks as included fragments rather than extra reader pages.
+- End with a dedicated TL;DR: core formulas **with conditions**, selection cues,
+  solving recipes/stopping rules, a compact checked example, and error reminders.
+- Teach through goals, intuition, precise definitions/results, concise explanations,
+  numbered worked steps with how/why, checkpoints, takeaways and linked practice.
+- Shadows are the primary analogy. Blue labels structure steps, yellow highlights
+  important results, red marks pitfalls, green groups examples, pink defines terms;
+  retain readable cocoa text, blush paper and contrasting light/dark pairs.
+- Verify complete source coverage, mathematics, the **actual sidebar**, desktop,
+  mobile, keyboard answers, cross-page references and print. Local builds and
+  source documents do not establish live deployment or student effectiveness.
 
 ## 1. The premise
 
@@ -48,7 +80,7 @@ Observed implementation and intended experience are recorded separately.
 
 | Area | Observed state | Evidence | Caveat |
 | --- | --- | --- | --- |
-| Book | Lecture 1: two structured teaching pages, 24 exercises, and explained solutions; four website pages total. | `book/lecture1/`, `book/_toc.yml` | Weeks 2–5 and cumulative exam preparation remain unfinished. |
+| Book | Lectures 1 and 2, four numbered topic/review pages each with integrated practice and answers. | `book/lecture1/`, `book/lecture2/`, `book/_toc.yml` | Weeks 3–5 and cumulative exam preparation remain unfinished. |
 | Lectures | Five PDF decks, 191 PDF pages in total. | `resources/lectures/` | Counts include title pages and progressive reveals; these are not 191 distinct lessons. |
 | Supporting materials | Six homework/worksheet/recitation PDFs; seven exam PDFs and a topic list. | `resources/HW/`, `resources/practiceExams/` | Inventory and text extraction completed; full mathematical and visual review remains. |
 | Build stack | Python 3.12, pinned TeachBooks/Jupyter Book v1 and sphinx-design; clean strict local build. | `requirements.txt`, `authoring/lecture1-review.md` | MathJax uses a CDN; deployment is unverified. |
@@ -239,7 +271,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 - **Path:** Objectives → explanation and examples → checkpoints → synthesis → practice and solutions.
 - **Success:** Reader can explain the central ideas and solve a new representative problem.
 - **Recovery:** Link prerequisite concepts, provide hints, explain common errors, and expose worked solutions.
-- **Implementation/status:** Lectures 1 and 2 (systems portion) implement this route in four website pages each; remaining material is unfinished.
+- **Implementation/status:** Lectures 1 and 2 (full decks) implement this route in four website pages each; remaining material is unfinished.
 
 ### Flow: Review for the midterm
 
@@ -255,7 +287,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 - **Path:** Read source pages and relevant problems → draft → check mathematics → render → inspect → update source notes and checklist.
 - **Success:** Section meets the shared chapter standard and builds with valid references.
 - **Recovery:** Keep unreadable source pages and unresolved mathematical discrepancies explicitly open.
-- **Implementation/status:** Workflow defined here; chapter implementation not started.
+- **Implementation/status:** Workflow implemented for Lectures 1–2; subsequent chapters remain planned.
 
 ## 7. Continuity ledger
 
@@ -363,3 +395,31 @@ practice problems preserve source examples and distinguish Gaussian elimination
 with back substitution from Gauss–Jordan to RREF. Determinants/inverses on
 pp. 22–36 remain open. See [coverage](authoring/lecture2-coverage.md) and
 [review](authoring/lecture2-review.md). Publication and learner outcomes are unverified.
+
+**Lecture 2 flow refinement.** Follow one running system through the full solving
+method; introduce notation through the concrete equations before generalizing.
+Explain each operation's purpose before showing it. Keep contrasting source
+examples in labeled follow-ups and apply the shadow model after the solve.
+Avoid repeated full setups and premature discussion of free variables. Preserve
+concise prose, numbered sections, readable teaching panels and all four reader pages.
+
+**Current lecture coverage and cheat-sheet requirement, 2026-10-27.** The owner
+requires every mathematical topic and distinct example from each lecture, in
+source order, with lettered parts (A, B, C, …). A selected topic list is not a
+reason to omit the rest of that lecture. This supersedes Lecture 2's earlier
+systems-only boundary. Map every PDF page; merge title pages/progressive reveals
+without dropping content. Source fidelity still permits clear mathematical corrections.
+
+Each worked example must use visibly numbered action steps, state how/why each
+operation is performed, and check the result. Blue labels structure steps; yellow
+marks key results, red flags pitfalls, green groups examples, and pink introduces
+definitions. Do not rely on bold paragraphs alone for procedural highlighting.
+
+The textbook also builds a useful exam cheat sheet: provide a dedicated TL;DR
+page with core formulas **and conditions**, method-selection/stopping rules, and
+a concise complete example. Preserve the four-page cap by combining practice
+and expandable explained solutions when needed. Lecture 2 now uses A–D systems,
+E–N determinants/inverses, TL;DR, practice/solutions; 14 parts, 17 worked examples,
+and 26 practice problems cover PDF pp. 1–36. See the latest
+[source audit](authoring/lecture2-coverage.md) and [review](authoring/lecture2-review.md).
+Earlier source-only/format notes above are historical wherever they conflict.

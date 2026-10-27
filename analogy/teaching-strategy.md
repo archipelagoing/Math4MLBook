@@ -36,7 +36,7 @@ integrality/nonnegativity rules rather than carrying them into the new analogy.
 ## 2. The connected course route
 
 Exact lecture pages remain in the [course map](course-map.md); the canon owns the
-matrices and mechanism boundaries. Week 2 systems now has a written chapter; determinants/inverses and the later routes remain plans.
+matrices and mechanism boundaries. Week 2 systems, determinants and inverses now have a written chapter; later routes remain plans.
 
 | Course unit | Scene and mathematical purpose |
 | --- | --- |
@@ -102,5 +102,10 @@ verification. Later-week mechanisms remain plans until their chapters are writte
 use O and H to connect prediction to reconstruction, exact consistency, redundancy,
 and missing-coordinate freedom. Matched readings must agree on Y. Row operations
 rewrite constraints without changing the point; they do not create new observations.
-The 18 exercises include symbolic consistency of front (a,b), side (c,d): a unique
-point (a,b,d) exactly when b=c. Determinants/inverses remain future work.
+The 26 exercises include symbolic consistency of front (a,b), side (c,d): a unique
+point (a,b,d) exactly when b=c. Determinants/inverses are now included for declared square maps.
+
+The full-deck chapter explicitly distinguishes rectangular views O/H from the
+square screen-coordinate mixing map C=[2,1;1,1]. Det(C)=1 preserves screen area;
+C inverse undoes that mixing. It cannot recover the depth removed by O. Parts
+A–N preserve slide order; the TL;DR page supports subsequent exam review.

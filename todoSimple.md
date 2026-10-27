@@ -27,8 +27,8 @@ craft material remains historical/reference work. This revision is local.
 1. Review the completed Lecture 1 reading experience and gather reader feedback (§4).
 2. Complete the remaining source/notation map, including visual-only supporting
    PDFs and statistics/PCA (§2).
-3. Review the shadow-led Lecture 2 systems chapter (§5), then finish determinants/
-   inverses, proceed through Weeks 3–5, and close midterm coverage (§§6–9).
+3. Review the complete Lecture 2 and its cheat sheet (§5), then proceed through
+   Weeks 3–5 and close midterm coverage (§§6–9).
 
 ## 1. Define the project
 
@@ -328,20 +328,21 @@ Independent reviewer and learner-performance evidence remain open, as do later w
   operations, elimination, echelon forms, pivots, and back substitution.
 - [x] Explain unique/inconsistent/infinitely many solution cases with appropriate
   examples, distinguishing a needed row swap from actual singularity.
-- [ ] Develop determinants, expansion/properties, area/volume interpretation,
+- [x] Develop determinants, expansion/properties, area/volume interpretation,
   invertibility, Gauss–Jordan, and cofactor inverse formulas with assumptions.
 - [ ] Integrate mapped homework/recitation examples, figures, checkpoints,
   misconceptions, summary, graded practice, hints, and checked solutions.
-- [ ] Meet the chapter definition of done, including independent computations,
+- [x] Meet the chapter definition of done, including independent computations,
   source mapping, a successful build, and rendered inspection.
 
-Progress (2026-10-27): The requested systems portion, PDF pp. 1–21, is built in
-four Lecture 2 pages with eight sections, three diagrams, eight checkpoints and
-18 exercises/solutions. Determinants and inverses (pp. 22–36) remain open; the
-whole Week 2 chapter checklist above is not complete. See
+Progress (2026-10-27): All 36 lecture PDF pages are now mapped to Parts A–N in
+lecture order, including determinants and inverses. Four reader pages contain
+17 highlighted stepwise examples, 14 checkpoints, a dedicated TL;DR cheat sheet,
+and 26 exercises with hints/expandable solutions. Source mapping, arithmetic,
+strict build and rendered checks are recorded in
 [coverage](authoring/lecture2-coverage.md) and [verification](authoring/lecture2-review.md).
-Supporting homework contains elimination,
-invertibility, and parameter-dependent systems; exact problem mapping remains open.
+Supporting homework/recitation problem alignment remains open; the combined
+integration item above is not marked complete solely from slide coverage.
 
 ## 6. Week 3 — Vector spaces, rank, and bases
 
@@ -541,3 +542,30 @@ active; they are not requirements for the five-week milestone.
 - [x] Extend the shadow canon with the actual Week 1 profile records and chapter links.
 - [x] Check active reading pages contain no residual craft narrative; strict build
   and 93 arithmetic/structure/narrative checks pass. Publication remains pending.
+
+## Lecture 2 flow refinement
+
+- [x] Carry the main slide system through matrix notation, row operations, REF,
+  back substitution and RREF with explicit transitions.
+- [x] Reduce repetition and move supplementary slide examples to labeled dropdowns.
+- [x] Introduce the shadow solution cases after teaching the method; retain all
+  requested topics, eight checkpoints, 18 practice problems and the four-page route.
+
+## Lecture 2 full-deck and cheat-sheet refinement
+
+- [x] Cover every Week 2 slide topic/example; label Parts A–N in source order.
+- [x] Highlight the operation and explain how/why at each worked-example step.
+- [x] Add all determinant rules, Laplace expansion, geometry, invertibility tests,
+  Gauss–Jordan inverse construction and full 2×2/3×3 cofactor methods.
+- [x] Add a dedicated TL;DR page with formulas, conditions, method selection and
+  a complete example; combine practice/answers to preserve four reader pages.
+- [x] Extend the practice bank to 26 questions and verify all inverse/determinant examples.
+
+## Numbered topic navigation and agent instructions
+
+- [x] Add root `AGENTS.md` with source, teaching, navigation, verification and handoff rules.
+- [x] Put the current authoring contract near the start of the show bible; distinguish history.
+- [x] Group actual sidebar links by lecture and label each Page 1–4 with its topic.
+- [x] Split Lecture 1 into vectors, geometry, matrices and TL;DR; Lecture 2 into systems, determinants, inverses and TL;DR.
+- [x] Include practice and expandable answers immediately below each question on its topic page; preserve all IDs.
+- [x] Keep all source examples and conditions; update welcome/routes and source coverage records.

@@ -1,23 +1,23 @@
 format: jb-book
 root: intro
 parts:
-  - caption: The textbook
+  - caption: Lecture 1 · Vectors and matrices
     chapters:
       - file: lecture1/index
-        title: Lecture 1 · Vectors and geometry
-        sections:
-          - file: lecture1/matrix-guide
-            title: Matrices and products
-          - file: lecture1/practice
-            title: Exercises
-          - file: lecture1/solutions
-            title: Solutions
+        title: Page 1 · Vectors & combinations
+      - file: lecture1/geometry
+        title: Page 2 · Dot products & geometry
+      - file: lecture1/matrix-guide
+        title: Page 3 · Matrices & products
+      - file: lecture1/cheatsheet
+        title: Page 4 · TL;DR cheat sheet
+  - caption: Lecture 2 · Systems, determinants, and inverses
+    chapters:
       - file: lecture2/index
-        title: Lecture 2 · Systems of linear equations
-        sections:
-          - file: lecture2/elimination
-            title: Elimination and echelon forms
-          - file: lecture2/practice
-            title: Exercises
-          - file: lecture2/solutions
-            title: Solutions
+        title: Page 1 · Systems & elimination
+      - file: lecture2/elimination
+        title: Page 2 · Determinants & geometry
+      - file: lecture2/inverses
+        title: Page 3 · Inverses & invertibility
+      - file: lecture2/cheatsheet
+        title: Page 4 · TL;DR cheat sheet

@@ -338,5 +338,11 @@ front (2,2) and side (4,4) produce 0=2, not an implicit average. General front
 
 Operations transform equations and their right sides, never the underlying point.
 The chapter includes source-only systems as well as the shared scene; no silhouette
-reconstruction or perspective claim is introduced. Determinants/inverses are not
-yet implemented. See the [source audit](../../../authoring/lecture2-coverage.md).
+reconstruction or perspective claim is introduced. Determinants/inverses are now implemented for explicitly square maps. See the [source audit](../../../authoring/lecture2-coverage.md).
+
+**Full Week 2 integration.** Parts E–N include determinants, cofactor methods and
+invertibility. The added screen-coordinate mixing C=[2,1;1,1] acts from R2 to R2
+with the same fixed origin: det(C)=1 and C inverse=[1,-1;-1,2]. It preserves
+screen area and can be undone. This is distinct from O's R3-to-R2 observation
+and does not recover hidden depth. The lecture's original determinant and inverse
+matrices remain formal examples; their interpretation does not change H's dimensions.

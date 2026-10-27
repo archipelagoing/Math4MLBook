@@ -3,30 +3,29 @@
 A TeachBooks textbook built from the course materials in `resources/`, using
 marked points and calibrated shadow views to develop the mathematics.
 
-**Lecture 1 is a four-page textbook chapter:**
+Each lecture has four **numbered topic pages in the left sidebar**, grouped under
+its lecture title. Practice and expandable explained solutions follow the relevant
+topic on the same page. They are not separate sidebar destinations.
 
-1. [Vectors and geometry](book/lecture1/index.md).
-2. [Matrices and products](book/lecture1/matrix-guide.md).
-3. [Exercises](book/lecture1/practice.md).
-4. [Solutions](book/lecture1/solutions.md).
+| Page | Lecture 1 | Lecture 2 |
+| --- | --- | --- |
+| 1 | [Vectors and combinations](book/lecture1/index.md) | [Systems and elimination](book/lecture2/index.md) |
+| 2 | [Dot products and geometry](book/lecture1/geometry.md) | [Determinants and geometry](book/lecture2/elimination.md) |
+| 3 | [Matrices and products](book/lecture1/matrix-guide.md) | [Inverses and invertibility](book/lecture2/inverses.md) |
+| 4 | [TL;DR cheat sheet](book/lecture1/cheatsheet.md) | [TL;DR cheat sheet](book/lecture2/cheatsheet.md) |
 
-The shadow-based reading pages contain 12 numbered learning sections, page objectives, section
-roadmaps, four diagrams, 12 worked examples, 12 checkpoint answers, highlighted
-results, and an end-of-chapter readiness map. Each solution links to a relevant
-explanation and a retry problem. All distinct lecture examples and
-properties remain; [the coverage audit](authoring/lecture1-coverage.md) maps them
-to the chapter. Each lecture is limited to four website pages including practice
-and solutions. Printed page count is not the navigation limit. Lecture 2 now covers systems of linear equations; determinants/inverses and
-Weeks 3–5 remain unfinished. The earlier condensed PDF is an archived summary, not the current
-textbook reading experience.
+Lecture 1 retains 12 learning sections and 24 exercises. Lecture 2 covers all 36
+PDF pages in Parts A–N, with 17 numbered stepwise examples and 26 exercises.
+Source banks `practice.md` and `solutions.md` are included by topic, preserving
+problem and solution IDs while placing answers directly below their questions.
+TL;DR pages collect formulas/conditions, method recipes and checked examples.
+The four-page cap concerns website navigation, not physical print sheets.
+Weeks 3–5 and cumulative exam preparation remain unfinished.
 
-**Lecture 2 is also four pages:** [Systems and modelling](book/lecture2/index.md),
-[elimination and echelon forms](book/lecture2/elimination.md),
-[18 exercises](book/lecture2/practice.md), and [explained solutions](book/lecture2/solutions.md).
-It covers Week 2 PDF pages 1–21, with eight learning sections/checkpoints, the slide
-systems, Gaussian elimination/back substitution, Gauss–Jordan, REF/RREF, and solution
-classification. [Source audit](authoring/lecture2-coverage.md) and
-[review record](authoring/lecture2-review.md) identify scope and checks.
+Start agent work with [AGENTS.md](AGENTS.md), then the
+[current contract in the show bible](SHOW_BIBLE.md#current-authoring-contract).
+Coverage and verification records live in `authoring/lectureN-coverage.md` and
+`authoring/lectureN-review.md`. Earlier condensed PDFs are historical summaries.
 
 ## Read locally
 
@@ -59,13 +58,15 @@ jupyter-book build book --all --warningiserror --keep-going
 
 The calculation checker recomputes the chapter's numerical examples and verifies
 practice/solution pairing. It does not replace mathematical proofreading.
-See [Lecture 1 review evidence](authoring/lecture1-review.md) for source checks,
+See [Lecture 1 review evidence](authoring/lecture1-review.md) and
+[Lecture 2 review evidence](authoring/lecture2-review.md) for source checks,
 browser checks, and remaining limitations. The installed browser tooling is an
 optional review aid and is not a book build dependency.
 
 ## Editorial references
 
-- [Show bible](SHOW_BIBLE.md): teaching goals, style, and scope.
+- [Agent instructions](AGENTS.md): source coverage, numbered topic navigation, authoring and build workflow.
+- [Show bible](SHOW_BIBLE.md): current contract, teaching goals, style, and scope.
 - [Main rubric](rubricatm.md): whole-book quality criteria and current assessment.
 - [Checklist](todoSimple.md): implementation status and next work.
 - [Analogy reference](analogy/README.md): shared mathematical mappings.

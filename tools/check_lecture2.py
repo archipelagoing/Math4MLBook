@@ -45,6 +45,10 @@ m4=add(m3,0,1,-1)
 check(m4,mat([[1,0,0,5],[0,1,0,4],[0,0,1,2]]))
 check(rref(main)[0],m4)
 solvecheck([r[:3] for r in main],[5,4,2],[15,21,13])
+# New introductory candidate and checkpoint computations.
+solvecheck([r[:3] for r in main],[1,1,1],[5,7,4])
+solvecheck([r[:3] for r in main],[2,0,1],[5,6,4])
+solvecheck([[0,0,-2],[0,1,1]],[0,4,-3],[6,1])
 L=[[1,0,0],[-1,1,0],[0,-1,1]]
 solvecheck(L,[2,5,9],[2,3,4]);solvecheck(L,[3,7,8],[3,4,1])
 A=[[1,2,3],[2,5,2],[6,-3,1]]
@@ -87,15 +91,65 @@ for b,c in [(F(3),F(3)),(F(-2),F(7)),(F(1,3),F(2,3))]:
     aug=mat([r+[v] for r,v in zip(H,[2,b,c,4])])
     check(add(aug,2,1,-1)[2],[0,0,0,c-b])
     check(classify(aug),'unique' if b==c else 'none')
-for file in ['index','elimination','practice','solutions']:
-    s=(ROOT/f'book/lecture2/{file}.md').read_text()
-    check(s.count('<a href='),4);check(s.count('aria-current="page"'),1)
-    check(bool(re.search(r'\b(knitting|crochet|yarn|stitch)\b',s,re.I)),False)
-    if file in ['index','elimination']:
-        check(s.count('{div} section-intro'),4)
-        check(s.count('{div} section-recap'),4)
-        check(s.count(':class: checkpoint'),4)
+
+# Determinants checked independently with a signed permutation sum.
+from itertools import permutations
+from math import prod
+
+def det(a):
+    n=len(a)
+    return sum((-1)**sum(p[i]>p[j] for i in range(n) for j in range(i+1,n))
+               * prod(F(a[i][p[i]]) for i in range(n))
+               for p in permutations(range(n)))
+
+def mm(a,b):
+    return [[sum(F(a[i][k])*F(b[k][j]) for k in range(len(b)))
+             for j in range(len(b[0]))] for i in range(len(a))]
+
+def identity(n):return [[F(i==j) for j in range(n)] for i in range(n)]
+
+def minors(a):
+    return [[det([[v for c,v in enumerate(row) if c!=j] for r,row in enumerate(a) if r!=i])
+             for j in range(len(a))] for i in range(len(a))]
+
+C=[[2,1],[1,1]];Ci=[[1,-1],[-1,2]]
+Q=[[1,2,1],[4,4,5],[6,7,7]];Qi=[[-7,-7,6],[2,1,-1],[4,5,-4]]
+D=[[1,2,3],[3,1,2],[0,0,1]]
+check(det(C),1);check(det(Q),1);check(det(D),-5)
+check(det([r[:3] for r in main]),-1)
+check(minors(Q),mat([[-7,-2,4],[7,1,-5],[6,1,-4]]))
+cof=[[(-1)**(i+j)*x for j,x in enumerate(row)] for i,row in enumerate(minors(Q))]
+check(cof,mat([[-7,2,4],[-7,1,5],[6,-1,-4]]))
+check(list(map(list,zip(*cof))),mat(Qi))
+for a,inv in [(C,Ci),(Q,Qi)]:
+    check(mm(a,inv),identity(len(a)));check(mm(inv,a),identity(len(a)))
+    augmented=[r+v for r,v in zip(a,identity(len(a)))]
+    check(rref(augmented)[0],[r+v for r,v in zip(identity(len(a)),mat(inv))])
+solvecheck([[1,1],[1,-1]],[2,1],[3,1])
+solvecheck(C,[2,1],[5,3]);check(product(Ci,[5,3]),[2,1])
+# Verify each displayed inverse-elimination stage, not just the final inverse.
+g=mat([[2,1,1,0],[1,1,0,1]]);g[0],g[1]=g[1],g[0]
+check(g,mat([[1,1,0,1],[2,1,1,0]]))
+g=add(g,1,0,-2);check(g,mat([[1,1,0,1],[0,-1,1,-2]]))
+g[1]=[-x for x in g[1]];check(g,mat([[1,1,0,1],[0,1,-1,2]]))
+g=add(g,0,1,-1);check(g,mat([[1,0,1,-1],[0,1,-1,2]]))
+check(det([[1,2],[2,4]]),0)
+check(classify([[1,2,3],[2,4,6]]),'infinite')
+check(classify([[1,2,3],[2,4,7]]),'none')
+check(-(-5*3),15);check(abs(-3)*4,12);check(abs(F(-5))/2,F(5,2))
+# Distinguish row-linearity from the false whole-matrix linearity claim.
+check(det([[2,0],[0,2]]),4)
+check(det([[2,0],[0,2]]) == 2*det([[1,0],[0,1]]),False)
+for file in ['index','elimination','inverses','cheatsheet']:
+    text=(ROOT/f'book/lecture2/{file}.md').read_text()
+    check(text.count('<a href='),4);check(text.count('aria-current="page"'),1)
+    check(bool(re.search(r'\b(knitting|crochet|yarn|stitch)\b',text,re.I)),False)
+    if file in ['index','elimination','inverses']:
+        expected=6 if file=='inverses' else 4
+        check(text.count('{div} section-intro'),expected)
+        check(text.count('{div} section-recap'),expected)
+        check(text.count(':class: checkpoint'),expected)
 p=(ROOT/'book/lecture2/practice.md').read_text();s=(ROOT/'book/lecture2/solutions.md').read_text()
-check(re.findall(r'\(w2-p(\d+)\)=',p),[f'{n:02}' for n in range(1,19)])
-check(re.findall(r'\(w2-s(\d+)\)=',s),[f'{n:02}' for n in range(1,19)])
-print(f'{checks} Lecture 2 arithmetic, family, classification, and structure checks passed.')
+check(re.findall(r'\(w2-p(\d+)\)=',p),[f'{n:02}' for n in range(1,27)])
+check(re.findall(r'\(w2-s(\d+)\)=',s),[f'{n:02}' for n in range(1,27)])
+print(f'{checks} Lecture 2 arithmetic, determinant, inverse, family, and structure checks passed.')
