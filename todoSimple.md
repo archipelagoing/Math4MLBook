@@ -76,10 +76,10 @@ solutions that must still be independently checked.
 
 ## Connected knitting-and-crochet analogy system
 
-- [x] Create [ANALOGY_WEB.md](ANALOGY_WEB.md) as the separate source of truth for the
+- [x] Create [Knitting Crochet](analogy/systems/knitting-crochet/canon.md) as the separate source of truth for the
   actual stitch actions, cast-on/bind-off, magic-ring rounds, swatches/gauge,
   connected graph, precise mappings, and limitations.
-- [x] Create [ANALOGY_RUBRIC.md](ANALOGY_RUBRIC.md) with weighted criteria and an
+- [x] Create [Knitting Crochet Rubric](analogy/systems/knitting-crochet/rubric.md) with weighted criteria and an
   honest assessment separate from the main textbook rubric.
 - [x] Check the revised stitch-ledger examples, count transformations, gauge
   statistics, and action graph's structural connectivity.
@@ -102,14 +102,14 @@ qualified review, chapter integration, and learner transfer remain pending.
 
 ## Additional connected analogy references
 
-- [x] Create [the bacteria/virus canon](ANALOGY_BACTERIA_VIRUSES.md) and
-  [its rubric](ANALOGY_BACTERIA_VIRUSES_RUBRIC.md), grounded in actual division,
+- [x] Create [the bacteria/virus canon](analogy/systems/bacteria-viruses/canon.md) and
+  [its rubric](analogy/systems/bacteria-viruses/rubric.md), grounded in actual division,
   infection, lysis, compartment counts, and measurement limitations.
-- [x] Create [the astrological-wheel canon](ANALOGY_ASTROLOGICAL_WHEEL.md) and
-  [its rubric](ANALOGY_ASTROLOGICAL_WHEEL_RUBRIC.md), grounded in degree placements,
+- [x] Create [the astrological-wheel canon](analogy/systems/astrology/canon.md) and
+  [its rubric](analogy/systems/astrology/rubric.md), grounded in degree placements,
   aspects, declared house conventions, rotations, and chart records.
-- [x] Create [the original pottery canon](ANALOGY_POTTERY.md) and
-  [its rubric](ANALOGY_POTTERY_RUBRIC.md), grounded in clay preparation, wheel
+- [x] Create [the original pottery canon](analogy/old/ANALOGY_POTTERY.md) and
+  [its rubric](analogy/old/ANALOGY_POTTERY_RUBRIC.md), grounded in clay preparation, wheel
   actions, profiles, trimming, stage measurements, and fired pieces.
 - [x] Check original numerical anchors, graph connectivity, local links, and rubric
   arithmetic; distinguish domain-source facts from invented models/data.
@@ -124,6 +124,159 @@ linked; mathematical anchors checked with exact arithmetic/structural identities
 Graph rendering, empirical examples, qualified review, chapter integration, and
 learner effectiveness remain unverified. Knitting/crochet stays the primary
 thread; additional lenses can be selected without repeating all four everywhere.
+
+## Lecture-linked analogy index and ranked options
+
+- [x] Rename the generic analogy filenames to `ANALOGY_KNITTING_CROCHET.md` and
+  `ANALOGY_KNITTING_CROCHET_RUBRIC.md` inside `analogy/`; fix moved-file links.
+- [x] Align the knitting reference with the other canons: domain/source boundary,
+  fixed objects, action cards, numerical anchors, course register, graph, and status;
+  add a weekly route and formal transfer anchors.
+- [x] Rank five original candidate frameworks with course-specific strengths,
+  boundaries, recognizable scenes, and linked domain foundations.
+- [x] Map 36 topic IDs to exact one-based lecture PDF pages or the exam-topic list;
+  supply a destination in every current lens and every candidate framework.
+- [x] Add cross-lens translation cards and shared graph; connect each canon/rubric
+  to the shared register; verify local links, topic coverage, and graph connectivity.
+- [ ] Visually review W3 pp. 16–17 and W5 p. 22; complete supporting-problem mapping
+  and independent review of topic-level mechanisms and source precision.
+- [ ] Convert selected mappings into chapter passages, illustrations, and a full
+  fresh transfer bank. Light and shadows are now selected for full drafts; the other
+  three ranked options remain proposals.
+
+Progress, 2026-10-26: Reviewed extractable page content from all five lecture decks.
+The shared index links all current systems through mathematics and source pages;
+it does not imply physical equivalence. Knitting/crochet remains primary. New
+lecture-page mapping supersedes older notes that it was wholly absent; supporting
+problem references, source images, manuscript integration, and learner evidence
+remain incomplete. Earlier specialized rubric scores are preserved as dated
+baselines, with a source-map addendum rather than an unsupported score increase.
+
+## Colored light versus multiple shadows — replacing pottery
+
+- [x] Develop [the light canon](analogy/systems/colored-light/canon.md) with actual
+  emission/sensing/filtering mechanisms, checked anchors, complete lecture route,
+  graph, formal transfer anchors, and explicit toy-sensor/perception boundaries.
+- [x] Develop [the shadow canon](analogy/systems/shadows/canon.md) with matched points,
+  calibrated views, hidden depth, checked reconstruction/fitting/SVD examples,
+  complete lecture route, graph, and formal transfer anchors.
+- [x] Create separate, equally weighted [light](analogy/systems/colored-light/rubric.md)
+  and [shadow](analogy/systems/shadows/rubric.md) rubrics with domain-specific rejection tests.
+- [x] Write [the head-to-head case](analogy/comparisons/light-vs-shadows.md), including
+  opening hooks, strongest objections, lecture comparison, and a fair transfer trial.
+- [x] Replace pottery with both contenders in the active source map and bible;
+  retain the old pottery documents in `analogy/old/` with historical status.
+- [x] Verify the new exact numerical anchors, all 36 active topic destinations,
+  graph connectivity, rubric arithmetic, and local file links.
+- [ ] Develop matched illustrated teaching samples and fresh equivalent transfer
+  questions; obtain independent domain/math review and record learner evidence.
+- [ ] Select the preferred lens after reviewing the concrete comparison; no change
+  to the existing primary knitting/crochet thread is inferred yet.
+
+Progress, 2026-10-26: Both competing frameworks are drafted, source-linked, and
+calculation-checked. Light makes nonunique observation memorable; shadows has a
+particularly direct geometric route through the four spaces and projection. These
+are editorial judgments. No calibrated optics demonstration, rendered figure,
+complete chapter, independent review, or comparative learner trial has run.
+
+## Common-method rebuild of the four earlier analogy systems
+
+- [x] Write [Build Method](analogy/build-method.md) first,
+  documenting the actual light/shadow workflow, checks, gaps, and shared contract.
+- [x] Move the eight original canon/rubric files unchanged into
+  [analogy/old/](analogy/old/README.md); record source paths and SHA-256 hashes.
+- [x] Rebuild knitting/crochet, biology, astrology, and pottery with concrete scenes,
+  stable vocabulary, unique/nonunique cases, four spaces, fitting/Gram–Schmidt,
+  eigen/SVD distinctions/shapes/truncation, and checked statistics/PCA anchors.
+- [x] Embed all 36 exact lecture/topic destinations and six chapter routes in each
+  rebuilt canon; provide six answered formal transfer anchors with diagnostic feedback.
+- [x] Add connected graphs, accessible prose, diagram briefs, objections/responses,
+  source/model boundaries and cross-lens translation links to each reference.
+- [x] Rebuild the four separate rubrics with identical weights, domain-specific
+  rejection tests, evidence ledgers, and no unearned inherited scores.
+- [x] Restore pottery as a current rebuilt reference; update the six-lens source
+  map and current links while preserving earlier selection/history statements.
+- [x] Verify exact arithmetic, original hashes, 36-topic/six-route coverage,
+  current links, graph reachability and rubric weights; record the remaining gaps.
+- [ ] Complete independent domain/math review, exact supporting problem references,
+  image-only lecture review, full chapter passages and a fresh exercise bank.
+- [ ] Render and inspect the proposed figures; collect matched reader-transfer
+  evidence before assigning comparative effectiveness or exam-readiness claims.
+
+Progress, 2026-10-26: Four canon/rubric pairs rebuilt using the newly documented
+method. The original bytes are preserved in old/. Each rebuilt system now covers
+all five lecture weeks plus the exam statistics/PCA supplement, with the same
+required artifact set. Mathematical checks are author verification, not outside
+review; no physical experiment, rendered figure, completed chapter or learner
+trial is claimed. Older notes about pottery retirement and absent topic mapping
+are historical; the current six-lens source map and this section govern current state.
+
+## Analogy folder organization and consistency
+
+- [x] Group all six current canon/rubric pairs under `analogy/systems/<theme>/`;
+  use concise filenames and update current project links.
+- [x] Keep the index, build method, and authoritative source map at the folder root;
+  group comparison documents under `comparisons/` and checks/history under `verification/`.
+- [x] Centralize all exact PDF-page mappings in `analogy/course-map.md`; retain
+  local mechanism indexes with direct topic-anchor links instead of copied page tables.
+- [x] Move prior selections, rebuild commentary and numerical rubric scores into
+  `verification/history.md`; retain all mathematical examples and current limitations.
+- [x] Standardize all six rubrics: editorial draft, author checks recorded,
+  independent review pending, weighted total unassigned; keep evidence differences explicit.
+- [x] Preserve every file in `analogy/old/` unchanged, including README and manifest.
+- [x] Check current local links/fragments, topic coverage, graphs, rubric weights,
+  unchanged numerical code blocks and preserved historical hashes; document results
+  in `analogy/verification/layout.md`.
+
+Progress, 2026-10-26: The root now contains only the index, build method, and course
+map. Six system folders, comparison and verification folders separate current
+teaching references from decision history. All six rubric statuses agree; historical
+scores remain recorded. Old snapshot links retain their original relative paths
+because the entire old folder is immutable; use the current index for navigation.
+This cleanup changes organization/documentation, not mathematical models or the
+remaining chapter, illustration, review, and learner-validation tasks.
+
+## Three-role textbook teaching strategy
+
+- [x] Write [teaching-strategy.md](analogy/teaching-strategy.md): distinct roles,
+  six chapter routes, all 36 topic allocations, a worked cross-lens transition,
+  formal transfer/feedback, visual rules, implementation order, and acceptance criteria.
+- [x] Link the guide from the analogy index and show bible; verify local links,
+  topic anchors and the fresh formal transfer example.
+- [ ] Implement the strategy through a complete Week 1 chapter, inspect its rendered
+  output, and test fresh formal problems before repeating the pattern.
+
+Historical progress, 2026-10-26: Initially proposed shadows as the mathematical
+backbone. The craft-centered strategy below now supersedes that proposal; light
+and shadows are optional support.
+The guide develops the recommendation without requiring three explanations per
+concept. This is a written implementation plan; no chapter, figure, independent
+review, or learner-effectiveness result is completed by this documentation pass.
+
+## Strengthen knitting/crochet as the mathematical backbone
+
+- [x] Rewrite the teaching strategy so craft examples lead every chapter and all
+  36 topic groups; shadows/light are optional supporting views.
+- [x] Add a four-row, 24-stitch color panel with four marked six-stitch sections;
+  derive record geometry, uniform-repeat projection and Gram–Schmidt from it.
+- [x] Derive the panel's baseline/alternating SVD, null directions, full/compact
+  shapes and truncation loss; center the same record for a distinct PCA lesson.
+- [x] Add a six-sector crochet relabeling operator with checked uniform/alternating
+  eigen-directions, and explicit real-basis/physical limits.
+- [x] Generate a labeled stitch-count schematic; verify its two panels each contain
+  96 cells, 32 pink and 64 green. Visual/technique review remains separate.
+- [x] Update the canon's 36 mechanisms, six transfer anchors, graph, rubric and
+  source-map summaries; verify the new calculations and current links.
+- [ ] Work or obtain qualified craft review of the panel and marked-round
+  constructions; inspect the SVG and develop loop-accurate technique diagrams.
+- [ ] Build and review the actual Week 1 chapter, then carry the same projects
+  through subsequent weeks with a fresh formal exercise bank and learner checks.
+
+Progress, 2026-10-26: The earlier shadow-led proposal is superseded. Yarn now carries
+the mathematics as well as the book's identity. The same swatch supports bases,
+projection, SVD and PCA; the crochet motif supports a specific permutation/eigenvector
+example. These are checked mathematical constructions and a generated schematic,
+not physical pattern execution, completed chapters, or measured learning outcomes.
 
 ## 3. Establish the book and visual foundation
 

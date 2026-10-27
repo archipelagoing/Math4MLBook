@@ -60,29 +60,64 @@ Observed implementation and intended experience are recorded separately.
 
 ## 3. The world and its rules
 
-**Connected analogy source of truth.** [ANALOGY_WEB.md](ANALOGY_WEB.md) defines the
+**Connected analogy source of truth.** [Knitting Crochet](analogy/systems/knitting-crochet/canon.md) defines the
 actual-action knitting-and-crochet canon: individual stitches, cast-on and bind-off,
 magic-ring rounds, charts, shaping operations, swatches, gauge, and their connected
-mathematical mappings and limits. [ANALOGY_RUBRIC.md](ANALOGY_RUBRIC.md) evaluates it
+mathematical mappings and limits. [Knitting Crochet Rubric](analogy/systems/knitting-crochet/rubric.md) evaluates it
 separately. Every taught concept must have a connected mapping in that reference;
 chapter passages must begin with specific craft actions, identify what their
 counts/measurements represent, return to exact mathematics, and support independent
 exam transfer. Do not replace the physical craft with generic studio-management or
 fictional design-feature metaphors. Preserve its vocabulary and coordinate meanings across the entire book.
 
+**Craft-centered manuscript strategy.** [The teaching strategy](analogy/teaching-strategy.md)
+puts knitting/crochet at the center of the mathematical teaching, not only the
+chapter openings. One 24-stitch sampler gains a four-row colorwork count panel;
+one crochet motif gains six marked sectors. These supply shaping systems, repeat
+bases, projection/Gram–Schmidt, permutation eigen-directions, chart SVD and centered
+PCA. Gauge supplies measured-feature statistics. Shadows and colored light are
+optional supporting illustrations after the craft-derived explanation, not the
+formal backbone. All 36 topic groups retain a substantive yarn-led route.
+This plan and its checked anchors are not completed chapters, worked physical
+samples, or learner validation.
+
+**Shared lecture source and translation index.**
+[Course Map](analogy/course-map.md) connects 36 topic IDs to
+specific lecture PDF pages and each current analogy, preserving the original five-option comparison.
+Its translation cards explain the exact shared mathematics. Every chapter analogy
+must identify a topic ID, local mechanism, mathematical landing, boundary, and
+source. [Top Five](analogy/comparisons/top-five-options.md) ranks sound, colored light,
+multiple shadows, a hanging mobile, and dance capture. The owner has selected
+colored light and multiple shadows for full competing drafts in place of pottery,
+then requested the current common-method rebuild of all four earlier lenses.
+Their [head-to-head comparison](analogy/comparisons/light-vs-shadows.md) makes the case
+for each; no switch from the primary knitting/crochet thread is assumed.
+
+**Shared authoring method and originals.**
+[Build Method](analogy/build-method.md) documents the light/shadow
+workflow and the rebuild contract. The original four canon/rubric pairs are
+preserved unchanged in [analogy/old/](analogy/old/README.md), with SHA-256 hashes.
+Knitting/crochet, biology, astrology, and pottery have been rebuilt with six chapter
+routes, 36-topic mechanism indexes linked to the source register, checked anchors, six answered
+transfer anchors, graph/diagram briefs, and separate evidence-based rubrics.
+These are equally structured editorial references; completed chapters, independent
+review, and student evidence remain separate unfinished work.
+
 **Additional complete analogy lenses.** Keep these separate from the knitting/
 crochet canon, with their own objects, graphs, mathematical boundaries, and rubrics:
 
 | Lens | Source of truth | Separate rubric |
 | --- | --- | --- |
-| Bacteria versus viruses | [Cells, Infection, and Measurement](ANALOGY_BACTERIA_VIRUSES.md) | [Biology rubric](ANALOGY_BACTERIA_VIRUSES_RUBRIC.md) |
-| Astrological wheel | [Around the Zodiac](ANALOGY_ASTROLOGICAL_WHEEL.md) | [Wheel rubric](ANALOGY_ASTROLOGICAL_WHEEL_RUBRIC.md) |
-| Original pottery framework | [From Spinning Clay to Fired Form](ANALOGY_POTTERY.md) | [Pottery rubric](ANALOGY_POTTERY_RUBRIC.md) |
+| Bacteria versus viruses | [Cells, Infection, and Measurement](analogy/systems/bacteria-viruses/canon.md) | [Biology rubric](analogy/systems/bacteria-viruses/rubric.md) |
+| Astrological wheel | [Around the Zodiac](analogy/systems/astrology/canon.md) | [Wheel rubric](analogy/systems/astrology/rubric.md) |
+| Colored light | [Different Light, the Same Color](analogy/systems/colored-light/canon.md) | [Light rubric](analogy/systems/colored-light/rubric.md) |
+| Multiple shadows | [The Object Behind the Shadows](analogy/systems/shadows/canon.md) | [Shadow rubric](analogy/systems/shadows/rubric.md) |
+| Pottery, rebuilt | [From Spinning Clay to Fired Form](analogy/systems/pottery/canon.md) | [Pottery rubric](analogy/systems/pottery/rubric.md) |
 
 Each lens covers the same mathematical course scope through its own connected
 mechanisms. Knitting/crochet remains the primary textbook thread unless the owner
 changes that direction; these are additional lenses, not an instruction to repeat
-four explanations for every concept. Use a deliberate lens for a passage and name
+all lens explanations for every concept. Use a deliberate lens for a passage and name
 any switch. Shared mathematics can connect lenses; their physical/symbolic entities
 must not silently merge. All current analogy references are drafts, with chapter
 integration and learner validation pending.
@@ -274,3 +309,9 @@ Update canon only after implementation and verification. Keep the roadmap in syn
 | 2026-10-26 | Established the separate knitting/crochet analogy bible and rubric as the canonical connected metaphor system for all taught concepts. |
 | 2026-10-26 | Replaced the rejected studio metaphor with actual stitch-action analogies and a specificity-first rubric, following owner correction. |
 | 2026-10-26 | Added independent bacteria/virus, astrological-wheel, and original pottery analogy canons and rubrics, preserving knitting/crochet as the main thread. |
+| 2026-10-26 | Renamed knitting canon/rubric explicitly; linked all analogy lenses and five ranked candidates through a 36-topic lecture-page source and translation map. |
+| 2026-10-26 | Replaced pottery in the active set with full colored-light and multiple-shadow canons and equal-weight rubrics; archived pottery and prepared a head-to-head teaching comparison. |
+| 2026-10-26 | Documented the build method, preserved eight originals unchanged in old/, and rebuilt knitting/crochet, biology, astrology, and pottery to a shared six-chapter/36-topic standard. |
+| 2026-10-26 | Organized analogy systems into per-theme folders, centralized PDF pages in course-map.md, moved development history to verification/, and standardized all six rubrics as unscored evidence ledgers. |
+| 2026-10-26 | Added the three-role teaching strategy: shadows for formal structure, light for targeted contrasts, yarn for recurring narrative and concrete checks, with all-topic allocation and an implementation sequence. |
+| 2026-10-26 | Strengthened knitting/crochet as the formal teaching backbone using repeated colorwork, uniform/alternating pattern geometry, marked crochet sectors, chart SVD and centered PCA; shadows/light are optional support. |

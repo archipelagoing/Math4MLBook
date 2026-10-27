@@ -1,8 +1,10 @@
 # Yarn in Your Hands — Knitting and Crochet Analogy Canon
 
-Version 2 · 2026-10-26 · [Quality rubric](ANALOGY_RUBRIC.md)
+Connected knitting-and-crochet analogy canon · Version 3 · 2026-10-26
+[Companion rubric](ANALOGY_KNITTING_CROCHET_RUBRIC.md) · [Main bible](../SHOW_BIBLE.md)
+[Lecture and cross-analogy map](ANALOGY_COURSE_MAP.md)
 
-## 1. What this reference commits to
+## 1. The actual stitches, shared projects, and source boundary
 
 The recurring story is **making a knitted sampler and a crocheted circular motif**:
 putting stitches on a needle, inserting a hook, counting loops, repeating a stitch
@@ -19,8 +21,8 @@ what is counted, how the operation changes those counts, and what the count lose
 This is the canonical source for the connected analogy system, not a finished
 chapter manuscript. The examples below are original teaching constructions.
 Craft facts have linked references; mathematical constructions are identified as
-our deductions. Exact lecture pages, chapter integration, diagrams, independent
-review, and learner-transfer evidence remain open.
+our deductions. Exact lecture-page destinations are recorded in the shared course map. Chapter
+integration, diagrams, independent review, and learner-transfer evidence remain open.
 
 ### Fixed projects and terminology
 
@@ -339,8 +341,9 @@ not establish a sound missing-rating prediction method.
 ## 5. Complete course-coverage register
 
 A card reference is a concrete starting point, not proof that a chapter is taught.
-All entries are **drafted**; source pages, manuscript locations, diagrams, formal
-edge cases, and transfer exercises remain to be developed.
+All entries are **drafted**. Use the shared [course map](ANALOGY_COURSE_MAP.md) for
+one-based lecture PDF pages and cross-lens connections. Manuscript locations,
+diagrams, formal edge cases, and transfer exercises remain to be developed.
 
 | Course concept(s) | Physical anchor / card | Required mathematical landing |
 | --- | --- | --- |
@@ -447,3 +450,30 @@ rendered illustrations, and student transfer evidence remain pending.
 | Date | Change |
 | --- | --- |
 | 2026-10-26 | Rebuilt the canon around actual stitch operations, two fixed projects, a consumed/produced stitch ledger, cast-on/finish callbacks, magic-ring rounds, gauge measurements, and a connected action graph. |
+
+## 9. Specific lecture route and formal transfer checks
+
+| Lecture | Exact source-topic IDs | Stitch sequence and explanatory job |
+| --- | --- | --- |
+| Week 1 | W1.01–W1.08 in the course map | Cast on; count a `k2,p2` repeat; record a chart; use the plain/increase/decrease ledger. Show the difference between sequence, count vector, and count map. |
+| Week 2 | W2.01–W2.04 | Work `(k3,kfb)` six times from 24 stitches to 30; derive the two equations; recover operation counts; compare a redundant net-count row with an invertible two-count map. |
+| Week 3 | W3.01–W3.09 | Compare an increase plus decrease with three plain stitches; derive the four spaces, rank, feasible solution family, and alternative bookkeeping bases. |
+| Week 4 | W4.01–W4.06 | Diagnose the impossible 24/30/+7 report; derive projection and orthogonality; use measured swatches for fitting; orthogonalize overlapping ledger columns. |
+| Week 5 | W5.01–W5.07 | Rewrite a knit/purl repeat with the stated substitution; derive its eigenmodes; return to the rectangular stitch ledger for SVD and lost count distinctions; use actual named swatch ratings for the recommendation bridge. |
+| Exam-topic supplement | B.01–B.02 | Measure stitch/row gauge across swatches, center the data, and derive covariance/PCA. This is required by the topic list, not claimed to be in the Week 5 deck. |
+
+**Checked transfer anchors, in ordinary mathematics:**
+
+- W2/W3: Solve `p+i=24`, `p+2i=30`: `(p,i)=(18,6)`. If decreases are allowed,
+  verify the null direction `(-3,1,1)` of A; do not confuse its real solution family
+  with its finite nonnegative-integer feasible choices.
+- W4: For `b=(24,30,7)`, verify the stated projected p and `A^T(b-p)=0`. State why
+  `A(A^T A)^{-1}A^T` is unavailable for this A.
+- W5: For `T=[[2,1],[1,2]]`, find eigenvalues 3 and 1 and unit directions
+  `(1,1)/sqrt(2)`, `(1,-1)/sqrt(2)`. Explain why the same values cannot be assumed
+  for an arbitrary stitch map.
+
+These are verified anchor checks, not yet a full fresh question bank. To connect
+another lens, name the shared topic ID first, translate its objects/spaces, and
+then ask what the other record retains or loses. Do not call a bacterial cell a
+stitch, an aspect a yarn loop, or a matrix null direction an identical physical action.

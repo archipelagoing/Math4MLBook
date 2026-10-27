@@ -1,7 +1,10 @@
 # From Spinning Clay to Fired Form — An Original Pottery Analogy Canon
 
+> Archived on 2026-10-26: replaced in the active comparison by colored light and multiple shadows. Retained as historical work; not a current textbook lens.
+
+
 Connected analogy canon · 2026-10-26
-[Companion rubric](ANALOGY_POTTERY_RUBRIC.md) · [Main bible](SHOW_BIBLE.md)
+[Companion rubric](ANALOGY_POTTERY_RUBRIC.md) · [Main bible](../../SHOW_BIBLE.md)
 
 ## 1. Why this world connects
 
@@ -279,3 +282,19 @@ Cards, graph, coverage, and calculation anchors are drafted; craft sources are
 linked. The numerical data are invented and mathematically checked, not measured.
 Exact course pages, completed manuscript examples, worked pottery demonstrations,
 rendered diagrams, qualified review, and learner-transfer validation remain open.
+
+## Shared lecture and cross-analogy source map
+
+[ANALOGY_COURSE_MAP.md](../ANALOGY_COURSE_MAP.md) now gives the exact one-based
+lecture PDF pages for each registered topic, identifies statistics/PCA as an
+exam-topic supplement, and connects this canon to the knitting/crochet, biology,
+wheel, and pottery lenses plus five candidate frameworks. Use its W1–W5 and B
+IDs alongside the local action-card names above. Earlier references here to
+pending lecture-page mapping are superseded by that register; exact supporting
+problem numbers, image-only source review, and manuscript locations remain open.
+
+A cross-lens passage must name the invariant mathematics before translating:
+what counts as input/output, what the map preserves or hides, what the real/signed
+extension means, and which physical constraints differ. Do not silently merge
+objects from separate domains. The graph connects through mathematical structure,
+not a claim that different mechanisms are physically equivalent.

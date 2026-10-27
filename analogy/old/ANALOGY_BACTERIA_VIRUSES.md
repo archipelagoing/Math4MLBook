@@ -1,7 +1,7 @@
 # Cells, Infection, and What a Measurement Can See
 
 Connected bacteria-versus-viruses analogy canon · 2026-10-26
-[Companion rubric](ANALOGY_BACTERIA_VIRUSES_RUBRIC.md) · [Main bible](SHOW_BIBLE.md)
+[Companion rubric](ANALOGY_BACTERIA_VIRUSES_RUBRIC.md) · [Main bible](../SHOW_BIBLE.md)
 
 ## 1. The concrete story and source boundary
 
@@ -237,3 +237,19 @@ Drafted mechanism cards, coverage, graph, and original calculations. Linked sour
 support biology; mathematical models are our constructions. Exact course-page
 mapping, full worked chapter treatments, diagram rendering, biological/mathematical
 review, and learner evidence remain pending. No real sample or medical result is claimed.
+
+## Shared lecture and cross-analogy source map
+
+[ANALOGY_COURSE_MAP.md](ANALOGY_COURSE_MAP.md) now gives the exact one-based
+lecture PDF pages for each registered topic, identifies statistics/PCA as an
+exam-topic supplement, and connects this canon to the knitting/crochet, biology,
+wheel, colored-light, and multiple-shadow lenses, while preserving the five-option shortlist. Use its W1–W5 and B
+IDs alongside the local action-card names above. Earlier references here to
+pending lecture-page mapping are superseded by that register; exact supporting
+problem numbers, image-only source review, and manuscript locations remain open.
+
+A cross-lens passage must name the invariant mathematics before translating:
+what counts as input/output, what the map preserves or hides, what the real/signed
+extension means, and which physical constraints differ. Do not silently merge
+objects from separate domains. The graph connects through mathematical structure,
+not a claim that different mechanisms are physically equivalent.

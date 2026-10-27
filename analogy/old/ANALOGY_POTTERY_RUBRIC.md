@@ -1,13 +1,16 @@
-# Cells and Phages — Connected Analogy Rubric
+# From Clay to Fired Form — Connected Analogy Rubric
 
-2026-10-26 · Evaluates [the canon](ANALOGY_BACTERIA_VIRUSES.md) and its eventual chapter uses.
-Separate from [the main textbook rubric](rubricatm.md) and the other analogy rubrics.
+> Archived on 2026-10-26: replaced in the active comparison by colored light and multiple shadows. Retained as historical work; not a current textbook lens.
+
+
+2026-10-26 · Evaluates [the canon](ANALOGY_POTTERY.md) and its eventual chapter uses.
+Separate from [the main textbook rubric](../../rubricatm.md) and the other analogy rubrics.
 
 ## Target and specificity contract
 
-Bacterial division, successful phage infection, intracellular production, lysis, and the limitations of compartment-count reports connect every course concept.
+Portioning clay, centering, opening, pulling walls, trimming, checking test bars, and comparing fired pieces connect every course concept.
 
-Division changes susceptible-cell count by +1; infection and lysis move quantities between explicitly named compartments. The chosen lytic phage example never becomes a universal account of all viruses.
+Material mass, wheelhead position, vessel profile, and wet/dry/fired dimensions are distinct records of a concrete making process. Ideal geometric models never substitute for unmeasured material behavior.
 
 Each entry needs an actual event, action, or observed record; a before/after or
 measured quantity; an exact mathematical landing; an explicit limitation; a
@@ -18,11 +21,11 @@ if its useful role is an honest boundary or initial-condition callback.
 
 ## Domain-specific rejection tests
 
-1. A virus is described as dividing like a bacterial cell or replicating independently of its host.
-2. All phages are treated as lytic, an illustrative yield becomes an empirical constant, or bacterial/viral roles are assigned good/bad or linear/nonlinear identities.
-3. An event ledger is confused with a rate model; interactions such as B times V are silently treated as globally linear.
-4. A report that cannot distinguish infected from uninfected cells is claimed to determine infection status or clinical risk.
-5. Endpoint inversion is claimed to reverse lysis or recover event order; real solutions bypass count and state-feasibility checks.
+1. Centering clay is equated with subtracting a statistical mean without distinguishing the operations.
+2. Throwing, trimming, or firing is called a universal linear/invertible map on physical clay; dimensional inversion is claimed to unfire a pot.
+3. Equal component masses or profile summaries are claimed to establish identical fabric, shape, chemistry, shrinkage, or function.
+4. Stage-specific percentage losses are added without checking their reference lengths; hypothetical factors become empirical firing recommendations.
+5. Recorded-radius SVD or PCA is described as a physical hand technique, aesthetic verdict, or evidence that a pot is functional or safe.
 6. A course concept lacks an explicit mechanism anchor and mathematical landing,
    or the graph connects topics only through shared imagery.
 7. Dimensions, assumptions, singular/zero cases, normalization, or computations
@@ -35,6 +38,16 @@ Any unresolved rejection prevents a claim of full readiness regardless of score.
 Do not mix this canon's entities with another analogy midway through an explanation.
 Cross-analogy comparisons must explicitly identify the shared mathematics.
 
+## Shared lecture and cross-lens requirements
+
+Use [ANALOGY_COURSE_MAP.md](../ANALOGY_COURSE_MAP.md) as the shared source/topic
+register. Every analogy passage must identify its topic ID, one-based lecture
+PDF page(s) or exam-topic supplement, local action card, exact mathematical
+landing, boundary, and eventually its manuscript location. Cross-lens callbacks
+must identify the shared mathematical relationship and distinguish each lens's
+objects, units, domains, and information losses. A matching word alone is not a
+connection. The five options are proposals until selected and developed.
+
 ## Scoring
 
 Use 0 for absent/contradictory, 1 for an initial idea, 2 for useful partial work,
@@ -45,7 +58,7 @@ performance or manuscript completion.
 
 | Criterion | Weight | A 4/4 requires |
 | --- | ---: | --- |
-| Domain mechanism specificity | 25 | Division changes susceptible-cell count by +1; infection and lysis move quantities between explicitly named compartments. The chosen lytic phage example never becomes a universal account of all viruses. Each before/after event or measurement is explained with a sourced diagram/example and domain-qualified review where needed. |
+| Domain mechanism specificity | 25 | Material mass, wheelhead position, vessel profile, and wet/dry/fired dimensions are distinct records of a concrete making process. Ideal geometric models never substitute for unmeasured material behavior. Each before/after event or measurement is explained with a sourced diagram/example and domain-qualified review where needed. |
 | Mathematical fidelity and boundaries | 25 | Object/space meanings, dimensions, domains, metric, hypotheses, exceptional cases, calculations, and information losses are correct and independently reviewed. |
 | Connected narrative and stable canon | 15 | Recurring objects and numerical anchors stay stable; every graph edge has a useful explanatory callback; graph and accessible prose agree and are checked in rendered form. |
 | Complete course and chapter coverage | 15 | Every taught concept has an anchor, exact source page/problem or added-material label, manuscript location, mathematical landing, limitation, and checked example or justified callback. |
@@ -55,7 +68,7 @@ performance or manuscript completion.
 
 ## Review procedure
 
-1. Walk this exact route: **CELL → EVENTS → SOLVE/OBSERVE → COORDINATES/GEOMETRY → FIT/MODES → REPLICATES**. Follow the rest of the graph too.
+1. Walk this exact route: **PREPARE → CENTER/OPEN/TRIM and SOLVE/COORDINATES/OBSERVE → ORTH/FINISH/FIT/MODES → COMPARE**. Follow the rest of the graph too.
 2. Compare every taught mathematical concept against the coverage register and
    exact course sources. Check explicit chapter locations rather than assuming
    that a drafted table means the concept is taught.
@@ -87,17 +100,25 @@ is not a grade forecast and is not directly comparable to the main textbook scor
 | Review and learning evidence | 10 | 0 | 0 | Limits of verification stated; no observed student success claimed. | Qualified independent review, rendered accessibility, and learner evidence absent. |
 | **Total** | **100** | | **55** | | |
 
-**Domain-source inspection:** NHGRI bacteria/virus definitions and OpenStax division/viral-cycle sources linked in the canon. Sources establish biology; event yields and reporting maps are original models.
+**Domain-source inspection:** Ceramic Arts Network wheel-throwing cross sections, Digitalfire specimen testing, and Lakeside Pottery shrinkage discussion linked in the canon. Numerical material properties remain hypothetical.
 
-**Calculation checks:** E event accounting and endpoint reconstruction; M measurement null spaces and contradictory-report projection; H singular directions; centered repeated-count covariance/PCA. Checked with exact rational arithmetic and structural matrix identities. Graph reachability, local document links, rubric weights, and score arithmetic checked separately.
+**Calculation checks:** Batch A, null spaces, and contradictory-total projection; staged shrinkage product and determinant; bar-length least-squares fit and residual; profile H singular-value Gram matrix; centered dimensional covariance/PCA. Checked with exact rational arithmetic and structural matrix identities. Graph reachability, local document links, rubric weights, and score arithmetic checked separately.
 
 **Not performed:** Full course-page audit, independent semantic review, domain
 experiment/demonstration, Mermaid rendering, chapter build, or learner trial.
 
 **Three next improvements:**
 
-1. Review the cell/infection/lysis diagrams and report assumptions with a biology-qualified reader; ensure no inference of infection status survives a deliberately uninformative report.
+1. Illustrate a cylinder cross section and stage-labeled test bar; obtain craft review for centering/opening/trimming descriptions and keep measured properties separate from invented scale factors.
 2. Attach exact lecture/problem references and develop the Week 1 route into
    illustrated manuscript passages with checked formal transfer questions.
 3. Review the advanced four-space, projection, eigen/SVD, and statistics/PCA routes;
    then gather reader transfer evidence and revise misleading mappings.
+
+**Source-map update, 2026-10-26:** The shared course map now supplies 36 topic IDs,
+exact extractable lecture-page destinations, four existing-lens routes, five
+candidate routes, and cross-lens translation cards. Prior references above to
+missing lecture-page mapping describe the earlier baseline. Problem-level references,
+manuscript locations, image-only pages, rendered output, and independent validation
+remain open. The earlier score is retained as a dated baseline, not reassessed or
+raised for editorial mapping alone.

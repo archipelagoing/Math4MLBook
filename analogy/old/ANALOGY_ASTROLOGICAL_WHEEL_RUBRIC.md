@@ -1,7 +1,7 @@
 # The Zodiac Wheel — Connected Analogy Rubric
 
 2026-10-26 · Evaluates [the canon](ANALOGY_ASTROLOGICAL_WHEEL.md) and its eventual chapter uses.
-Separate from [the main textbook rubric](rubricatm.md) and the other analogy rubrics.
+Separate from [the main textbook rubric](../rubricatm.md) and the other analogy rubrics.
 
 ## Target and specificity contract
 
@@ -34,6 +34,17 @@ if its useful role is an honest boundary or initial-condition callback.
 Any unresolved rejection prevents a claim of full readiness regardless of score.
 Do not mix this canon's entities with another analogy midway through an explanation.
 Cross-analogy comparisons must explicitly identify the shared mathematics.
+
+## Shared lecture and cross-lens requirements
+
+Use [ANALOGY_COURSE_MAP.md](ANALOGY_COURSE_MAP.md) as the shared source/topic
+register. Every analogy passage must identify its topic ID, one-based lecture
+PDF page(s) or exam-topic supplement, local action card, exact mathematical
+landing, boundary, and eventually its manuscript location. Cross-lens callbacks
+must identify the shared mathematical relationship and distinguish each lens's
+objects, units, domains, and information losses. A matching word alone is not a
+connection. Colored light and multiple shadows now have selected full drafts; sound, mobile,
+and dance remain proposals. Pottery is archived.
 
 ## Scoring
 
@@ -101,3 +112,11 @@ experiment/demonstration, Mermaid rendering, chapter build, or learner trial.
    illustrated manuscript passages with checked formal transfer questions.
 3. Review the advanced four-space, projection, eigen/SVD, and statistics/PCA routes;
    then gather reader transfer evidence and revise misleading mappings.
+
+**Source-map update, 2026-10-26:** The shared course map now supplies 36 topic IDs,
+exact extractable lecture-page destinations, the then-current four-lens routes and five
+candidate routes, and cross-lens translation cards. Prior references above to
+missing lecture-page mapping describe the earlier baseline. Problem-level references,
+manuscript locations, image-only pages, rendered output, and independent validation
+remain open. The earlier score is retained as a dated baseline, not reassessed or
+raised for editorial mapping alone.

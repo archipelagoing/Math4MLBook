@@ -57,17 +57,36 @@ as an editorial mastery target, not a statement of course grading policy.
 `book/_config.yml`. The README is currently template documentation, not evidence
 of completed textbook behavior.
 
-**Analogy companion:** [ANALOGY_WEB.md](ANALOGY_WEB.md) is the canonical knitting/
+**Analogy companion:** [Knitting Crochet](analogy/systems/knitting-crochet/canon.md) is the canonical knitting/
 crochet action web, grounded in named stitches, magic-ring rounds, cast-on/bind-off,
-and swatch measurements; [ANALOGY_RUBRIC.md](ANALOGY_RUBRIC.md) scores its coverage,
+and swatch measurements; [Knitting Crochet Rubric](analogy/systems/knitting-crochet/rubric.md) scores its coverage,
 fidelity, continuity, and transfer separately. Main textbook reviews should check
 that chapter analogies explain actual craft mechanisms, preserve mathematics and
 representation boundaries, and lead back to ordinary
 exam questions. A high analogy score does not establish textbook completion.
-Additional independent references and rubrics cover [bacteria/viruses](ANALOGY_BACTERIA_VIRUSES.md),
-the [astrological wheel](ANALOGY_ASTROLOGICAL_WHEEL.md), and [pottery](ANALOGY_POTTERY.md).
+Additional independent references and rubrics cover [bacteria/viruses](analogy/systems/bacteria-viruses/canon.md),
+the [astrological wheel](analogy/systems/astrology/canon.md),
+[colored light](analogy/systems/colored-light/canon.md),
+[multiple shadows](analogy/systems/shadows/canon.md), and [rebuilt pottery](analogy/systems/pottery/canon.md).
+The [build method](analogy/build-method.md) defines the common artifact
+standard; the four earlier pairs are unchanged in `analogy/old/`. All six current
+rubrics use the same unscored evidence-ledger status; prior light/shadow scores
+are historical. Exact PDF-page mappings live only in the shared course map.
+The [head-to-head comparison](analogy/comparisons/light-vs-shadows.md) distinguishes
+editorial preference from observed learner effectiveness.
 Each reference links its own rubric. Verify the chosen lens against its own canon;
-do not require all four analogies in every passage or conflate their entities.
+do not require all analogies in every passage or conflate their entities.
+
+**Primary teaching strategy:** The [craft-centered plan](analogy/teaching-strategy.md)
+requires knitting/crochet to lead substantial mathematical examples in every week.
+The sampler panel and marked crochet round extend the ledger to geometric, spectral,
+and statistical topics. Evaluate shadows/light as optional clarifications rather
+than evidence that yarn can be omitted from later formal teaching.
+
+**Lecture alignment:** [The shared analogy course map](analogy/course-map.md)
+provides topic IDs, exact extractable lecture-page destinations, all current lens
+routes, and proposed top-five routes. Check analogy claims against that register
+and its source-precision notes; registered mappings are not delivered chapters.
 
 ## Scoring rules
 

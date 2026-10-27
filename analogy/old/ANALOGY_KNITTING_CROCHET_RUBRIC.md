@@ -1,8 +1,8 @@
 # Yarn in Your Hands — Craft-Action Analogy Rubric
 
-Evaluates [ANALOGY_WEB.md](ANALOGY_WEB.md) and its eventual chapter integration.
+Evaluates [ANALOGY_KNITTING_CROCHET.md](ANALOGY_KNITTING_CROCHET.md) and its eventual chapter integration.
 Version 2 · 2026-10-26. This replaces the rejected generic studio-model rubric.
-The main textbook assessment remains [rubricatm.md](rubricatm.md).
+The main textbook assessment remains [rubricatm.md](../rubricatm.md).
 
 ## The target
 
@@ -44,6 +44,17 @@ A physical action may serve a modest, honest role. Casting on can introduce an
 initial condition and binding off a final constraint check; neither needs to be
 falsely equated with an advanced algebraic operator. All mathematical topics still
 require explicit connections, but all craft techniques need not represent theorems.
+
+## Shared lecture and cross-lens requirements
+
+Use [ANALOGY_COURSE_MAP.md](ANALOGY_COURSE_MAP.md) as the shared source/topic
+register. Every analogy passage must identify its topic ID, one-based lecture
+PDF page(s) or exam-topic supplement, local action card, exact mathematical
+landing, boundary, and eventually its manuscript location. Cross-lens callbacks
+must identify the shared mathematical relationship and distinguish each lens's
+objects, units, domains, and information losses. A matching word alone is not a
+connection. Colored light and multiple shadows now have selected full drafts; sound, mobile,
+and dance remain proposals. Pottery is archived.
 
 ## Scoring rules
 
@@ -138,3 +149,11 @@ is not claimed.
    questions, checked solutions, and precise course references.
 3. Develop/review the four-space, projection, SVD, and gauge/PCA derivations;
    validate that readers transfer the insight without relying on craft vocabulary.
+
+**Source-map update, 2026-10-26:** The shared course map now supplies 36 topic IDs,
+exact extractable lecture-page destinations, the then-current four-lens routes and five
+candidate routes, and cross-lens translation cards. Prior references above to
+missing lecture-page mapping describe the earlier baseline. Problem-level references,
+manuscript locations, image-only pages, rendered output, and independent validation
+remain open. The earlier score is retained as a dated baseline, not reassessed or
+raised for editorial mapping alone.
