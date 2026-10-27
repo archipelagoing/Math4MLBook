@@ -1,9 +1,10 @@
 # Math4MLBook TODO
 
-Last updated: 2026-10-26. At the owner's request, Lecture 1 has two reader pages
-retaining all requested topics, formulas, and distinct lecture examples. The expanded manuscript and
-24 solutions are retained outside reader navigation. See the current review note
-in [the validation record](authoring/lecture1-review.md). Weeks 2–5 remain unfinished.
+Last updated: 2026-10-26. Lecture 1 restores the textbook explanations and diagrams
+in **four website pages**: vectors/geometry, matrices/products, exercises, solutions.
+This replaces the rejected formula-sheet edition. All source examples/formulas
+remain. The limit concerns website pages, not printed sheets. Later weeks remain
+unfinished; the current revision has not been published.
 
 ## Maintenance instructions
 
@@ -492,3 +493,14 @@ active; they are not requirements for the five-week milestone.
 - [x] Verify complete-coverage reader pages on desktop/mobile and regenerate the
   PDF: four A4 sheets, two per reading page; retain legible math instead of dropping
   lecture content. Strict build passes; publication remains pending.
+
+## Restore the textbook experience with fewer navigation pages
+
+- [x] Consolidate full teaching explanations into vectors/geometry and matrices/products.
+- [x] Restore all four diagrams, worked examples, derivations, and checkpoint answers.
+- [x] Reconnect the 24 exercises and explained solutions as the other two pages.
+- [x] Move synthesis and source attribution into the teaching pages.
+- [x] Rewrite concept links to anchors in the included pages; remove compressed styling.
+- [x] Preserve all source examples/formulas and the four-page cap including exercises/solutions.
+- [x] Update the reader guide and authoring references to describe website navigation,
+  with no printed-page target. Publication remains pending.

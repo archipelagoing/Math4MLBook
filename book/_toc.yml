@@ -1,8 +1,14 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Lecture guides
+  - caption: The textbook
     chapters:
       - file: lecture1/index
+        title: Lecture 1 · Vectors and geometry
         sections:
           - file: lecture1/matrix-guide
+            title: Matrices and products
+          - file: lecture1/practice
+            title: Exercises
+          - file: lecture1/solutions
+            title: Solutions

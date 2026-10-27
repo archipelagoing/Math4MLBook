@@ -541,3 +541,9 @@ now refer to retained expanded sources rather than the current reader navigation
 The owner then required all distinct lecture examples and all listed formulas/topics
 to remain. The two reader guides now retain them; the complete PDF uses four sheets.
 See the [source-coverage audit](../../../authoring/lecture1-coverage.md).
+
+**Current implementation.** Lecture 1 restores the full textbook presentation within
+four website pages, including [exercises](../../../book/lecture1/practice.md) and
+[solutions](../../../book/lecture1/solutions.md). The two concept pages again show
+the sampler, repeat-family geometry and operation map with connected explanations.
+The former condensed PDF is not the current reader format.

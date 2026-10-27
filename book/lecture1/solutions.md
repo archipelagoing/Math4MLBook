@@ -15,7 +15,7 @@ independent performance.
 $(4,-1,2,3)^T$ is a vector in $\mathbb R^4$: all four entries are real numbers.
 It is not an actual four-section pink-count row because the second count is negative.
 As a **change** from another row, a negative entry could be meaningful. The record's
-domain must be stated. Revisit [vectors and interpretation](vectors.md) if you
+domain must be stated. Revisit {ref}`vectors and interpretation <w1-vectors>` if you
 classified the algebraic vector as invalid merely because it is not executable.
 
 (w1-s02)=
@@ -33,7 +33,7 @@ A combination of e,a has coordinates $(\alpha+\beta,\alpha-\beta,
 \alpha+\beta,\alpha-\beta)^T$. For $(4,2,4,2)^T$, the equations give
 $\alpha=3$, $\beta=1$. Substitution verifies every entry.
 For $(4,2,3,2)^T$, coordinates 1 and 3 differ, contradicting the structural form.
-No coefficients work. Revisit [general combinations](combinations.md) rather
+No coefficients work. Revisit {ref}`general combinations <w1-combinations>` rather
 than trying endless numerical guesses.
 
 (w1-s04)=
@@ -50,7 +50,7 @@ The cosine must lie between −1 and 1 for nonzero real Euclidean vectors.
 $\|\mathbf u\|=\sqrt{9+16}=5$, so
 $\widehat{\mathbf u}=(-3/5,0,4/5)^T$ and $\|-2\mathbf u\|=2\cdot5=10$.
 Check the unit length: $9/25+16/25=1$. Zero's norm is zero, so normalization would
-divide by zero; it has no unit direction. Revisit [norms](geometry.md) if the
+divide by zero; it has no unit direction. Revisit {ref}`norms <w1-geometry>` if the
 negative multiplier produced a negative length.
 
 (w1-s06)=
@@ -61,7 +61,7 @@ A is $2\times3$, $a_{23}=6$, and
 $$A^T=\begin{bmatrix}1&4\\2&5\\3&6\end{bmatrix}\in\mathbb R^{3\times2}.$$
 
 Trace is not defined for this rectangular A under the chapter's convention.
-Adding $1+5$ would silently change that convention. Revisit [matrix definitions](matrices.md).
+Adding $1+5$ would silently change that convention. Revisit {ref}`matrix definitions <w1-matrices>`.
 
 (w1-s07)=
 ### 7. Entrywise arithmetic
@@ -90,7 +90,7 @@ $c\mathbf v+d\mathbf w=(c,c+d,d)^T$, so membership requires $y=x+z$.
 For $(2,5,3)^T$, choose c=2,d=3; the middle coordinate is $2+3=5$.
 For $(2,4,3)^T$, the required middle coordinate would be 5, not 4.
 State both the coefficients for the successful case and the obstruction for the
-failed one. [The plane example](combinations.md) shows why the condition is sufficient.
+failed one. {ref}`The plane example <w1-combinations>` shows why the condition is sufficient.
 
 (w1-s10)=
 ### 10. The second direction is redundant
@@ -127,7 +127,7 @@ AB exists and is $2\times4$; BA and $A^TB$ are undefined because their inner siz
 are respectively 4 versus 2, and 2 versus 3. $B^TA^T$ exists and is $4\times2$.
 Both $I_2A$ and $AI_3$ exist and equal A, with shape $2\times3$.
 AB is rectangular, so its trace is not defined here.
-Revisit the [shape rule](products.md) before attempting numerical multiplication.
+Revisit the {ref}`shape rule <w1-products>` before attempting numerical multiplication.
 
 (w1-s14)=
 ### 14. Compute and interpret by columns
@@ -149,7 +149,7 @@ $$H\mathbf x=\begin{bmatrix}12+4+2\cdot2\\12+2\cdot4+2\end{bmatrix}
 Twenty old stitches are consumed and 22 new stitches produced, a net increase of 2.
 The operation counts give neither their order nor all their placement details.
 If you counted 24 consumed, you likely treated every decrease as two produced
-stitches rather than two consumed ones. Revisit the [column interpretation](products.md).
+stitches rather than two consumed ones. Revisit the {ref}`column interpretation <w1-products>`.
 
 (w1-s16)=
 ### 16. Several summaries of one matrix

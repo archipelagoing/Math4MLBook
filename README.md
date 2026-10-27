@@ -3,14 +3,20 @@
 A TeachBooks textbook built from the course materials in `resources/`, using a
 connected knitting-and-crochet sampler to develop the mathematics.
 
-**Available:** Lecture 1 in two reading pages, retaining every distinct lecture example:
-[vectors and geometry](book/lecture1/index.md) and
-[matrices and multiplication](book/lecture1/matrix-guide.md).
-[Download the complete guide PDF](authoring/lecture1-study-guide.pdf).
-[Source-coverage audit](authoring/lecture1-coverage.md) maps every topic and example.
-Yellow panels highlight essential formulas; red panels flag exam mistakes.
-The earlier expanded explanations and 24-problem bank remain in `book/lecture1/`
-as source references, outside the reader navigation. Weeks 2–5 remain unfinished.
+**Lecture 1 is a four-page textbook chapter:**
+
+1. [Vectors and geometry](book/lecture1/index.md).
+2. [Matrices and products](book/lecture1/matrix-guide.md).
+3. [Exercises](book/lecture1/practice.md).
+4. [Solutions](book/lecture1/solutions.md).
+
+The reading pages use connected explanations, four diagrams, worked examples,
+checkpoint answers, and highlighted results. All distinct lecture examples and
+properties remain; [the coverage audit](authoring/lecture1-coverage.md) maps them
+to the chapter. Each lecture is limited to four website pages including practice
+and solutions. Printed page count is not the navigation limit. Weeks 2–5 remain
+unfinished. The earlier condensed PDF is an archived summary, not the current
+textbook reading experience.
 
 ## Read locally
 

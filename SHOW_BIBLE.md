@@ -10,7 +10,7 @@ Observed implementation and intended experience are recorded separately.
 | Project | [Math4MLBook](https://github.com/archipelagoing/Math4MLBook) |
 | Working title | Mathematical Foundations of Machine Learning |
 | Premise | A beautiful, rigorous, readable textbook that develops the course's weekly slides into a complete learning experience. |
-| Current stage | Lecture 1 condensed to two study-guide pages at owner request; expanded sources retained. |
+| Current stage | Lecture 1 uses four textbook pages: two teaching pages, exercises, and solutions; full explanations restored. |
 | Canonical branch | `main`; working tree based on `b1e21f70c9921e91c386f6836f3717498b14da06`. No release verified. |
 | Decision maker | Repository owner; final title and aesthetic preferences remain adjustable. |
 | Last verified | 2026-10-26: local strict build and Lecture 1 desktop/mobile/dark/print checks; live deployment unverified. |
@@ -331,3 +331,12 @@ relationships, dot-product properties, and all matrix-product properties. Combin
 progressive reveals and shorten prose; do not omit formulas or examples to meet a
 printed page count. Keep two reader pages, allowing additional print sheets for
 legible mathematics. [Coverage audit](authoring/lecture1-coverage.md) is the checklist.
+
+**Current reader format, 2026-10-26.** The owner clarified that the problem was
+excessive website navigation, not print length, and rejected the formula-sheet
+presentation. Restore the original textbook voice, prose, diagrams, worked
+examples and checkpoints; consolidate concepts instead of compressing typography.
+**Maximum four website pages per lecture, including exercises and solutions.**
+Lecture 1 uses vectors/geometry, matrices/products, exercises, solutions. Source
+notes and synthesis belong within these pages. Printed sheet count does not govern
+content. Earlier short-guide/print-limit decisions above are superseded.

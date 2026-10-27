@@ -1,31 +1,29 @@
 # Lecture 1 editorial and validation record
 
-## Current edition: concise guide with complete lecture coverage
+## Current edition: textbook presentation, four website pages
 
-The owner clarified that every requested topic and all lecture examples must stay.
-The reader route remains `index.md` and `matrix-guide.md`; these now include all
-source definitions/properties, every distinct example, and the orthogonality/cosine
-proof relationships. Progressive reveal slides are consolidated.
-[The coverage audit](lecture1-coverage.md) maps the entire deck to the current guide.
+The owner clarified that the limit concerns website navigation, not print length,
+and rejected the condensed formula-sheet presentation. The reader route is now:
+`index.md` (vectors/geometry), `matrix-guide.md` (matrices/products), `practice.md`,
+and `solutions.md`. There are exactly four pages for Lecture 1, including exercises.
 
-The previous two-sheet summary omitted properties/examples and is superseded.
-The current [complete guide PDF](lecture1-study-guide.pdf) has **four A4 pages**:
-two for vectors, two for matrices, at 10pt body size with 12mm margins. Coverage
-takes priority over the earlier ideal two-sheet limit. The expanded opener remains
-`expanded-opener.md`; the longer practice sources remain outside the reader TOC.
+The teaching pages restore connected prose, four original diagrams, worked
+examples, derivations, highlighted results, and five checkpoint answers. Repeated
+boundary notes and duplicated summaries were shortened. All source examples and
+properties retained in the prior coverage revision remain; the
+[coverage audit](lecture1-coverage.md) maps their destinations.
 
-Current checks: strict build passes without warnings; all three reader pages at
-1440/390 pixels have no MathJax errors, page-wide overflow, or JavaScript errors.
-The numerical/structural checker passes 77 checks, including the original addition,
-scaling, transpose and source-plane examples. Rendered slide pages 5–6, 8–9, 12,
-15, and 18 were newly inspected, supplementing the source image checks below.
-The original addition uses (0,2), not (2,0). Every source formula/example in the
-coverage audit was manually compared with the current manuscript.
+Concept labels are embedded in the two teaching pages. Solution revision links
+now target those labels instead of excluded old page files. Synthesis and source
+notes are embedded in the matrices page. The old compact-print overrides are
+removed. The previous PDF is an archived summary; no printed-sheet target applies
+to the current reading experience.
 
-Browser exports are produced by `tools/review_lecture1.py`; combine them with
-`pdfunite /tmp/math4ml-brief-index.pdf /tmp/math4ml-brief-matrix-guide.pdf authoring/lecture1-study-guide.pdf`.
-PDF page count and rendered output were checked. This revision has not been pushed
-or deployed. No independent reader/reviewer outcome is claimed.
+Validation: strict build, 77 numerical/structural checks, browser checks of the
+five reader documents at desktop/mobile widths, four-page sidebar verification,
+checkpoint keyboard access, a solution-to-concept return link, dark colors, print
+answer expansion, and rendered links/assets. This revision is local and has not
+been pushed or deployed. Independent reviewer/student outcomes remain unverified.
 
 ## Expanded edition review (historical)
 
