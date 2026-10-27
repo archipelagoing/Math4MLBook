@@ -2,7 +2,7 @@
 
 Start with the [course map](course-map.md) for exact lecture pages and cross-system
 connections. Read the [teaching strategy](teaching-strategy.md) for the proposed
-knitting/crochet-led chapter plan, with shadows and light as optional supporting views. Use the [build method](build-method.md)
+shadow-led chapter plan; colored light and the other lenses remain optional references. Use the [build method](build-method.md)
 when writing or extending a system.
 
 | System | Canon | Rubric |
@@ -14,9 +14,9 @@ when writing or extending a system.
 | Colored light | [Read](systems/colored-light/canon.md) | [Review](systems/colored-light/rubric.md) |
 | Multiple shadows | [Read](systems/shadows/canon.md) | [Review](systems/shadows/rubric.md) |
 
-All six are editorial drafts with author checks recorded, independent review
-pending, and weighted rubric totals unassigned. Knitting/crochet remains the
-primary mathematical and narrative thread. The references do not establish completed chapters or
+All six reference frameworks have author checks recorded, independent review
+pending, and weighted analogy-rubric totals unassigned. The owner selected shadows as the
+primary mathematical and narrative thread; its Lecture 1 integration is implemented. The references do not establish completed chapters or
 student exam readiness.
 
 ## Compare options

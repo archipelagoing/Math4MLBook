@@ -1,7 +1,7 @@
 # Mathematical Foundations of Machine Learning
 
-A TeachBooks textbook built from the course materials in `resources/`, using a
-connected knitting-and-crochet sampler to develop the mathematics.
+A TeachBooks textbook built from the course materials in `resources/`, using
+marked points and calibrated shadow views to develop the mathematics.
 
 **Lecture 1 is a four-page textbook chapter:**
 
@@ -10,8 +10,10 @@ connected knitting-and-crochet sampler to develop the mathematics.
 3. [Exercises](book/lecture1/practice.md).
 4. [Solutions](book/lecture1/solutions.md).
 
-The reading pages use connected explanations, four diagrams, worked examples,
-checkpoint answers, and highlighted results. All distinct lecture examples and
+The shadow-based reading pages contain 12 numbered learning sections, page objectives, section
+roadmaps, four diagrams, 12 worked examples, 12 checkpoint answers, highlighted
+results, and an end-of-chapter readiness map. Each solution links to a relevant
+explanation and a retry problem. All distinct lecture examples and
 properties remain; [the coverage audit](authoring/lecture1-coverage.md) maps them
 to the chapter. Each lecture is limited to four website pages including practice
 and solutions. Printed page count is not the navigation limit. Weeks 2–5 remain
@@ -57,11 +59,11 @@ optional review aid and is not a book build dependency.
 - [Main rubric](rubricatm.md): whole-book quality criteria and current assessment.
 - [Checklist](todoSimple.md): implementation status and next work.
 - [Analogy reference](analogy/README.md): shared mathematical mappings.
-- [Lecture 1 source notes](book/lecture1/source-notes.md): attribution and scope.
+- [Lecture 1 source audit](authoring/lecture1-coverage.md): attribution and scope.
 
 The repository began with the [TeachBooks template](https://github.com/TeachBooks/template).
 Its authoring examples remain available in the source tree, outside the reader's
-navigation. The existing [license](LICENSE.md) does not establish ownership of the
+navigation. The existing [license](LICENSE) does not establish ownership of the
 supplied course PDFs; source-specific attribution is recorded in each chapter.
 Local authoring and checking do not publish the book. Deployment uses the existing
 GitHub workflow when publication is authorized.

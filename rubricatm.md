@@ -54,34 +54,28 @@ as an editorial mastery target, not a statement of course grading policy.
 
 **References:** [SHOW_BIBLE.md](SHOW_BIBLE.md), [todoSimple.md](todoSimple.md),
 `resources/lectures/`, `resources/HW/`, `resources/practiceExams/`, `book/_toc.yml`,
-`book/_config.yml`. The README is currently template documentation, not evidence
-of completed textbook behavior.
+`book/_config.yml`. The README records local setup and chapter scope; inspect rendered output rather
+than treating documentation alone as proof of behavior.
 
-**Analogy companion:** [Knitting Crochet](analogy/systems/knitting-crochet/canon.md) is the canonical knitting/
-crochet action web, grounded in named stitches, magic-ring rounds, cast-on/bind-off,
-and swatch measurements; [Knitting Crochet Rubric](analogy/systems/knitting-crochet/rubric.md) scores its coverage,
-fidelity, continuity, and transfer separately. Main textbook reviews should check
-that chapter analogies explain actual craft mechanisms, preserve mathematics and
-representation boundaries, and lead back to ordinary
-exam questions. A high analogy score does not establish textbook completion.
-Additional independent references and rubrics cover [bacteria/viruses](analogy/systems/bacteria-viruses/canon.md),
-the [astrological wheel](analogy/systems/astrology/canon.md),
-[colored light](analogy/systems/colored-light/canon.md),
-[multiple shadows](analogy/systems/shadows/canon.md), and [rebuilt pottery](analogy/systems/pottery/canon.md).
-The [build method](analogy/build-method.md) defines the common artifact
-standard; the four earlier pairs are unchanged in `analogy/old/`. All six current
-rubrics use the same unscored evidence-ledger status; prior light/shadow scores
-are historical. Exact PDF-page mappings live only in the shared course map.
-The [head-to-head comparison](analogy/comparisons/light-vs-shadows.md) distinguishes
-editorial preference from observed learner effectiveness.
-Each reference links its own rubric. Verify the chosen lens against its own canon;
-do not require all analogies in every passage or conflate their entities.
+**Analogy companion:** [The Object Behind the Shadows](analogy/systems/shadows/canon.md)
+is the selected canonical system; its [rubric](analogy/systems/shadows/rubric.md)
+checks domain specificity, mathematics, continuity and transfer. Use matched points,
+calibrated parallel-ray views, explicit spaces, and the distinction between one
+point's coordinates and a profile across points. Do not infer arbitrary solid
+reconstruction from silhouettes, or identify record-space geometry with physical
+orientation. A high analogy score does not establish textbook completion.
 
-**Primary teaching strategy:** The [craft-centered plan](analogy/teaching-strategy.md)
-requires knitting/crochet to lead substantial mathematical examples in every week.
-The sampler panel and marked crochet round extend the ledger to geometric, spectral,
-and statistical topics. Evaluate shadows/light as optional clarifications rather
-than evidence that yarn can be omitted from later formal teaching.
+Other systems remain references in [the analogy index](analogy/README.md).
+The [build method](analogy/build-method.md) defines their common standard; original
+snapshots in `analogy/old/` are unchanged. The
+[comparison](analogy/comparisons/light-vs-shadows.md) records the reasoning for the
+selected lens, without claiming measured learner effectiveness.
+
+**Primary teaching strategy:** The [shadow-led plan](analogy/teaching-strategy.md)
+requires a connected path from point coordinates to observations, independent
+views, fitting, decomposition and point data. Use the selected canon's O and H;
+identify supplementary record tables such as the four-bead X profiles. The earlier
+craft-led strategy is historical. Preserve formal lecture examples and exam transfer.
 
 **Lecture alignment:** [The shared analogy course map](analogy/course-map.md)
 provides topic IDs, exact extractable lecture-page destinations, all current lens
@@ -154,14 +148,15 @@ checks, blockers, and whether comparisons use the same target and weights.
 
 ## Latest assessment
 
-**Date:** 2026-10-26. **Base commit:** `d32974f00ec255101866c20df1d0ffd13cf1deb6`;
-includes uncommitted concise-edition changes.
+**Date:** 2026-10-26. **Base commit:** `9d932e0`;
+includes the local teaching-structure revision.
 
 **Current format:** Textbook explanations, diagrams, worked examples, and checkpoint
 answers are restored. Lecture 1 has four website pages: vectors/geometry,
 matrices/products, exercises, solutions. The user's cap includes exercises and
 solutions; it does not limit printed sheets. Every distinct lecture example and
-formula/property is retained. The condensed formula-sheet format is superseded.
+formula/property is retained. The owner selected shadows; all active prose, exercises,
+solutions and figures now use that lens. The condensed formula-sheet format is superseded.
 
 The original five-week preparation criteria and weights remain below. The current
 whole-book score is **56.25/100 provisional**; it measures remaining breadth and
@@ -171,21 +166,27 @@ assessment work, not whether the requested shorter format is preferable.
 | --- | ---: | ---: | ---: | --- |
 | Weekly coverage and source fidelity | 20 | 2 | 10 | Lecture 1 key concepts summarized with source attribution; expanded source map retained. Later weeks and complete exam blueprint remain open. |
 | Mathematical correctness and precision | 20 | 2 | 10 | Definitions, conditions, example calculations, and matrix dimensions checked. Full independent review and later-week work remain open. |
-| Exposition and learning progression | 20 | 2 | 10 | Concise source examples, coordinate interpretations, cosine/orthogonality derivation, and operation-selection warnings; later-week progression remains open. |
-| Practice and assessment | 15 | 2 | 7.5 | Five checkpoints and 24 graduated exercises with explained solutions are in the reader route; cumulative/timed practice and student outcomes remain open. |
+| Exposition and learning progression | 20 | 2 | 10 | Page objectives, 12 numbered sections/worked examples, source references, cosine proof, and method-selection guidance; later-week progression remains open. |
+| Practice and assessment | 15 | 2 | 7.5 | 12 checkpoints and 24 graduated exercises with explained solutions are in the reader route; cumulative/timed practice and student outcomes remain open. |
 | Visual design and accessibility | 15 | 3 | 11.25 | Yellow formulas, red pitfalls, readable palette, mobile and desktop math checks, print layout. Full accessibility audit remains open. |
 | Build integrity and reproducibility | 5 | 4 | 5 | Documented environment, clean strict build, numerical checks, updated browser review script. Live deployment of this revision unverified. |
-| Editorial completeness and delivery | 5 | 2 | 2.5 | Two-page navigation and updated welcome/setup/status documents. Later guides, final credits, and publication remain open. |
+| Editorial completeness and delivery | 5 | 2 | 2.5 | Four-page navigation, numbered learning sections, readiness map, and accurate status documents. Later guides, final credits, and publication remain open. |
 | **Total** | **100** | | **56.25** | |
 
 **Verification:** See [the current edition note](authoring/lecture1-review.md).
 Strict build passed. All five reader documents are checked at 1440/390 pixels:
 no MathJax errors, page-wide overflow, or JavaScript errors. The retained
-expanded-edition checker still passes 77 numerical/structural checks, including restored source examples.
+expanded-edition checker still passes 93 numerical/structural/narrative checks, including restored source examples.
 
-**Next improvements:** review the concise guide with the student; continue to
+**Next improvements:** review comprehension of the structured chapter with the student; continue to
 Lecture 2 when authorized; resolve the statistics/PCA and exam coverage gaps.
 Student outcomes and independent review remain unverified.
 
 **Comparison:** The earlier 56.25 assessment applied to the expanded reader route; the first compact edition scored 47.5 before source examples and derivations were restored. The current revision restores the textbook learning sequence within
 four navigation pages, including the practice bank. No new student outcome is claimed.
+
+**Latest structure evidence:** The current 56.25 whole-book assessment keeps the
+same weights. Lecture 1 now implements the show bible's section-level learning
+sequence and all four reading pages; the browser checker verifies its 12 learning
+sections, examples and checkpoints. This is stronger chapter evidence, not a claim
+that the remaining weeks or A-level student outcomes are complete.

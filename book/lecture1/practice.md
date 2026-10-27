@@ -1,5 +1,13 @@
 (w1-practice)=
-# Practice: from a familiar repeat to fresh mathematics
+# Practice: from point measurements to fresh mathematics
+
+<nav class="lecture-path" aria-label="Lecture 1 learning path">
+<a href="index.html"><span class="path-number">01</span><span>Vectors &amp; geometry</span></a>
+<a href="matrix-guide.html"><span class="path-number">02</span><span>Matrices &amp; products</span></a>
+<a href="practice.html" aria-current="page"><span class="path-number">03</span><span>Exercises</span></a>
+<a href="solutions.html"><span class="path-number">04</span><span>Solutions</span></a>
+</nav>
+
 
 Try each problem before opening its solution. The first group isolates the tools;
 the second changes the examples; the final group mixes concepts and asks for
@@ -13,8 +21,9 @@ Use Problems 19–24 as an unaided mixed review after learning the individual me
 (w1-p01)=
 ### 1. What does a vector record?
 
-A four-section sampler record is $(4,-1,2,3)^T$. Is it a vector in $\mathbb R^4$?
-Can it be the actual pink counts of four six-stitch sections? Explain the difference.
+The X coordinates of four labeled beads are $(4,-1,2,3)^T$. Is this a vector in
+$\mathbb R^4$? Does the negative entry invalidate a coordinate record? Does this
+record determine the beads’ depths? Explain all three answers.
 
 {ref}`Solution 1 <w1-s01>`
 
@@ -26,7 +35,7 @@ For $\mathbf u=(2,-1,3)^T$ and $\mathbf v=(-1,4,0)^T$, find $2\mathbf u-\mathbf 
 {ref}`Solution 2 <w1-s02>`
 
 (w1-p03)=
-### 3. Repeat coefficients
+### 3. Profile coefficients
 
 Using e and a from the chapter, express $(4,2,4,2)^T$ as $\alpha\mathbf e+\beta\mathbf a$.
 Can $(4,2,3,2)^T$ be expressed that way? Give a reason.
@@ -136,17 +145,17 @@ Show a column-based check for one of the products.
 {ref}`Solution 14 <w1-s14>`
 
 (w1-p15)=
-### 15. A new shaping record
+### 15. Two views of a new point
 
-Use $H=\begin{bmatrix}1&1&2\\1&2&1\end{bmatrix}$ and
-$\mathbf x=(12,4,2)^T$, whose entries count plain, increase, and decrease operations.
-Compute Hx, interpret both entries, and find the net count change. Does this
-specify the operation order?
+Use the stacked front/side map
+$H=\begin{bmatrix}1&0&0\\0&1&0\\0&1&0\\0&0&1\end{bmatrix}$ and
+$\mathbf p=(12,4,2)^T$. Compute Hp and identify each output entry.
+Why must two entries agree? Do four readings make p a four-dimensional point?
 
 {ref}`Solution 15 <w1-s15>`
 
 (w1-p16)=
-### 16. Group the sections
+### 16. Group the point measurements
 
 Let
 
@@ -154,7 +163,8 @@ $$R=\begin{bmatrix}2&1&2&1\\1&2&1&2\\3&0&3&0\end{bmatrix},\qquad
 S=\begin{bmatrix}1&0\\1&0\\0&1\\0&1\end{bmatrix}.$$
 
 Compute RS, $R\mathbf1_4$, and $R^T\mathbf1_3$, where $\mathbf1_n$ is the
-n-entry all-ones column. Explain what the three results summarize.
+n-entry all-ones column. Here R records three configurations (rows) of four
+beads’ X coordinates (columns). Explain what the three results summarize.
 
 {ref}`Solution 16 <w1-s16>`
 
@@ -179,9 +189,9 @@ whether your answer is unique.
 (w1-p19)=
 ### 19. What survives a summary?
 
-Two rows have section records r=(3,1,3,1) and s=(1,3,1,3). A summary keeps only
-the total. Show that the difference is invisible to that summary. Does this
-establish the same stitch order, fabric, or section record?
+Two configurations have X profiles r=(3,1,3,1) and s=(1,3,1,3). A summary keeps
+only their coordinate sum. Show that their difference is invisible to that summary.
+Does this establish identical front marks or identical three-dimensional positions?
 
 :::{dropdown} Hint · Choose a first step
 

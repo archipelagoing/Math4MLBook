@@ -65,7 +65,9 @@ Replace only Latest assessment at a meaningful milestone; keep comparable weight
 
 **Date:** 2026-10-26.
 
-**Status:** Editorial draft; author checks recorded; independent review pending.
+**Status:** Selected primary lens; Lecture 1 prose, figures, exercises and solutions
+implemented with local author checks. Later-week integration and independent
+review remain pending.
 
 **Weighted total:** Not assigned. Formal scoring has not been completed using the
 current evidence ledger. Historical scores are retained in
@@ -73,11 +75,11 @@ current evidence ledger. Historical scores are retained in
 
 | Criterion | Weight | Present evidence | Remaining evidence |
 | --- | ---: | --- | --- |
-| Domain mechanism specificity | 25 | Concrete scene, stable vocabulary, source boundaries, named mechanisms and stated limitations. | Qualified domain review and inspected teaching figures/demonstrations. |
+| Domain mechanism specificity | 25 | Concrete scene, stable vocabulary, canonical O/H, four-bead PROFILE extension, and Lecture 1 passages/figures. | Qualified domain review and inspected teaching figures/demonstrations. |
 | Mathematical fidelity and boundaries | 25 | Recorded numerical-anchor checks, explicit spaces/domains and assumptions. | Independent semantic audit and full manuscript proofs/edge-case treatment. |
 | Connected narrative and stable canon | 15 | Recurring anchors, graph, accessible route and cross-lens links. | Rendered graph and consistency through actual textbook passages. |
-| Complete course and manuscript coverage | 15 | All 36 topic groups through the shared course map and weekly routes. | Supporting problem references, image-only source review and completed chapter locations. |
-| Teaching, visual explanation, and transfer design | 10 | 3 answered anchor questions, worked examples and a formal transfer contract. | Full fresh question bank, illustrated exposition and tested diagnostic feedback. |
+| Complete course and manuscript coverage | 15 | All 36 topic groups through the shared course map and weekly routes. | Later-week chapter locations, exact supporting problem references and remaining image-only source review. |
+| Teaching, visual explanation, and transfer design | 10 | 3 answered anchor questions, worked examples and a formal transfer contract. | Later-week question banks and observed learner transfer; Lecture 1 now has 24 exercises with feedback and four illustrations. |
 | Independent review and learning evidence | 10 | No outside review or learner results are claimed. | Domain/math review, accessibility inspection and observed independent transfer. |
 
 **Recorded mathematical checks:** ONE O and embedded P; TWO H and four spaces; FIT least-squares solution, residual and projector; ANGLE Gram eigenvalues; TURN rotation/deformation; MODES singular pairs and truncation; CLOUD centered covariance/PCA. Exact rational identities and squared-normalization identities checked where possible; angle examples checked by their analytic Gram matrix.
@@ -94,3 +96,9 @@ independent review, physical validation, rendered accessibility, or student read
    homework/problem references and fresh checked transfer questions.
 3. Independently review the eigen/SVD/statistics routes and conduct the matched
    learner comparison before claiming one lens teaches more effectively.
+
+**Lecture 1 local evidence:** Four active illustrations were rendered and inspected;
+93 arithmetic/structural/narrative checks pass. Five reader documents were checked
+at desktop/mobile widths, including the four-page route, 12 teaching sections,
+12 worked examples, 12 checkpoints and their links. This remains author verification,
+not qualified independent review or observed student learning.

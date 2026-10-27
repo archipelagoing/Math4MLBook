@@ -73,9 +73,17 @@ K=[[0,2,-1],[-2,0,3],[1,-3,0]]
 equal(transpose(K),[scale(-1,row) for row in K])
 equal(product([[1,0,0],[-1,1,0],[0,-1,1]],[[2],[5],[9]]),[[2],[3],[4]])
 equal(product([[1,2,3],[3,2,1]],[[0,2],[1,1],[0,1]]),[[2,7],[2,9]])
-H=[[1,1,2],[1,2,1]]
-for x,y in [([18,6,0],[24,30]),([15,3,3],[24,24]),([12,4,2],[20,22])]:
-    equal(product(H,[[t] for t in x]),[[t] for t in y])
+# The selected shadow canon: one front view and stacked front/side views.
+O=[[1,0,0],[0,1,0]]
+H=[[1,0,0],[0,1,0],[0,1,0],[0,0,1]]
+equal(product(O,[[2],[3],[4]]),[[2],[3]])
+equal(product(O,[[2],[3],[9]]),[[2],[3]])
+equal(product(H,[[2],[3],[4]]),[[2],[3],[3],[4]])
+equal(product(H,[[12],[4],[2]]),[[12],[4],[4],[2]])
+equal(product(O,[[0],[0],[5]]),[[0],[0]])
+equal(dot([1,0,0],[2,3,4]),2)
+equal((len(O),len(O[0])),(2,3))
+equal((len(H),len(H[0])),(4,3))
 W=[r,s,r,s]
 S=[[1,0],[1,0],[0,1],[0,1]]
 equal(transpose(W),W)
@@ -125,12 +133,24 @@ equal(dot([4,4,-3],[1,2,4]),0)
 equal(dot([4,4,-3],[2,1,4]),0)
 equal(dot([4,4,-3],[9,8,7]),47)
 
+# New section checkpoints use fresh numbers while preserving coordinate roles.
+equal(dot([3,-1],[2,6]),0)
+equal(dot([0,-5],[0,-5]),25)
+equal(dot([0,-1],[0,-1]),1)
+equal([scale(-2,row) for row in [[1,-2],[0,3]]],[[-2,4],[0,-6]])
+equal(product(O,[[5],[-2],[7]]),[[5],[-2]])
+equal(product(O,[[5],[-2],[10]]),[[5],[-2]])
+
 practice=(ROOT/'book/lecture1/practice.md').read_text()
 solutions=(ROOT/'book/lecture1/solutions.md').read_text()
 equal(re.findall(r'^\(w1-p(\d+)\)=',practice,re.M),[f'{n:02}' for n in range(1,25)])
 equal(re.findall(r'^\(w1-s(\d+)\)=',solutions,re.M),[f'{n:02}' for n in range(1,25)])
 equal(re.findall(r'<w1-s(\d+)>',practice),[f'{n:02}' for n in range(1,25)])
-for path in (ROOT/'book/figures/lecture1').glob('*.svg'):
+# Only active assets are part of this chapter's validation; earlier SVGs are retained.
+for name in ['shadow-views','shadow-profiles','shadow-geometry','shadow-map']:
     import xml.etree.ElementTree as ET
+    path=ROOT/'book/figures/lecture1'/f'{name}.svg'
     equal(ET.parse(path).getroot().tag,'{http://www.w3.org/2000/svg}svg')
-print(f'{checks} Lecture 1 arithmetic, pairing, and figure checks passed.')
+for path in [ROOT/'book/intro.md',*[ROOT/'book/lecture1'/f'{name}.md' for name in ['index','matrix-guide','practice','solutions']]]:
+    equal(bool(re.search(r'\b(knitting|crochet|stitch|stitches|swatch|sampler|fabric|yarn)\b',path.read_text(),re.I)),False)
+print(f'{checks} Lecture 1 arithmetic, pairing, active-asset, and narrative checks passed.')

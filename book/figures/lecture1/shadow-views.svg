@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="440" viewBox="0 0 1120 440" role="img" aria-labelledby="title desc">
+<title id="title">One front mark can hide two different depths</title><desc id="desc">Two candidate point positions p=(2,3,4) and p-prime=(2,3,9) have the same front mark (2,3). A side view records (3,4) and (3,9). Axes are calibrated X,Y and Y,Z; positions are alternatives, not simultaneous unidentified points.</desc>
+<rect width="1120" height="440" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="38" class="title" >One front mark can hide two different depths</text>
+<text x="30" y="88" class="label" >World: X = 2, Y = 3</text>
+<path d="M45 283 H305" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M55 277 V289" fill="none" stroke="#543124" stroke-width="1" />
+<text x="55" y="310" class="small" text-anchor="middle">0</text>
+<path d="M151 277 V289" fill="none" stroke="#543124" stroke-width="1" />
+<text x="151" y="310" class="small" text-anchor="middle">4</text>
+<path d="M271 277 V289" fill="none" stroke="#543124" stroke-width="1" />
+<text x="271" y="310" class="small" text-anchor="middle">9</text>
+<circle cx="151" cy="283" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M271 275 L279 283 L271 291 L263 283 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="100" y="238" class="small" >p: Z = 4</text>
+<text x="216" y="211" class="small" >p′: Z = 9</text>
+<text x="300" y="315" class="small" >Z</text>
+<text x="30" y="350" class="small" >Move only in depth.</text>
+<text x="390" y="88" class="label" >Front screen: keep X,Y</text>
+<path d="M435 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="435" y="350" class="small" text-anchor="middle">0</text>
+<path d="M473 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="473" y="350" class="small" text-anchor="middle">1</text>
+<path d="M511 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="511" y="350" class="small" text-anchor="middle">2</text>
+<path d="M549 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="549" y="350" class="small" text-anchor="middle">3</text>
+<path d="M587 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="587" y="350" class="small" text-anchor="middle">4</text>
+<path d="M435 289 H587" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="423" y="294" class="small" text-anchor="end">1</text>
+<path d="M435 251 H587" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="423" y="256" class="small" text-anchor="end">2</text>
+<path d="M435 213 H587" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="423" y="218" class="small" text-anchor="end">3</text>
+<path d="M435 175 H587" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="423" y="180" class="small" text-anchor="end">4</text>
+<path d="M435 137 H587" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="423" y="142" class="small" text-anchor="end">5</text>
+<path d="M435 327 H602" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M435 327 V123" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="609" y="332" class="small" >X</text>
+<text x="430" y="114" class="small" >Y</text>
+<circle cx="511" cy="213" r="12" fill="none" stroke="#357D22" stroke-width="3"/>
+<circle cx="511" cy="213" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<text x="532" y="207" class="small" >(2, 3)</text>
+<text x="400" y="374" class="small" >Both positions share this mark.</text>
+<text x="768" y="88" class="label" >Side screen: keep Y,Z</text>
+<path d="M813 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="813" y="350" class="small" text-anchor="middle">0</text>
+<path d="M832 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="832" y="350" class="small" text-anchor="middle">1</text>
+<path d="M851 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="851" y="350" class="small" text-anchor="middle">2</text>
+<path d="M870 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="870" y="350" class="small" text-anchor="middle">3</text>
+<path d="M889 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="889" y="350" class="small" text-anchor="middle">4</text>
+<path d="M908 137 V327" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="908" y="350" class="small" text-anchor="middle">5</text>
+<path d="M813 308 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M813 289 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M813 270 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M813 251 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="801" y="256" class="small" text-anchor="end">4</text>
+<path d="M813 232 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M813 213 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M813 194 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M813 175 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M813 156 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="801" y="161" class="small" text-anchor="end">9</text>
+<path d="M813 137 H908" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M813 327 H923" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M813 327 V123" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="930" y="332" class="small" >Y</text>
+<text x="808" y="114" class="small" >Z</text>
+<circle cx="870" cy="251" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M870 148 L878 156 L870 164 L862 156 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="888" y="256" class="small" >(3, 4)</text>
+<text x="888" y="161" class="small" >(3, 9)</text>
+<text x="773" y="374" class="small" >The depth change becomes visible.</text>
+<text x="26" y="416" class="small" >Ideal parallel-ray views of matched points. A view records selected coordinates, not a whole solid object.</text>
+</svg>

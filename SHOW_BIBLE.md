@@ -10,8 +10,8 @@ Observed implementation and intended experience are recorded separately.
 | Project | [Math4MLBook](https://github.com/archipelagoing/Math4MLBook) |
 | Working title | Mathematical Foundations of Machine Learning |
 | Premise | A beautiful, rigorous, readable textbook that develops the course's weekly slides into a complete learning experience. |
-| Current stage | Lecture 1 uses four textbook pages: two teaching pages, exercises, and solutions; full explanations restored. |
-| Canonical branch | `main`; working tree based on `b1e21f70c9921e91c386f6836f3717498b14da06`. No release verified. |
+| Current stage | Lecture 1: four website pages, with 12 numbered learning sections, objectives, worked steps, checkpoints, and synthesis. |
+| Canonical branch | `main`; current teaching-structure revision based on `9d932e0`. This local revision is not deployed. |
 | Decision maker | Repository owner; final title and aesthetic preferences remain adjustable. |
 | Last verified | 2026-10-26: local strict build and Lecture 1 desktop/mobile/dark/print checks; live deployment unverified. |
 | Start here | This file → [rubricatm.md](rubricatm.md) → [todoSimple.md](todoSimple.md); implementation in `book/`, course sources in `resources/`. |
@@ -48,38 +48,38 @@ Observed implementation and intended experience are recorded separately.
 
 | Area | Observed state | Evidence | Caveat |
 | --- | --- | --- | --- |
-| Book | Lecture 1: two concise guide pages; expanded chapter and practice retained as source references. | `book/lecture1/`, `book/_toc.yml` | Weeks 2–5 and cumulative exam preparation remain unfinished. |
+| Book | Lecture 1: two structured teaching pages, 24 exercises, and explained solutions; four website pages total. | `book/lecture1/`, `book/_toc.yml` | Weeks 2–5 and cumulative exam preparation remain unfinished. |
 | Lectures | Five PDF decks, 191 PDF pages in total. | `resources/lectures/` | Counts include title pages and progressive reveals; these are not 191 distinct lessons. |
 | Supporting materials | Six homework/worksheet/recitation PDFs; seven exam PDFs and a topic list. | `resources/HW/`, `resources/practiceExams/` | Inventory and text extraction completed; full mathematical and visual review remains. |
 | Build stack | Python 3.12, pinned TeachBooks/Jupyter Book v1 and sphinx-design; clean strict local build. | `requirements.txt`, `authoring/lecture1-review.md` | MathJax uses a CDN; deployment is unverified. |
 | Visual implementation | Shared craft palette, light/dark styles, four original SVGs, printable checkpoint answers. | `book/_static/textbook.css`, `book/figures/lecture1/` | Representative browser checks, not a full accessibility audit. |
 | Automation | Reusable TeachBooks deployment workflow triggered by book/config changes and manual dispatch. | `.github/workflows/call-deploy-book.yml` | Successful runs and GitHub Pages availability unverified. |
-| Project identity | Working title, yarn mark, repository links, reader guide, setup README, chapter navigation. | `README.md`, `book/_config.yml`, `book/_toc.yml` | Final human author credit and publication URL remain to be settled. |
+| Project identity | Working title, point/view mark, repository links, reader guide, setup README, chapter navigation. | `README.md`, `book/_config.yml`, `book/_toc.yml` | Final human author credit and publication URL remain to be settled. |
 
 **Known source limitations.** `Recitation1_Solutions.pdf` and `PT1_f22Sol.pdf` yielded no non-whitespace text with `pdftotext -layout`; inspect their pages visually or with OCR before relying on their contents. Extractable PDFs can still contain diagrams and handwritten annotations that text extraction misses. The Week 5 extracted text covers eigendecomposition and SVD but does not mention statistics or PCA; check the visual source and supporting materials before choosing where to add a clearly identified supplement.
 
 ## 3. The world and its rules
 
-**Connected analogy source of truth.** [Knitting Crochet](analogy/systems/knitting-crochet/canon.md) defines the
-actual-action knitting-and-crochet canon: individual stitches, cast-on and bind-off,
-magic-ring rounds, charts, shaping operations, swatches, gauge, and their connected
-mathematical mappings and limits. [Knitting Crochet Rubric](analogy/systems/knitting-crochet/rubric.md) evaluates it
-separately. Every taught concept must have a connected mapping in that reference;
-chapter passages must begin with specific craft actions, identify what their
-counts/measurements represent, return to exact mathematics, and support independent
-exam transfer. Do not replace the physical craft with generic studio-management or
-fictional design-feature metaphors. Preserve its vocabulary and coordinate meanings across the entire book.
+**Primary analogy: shadows and matched point measurements.** The owner selected
+[The Object Behind the Shadows](analogy/systems/shadows/canon.md), replacing the
+knitting/crochet backbone. Its [rubric](analogy/systems/shadows/rubric.md) owns the
+domain/math acceptance tests; [the teaching strategy](analogy/teaching-strategy.md)
+owns the classroom route. Use ideal parallel-ray views of matched labeled points,
+fixed calibrated axes, and a declared origin. World coordinates, screen readings,
+and multi-point measurement profiles are different records with explicit dimensions.
+A front view keeps X,Y and hides Z; an independent side view adds Y,Z.
 
-**Craft-centered manuscript strategy.** [The teaching strategy](analogy/teaching-strategy.md)
-puts knitting/crochet at the center of the mathematical teaching, not only the
-chapter openings. One 24-stitch sampler gains a four-row colorwork count panel;
-one crochet motif gains six marked sectors. These supply shaping systems, repeat
-bases, projection/Gram–Schmidt, permutation eigen-directions, chart SVD and centered
-PCA. Gauge supplies measured-feature statistics. Shadows and colored light are
-optional supporting illustrations after the craft-derived explanation, not the
-formal backbone. All 36 topic groups retain a substantive yarn-led route.
-This plan and its checked anchors are not completed chapters, worked physical
-samples, or learner validation.
+One four-bead X profile supplies the connected vector/data examples; O and stacked
+H supply the view maps. Coordinate arithmetic, geometry, composition, reconstruction,
+spaces, projection, SVD and PCA develop from those declared records. Preserve every
+lecture example and formal transfer problem. The analogy must not promise arbitrary
+solid reconstruction from silhouettes or identify record-space angles with physical
+frame rotations. Negative and fractional coordinates are valid; the former physical
+stitch-count restrictions do not apply.
+
+The [knitting/crochet system](analogy/systems/knitting-crochet/canon.md) and
+[earlier craft strategy](analogy/verification/knitting-teaching-strategy.md) remain
+reference/history. Their earlier primary-backbone decisions are superseded.
 
 **Shared lecture source and translation index.**
 [Course Map](analogy/course-map.md) connects 36 topic IDs to
@@ -91,7 +91,7 @@ multiple shadows, a hanging mobile, and dance capture. The owner has selected
 colored light and multiple shadows for full competing drafts in place of pottery,
 then requested the current common-method rebuild of all four earlier lenses.
 Their [head-to-head comparison](analogy/comparisons/light-vs-shadows.md) makes the case
-for each; no switch from the primary knitting/crochet thread is assumed.
+for each; the owner has now selected shadows as the primary thread.
 
 **Shared authoring method and originals.**
 [Build Method](analogy/build-method.md) documents the light/shadow
@@ -103,8 +103,8 @@ transfer anchors, graph/diagram briefs, and separate evidence-based rubrics.
 These are equally structured editorial references; completed chapters, independent
 review, and student evidence remain separate unfinished work.
 
-**Additional complete analogy lenses.** Keep these separate from the knitting/
-crochet canon, with their own objects, graphs, mathematical boundaries, and rubrics:
+**Analogy references.** Keep each lens’s objects, graphs, mathematical boundaries,
+and rubric distinct. Shadows is the selected primary lens; others remain references:
 
 | Lens | Source of truth | Separate rubric |
 | --- | --- | --- |
@@ -115,12 +115,11 @@ crochet canon, with their own objects, graphs, mathematical boundaries, and rubr
 | Pottery, rebuilt | [From Spinning Clay to Fired Form](analogy/systems/pottery/canon.md) | [Pottery rubric](analogy/systems/pottery/rubric.md) |
 
 Each lens covers the same mathematical course scope through its own connected
-mechanisms. Knitting/crochet remains the primary textbook thread unless the owner
-changes that direction; these are additional lenses, not an instruction to repeat
+mechanisms. Shadows is now the primary textbook thread; these are additional lenses, not an instruction to repeat
 all lens explanations for every concept. Use a deliberate lens for a passage and name
 any switch. Shared mathematics can connect lenses; their physical/symbolic entities
-must not silently merge. All current analogy references are drafts, with chapter
-integration and learner validation pending.
+must not silently merge. The six reference frameworks remain drafts; shadows now has Lecture 1
+integration. Later chapters and learner validation remain pending.
 
 | Term | Meaning here |
 | --- | --- |
@@ -171,12 +170,12 @@ integration and learner validation pending.
 | Midterm materials | Coverage checks and assessment styles | `resources/practiceExams/` |
 | Book content | Reader-facing explanation and practice | `book/` |
 | Navigation and configuration | Chapter order, identity, extensions, build behavior | `book/_toc.yml`, `book/_config.yml` |
-| Styling and illustrations | Shared visual tokens and mathematical figures | Existing `book/_static/`, `book/figures/`; textbook assets planned |
+| Styling and illustrations | Shared visual tokens, section hierarchy, teaching components, and mathematical figures | `book/_static/textbook.css`, `book/figures/lecture1/` |
 | Governance | Identity → assessment → execution checklist | `SHOW_BIBLE.md`, `rubricatm.md`, `todoSimple.md` |
 
 **Source priority.** Use lectures for scope and exposition, supporting problems for depth, and the topic list to detect gaps. Mathematical correctness takes precedence when sources conflict. Cite the discrepancy and explain the correction. Sources use varying course labels; do not infer that one identifier is authoritative without owner confirmation.
 
-## 5. Visual and interaction language — planned
+## 5. Visual and interaction language
 
 **Direction.** A modern academic textbook with a cute, lively personality: hot pink and bright green, balanced by warm caramel brown, buttery yellow, and blush paper, with deep warm brown text and blue structural accents. Reserve red for attention cues and yellow for important highlights. The reading page should feel carefully typeset, welcoming, and calm, with memorable diagrams and consistent teaching devices. Proposed defaults below can be refined through the first rendered chapter.
 
@@ -240,7 +239,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 - **Path:** Objectives → explanation and examples → checkpoints → synthesis → practice and solutions.
 - **Success:** Reader can explain the central ideas and solve a new representative problem.
 - **Recovery:** Link prerequisite concepts, provide hints, explain common errors, and expose worked solutions.
-- **Implementation/status:** Planned in `book/`; weekly pages absent today.
+- **Implementation/status:** Lecture 1 implements this route in four website pages; later weekly chapters remain unfinished.
 
 ### Flow: Review for the midterm
 
@@ -340,3 +339,18 @@ examples and checkpoints; consolidate concepts instead of compressing typography
 Lecture 1 uses vectors/geometry, matrices/products, exercises, solutions. Source
 notes and synthesis belong within these pages. Printed sheet count does not govern
 content. Earlier short-guide/print-limit decisions above are superseded.
+
+**Teaching structure requirement.** Four website pages is a navigation cap, not
+permission to flatten a chapter into continuous text. Lecture 1 uses sections
+1.1–1.12. Each has a learning goal, a motivating question, a source-page label,
+explanation/definitions, a checkpoint, a takeaway, and linked practice. Number
+worked examples and show intermediate reasoning and verification. Distinguish
+Definition, Theorem/Key Result, Proof, Worked Example, ML Connection, and Pitfall
+visually and by text labels. Open with prerequisites and measurable outcomes;
+close with synthesis, an unaided readiness checklist, and a targeted exercise map.
+
+**Current analogy decision.** The owner selected shadows. Active reading pages,
+examples, four diagrams, exercises, solutions, and book branding now use marked
+points and calibrated views. Retain the 12-section teaching structure and four-page
+navigation cap. Other lenses remain available as references; prior craft-centered
+instructions above are historical where they conflict with this decision.

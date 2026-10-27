@@ -1,40 +1,86 @@
 (lecture-one)=
 # Lecture 1 · Vectors and geometry
 
-<div class="chapter-kicker">From stitch records to linear algebra</div>
+<div class="chapter-kicker">What does a view reveal—and what does it hide?</div>
 
-A pattern tells your hands what to do. A mathematical record lets you compare
-what you made, combine patterns, and predict counts. We will follow a **24-stitch
-sampler**, divided into four sections of six stitches. A row has pink-stitch counts
-$\mathbf r=(3,1,3,1)^T$; another has $\mathbf s=(1,3,1,3)^T$.
-Both total eight, but their sections differ. A vector preserves that distinction.
+Move a marked bead toward a screen. Its front shadow can stay in exactly the same
+place even though the bead moved. A second view can reveal the missing depth.
+Linear algebra gives us a language for describing the point, its measurements,
+and the information a view retains.
 
-```{figure} ../figures/lecture1/sampler.svg
-:name: fig-w1-sampler
-:alt: Four rows of 24 stitch cells grouped into four sections of six. The section-count matrix alternates rows 3,1,3,1 and 1,3,1,3. Each row has eight pink stitches; the rest are green.
+We use ideal **parallel-ray views of labeled points**, with fixed calibrated axes
+and a shared reference origin. A point $\mathbf p=(X,Y,Z)^T$ has front-screen
+coordinates $(X,Y)^T$; the side screen records $(Y,Z)^T$.
+We follow matched point marks, rather than attempting to reconstruct a solid
+object from its silhouette.
 
-Each matrix entry summarizes **six stitches**, rather than encoding one stitch.
-The same sampler will connect vectors, geometry, and matrix multiplication.
+```{figure} ../figures/lecture1/shadow-views.svg
+:name: fig-w1-shadows
+:alt: Two point positions p=(2,3,4) and p-prime=(2,3,9) share front coordinates (2,3). The side view records (3,4) and (3,9), revealing the changed depth. The calibrated screen coordinates are labeled X,Y for the front and Y,Z for the side.
+
+One point, two views. A front view keeps X and Y; the side view makes a change in Z
+visible. This is an original idealized coordinate model, not a perspective photograph.
 ```
 
-**Four pages for this lecture:** vectors and geometry → [matrices and products](matrix-guide.md)
-→ [exercises](practice.md) → [solutions](solutions.md).
-Use the contents panel to jump between sections on this page.
+<nav class="lecture-path" aria-label="Lecture 1 learning path">
+<a href="index.html" aria-current="page"><span class="path-number">01</span><span>Vectors & geometry</span></a>
+<a href="matrix-guide.html"><span class="path-number">02</span><span>Matrices & products</span></a>
+<a href="practice.html"><span class="path-number">03</span><span>Exercises</span></a>
+<a href="solutions.html"><span class="path-number">04</span><span>Solutions</span></a>
+</nav>
 
-You need signed arithmetic, fractions, square roots, and simple algebra. You do
-not need craft experience. The examples name their records explicitly; drawings
-are count schematics rather than loop-by-loop technique instructions.
+## Before you begin
+
+You need signed arithmetic, fractions, square roots, and simple algebra. No optics
+background is assumed. Keep two records distinct: a **single point’s coordinates**
+and a **list of measurements across several labeled points**.
+
+:::{admonition} What you will understand
+:class: key-result
+
+By the end of this page, you should be able to:
+
+1. Read ordered coordinates and compute sums, differences, and scalar multiples.
+2. Decide whether a target can be made from given vector directions.
+3. Compute dot products, lengths, unit vectors, and angles with their conditions.
+4. Explain what a result means and check it independently.
+:::
+
+::::{div} page-roadmap
+
+**On this page**
+
+- {ref}`1.1 · Vector records <w1-vectors>`
+- {ref}`1.2 · Addition and scaling <w1-vector-arithmetic>`
+- {ref}`1.3 · Linear combinations <w1-combinations>`
+- {ref}`1.4 · Dot products <w1-geometry>`
+- {ref}`1.5 · Length and unit vectors <w1-norms>`
+- {ref}`1.6 · Angles and the cosine formula <w1-angles>`
+::::
 
 (w1-vectors)=
-## 1. Vectors: meaning, addition, and scaling
+## 1.1 Vector records
+
+::::{div} section-intro
+
+**Learning goal:** Read a vector and state what each coordinate records.
+
+<span class="source-label">Lecture pages 3–6</span>
+
+Label four beads A–D so each shadow mark can be matched to its point.
+What can an ordered list of their screen positions tell you?
+::::
+
 
 ### Start with the entries, not the brackets
 
-Our four marked sections contain $3,1,3,1$ pink stitches. The order matters:
-entry 1 belongs to section A, entry 2 to B, and so on. Reversing or rearranging
-the entries changes the record unless we also explain how the section labels changed.
+On the front screen, four labeled beads A–D have horizontal positions
+$3,1,3,1$, measured in the same chosen length unit. Their vertical coordinates
+are fixed at $1,2,3,4$ so their marks remain distinguishable. The ordered horizontal
+profile is $\mathbf r=(3,1,3,1)^T$. Entry 1 belongs to A, entry 2 to B, and so on.
+Reordering entries changes the record unless the bead labels are also redefined.
 
-:::{admonition} Definition · Real column vector
+:::{admonition} Definition 1.1 · Real column vector
 :class: definition
 
 A vector $\mathbf v\in\mathbb R^n$ is an ordered list of $n$ real entries,
@@ -52,17 +98,22 @@ horizontal list into a column; we will define transpose formally later. In
 prose, a tuple such as $(3,1,3,1)$ names the entries; in products, we state whether
 it is a row or a column.
 
-The $\mathbb R$ means real-valued coordinates. Actual stitch counts are
-nonnegative integers no larger than six per section in this example. We use the
-larger real coordinate space so that differences and later algebra make sense.
-A result can be mathematically valid while failing the conditions for a literal
-row of stitches.
+The $\mathbb R$ means real-valued coordinates. Positions may be fractional or
+negative: a negative X is simply left of the chosen origin. Any real value is permitted in this ideal
+coordinate model.
 
-A whole-row total loses the sections; section counts lose the order of stitches
-inside each section. Choose the record that answers your question. The lecture's
-house example uses $(3,2,2,2008,150000)^T$ for bedrooms, bathrooms, floors, year,
-and price. Unlike section counts, those coordinates have different units; a raw
-distance would need a reasoned choice of scaling.
+| Record | Dimension | What it leaves out |
+| --- | --- | --- |
+| One point $(X,Y,Z)^T$ | $\mathbb R^3$ | Other points in the scene |
+| Its front mark $(X,Y)^T$ | $\mathbb R^2$ | Depth Z |
+| Four beads' X profile $(X_A,X_B,X_C,X_D)^T$ | $\mathbb R^4$ | Their Y and Z coordinates |
+
+Our second profile is $\mathbf s=(1,3,1,3)^T$. Both profiles sum to eight, but they
+place individual marks differently. The sum is a summary, not a full arrangement.
+
+The lecture's house example uses $(3,2,2,2008,150000)^T$ for bedrooms, bathrooms,
+floors, year, and price. Unlike our equally scaled X coordinates, those entries
+have different units; a raw distance would need a reasoned choice of scaling.
 
 **The lecture's first vectors** are $(5,2)^T\in\mathbb R^2$ and
 $(1,7,3)^T\in\mathbb R^3$. Adding a coordinate, as in
@@ -75,11 +126,10 @@ to the point $(a,b)$. Its components are displacement along two coordinate axes.
 The same displacement can be drawn from another starting point; its coordinates
 still describe the change, not the arrow's absolute location.
 
-For the sampler, the four coordinates are **section counts**, not four spatial
-axes of the cloth. We can still use the geometry of $\mathbb R^4$ to compare
-these records, provided that we say what metric we are using. Later we will find
-a two-dimensional family of repeats and draw its coordinate geometry without
-pretending that the fabric itself lives on that plot.
+For our four-bead profile, the four coordinates are **X measurements of four
+points**, not four physical spatial axes. Geometry in $\mathbb R^4$ compares these
+measurement records. A later plot will display a two-dimensional family of profiles;
+it will not depict a physical rotation of the frame.
 
 The standard directions make this representation explicit:
 $\mathbf e_1=(1,0)^T$, $\mathbf e_2=(0,1)^T$, and
@@ -87,9 +137,44 @@ $(a,b)^T=a\mathbf e_1+b\mathbf e_2$.
 In three dimensions the coordinate directions are $(1,0,0)^T$, $(0,1,0)^T$,
 $(0,0,1)^T$; combining them with coefficients a,b,c gives $(a,b,c)^T$.
 
-A simple two-coordinate craft record might count knit and purl operations:
-$\mathbf k=(2,2)^T$ records one `k2,p2` repeat. It does not encode their order:
-`k,p,k,p` gives the same count vector. An ordered chart is a richer record.
+A two-coordinate screen mark $(2,2)^T$ has an equally concrete meaning:
+two units along each screen axis. Many three-dimensional points can share it,
+because the front view does not include Z.
+
+
+
+:::{admonition} Check your understanding
+:class: checkpoint
+
+Profiles $(2,1,2,1)^T$ and $(1,2,1,2)^T$ both have coordinate sum six.
+Do they place all four labeled marks at the same horizontal positions?
+:::
+
+:::{dropdown} Check your reasoning
+
+No. Corresponding entries differ in all four positions. The equal total is only a summary; it does not recover the ordered record.
+:::
+
+::::{div} section-recap
+
+**Keep this:** Coordinates carry both an order and a meaning; equal totals can hide different records.
+
+**Try it yourself:** {ref}`Problem 1 <w1-p01>`.
+::::
+
+(w1-vector-arithmetic)=
+## 1.2 Addition and scalar multiplication
+
+::::{div} section-intro
+
+**Learning goal:** Compute vector sums, differences, and scaled vectors.
+
+<span class="source-label">Lecture pages 7–9</span>
+
+Move each labeled bead horizontally, then apply a second set of movements.
+The combined displacements add entry by entry; comparing two configurations gives
+a signed difference profile.
+::::
 
 ### Adding compatible vectors
 
@@ -104,10 +189,10 @@ $$
 $$
 
 Both vectors must belong to the same coordinate space **and describe matching
-coordinates**. Four section counts should not be added to four unrelated gauge
-measurements merely because both lists have length four.
+coordinates**. An A–D list of horizontal displacements cannot be added meaningfully
+to an unrelated four-number record merely because both lists have length four.
 
-:::{admonition} Worked example · Combine two recorded rows
+:::{admonition} Worked example 1.1 · Combine horizontal movements
 :class: example
 
 For $\mathbf r=(3,1,3,1)^T$ and $\mathbf s=(1,3,1,3)^T$,
@@ -116,21 +201,24 @@ $$
 \mathbf r+\mathbf s=\begin{bmatrix}4\\4\\4\\4\end{bmatrix}.
 $$
 
-Each section has four pink stitches **across the two rows**, not four in a newly
-specified single row. The record's interpretation changed from one row to two
-rows, and we stated that change. The total $16$ agrees with $8+8$.
+Interpreted as successive horizontal displacements from a zero-X reference,
+r followed by s moves **each bead four units**. The coordinate sum is $16=8+8$.
+We added movement records; we did not add or superimpose shadow images.
 :::
 
 Geometrically, vector addition is the head-to-tail rule: draw the second
 displacement from the endpoint of the first. The resulting displacement has the
 sum of their components. This is why geometric and componentwise addition agree.
 
-:::{admonition} Lecture example · Vector addition and subtraction
+:::{admonition} Worked example 1.2 · Vector addition and subtraction
 :class: example
 
-For $\mathbf x=(0,2)^T$ and $\mathbf y=(2,2)^T$,
-$\mathbf x+\mathbf y=(2,4)^T$ and $\mathbf x-\mathbf y=(-2,0)^T$.
-Check the two coordinates separately; subtraction changes every entry of y's sign.
+**Given:** $\mathbf x=(0,2)^T$ and $\mathbf y=(2,2)^T$.
+
+1. **Check compatibility.** Both vectors have two matching coordinates.
+2. **Add entrywise:** $\mathbf x+\mathbf y=(0+2,2+2)^T=(2,4)^T$.
+3. **Subtract entrywise:** $\mathbf x-\mathbf y=(0-2,2-2)^T=(-2,0)^T$.
+4. **Check:** adding y back to the difference returns x.
 :::
 
 ### Differences describe changes
@@ -141,13 +229,13 @@ $$
 \mathbf r-\mathbf s=\begin{bmatrix}2\\-2\\2\\-2\end{bmatrix}.
 $$
 
-This says r has two more pink stitches in A and C, and two fewer in B and D.
-There are no negative stitches in either actual row. The negative entries belong
-to a **change record**. Its entries sum to zero because both rows have eight pink stitches.
+Compared with configuration s, A and C are two units farther right in r, while
+B and D are two units farther left. The signed difference describes those
+horizontal changes. Its entries sum to zero because the two coordinate sums agree.
 
 The zero vector $\mathbf 0=(0,\ldots,0)^T$ has the appropriate dimension for its
 context. A zero change means no change in that record; it does not imply an
-empty fabric or the absence of physical differences omitted by the record.
+an empty scene or the absence of depth changes that this record omits.
 
 ### Scalar multiplication
 
@@ -155,7 +243,7 @@ For a real scalar $c$,
 
 $$c\mathbf v=(cv_1,\ldots,cv_n)^T.$$
 
-Six repetitions of the knit/purl count $(2,2)^T$ give $(12,12)^T$: 24 operations.
+Six successive screen-plane displacements of $(2,2)^T$ combine to $(12,12)^T$.
 Scaling a geometric vector by positive $c$ changes its length by $c$ and preserves
 its direction; negative $c$ reverses direction, with length scaled by $|c|$.
 Multiplication by zero gives the zero vector.
@@ -164,24 +252,24 @@ The lecture separately scales $\mathbf x=(2,2)^T$:
 $2\mathbf x=(4,4)^T$, $\tfrac12\mathbf x=(1,1)^T$,
 and $-\mathbf x=(-2,-2)^T$. The first two preserve direction; the last reverses it.
 
-Fractions and negative scalars are allowed in $\mathbb R^n$. But half an arbitrary
-count vector need not be an executable stitch instruction. For example,
-$\frac12(3,1,3,1)^T$ is a valid real vector with fractional coordinates. State the
-physical constraints after doing the algebra.
+Fractions and negative scalars are allowed. Half the profile
+$\tfrac12(3,1,3,1)^T=(1.5,0.5,1.5,0.5)^T$ is also a possible coordinate record.
+Physical restrictions, such as a finite screen boundary, would be additional
+assumptions; they do not come from the definition of a real vector.
 
 :::{admonition} Check your understanding
 :class: checkpoint
 
 Let $\mathbf u=(5,2)^T$ and $\mathbf v=(1,7)^T$. Compute $\mathbf u-2\mathbf v$.
-What must be true before interpreting this as a physical count record?
+If the entries are screen coordinates, does the negative entry invalidate the result?
 :::
 
 :::{dropdown} Reason it through
 
 $\mathbf u-2\mathbf v=(5-2,2-14)^T=(3,-12)^T$. It is a valid vector in
-$\mathbb R^2$. It can describe a signed change if the coordinates match, but it
-cannot itself be two nonnegative stitch counts. The meaning and feasible domain
-must be supplied separately.
+$\mathbb R^2$. With signed screen coordinates, -12 means twelve units below
+the chosen horizontal reference axis. The calculation requires matching coordinate
+meanings, not nonnegative entries.
 :::
 
 ### Useful algebraic rules
@@ -202,8 +290,27 @@ These follow entry by entry from real-number arithmetic. They let us reorganize
 computations without changing the result. **Compatibility comes first**; the rules
 do not make addition between a two-entry and a three-entry vector meaningful.
 
+
+::::{div} section-recap
+
+**Keep this:** Add matching coordinates. Scale every entry. Interpret negative entries as changes when appropriate.
+
+**Try it yourself:** {ref}`Problem 2 <w1-p02>`.
+::::
+
 (w1-combinations)=
-## 2. Linear combinations: reachable patterns
+## 1.3 Linear combinations
+
+::::{div} section-intro
+
+**Learning goal:** Construct a general combination and test whether a target belongs to its family.
+
+<span class="source-label">Lecture pages 10–19</span>
+
+Can moving all four beads together, plus one alternating displacement pattern,
+produce every horizontal profile? Writing the general form exposes the limits.
+::::
+
 
 Addition and scalar multiplication become much more useful together. They let
 us describe an entire family of records with a few directions and adjustable
@@ -212,7 +319,7 @@ but “which vectors can these ingredients produce?”
 
 ### Separate a baseline from an alternating contrast
 
-Consider two section-count records from our panel:
+Consider two horizontal profiles of our labeled points:
 
 $$
 \mathbf r=\begin{bmatrix}3\\1\\3\\1\end{bmatrix},\qquad
@@ -227,11 +334,11 @@ $$
 $$
 
 Then $\mathbf r=2\mathbf e+\mathbf a$ and $\mathbf s=2\mathbf e-\mathbf a$.
-The term $2\mathbf e$ means a shared baseline of two pink stitches per section.
-The term $\mathbf a$ changes that baseline by one extra, one fewer, one extra,
-one fewer. It is a signed contrast record, not a negative-yarn operation.
+The term $2\mathbf e$ places every bead at X=2. Adding a moves A and C one
+unit right, and B and D one unit left. Subtracting a reverses the alternation.
+Here e and a are displacement patterns across four labeled points.
 
-:::{admonition} Definition · Linear combination
+:::{admonition} Definition 1.2 · Linear combination
 :class: definition
 
 For vectors $\mathbf v_1,\ldots,\mathbf v_k$ in the same real coordinate space,
@@ -255,15 +362,14 @@ $$
 $$
 
 The third coordinate must equal the first, and the fourth must equal the second.
-The particular row $(3,1,3,1)^T$ uses $(\alpha,\beta)=(2,1)$.
-The uniform row $(2,2,2,2)^T$ uses $(2,0)$.
-The row $(3,1,2,1)^T$ cannot be produced: its first and third coordinates disagree.
+The particular profile $(3,1,3,1)^T$ uses $(\alpha,\beta)=(2,1)$.
+The uniform profile $(2,2,2,2)^T$ uses $(2,0)$.
+The profile $(3,1,2,1)^T$ cannot be produced: its first and third coordinates disagree.
 This is a structural test that avoids guessing coefficients endlessly.
 
-For a literal six-stitch section, each resulting count must be an integer from
-0 through 6. Thus a real linear combination and an executable color-count row
-are different questions. We first identify the algebraic family, then enforce
-the physical constraints.
+All real coefficients are allowed in this coordinate model. Negative coordinates
+place marks on the opposite side of the origin; fractional coordinates describe
+fractional distances. If a particular apparatus has bounds, state them separately.
 
 ### One direction makes a line
 
@@ -289,49 +395,32 @@ $\mathbb R^4$: e has all entries equal, while a alternates signs. Their combinat
 form a two-dimensional family of four-entry records. This does not say that every
 four-entry pattern belongs to that family.
 
-```{figure} ../figures/lecture1/repeat-family.svg
-:name: fig-w1-repeat-family
-:alt: A coordinate plot with alpha on the horizontal axis and beta on the vertical axis. The uniform record 2e is at 2,0; r equals 2e plus a at 2,1; s equals 2e minus a at 2,-1. Each labeled point has a separate four-entry section-count record.
+```{figure} ../figures/lecture1/shadow-profiles.svg
+:name: fig-w1-profiles
+:alt: A coordinate plot with alpha on the horizontal axis and beta on the vertical axis. The uniform record 2e is at 2,0; r equals 2e plus a at 2,1; s equals 2e minus a at 2,-1. The associated physical panel locates the four labeled marks for each profile.
 
-Coordinates **of a repeat family**. This plot records coefficients of e and a;
-it does not depict the physical width or height of a swatch.
+The screen panel shows the actual horizontal marks; the coefficient panel shows
+**which record** a combination produces. Those are different coordinate systems.
 ```
 
-### The lecture's plane example, fully worked
+:::{admonition} Worked example 1.3 · The lecture's plane-membership test
+:class: example
 
-Take the source vectors
+**Question:** Which vectors can be made from
+$\mathbf v=(1,1,0)^T$ and $\mathbf w=(0,1,1)^T$?
 
-$$
-\mathbf v=\begin{bmatrix}1\\1\\0\end{bmatrix},\qquad
-\mathbf w=\begin{bmatrix}0\\1\\1\end{bmatrix}.
-$$
+1. **Write a general combination:**
+   $c\mathbf v+d\mathbf w=(c,c+d,d)^T$.
+2. **Compare with a target $(x,y,z)^T$.** The first and third entries force
+   $c=x$ and $d=z$, so the middle must satisfy **$y=x+z$**.
+3. **Check sufficiency.** Whenever $y=x+z$, choosing those coefficients reproduces
+   all three entries. This is an if-and-only-if membership test.
+4. **Apply it.** The lecture's $(1,2,3)^T$ is outside because $2\ne1+3$.
+   In contrast, $(1,3,2)^T=\mathbf v+2\mathbf w$ is inside.
 
-Their combinations are
-
-$$
-c\mathbf v+d\mathbf w
-=\begin{bmatrix}c\\c+d\\d\end{bmatrix}.
-$$
-
-If the coordinates are named $(x,y,z)$, every result satisfies $y=x+z$.
-Conversely, if a vector satisfies $y=x+z$, choosing $c=x$ and $d=z$ produces
-it. We have proved both directions:
-
-:::{admonition} Key result · A complete membership test
-:class: key-result
-
-A vector $(x,y,z)^T$ is a combination of $(1,1,0)^T$ and $(0,1,1)^T$
-**if and only if** $y=x+z$.
+**Method cue:** “Can this vector be built from these vectors?” means write the
+combination first, then compare coordinates. Larger cases become linear systems.
 :::
-
-The lecture asks for a vector outside the plane and displays $(1,2,3)^T$.
-It is outside because $2\ne1+3$. In contrast, $(1,3,2)^T$ is inside:
-$\mathbf v+2\mathbf w=(1,3,2)^T$. The order of entries decides the answer.
-
-**Method choice:** When a problem asks whether a vector can be built from given
-vectors, write the general combination and compare coordinates. In this example
-that comparison yields one simple equation. In larger examples it becomes a
-system of linear equations, which is the subject of the next lecture.
 
 ### The lecture's line, plane, and space example
 
@@ -360,17 +449,35 @@ condition settles the second question without solving an inconsistent system.
 A model can likewise describe a record as a weighted sum of simpler patterns.
 Next we need a way to compare those patterns: dot products, lengths, and angles.
 
-(w1-geometry)=
-## 3. Dot products, lengths, and angles
 
-Two repeat records can have the same total and still differ in every section.
-A useful comparison should say more than “the entries add to eight.” The dot
-product gives us one scalar comparison, and from it we can define Euclidean
-length, distance, and angle.
+::::{div} section-recap
+
+**Keep this:** A membership claim needs coefficients that reproduce every coordinate, or a condition that proves none can.
+
+**Try it yourself:** {ref}`Problem 3 <w1-p03>` · {ref}`Problem 9 <w1-p09>`.
+::::
+
+(w1-geometry)=
+## 1.4 Dot products
+
+::::{div} section-intro
+
+**Learning goal:** Calculate a scalar dot product and use its algebraic properties correctly.
+
+<span class="source-label">Lecture pages 20–23</span>
+
+Two configurations can have equal coordinate sums and different horizontal
+positions. The dot product compares matching point readings.
+::::
+
+
+Two profiles can have equal coordinate sums and different point positions. The
+dot product compares matching entries; from it we define Euclidean length,
+distance, and angle in the chosen record space.
 
 ### The dot product returns a scalar
 
-:::{admonition} Definition · Euclidean dot product
+:::{admonition} Definition 1.3 · Euclidean dot product
 :class: definition
 
 For $\mathbf u,\mathbf v\in\mathbb R^n$,
@@ -385,22 +492,28 @@ The summation means: multiply matching entries, then add the $n$ products.
 The result is a real **number**, not a vector.
 :::
 
-For the two color rows,
+For the two four-point profiles,
 
 $$
 (3,1,3,1)\cdot(1,3,1,3)=3+3+3+3=12.
 $$
 
-The lecture's example $\mathbf v=(3,4)^T$, $\mathbf w=(4,3)^T$ gives
-$\mathbf v\cdot\mathbf w=3\cdot4+4\cdot3=24$.
-Matching dimension is necessary, but an interpretation also requires meaningful
-coordinate pairing.
+:::{admonition} Worked example 1.4 · The lecture's dot product
+:class: example
 
-A dot product can apply weights. For $\mathbf n=(18,6,0)^T$ plain/increase/decrease
-counts, $\mathbf h=(1,2,1)^T$ contains produced-stitch counts per operation.
-Then $\mathbf h^T\mathbf n=30$ predicts the number of new stitches.
-Those weights are justified by specified stitch actions. They do not estimate
-yarn length or physical height without additional measurements.
+**Given:** $\mathbf v=(3,4)^T$ and $\mathbf w=(4,3)^T$.
+
+1. Pair the first coordinates: $3\cdot4=12$.
+2. Pair the second coordinates: $4\cdot3=12$.
+3. Add the products: $\mathbf v^T\mathbf w=12+12=24$.
+
+The answer is one number. It is neither a new vector nor an angle yet.
+:::
+
+A dot product can read a point along a screen axis. With
+$\mathbf p=(2,3,4)^T$ and horizontal unit direction $\mathbf h=(1,0,0)^T$,
+$\mathbf h^T\mathbf p=2$ selects the horizontal coordinate. The front screen's
+other axis $(0,1,0)^T$ selects 3; neither reading includes depth 4.
 
 ### Properties and a common misuse
 
@@ -429,9 +542,46 @@ $(\mathbf u\cdot\mathbf v)\mathbf w$ generally differ. With
 $\mathbf u=(1,0)^T$, $\mathbf v=\mathbf w=(0,1)^T$, the first is u and the second
 is zero. Always track the **type and shape of the output**, not just the symbols.
 
+
+**A zero dot product is called orthogonality.** Section 1.6 connects this algebraic
+condition to a right angle between nonzero directions.
+
+:::{admonition} Check your understanding
+:class: checkpoint
+
+For $\mathbf u=(3,-1)^T$ and $\mathbf v=(2,6)^T$, compute the dot product.
+What can you conclude from its value?
+:::
+
+:::{dropdown} Check your reasoning
+
+$3\cdot2+(-1)\cdot6=6-6=0$. Both vectors are nonzero, so they are orthogonal.
+A matching total would not establish this; the coordinate products do.
+:::
+
+::::{div} section-recap
+
+**Keep this:** The dot product multiplies matching entries, then sums; its output is a scalar.
+
+**Try it yourself:** {ref}`Problem 4 <w1-p04>` · {ref}`Problem 11 <w1-p11>`.
+::::
+
+(w1-norms)=
+## 1.5 Length, magnitude, norm, and unit vectors
+
+::::{div} section-intro
+
+**Learning goal:** Find a Euclidean length and normalize a nonzero direction.
+
+<span class="source-label">Lecture pages 27–34</span>
+
+Adding the X coordinates gives one summary. The Euclidean norm answers a
+different question: how long is the ordered profile in its declared coordinate geometry?
+::::
+
 ### Length, magnitude, and norm
 
-:::{admonition} Definition · Euclidean norm and distance
+:::{admonition} Definition 1.4 · Euclidean norm and distance
 :class: definition
 
 $$
@@ -445,16 +595,16 @@ It is the nonnegative square root. In particular,
 $\|\mathbf v\|^2=\mathbf v^T\mathbf v$; the norm itself is not generally that sum.
 :::
 
-For $\mathbf v=(3,4)^T$, $\|\mathbf v\|=5$. For the panel record
+For $\mathbf v=(3,4)^T$, $\|\mathbf v\|=5$. For the four-point profile
 $\mathbf r=(3,1,3,1)^T$,
 
 $$\|\mathbf r\|=\sqrt{9+1+9+1}=\sqrt{20}=2\sqrt5.$$
 
 Its entries sum to eight, but its norm is not eight. Sum and Euclidean length
-answer different questions. For e and a from the repeat family, both norms are 2.
+answer different questions. For e and a from the profile family, both norms are 2.
 For $\mathbf r-\mathbf s=(2,-2,2,-2)^T$, the distance is 4.
-This is distance between equal-width section-count records, not a physical
-measurement of how far apart the swatches are.
+This compares the four horizontal coordinates together. It does not include
+unrecorded depth, so it is not a full three-dimensional distance between objects.
 
 Scaling changes norm by absolute magnitude:
 
@@ -470,30 +620,42 @@ For $\mathbf v\ne\mathbf0$, define
 
 $$\widehat{\mathbf v}=\frac{\mathbf v}{\|\mathbf v\|}.$$
 
-Its norm is $\|\mathbf v\|/\|\mathbf v\|=1$, and the positive scaling preserves
-direction. The lecture uses the scalar $\mu=1/\|\mathbf v\|=1/5$ to normalize
-$(3,4)^T$ to $(3/5,4/5)^T$. The squared entries $9/25+16/25=1$ check its unit length.
-Our record $\mathbf r$ normalizes to $(3,1,3,1)^T/(2\sqrt5)$.
+Its norm is $\|\mathbf v\|/\|\mathbf v\|=1$; positive scaling preserves direction.
 
-:::{admonition} Common pitfall · Unit direction is not a stitch instruction
+:::{admonition} Worked example 1.5 · The lecture's normalization
+:class: example
+
+**Question:** Turn $(3,4)^T$ into a unit vector pointing the same way.
+
+1. **Find its length:** $\sqrt{3^2+4^2}=5$.
+2. **Choose the scalar:** $\mu=1/\|\mathbf v\|=1/5$.
+3. **Scale:** $\widehat{\mathbf v}=\mu\mathbf v=(3/5,4/5)^T$.
+4. **Verify unit length:** $(3/5)^2+(4/5)^2=1$; its norm is therefore 1.
+
+For our four-point profile the same method gives
+$\widehat{\mathbf r}=(3,1,3,1)^T/(2\sqrt5)$. Fractional coordinates describe a
+direction in record space; it no longer retains the original coordinate scale.
+:::
+
+:::{admonition} Common pitfall · A unit direction is not the full position record
 :class: pitfall
 
 You cannot normalize the zero vector: division by its norm would divide by zero.
-A normalized count record usually has fractional entries; it describes a direction
-in the record space, not an executable row of fractional stitches.
+A normalized record keeps direction but discards its original magnitude.
+Fractional coordinates are valid; normalization does not recover omitted depth.
 :::
 
-### Orthogonality of actual repeat records
+### Orthogonality of displacement profiles
 
-The uniform record e and signed alternating record a satisfy
+The uniform displacement e and alternating displacement a satisfy
 
 $$\mathbf e^T\mathbf a=1-1+1-1=0.$$
 
 They are perpendicular in the chosen Euclidean coordinate geometry. This does
-not assert that stitch columns physically cross at a right angle. It says the
+not assert that the frame physically turns through a right angle. It says the
 signed contrast has no net alignment with the uniform direction in this metric.
 
-A useful consequence is visible in our row:
+A useful consequence is visible in our profile:
 
 $$
 \mathbf r=2\mathbf e+\mathbf a,\qquad
@@ -510,7 +672,43 @@ $$
 The middle term is zero. This is the algebra behind the Pythagorean relationship.
 We will reuse these directions when studying projection and orthonormal bases.
 
-### The cosine formula and where it comes from
+
+
+:::{admonition} Check your understanding
+:class: checkpoint
+
+Find the norm and unit direction of $(0,-5)^T$. What would fail for $(0,0)^T$?
+:::
+
+:::{dropdown} Check your reasoning
+
+The norm is $\sqrt{0^2+(-5)^2}=5$, so the unit direction is $(0,-1)^T$. Its norm is 1. The zero vector would require division by zero and has no unit direction.
+:::
+
+::::{div} section-recap
+
+**Keep this:** A norm is a nonnegative length; normalization divides a nonzero vector by that length.
+
+**Try it yourself:** {ref}`Problem 5 <w1-p05>` · {ref}`Problem 18 <w1-p18>`.
+::::
+
+(w1-angles)=
+## 1.6 Angles and the cosine formula
+
+::::{div} section-intro
+
+**Learning goal:** Find the angle between nonzero vectors and explain why the cosine formula works.
+
+<span class="source-label">Lecture pages 24–26</span>
+
+Our two point profiles have equal coordinate sums and equal norms. Their angle
+describes something neither summary alone captures: alignment in the record space.
+::::
+
+### From a dot product to an angle
+
+:::{admonition} Theorem 1.1 · Cosine formula
+:class: key-result theorem
 
 For nonzero vectors, the Euclidean angle $\theta\in[0,\pi]$ satisfies
 
@@ -519,15 +717,25 @@ For nonzero vectors, the Euclidean angle $\theta\in[0,\pi]$ satisfies
 \cos\theta=\frac{\mathbf u^T\mathbf v}{\|\mathbf u\|\|\mathbf v\|}.
 ```
 
+Divide by **both** lengths before applying arccos.
+:::
+
 Equivalently, $\mathbf u^T\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$,
 the cosine formula in the lecture’s original form.
+
+::::{admonition} Proof · Why the cosine formula holds
+:class: proof
 
 To derive it, compare two expressions for the squared distance between endpoints.
 Expanding the dot product gives
 
 $$
+\begin{aligned}
 \|\mathbf u-\mathbf v\|^2
-=\|\mathbf u\|^2+\|\mathbf v\|^2-2\mathbf u^T\mathbf v.
+&=(\mathbf u-\mathbf v)^T(\mathbf u-\mathbf v)\\
+&=\mathbf u^T\mathbf u-\mathbf u^T\mathbf v-\mathbf v^T\mathbf u+\mathbf v^T\mathbf v\\
+&=\|\mathbf u\|^2+\|\mathbf v\|^2-2\mathbf u^T\mathbf v.
+\end{aligned}
 $$
 
 For perpendicular nonzero directions, Pythagoras instead gives
@@ -546,18 +754,27 @@ both norms. In higher-dimensional Euclidean spaces the same relationship applies
 in the plane generated by the two directions, with collinear cases handled by
 the corresponding limiting angles.
 
+::::
+
 For nonzero vectors, a positive dot product means an angle below $90^\circ$;
 a negative one means an angle above $90^\circ$; zero means a right angle.
 Parallel and opposite directions give the endpoint angles $0^\circ$ and $180^\circ$. The zero vector has zero dot product
 with everything and is algebraically orthogonal to every vector, but has no
 geometric direction or defined angle.
 
-For the lecture's $\mathbf u=(3,4)^T$, $\mathbf v=(4,3)^T$, both norms
-are 5 and their dot product is 24. Thus $\cos\theta=24/25$ and
-$\theta=\arccos(24/25)\approx16.26^\circ$. This angle evaluation is an
-application of the lecture's formula; the original slides calculate the dot product.
+:::{admonition} Worked example 1.6 · From the lecture's vectors to their angle
+:class: example
 
-:::{admonition} Worked example · Similar totals, different directions
+1. **Compute the dot product:** for $(3,4)^T$ and $(4,3)^T$, it is 24.
+2. **Find both lengths:** each is 5.
+3. **Normalize the comparison:** $\cos\theta=24/(5\cdot5)=24/25$.
+4. **Recover the angle:** $\theta=\arccos(24/25)\approx16.26^\circ$.
+
+Check: $24/25$ is between -1 and 1 and positive, so the angle is below $90^\circ$.
+The slides give the dot product; the angle evaluation applies their formula.
+:::
+
+:::{admonition} Worked example 1.7 · Similar summaries, different directions
 :class: example
 
 For $\mathbf r=(3,1,3,1)^T$ and $\mathbf s=(1,3,1,3)^T$, the dot product is 12
@@ -570,18 +787,22 @@ Check: $\|\mathbf r-\mathbf s\|^2=16$, and
 $20+20-2\cdot12=16$. The distance and dot-product calculations agree.
 :::
 
-```{figure} ../figures/lecture1/repeat-geometry.svg
-:name: fig-w1-repeat-geometry
+```{figure} ../figures/lecture1/shadow-geometry.svg
+:name: fig-w1-profile-geometry
 :alt: In orthonormal record coordinates q0=e/2 and q1=a/2, r has coordinates 4,2 and s has coordinates 4,-2. A horizontal uniform component of length 4 and a vertical alternating component of length 2 form a right triangle with squared hypotenuse length 20.
 
-The geometry belongs to the **repeat records**. Orthonormal axes
+The geometry belongs to the **four-point profiles**. Orthonormal axes
 $\mathbf q_0=\mathbf e/2$, $\mathbf q_1=\mathbf a/2$ preserve lengths and dot products
 within this family. Thus r is plotted at $(4,2)$, not $(2,1)$.
 ```
 
-**Machine-learning connection.** The normalized dot product is cosine similarity:
-it compares direction without retaining magnitude. Changing feature units can
-change a raw angle or norm, so coordinate scaling is a modeling decision.
+:::{admonition} ML connection · Direction versus magnitude
+:class: connection
+
+The normalized dot product is cosine similarity: it compares direction without
+retaining magnitude. Changing feature units can change a raw angle or norm, so
+coordinate scaling is a modeling decision.
+:::
 
 :::{admonition} Check your understanding
 :class: checkpoint
@@ -599,14 +820,22 @@ With zero u, the dot product remains zero, but normalization and the angle are
 undefined. A familiar formula still requires its hypotheses.
 :::
 
-:::{admonition} Carry these ideas forward
-:class: key-result
 
-A vector retains ordered coordinates. A linear combination asks what the chosen
-directions can produce. A dot product returns a scalar; norms and angles turn that
-comparison into geometry. State coordinate meanings and hypotheses before calculating.
-:::
+::::{div} section-recap
 
-Next, [matrices and products](matrix-guide.md) organize several records and apply
-several operations at once. Lecture source pages for this page: **1–34**;
-{ref}`source notes <w1-source-notes>` explain attribution and added examples.
+**Keep this:** Use a dot product and two nonzero lengths to find an angle; check the cosine before using arccos.
+
+**Try it yourself:** {ref}`Problem 4 <w1-p04>` · {ref}`Problem 12 <w1-p12>`.
+::::
+
+## Page summary · Can you do this unaided?
+
+- Read a record and distinguish individual coordinates from their sum.
+- Add, subtract, and scale compatible vectors, including signed changes.
+- Test a combination by comparing every target coordinate.
+- Compute a dot product, norm, unit vector, and angle with conditions stated.
+
+If a step is uncertain, use the linked exercises at each section's end, check the
+solution, and retry. Next, [matrices and products](matrix-guide.md) organize several
+records and apply maps to them. {ref}`Source notes <w1-source-notes>` identify the
+lecture material and added teaching examples.

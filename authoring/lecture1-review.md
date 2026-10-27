@@ -1,29 +1,52 @@
 # Lecture 1 editorial and validation record
 
-## Current edition: textbook presentation, four website pages
+## Current edition: show-bible teaching structure
 
-The owner clarified that the limit concerns website navigation, not print length,
-and rejected the condensed formula-sheet presentation. The reader route is now:
-`index.md` (vectors/geometry), `matrix-guide.md` (matrices/products), `practice.md`,
-and `solutions.md`. There are exactly four pages for Lecture 1, including exercises.
+**Selected scene:** The owner selected shadows to replace knitting/crochet. The
+active welcome, two teaching pages, exercises, solutions, book mark and four SVGs
+now use matched point coordinates and calibrated front/side views. Canonical O
+and H retain their 2-by-3 and 4-by-3 shapes. The four-bead X profiles are explicitly
+separate records from a single point's three-dimensional world coordinates.
 
-The teaching pages restore connected prose, four original diagrams, worked
-examples, derivations, highlighted results, and five checkpoint answers. Repeated
-boundary notes and duplicated summaries were shortened. All source examples and
-properties retained in the prior coverage revision remain; the
-[coverage audit](lecture1-coverage.md) maps their destinations.
+Negative/fractional coordinates are valid. Former integer/nonnegative count
+restrictions were removed, including the answer to Problem 1. Problem 15 and the
+matrix-vector checkpoint now use actual view maps; associated feedback and checks
+were rewritten. Source lecture examples, sectioning, colors and four-page cap are
+preserved. Earlier craft material below is historical.
 
-Concept labels are embedded in the two teaching pages. Solution revision links
-now target those labels instead of excluded old page files. Synthesis and source
-notes are embedded in the matrices page. The old compact-print overrides are
-removed. The previous PDF is an archived summary; no printed-sheet target applies
-to the current reading experience.
+Based on `9d932e0`; includes the selected shadow-lens migration. Lecture 1 remains exactly four website pages, including exercises
+and solutions. The two teaching pages now have 12 numbered sections (1.1–1.12),
+page objectives and prerequisites, route cards, local roadmaps, source-page labels,
+and motivating questions. Each section closes with a checkpoint, a takeaway, and
+practice links. The chapter contains 7 numbered definition boxes, 12 numbered
+worked examples, a named cosine-formula theorem/proof, and an ML connection.
 
-Validation: strict build, 77 numerical/structural checks, browser checks of the
-five reader documents at desktop/mobile widths, four-page sidebar verification,
-checkpoint keyboard access, a solution-to-concept return link, dark colors, print
-answer expansion, and rendered links/assets. This revision is local and has not
-been pushed or deployed. Independent reviewer/student outcomes remain unverified.
+Worked examples expose intermediate steps and checks. The final synthesis gives
+an unaided readiness checklist and a skill-to-exercise map; every one of the
+24 solutions links to an explanation and a related retry problem. All lecture
+examples/properties and the four diagrams are preserved; see the
+[coverage audit](lecture1-coverage.md).
+
+The stylesheet gives the page route, section introduction, definition, example,
+result, proof, warning, and recap distinct labeled roles. Bright fills accompany
+readable dark text; the serif reading measure is capped at 75ch. Dark/mobile/print
+styles retain the same hierarchy. No printed-page limit applies. The earlier
+condensed PDF is an archived summary rather than the current reader format.
+
+Validation: strict build, 93 arithmetic/structural/narrative checks, and browser checks cover
+the five reader documents at desktop/mobile widths. The browser checker verifies
+four lecture pages, six learning goals/recaps/checkpoints per teaching page,
+12 consecutively numbered worked examples, route/current-page markers, checkpoint
+keyboard access, section jumps, a solution return link, dark colors, and print
+answer expansion. All 10 viewport/page checks report no MathJax errors, page-wide
+overflow, or JavaScript errors; rendered local links/assets are checked separately. Section
+jump checks wait for scrolling to finish and verify the target heading position.
+Remaining independent reviewer/student outcomes are unverified.
+The four active SVGs were visually inspected at desktop size, with labeled world,
+front/side, and profile-coordinate panels. The browser also checks that all five
+active article bodies contain no residual craft narrative. The new point/view
+branding loads, and the old diagram assets remain outside the reader route.
+This revision is local and has not been pushed or deployed.
 
 ## Expanded edition review (historical)
 

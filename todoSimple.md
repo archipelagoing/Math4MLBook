@@ -1,10 +1,10 @@
 # Math4MLBook TODO
 
-Last updated: 2026-10-26. Lecture 1 restores the textbook explanations and diagrams
-in **four website pages**: vectors/geometry, matrices/products, exercises, solutions.
-This replaces the rejected formula-sheet edition. All source examples/formulas
-remain. The limit concerns website pages, not printed sheets. Later weeks remain
-unfinished; the current revision has not been published.
+Last updated: 2026-10-26. The owner selected **shadows and matched point measurements**
+as the primary analogy, replacing knitting/crochet. Lecture 1 retains its four-page
+route, 12 numbered learning sections, all lecture examples/formulas, and 24 explained
+exercises. Active prose, diagrams, and problem feedback use the shadow canon; earlier
+craft material remains historical/reference work. This revision is local.
 
 ## Maintenance instructions
 
@@ -504,3 +504,35 @@ active; they are not requirements for the five-week milestone.
 - [x] Preserve all source examples/formulas and the four-page cap including exercises/solutions.
 - [x] Update the reader guide and authoring references to describe website navigation,
   with no printed-page target. Publication remains pending.
+
+## Restore the show bible's section and learning structure
+
+- [x] Organize the teaching pages into sections 1.1–1.12 with visible numbered headings.
+- [x] Add prerequisites, measurable page objectives, four-page route cards, and local roadmaps.
+- [x] Give every section a learning goal, motivating question, and source-page reference.
+- [x] Number definitions, theorem/key results, and 12 worked examples; expose reasoning
+  and independent checks rather than only final results.
+- [x] Provide 12 checkpoints with collapsible explanations and 12 section recaps linked
+  to practice; keep all lecture examples/formulas and all four diagrams.
+- [x] Add a chapter synthesis, unaided readiness checklist, and skill-to-exercise map.
+- [x] Add specific concept/retry links to every explained solution.
+- [x] Implement the hierarchy and role-specific formatting without adding website pages.
+- [x] Verify the finished structure: strict build, 82 numerical/structural checks,
+  683 local links/assets, and 10 desktop/mobile page checks pass. Section jumps,
+  four-page navigation, keyboard checkpoints, and print answers work.
+
+## Switch the textbook backbone to shadows
+
+- [x] Record the owner's selection in the show bible, main rubric, analogy index,
+  and current teaching strategy; preserve the prior craft strategy as history.
+- [x] Rewrite the four active lecture pages and the welcome/branding around points,
+  calibrated front/side views, and explicitly defined coordinate records.
+- [x] Replace all four active diagrams; preserve the sectioning, palette, source
+  examples/formulas, checkpoints, and exercise/solution route.
+- [x] Correct domain-dependent explanations: negative/fractional coordinates are valid;
+  one-point world coordinates and multi-point profiles have different meanings.
+- [x] Use canonical O (2-by-3) and H (4-by-3), including the repeated Y reading;
+  update Problem 15 and its answer, and remove the former count restrictions.
+- [x] Extend the shadow canon with the actual Week 1 profile records and chapter links.
+- [x] Check active reading pages contain no residual craft narrative; strict build
+  and 93 arithmetic/structure/narrative checks pass. Publication remains pending.

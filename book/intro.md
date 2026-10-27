@@ -1,10 +1,10 @@
 (intro)=
-# Mathematics, stitch by stitch
+# Mathematics, in view
 
 A textbook for understanding the mathematics behind the course: connected
 explanations, precise formulas, diagrams, worked examples, and practice.
-Knitting and crochet provide the recurring examples; each record states what
-it counts and what it leaves out.
+Marked points and their shadows provide the recurring scene. Each coordinate
+record states what a view reveals and what it leaves out.
 
 :::{admonition} Lecture 1 · Vectors and matrices
 :class: key-result

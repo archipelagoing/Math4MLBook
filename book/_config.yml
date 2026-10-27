@@ -20,7 +20,7 @@ sphinx:
       - sphinx_book_theme
       - sphinx_multitoc_numbering
     language: en
-    html_favicon: figures/yarn-mark.svg
+    html_favicon: figures/shadow-mark.svg
     html_static_path:
       - _static
       - figures
@@ -31,9 +31,9 @@ sphinx:
     html_theme_options:
       home_page_in_toc: true
       logo:
-        text: Math, stitch by stitch
-        image_light: yarn-mark.svg
-        image_dark: yarn-mark.svg
+        text: Math, in view
+        image_light: shadow-mark.svg
+        image_dark: shadow-mark.svg
       repository_url: https://github.com/archipelagoing/Math4MLBook
       repository_branch: main
       path_to_docs: book

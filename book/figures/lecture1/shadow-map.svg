@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="365" viewBox="0 0 1060 365" role="img" aria-labelledby="title desc">
+<title id="title">A view matrix tells you what each coordinate changes</title><desc id="desc">The point p=(2,3,4) has three input coordinates. O keeps X and Y; its column effects are (1,0),(0,1),(0,0). The output is the front mark (2,3). A Z change is invisible to this view.</desc>
+<rect width="1060" height="365" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="38" class="title" >A view matrix tells you what each coordinate changes</text>
+<rect x="25" y="84" width="235" height="170" rx="12" fill="#FFF0F6" stroke="#3975DB" stroke-width="1.4"/>
+<text x="39" y="114" class="small" >World point p</text>
+<text x="41" y="153" class="label" >X = 2</text>
+<text x="41" y="188" class="label" >Y = 3</text>
+<text x="41" y="223" class="label" >Z = 4</text>
+<rect x="335" y="84" width="360" height="170" rx="12" fill="#EFF9E7" stroke="#3975DB" stroke-width="1.4"/>
+<text x="349" y="114" class="small" >Front view O: keep X,Y</text>
+<text x="351" y="153" class="label" >X column: (1, 0)</text>
+<text x="351" y="188" class="label" >Y column: (0, 1)</text>
+<text x="351" y="223" class="label" >Z column: (0, 0)</text>
+<rect x="770" y="84" width="260" height="170" rx="12" fill="#EFF9E7" stroke="#3975DB" stroke-width="1.4"/>
+<text x="784" y="114" class="small" >Screen mark Op</text>
+<text x="786" y="153" class="label" >horizontal X = 2</text>
+<text x="786" y="188" class="label" >vertical Y = 3</text>
+<path d="M270 169 H321" fill="none" stroke="#3975DB" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M705 169 H756" fill="none" stroke="#3975DB" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="27" y="300" class="label" >Op = 2(1, 0) + 3(0, 1) + 4(0, 0) = (2, 3)</text>
+<text x="27" y="338" class="small" >Three input coordinates → two readings. The zero third column makes depth invisible.</text>
+</svg>

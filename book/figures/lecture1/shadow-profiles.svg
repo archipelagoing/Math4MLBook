@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="490" viewBox="0 0 1120 490" role="img" aria-labelledby="title desc">
+<title id="title">Four labeled marks → one ordered profile</title><desc id="desc">Left: front-screen marks of four beads A,B,C,D at fixed Y=1,2,3,4. Pink circles are profile r=(3,1,3,1), green diamonds are s=(1,3,1,3). Right: coefficient coordinates r=2e+a, s=2e-a, and the uniform profile 2e. These are distinct physical and record coordinate plots.</desc>
+<rect width="1120" height="490" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<text x="25" y="38" class="title" >Four labeled marks → one ordered profile</text>
+<text x="65" y="82" class="small" >Front marks: X varies, Y labels the bead</text>
+<path d="M100 142 V362" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="100" y="385" class="small" text-anchor="middle">0</text>
+<path d="M165 142 V362" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="165" y="385" class="small" text-anchor="middle">1</text>
+<path d="M230 142 V362" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="230" y="385" class="small" text-anchor="middle">2</text>
+<path d="M295 142 V362" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="295" y="385" class="small" text-anchor="middle">3</text>
+<path d="M360 142 V362" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="360" y="385" class="small" text-anchor="middle">4</text>
+<path d="M100 307 H360" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="88" y="312" class="small" text-anchor="end">1</text>
+<path d="M100 252 H360" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="88" y="257" class="small" text-anchor="end">2</text>
+<path d="M100 197 H360" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="88" y="202" class="small" text-anchor="end">3</text>
+<path d="M100 142 H360" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="88" y="147" class="small" text-anchor="end">4</text>
+<path d="M100 362 H375" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M100 362 V128" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="382" y="367" class="small" >X</text>
+<text x="95" y="119" class="small" >Y</text>
+<circle cx="295" cy="307" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M165 299 L173 307 L165 315 L157 307 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="43" y="312" class="small" >A</text>
+<circle cx="165" cy="252" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M295 244 L303 252 L295 260 L287 252 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="43" y="257" class="small" >B</text>
+<circle cx="295" cy="197" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M165 189 L173 197 L165 205 L157 197 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="43" y="202" class="small" >C</text>
+<circle cx="165" cy="142" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M295 134 L303 142 L295 150 L287 142 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="43" y="147" class="small" >D</text>
+<circle cx="95" cy="411" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<text x="112" y="417" class="small" >r = (3, 1, 3, 1)</text>
+<path d="M330 403 L338 411 L330 419 L322 411 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="347" y="417" class="small" >s = (1, 3, 1, 3)</text>
+<text x="640" y="82" class="small" >Coefficients of the profile family</text>
+<path d="M675 128 V387" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="675" y="281" class="small" text-anchor="middle">0</text>
+<path d="M740 128 V387" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="740" y="281" class="small" text-anchor="middle">1</text>
+<path d="M805 128 V387" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="805" y="281" class="small" text-anchor="middle">2</text>
+<path d="M870 128 V387" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="870" y="281" class="small" text-anchor="middle">3</text>
+<path d="M935 128 V387" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="935" y="281" class="small" text-anchor="middle">4</text>
+<path d="M630 387 H970" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M630 322 H970" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M630 192 H970" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M630 127 H970" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<path d="M630 257 H990" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M675 390 V110" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1003" y="263" class="label" >α</text>
+<text x="683" y="109" class="label" >β</text>
+<path d="M675 257 L805 192" fill="none" stroke="#C91E70" stroke-width="3" />
+<circle cx="805" cy="192" r="6" fill="#C91E70"/>
+<text x="820" y="184" class="small" >r = 2e + a</text>
+<path d="M675 257 L805 322" fill="none" stroke="#357D22" stroke-width="3" />
+<circle cx="805" cy="322" r="6" fill="#357D22"/>
+<text x="820" y="314" class="small" >s = 2e − a</text>
+<circle cx="805" cy="257" r="6" fill="#3975DB"/>
+<text x="823" y="250" class="small" >2e: all X = 2</text>
+<text x="638" y="417" class="small" >e = (1,1,1,1);  a = (1,−1,1,−1)</text>
+<text x="25" y="465" class="small" >Left: positions on a screen. Right: coefficients that select a four-entry measurement record.</text>
+</svg>

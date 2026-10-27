@@ -1,3 +1,5 @@
+> Reference lens: the owner has selected [shadows](../shadows/canon.md) as the current textbook backbone. Earlier implementation notes below are historical.
+
 # Yarn in Your Hands — A Connected Knitting and Crochet Canon
 
 2026-10-26 · [Build method](../../build-method.md)

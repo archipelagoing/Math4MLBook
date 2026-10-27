@@ -1,3 +1,5 @@
+> Current choice: the owner selected **shadows** for the textbook. The comparison below records the rationale; earlier statements that knitting/crochet remains primary are superseded.
+
 # Colored Light versus Multiple Shadows — The Strongest Case for Each
 
 2026-10-26 · Editorial comparison, not measured learning evidence
