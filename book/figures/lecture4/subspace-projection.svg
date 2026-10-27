@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="title desc">
+<title id="title">Subspace projection: the error is normal to every allowed direction</title><desc id="desc">A schematic plane S is the column space of A. The fitted vector p=A x-hat lies in S. The vector b ends above S; residual e=b minus p goes from p to b and is perpendicular to every column of A. Thus A transpose times e is zero.</desc>
+<rect width="1000" height="500" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="40" class="title" >Subspace projection: the error is normal to every allowed direction</text>
+<path d="M60 350 L370 270 L485 360 L165 445 Z" fill="#EFF9E7" stroke="#357D22" stroke-width="2"/>
+<path d="M140 390 L270 135" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<path d="M140 390 L270 355" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green)"/>
+<path d="M270 355 V135" fill="none" stroke="#3975DB" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<text x="286" y="144" class="label" >b</text>
+<text x="288" y="245" class="small" >e = b − p</text>
+<text x="290" y="382" class="small" >p = A x̂</text>
+<text x="80" y="321" class="small" >S = C(A)</text>
+<text x="545" y="135" class="label" >1. Choose p inside the allowed span.</text>
+<text x="545" y="205" class="small" >2. Require e ⟂ every column of A.</text>
+<text x="545" y="275" class="label" >3. Solve AᵀA x̂ = Aᵀb.</text>
+<text x="545" y="345" class="label" >4. Check Aᵀe = 0.</text>
+<text x="30" y="477" class="small" >Schematic: the closest output lies in the subspace; the leftover error lies in its orthogonal complement.</text>
+</svg>

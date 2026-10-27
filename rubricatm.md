@@ -52,6 +52,12 @@ weaknesses; diagnostic feedback leads to targeted revision and successful retrie
 Use a supplied official A cutoff when available and label any other practice threshold
 as an editorial mastery target, not a statement of course grading policy.
 
+**Standalone reading gate:** Review with the slides closed. A slide reference
+passes only when the textbook includes the example's full problem data and
+reasoning, or a faithful labeled diagram with caption, alt text and explanation
+for a referenced figure. A citation or “as shown in the slides” cannot replace
+essential material. Earlier textbook dependencies must be restated or linked.
+
 **References:** [SHOW_BIBLE.md](SHOW_BIBLE.md), [todoSimple.md](todoSimple.md),
 `resources/lectures/`, `resources/HW/`, `resources/practiceExams/`, `book/_toc.yml`,
 `book/_config.yml`. The README records local setup and chapter scope; inspect rendered output rather
@@ -148,7 +154,7 @@ checks, blockers, and whether comparisons use the same target and weights.
 
 ## Latest assessment
 
-**Date:** 2026-10-27. **Base commit:** `2d3dad1`, with local Lecture 3 implementation.
+**Date:** 2026-10-27. **Base commit:** `718e1b7`, with local Lecture 4 implementation.
 
 **Current format:** Lecture 1 retains its 12 sections and 24 exercises. Lecture 2
 now covers **all 36 PDF pages** in 14 lettered parts A–N, following lecture order.
@@ -159,26 +165,30 @@ inverses/invertibility, and TL;DR. Practice and expandable answers are integrate
 by topic. Lecture 1 likewise uses vectors, geometry, matrices and TL;DR. The earlier systems-only scope is superseded.
 Lecture 3 now covers all 35 PDF pages in 11 ordered parts with 16 worked
 examples, 28 questions, four diagrams and a mixed independent rehearsal.
-Weeks 4–5, the statistics/PCA bridge and cumulative exam assessment remain open.
+Lecture 4 now covers all 28 PDF pages in 11 ordered parts with 14 stepwise worked
+examples, six original diagrams, 28 integrated questions, selected worksheet/
+recitation alignment and a fresh mixed rehearsal. Lecture 5, the statistics/PCA
+bridge and cumulative exam assessment remain open.
 
 The provisional whole-book score remains **56.25/100** under the same broad score
-bands and weights. Three covered lecture decks strengthen delivered coverage, but
+bands and weights. Four covered lecture decks strengthen delivered coverage, but
 five-week completion, independent review and student outcomes are not established.
 
 | Criterion | Weight | Score / 4 | Contribution | Current evidence and limits |
 | --- | ---: | ---: | ---: | --- |
-| Weekly coverage and source fidelity | 20 | 2 | 10 | Lectures 1–3 have specific source audits, including handwritten Week 3 systems/corrections. Weeks 4–5 and the full exam blueprint remain open. |
+| Weekly coverage and source fidelity | 20 | 2 | 10 | Lectures 1–4 have specific source audits, including Week 4 projection/fit/Gram–Schmidt data and conditions. Week 5, statistics/PCA and the full exam blueprint remain open. |
 | Mathematical correctness and precision | 20 | 2 | 10 | Exact systems, determinants, cofactor arrays, both inverse products, dimensions/conditions and parameter families checked. Independent expert review and later material remain open. |
-| Exposition and learning progression | 20 | 2 | 10 | 37 learning sections/parts across Lectures 1–3. Highlighted steps explain operations and checks; later-week progression remains open. |
-| Practice and assessment | 15 | 2 | 7.5 | 78 exercises with explained answers/revision links and 37 checkpoints; Lecture 3 adds fresh variants, selected supporting-problem mapping and a scored mixed rehearsal. All three TL;DR pages support review. Cumulative timed assessment and learner outcomes remain open. |
-| Visual design and accessibility | 15 | 3 | 11.25 | Shared readable palette, 11 active diagrams, blue step labels, yellow results, red pitfalls, mobile/desktop and keyboard/print checks. Full accessibility audit remains open. |
-| Build integrity and reproducibility | 5 | 4 | 5 | Strict build, 95 Lecture 1, 98 Lecture 2 and 223 Lecture 3 checks, reproducible diagrams and browser scripts. Live deployment unverified. |
+| Exposition and learning progression | 20 | 2 | 10 | 48 learning sections/parts across Lectures 1–4. Highlighted steps explain operations and checks; later-week progression remains open. |
+| Practice and assessment | 15 | 2 | 7.5 | 106 exercises with explained answers/revision links and 48 checkpoints; Lecture 3 adds fresh variants, selected supporting-problem mapping and a scored mixed rehearsal. All four TL;DR pages support review. Cumulative timed assessment and learner outcomes remain open. |
+| Visual design and accessibility | 15 | 3 | 11.25 | Shared readable palette, 17 active diagrams, blue step labels, yellow results, red pitfalls, mobile/desktop and keyboard/print checks. Full accessibility audit remains open. |
+| Build integrity and reproducibility | 5 | 4 | 5 | Strict build, 95 Lecture 1, 98 Lecture 2, 223 Lecture 3 and 409 Lecture 4 checks, reproducible diagrams and browser scripts. Lecture 3 verified live; Lecture 4 remains local. |
 | Editorial completeness and delivery | 5 | 2 | 2.5 | Four numbered sidebar pages per lecture, integrated practice/answers, root AGENTS.md, current show-bible contract, source notes and review maps. Later chapters, final credits and publication remain open. |
 | **Total** | **100** | | **56.25** | |
 
 **Verification:** [Lecture 1 record](authoring/lecture1-review.md) and
 [Lecture 2 record](authoring/lecture2-review.md), plus the current
-[Lecture 3 record](authoring/lecture3-review.md). Each browser review passes
+[Lecture 3 record](authoring/lecture3-review.md) and
+[Lecture 4 record](authoring/lecture4-review.md). Each browser review passes
 10 page/viewport checks, inspecting actual numbered sidebar labels and topic-based
 practice allocation. All answers can be keyboard-opened and all local article
 links resolve. No math errors, JavaScript errors or page-wide overflow were found,
@@ -203,3 +213,11 @@ and 239 local article links pass. Fresh practice and a transparent mixed check
 address the preparation weaknesses identified in the Lecture 2 audit, without
 claiming that student readiness or whole-course exam alignment has been demonstrated.
 The earlier Lecture 2 audit and its remaining tasks are unchanged.
+
+**Lecture 4 evidence:** [Coverage](authoring/lecture4-coverage.md) and
+[verification](authoring/lecture4-review.md) record the full deck, source-order
+teaching, independent arithmetic, browser/print inspection, and selected worksheet
+and recitation alignment. The whole-book score remains in the same provisional
+bands: four lectures do not establish all-five-week coverage, expert review, a
+complete exam blueprint or actual student readiness. The prior Lecture 2 audit
+and its remaining preparation tasks are unchanged.

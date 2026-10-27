@@ -10,10 +10,10 @@ Observed implementation and intended experience are recorded separately.
 | Project | [Math4MLBook](https://github.com/archipelagoing/Math4MLBook) |
 | Working title | Mathematical Foundations of Machine Learning |
 | Premise | A beautiful, rigorous, readable textbook that develops the course's weekly slides into a complete learning experience. |
-| Current stage | Lectures 1–3 implemented; four numbered topic/review pages each, with practice and explained answers beside the relevant material. |
-| Canonical branch | `main`; numbered topic-page revision is local and not deployed. |
+| Current stage | Lectures 1–4 implemented; four numbered topic/review pages each, with practice and explained answers beside the relevant material. |
+| Canonical branch | `main`; Lecture 3 verified live; Lecture 4 is local and not deployed. |
 | Decision maker | Repository owner; final title and aesthetic preferences remain adjustable. |
-| Last verified | 2026-10-27: local strict build and arithmetic checks; current browser evidence is in the lecture review records. Live deployment unverified. |
+| Last verified | 2026-10-27: local strict build and arithmetic checks; current browser evidence is in the lecture review records. Lecture 3 live URL verified; Lecture 4 remains local. |
 | Start here | [AGENTS.md](AGENTS.md) → current contract here → [rubricatm.md](rubricatm.md) → [todoSimple.md](todoSimple.md). |
 
 ## Current authoring contract
@@ -35,13 +35,19 @@ instructions for repository agents are in [AGENTS.md](AGENTS.md).
 - Current page routes: Lecture 1 — vectors/combinations → dot products/geometry →
   matrices/products → TL;DR. Lecture 2 — systems/elimination → determinants/geometry
   → inverses/invertibility → TL;DR. Lecture 3 — spaces/subspaces → complete solutions/
-  rank → independence/span/basis → TL;DR. Maintain lecture order within and across pages.
+  rank → independence/span/basis → TL;DR. Lecture 4 — orthogonality/projections →
+  subspaces/least squares → orthonormal bases/Gram–Schmidt → TL;DR. Maintain lecture order within and across pages.
 - Preserve section/concept/problem/solution anchors when relocating content.
   Keep source banks as included fragments rather than extra reader pages.
 - End with a dedicated TL;DR: core formulas **with conditions**, selection cues,
   solving recipes/stopping rules, a compact checked example, and error reminders.
 - Teach through goals, intuition, precise definitions/results, concise explanations,
   numbered worked steps with how/why, checkpoints, takeaways and linked practice.
+- Assume the website is the reader's only open resource. Every referenced slide
+  example must include its full problem data and explanation in the textbook;
+  every referenced slide figure must have a faithful, labeled textbook diagram,
+  caption and alt text. Source citations are attribution, never required reading
+  to understand the page. Review with the slides closed.
 - Shadows are the primary analogy. Blue labels structure steps, yellow highlights
   important results, red marks pitfalls, green groups examples, pink defines terms;
   retain readable cocoa text, blush paper and contrasting light/dark pairs.
@@ -81,12 +87,12 @@ instructions for repository agents are in [AGENTS.md](AGENTS.md).
 
 | Area | Observed state | Evidence | Caveat |
 | --- | --- | --- | --- |
-| Book | Lectures 1–3, four numbered topic/review pages each with integrated practice and answers. | `book/lecture1/`, `book/lecture2/`, `book/lecture3/`, `book/_toc.yml` | Weeks 4–5 and cumulative exam preparation remain unfinished. |
+| Book | Lectures 1–4, four numbered topic/review pages each with integrated practice and answers. | `book/lecture1/`, `book/lecture2/`, `book/lecture3/`, `book/lecture4/`, `book/_toc.yml` | Week 5, statistics/PCA and cumulative exam preparation remain unfinished. |
 | Lectures | Five PDF decks, 191 PDF pages in total. | `resources/lectures/` | Counts include title pages and progressive reveals; these are not 191 distinct lessons. |
 | Supporting materials | Six homework/worksheet/recitation PDFs; seven exam PDFs and a topic list. | `resources/HW/`, `resources/practiceExams/` | Inventory and text extraction completed; full mathematical and visual review remains. |
-| Build stack | Python 3.12, pinned TeachBooks/Jupyter Book v1 and sphinx-design; clean strict local build. | `requirements.txt`, `authoring/lecture1-review.md` | MathJax uses a CDN; deployment is unverified. |
-| Visual implementation | Shared textbook palette, light/dark styles, 11 original active SVGs, printable checkpoint answers. | `book/_static/textbook.css`, `book/figures/lecture1/` | Representative browser checks, not a full accessibility audit. |
-| Automation | Reusable TeachBooks deployment workflow triggered by book/config changes and manual dispatch. | `.github/workflows/call-deploy-book.yml` | Successful runs and GitHub Pages availability unverified. |
+| Build stack | Python 3.12, pinned TeachBooks/Jupyter Book v1 and sphinx-design; clean strict local build. | `requirements.txt`, `authoring/lecture4-review.md` | MathJax uses a CDN; Lecture 4 is not deployed. |
+| Visual implementation | Shared textbook palette, light/dark styles, 17 original active SVGs, printable checkpoint answers. | `book/_static/textbook.css`, `book/figures/lecture1/` | Representative browser checks, not a full accessibility audit. |
+| Automation | Reusable TeachBooks deployment workflow triggered by book/config changes and manual dispatch. | `.github/workflows/call-deploy-book.yml` | Run 40546720462 succeeded for 718e1b7; Lecture 3 URL verified HTTP 200 on 2026-10-27. Lecture 4 remains local. |
 | Project identity | Working title, point/view mark, repository links, reader guide, setup README, chapter navigation. | `README.md`, `book/_config.yml`, `book/_toc.yml` | Final human author credit and publication URL remain to be settled. |
 
 **Known source limitations.** `Recitation1_Solutions.pdf` and `PT1_f22Sol.pdf` yielded no non-whitespace text with `pdftotext -layout`; inspect their pages visually or with OCR before relying on their contents. Extractable PDFs can still contain diagrams and handwritten annotations that text extraction misses. The Week 5 extracted text covers eigendecomposition and SVD but does not mention statistics or PCA; check the visual source and supporting materials before choosing where to add a clearly identified supplement.
@@ -272,7 +278,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 - **Path:** Objectives → explanation and examples → checkpoints → synthesis → practice and solutions.
 - **Success:** Reader can explain the central ideas and solve a new representative problem.
 - **Recovery:** Link prerequisite concepts, provide hints, explain common errors, and expose worked solutions.
-- **Implementation/status:** Lectures 1–3 (full decks) implement this route in four website pages each; remaining material is unfinished.
+- **Implementation/status:** Lectures 1–4 (full decks) implement this route in four website pages each; Lecture 5 and cumulative review remain unfinished.
 
 ### Flow: Review for the midterm
 
@@ -288,7 +294,7 @@ These ranges identify whole decks, not a completed section-level source audit. I
 - **Path:** Read source pages and relevant problems → draft → check mathematics → render → inspect → update source notes and checklist.
 - **Success:** Section meets the shared chapter standard and builds with valid references.
 - **Recovery:** Keep unreadable source pages and unresolved mathematical discrepancies explicitly open.
-- **Implementation/status:** Workflow implemented for Lectures 1–3; subsequent chapters remain planned.
+- **Implementation/status:** Workflow implemented for Lectures 1–4; Lecture 5 remains planned.
 
 ## 7. Continuity ledger
 
@@ -308,8 +314,8 @@ These ranges identify whole decks, not a completed section-level source audit. I
 | Horizon | Outcome | Evidence of done |
 | --- | --- | --- |
 | Now | Complete planning documents in the requested order. | Project-specific bible, weighted baseline rubric, and actionable checklist. |
-| Next | Owner/student review of Lecture 3; continue the source map and Lecture 4. | Improve the validated chapter pattern and continue in weekly order. |
-| Then | Weeks 4–5 built and reviewed in order. | All five chapters satisfy the same rubric and source coverage requirements. |
+| Next | Owner/student review of Lecture 4; continue the source map and Lecture 5. | Improve the validated chapter pattern and continue in weekly order. |
+| Then | Week 5 built and reviewed. | All five chapters satisfy the same rubric and source coverage requirements. |
 | Then | Close statistics/PCA and midterm coverage gaps; integrate review. | Each topic and representative practice type maps to a verified section. |
 | Later | Publication-ready navigation, identity, attribution, accessibility, and delivery. | Successful build, rendered review, and separately authorized deployment verification. |
 
@@ -433,3 +439,14 @@ Practice includes three mapped recitation/assignment problems, fresh variants an
 a mixed independent rehearsal with editorial scoring/timing and diagnostic links.
 See [coverage](authoring/lecture3-coverage.md) and [review](authoring/lecture3-review.md).
 This delivers chapter material, not demonstrated student readiness or publication.
+
+## Lecture 4 delivery · 2026-10-27
+
+All 28 Week 4 PDF pages are developed in Parts A–K on four numbered topic/review
+pages. Fourteen highlighted worked examples preserve all source examples; eleven
+checkpoints, six original SVGs and 28 integrated questions support practice.
+The final page collects method choices, conditions, solving steps and a checked
+example. Selected worksheet/recitation tasks and a fresh mixed rehearsal are
+mapped in [the coverage audit](authoring/lecture4-coverage.md);
+[the review record](authoring/lecture4-review.md) owns verification evidence.
+Lecture 5 and cumulative exam preparation are still open; no learner grade is claimed.

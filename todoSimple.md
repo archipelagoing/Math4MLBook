@@ -22,13 +22,19 @@ craft material remains historical/reference work. This revision is local.
 - Preserve source PDFs, identify additions/corrections, and never invent source
   coverage or successful checks. Reassess the rubric after meaningful milestones.
 
+## Standalone reading requirement
+
+- [x] Make website-only reading explicit in AGENTS.md, the current show-bible contract and the rubric: include complete referenced examples and faithful labeled figures; source citations provide attribution.
+- [x] Apply the rule to Lecture 4: add the four-space and subspace-projection diagrams, restate the two-view measurement model, and link earlier textbook dependencies.
+- [ ] Apply a slides-closed audit to earlier chapters during their next revision; do not infer that this Lecture 4 check reviewed every prior page.
+
 ## Next steps
 
 1. Review the completed Lecture 1 reading experience and gather reader feedback (§4).
 2. Complete the remaining source/notation map, including visual-only supporting
    PDFs and statistics/PCA (§2).
-3. Review the complete Lecture 3 and its cheat sheet (§6), then proceed through
-   Weeks 4–5 and close midterm coverage (§§7–9).
+3. Review the complete Lecture 4 and its cheat sheet (§7), then build Week 5
+   and close midterm coverage (§§8–9).
 
 ## 1. Define the project
 
@@ -366,20 +372,24 @@ expert review, student outcomes and live deployment remain separate work.
 
 ## 7. Week 4 — Orthogonality, projections, and least squares
 
-- [ ] Explain orthogonal vectors/subspaces and the orthogonality relationships
+- [x] Explain orthogonal vectors/subspaces and the orthogonality relationships
   among the four fundamental subspaces, with dimensions stated.
-- [ ] Derive line and subspace projections; explain residual orthogonality and
+- [x] Derive line and subspace projections; explain residual orthogonality and
   the full-column-rank condition for inverse-based projection formulas.
-- [ ] Develop least squares and the normal equations through the slides' line-fit
+- [x] Develop least squares and the normal equations through the slides' line-fit
   example; discuss rank-deficient limitations at the appropriate depth.
-- [ ] Explain orthonormal bases and Gram–Schmidt with checked computations and
+- [x] Explain orthonormal bases and Gram–Schmidt with checked computations and
   the linear-independence requirement.
-- [ ] Integrate figures, checkpoints, pitfalls, synthesis, appropriate ML context,
+- [x] Integrate figures, checkpoints, pitfalls, synthesis, appropriate ML context,
   graded exercises, hints, and independently checked solutions.
-- [ ] Meet the chapter definition of done and verify earlier cross-references.
+- [x] Meet the chapter definition of done and verify earlier cross-references.
 
-Progress: Primary deck has 28 pages. Projection and least-squares diagrams are a
-major opportunity for the shared visual language; no figures have been built yet.
+Progress: All 28 pages mapped to 11 ordered parts on four numbered reader pages.
+14 highlighted examples, 11 checkpoints, six reproducible SVGs, 28 integrated
+questions with explained answers and targeted retry links, a fresh mixed rehearsal,
+and the TL;DR are delivered locally. See `authoring/lecture4-coverage.md` and
+`authoring/lecture4-review.md`. Selected worksheet/recitation alignment is complete;
+course-wide exam mapping and learner outcomes remain open. Not pushed or published.
 
 ## 8. Week 5 — Eigenvalues and matrix decompositions
 

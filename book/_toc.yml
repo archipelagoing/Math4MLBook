@@ -31,3 +31,13 @@ parts:
         title: Page 3 · Independence, span & basis
       - file: lecture3/cheatsheet
         title: Page 4 · TL;DR cheat sheet
+  - caption: Lecture 4 · Orthogonality and projections
+    chapters:
+      - file: lecture4/index
+        title: Page 1 · Orthogonality & projections
+      - file: lecture4/least-squares
+        title: Page 2 · Subspaces & least squares
+      - file: lecture4/orthonormal
+        title: Page 3 · Orthonormal bases & Gram–Schmidt
+      - file: lecture4/cheatsheet
+        title: Page 4 · TL;DR cheat sheet

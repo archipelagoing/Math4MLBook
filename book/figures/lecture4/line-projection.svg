@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="450" viewBox="0 0 1000 450" role="img" aria-labelledby="title desc">
+<title id="title">Projection: keep the line component</title><desc id="desc">On equally scaled x,y axes, b=(3,1) is split into p=(1,2) on the line spanned by (1,2), and e=(2,-1), perpendicular to the line.</desc>
+<rect width="1000" height="450" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="40" class="title" >Projection: keep the line component</text>
+<path d="M85 100 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="85" y="363" class="small" text-anchor="middle">0</text>
+<path d="M165 100 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="165" y="363" class="small" text-anchor="middle">1</text>
+<path d="M245 100 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="245" y="363" class="small" text-anchor="middle">2</text>
+<path d="M325 100 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="325" y="363" class="small" text-anchor="middle">3</text>
+<path d="M405 100 V340" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="405" y="363" class="small" text-anchor="middle">4</text>
+<path d="M85 260 H405" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="73" y="265" class="small" text-anchor="end">1</text>
+<path d="M85 180 H405" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="73" y="185" class="small" text-anchor="end">2</text>
+<path d="M85 100 H405" fill="none" stroke="#E3D8D0" stroke-width="1" />
+<text x="73" y="105" class="small" text-anchor="end">3</text>
+<path d="M85 340 H420" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M85 340 V86" fill="none" stroke="#3975DB" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="427" y="345" class="small" >x</text>
+<text x="80" y="77" class="small" >y</text>
+<path d="M85 340 L201.0 108.0" fill="none" stroke="#3975DB" stroke-width="2" stroke-dasharray="6 4"/>
+<path d="M85 340 L325 260" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<path d="M85 340 L165 180" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green)"/>
+<path d="M165 180 L325 260" fill="none" stroke="#357D22" stroke-width="3" marker-end="url(#green)"/>
+<path d="M174.60000000000002 160.79999999999998 L193.8 170.39999999999998 L184.2 189.60000000000002" fill="none" stroke="#543124" stroke-width="1.5" />
+<text x="130" y="145" class="small" >p = (1, 2)</text>
+<text x="335" y="252" class="small" >b = (3, 1)</text>
+<text x="252" y="174" class="small" >e = (2, −1)</text>
+<text x="555" y="125" class="label" >b = p + e</text>
+<text x="555" y="183" class="label" >p is on the allowed line.</text>
+<text x="555" y="233" class="label" >e is perpendicular to that line.</text>
+<text x="555" y="303" class="small" >Squared lengths: 10 = 5 + 5</text>
+<text x="25" y="419" class="small" >Fixed x,y axes; both axes use the same scale. The residual arrow runs from p to b.</text>
+</svg>

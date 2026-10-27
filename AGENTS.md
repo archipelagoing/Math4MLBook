@@ -43,6 +43,13 @@ source coverage, clarity, and useful practice matter as much as appearance.
    cases. A list of bold final answers is insufficient.
 6. Keep the prose concise and connected. Do not replace the teaching sequence with
    a formula sheet or remove source examples merely to shorten it.
+7. Assume the reader has **only the website open**, without the slides or lecture
+   audio. When referring to a source example, include its complete problem data,
+   notation and worked reasoning on the textbook page. When referring to a source
+   figure, include a faithful, labeled textbook diagram with a caption and alt text,
+   explaining what the reader should notice. Page citations provide attribution;
+   they must never substitute for essential content. Check each page with the PDF
+   closed; restate or explicitly link any earlier textbook definition it needs.
 
 ## Sidebar and page architecture
 
@@ -64,6 +71,7 @@ source coverage, clarity, and useful practice matter as much as appearance.
   - Lecture 1: vectors/combinations → dot products/geometry → matrices/products → TL;DR.
   - Lecture 2: systems/elimination → determinants/geometry → inverses/invertibility → TL;DR.
   - Lecture 3: spaces/subspaces → complete solutions/rank → independence/span/basis → TL;DR.
+  - Lecture 4: orthogonality/projections → subspaces/least squares → orthonormal bases/Gram–Schmidt → TL;DR.
 - Keep problem IDs, solution IDs, and concept anchors stable when moving content.
   Use MyST references so destinations follow the moved labels. Avoid stale direct
   links to source-only practice/solution fragments.

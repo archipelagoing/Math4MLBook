@@ -10,12 +10,14 @@ ROUTES={
  1:[('index','Vectors & combinations'),('geometry','Dot products & geometry'),('matrix-guide','Matrices & products'),('cheatsheet','TL;DR cheat sheet')],
  2:[('index','Systems & elimination'),('elimination','Determinants & geometry'),('inverses','Inverses & invertibility'),('cheatsheet','TL;DR cheat sheet')],
  3:[('index','Spaces & subspaces'),('solutions-rank','Complete solutions & rank'),('basis','Independence, span & basis'),('cheatsheet','TL;DR cheat sheet')],
+ 4:[('index','Orthogonality & projections'),('least-squares','Subspaces & least squares'),('orthonormal','Orthonormal bases & Gram–Schmidt'),('cheatsheet','TL;DR cheat sheet')],
 }
 GROUPS={1:[[1,2,3,9,10],[4,5,11,12,18,21],[6,7,8,13,14,15,16,17,19,20,22,23,24],[]],
         2:[list(range(1,19)),list(range(19,22)),list(range(22,27)),[]],
-        3:[list(range(1,9)),list(range(9,17)),list(range(17,29)),[]]}
-PARTS={1:[3,3,6,0],2:[4,4,6,0],3:[5,2,4,0]}
-EXAMPLES={1:12,2:17,3:16}
+        3:[list(range(1,9)),list(range(9,17)),list(range(17,29)),[]],
+        4:[list(range(1,9)),list(range(9,17)),list(range(17,29)),[]]}
+PARTS={1:[3,3,6,0],2:[4,4,6,0],3:[5,2,4,0],4:[5,3,3,0]}
+EXAMPLES={1:12,2:17,3:16,4:14}
 
 async def review(lecture):
     evidence=Path(f'/tmp/math4ml-navigation/lecture{lecture}');evidence.mkdir(parents=True,exist_ok=True)
@@ -67,12 +69,25 @@ async def review(lecture):
                             title=await example.locator('.admonition-title').first.inner_text()
                             match=re.search(fr'{lecture}\.(\d+)',title)
                             if match:examples.append(int(match.group(1)))
-                            if lecture in (2,3):
+                            if lecture in (2,3,4):
                                 step_labels=await example.locator('.step-label').all_text_contents()
                                 steps=[int(re.search(r'Step (\d+)',x).group(1)) for x in step_labels]
                                 assert len(steps)>=2 and steps==list(range(1,len(steps)+1)),title
                 report={'page':relative,'width':width,'mathErrors':await page.locator('mjx-merror').count(),
                         'overflow':await page.evaluate('document.documentElement.scrollWidth>innerWidth')}
+                if lecture==4:
+                    # A valid MathJax expression can still swallow adjacent prose if
+                    # display delimiters lack paragraph breaks. Catch exposed TeX too.
+                    prose=await page.locator('article').inner_text()
+                    assert not re.search(r'\\(?:frac|mathbf|widehat|begin|end|boxed|mathbb|operatorname)\b',prose),(relative,'Unrendered TeX')
+                    if relative!='intro.html':
+                        if width==1440:
+                            for j,figure in enumerate(await page.locator('article figure').all(),1):
+                                await figure.screenshot(path=str(evidence/f'{stem}-figure-{j}.png'))
+                        for number in (8,12):
+                            example=page.locator('.example').filter(has=page.locator('.admonition-title').filter(has_text=f'Worked example 4.{number} ·'))
+                            if await example.count():
+                                await example.screenshot(path=str(evidence/f'example-{number}-{width}.png'))
                 assert not report['mathErrors'] and not report['overflow'],report
                 reports.append(report)
                 if width==1440:

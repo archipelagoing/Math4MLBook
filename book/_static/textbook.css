@@ -265,21 +265,21 @@ a:focus-visible, button:focus-visible, summary:focus-visible, figure:focus-visib
     box-shadow: none !important;
   }
   /* The quick reference prints compactly without changing the reading pages. */
-  body:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) #jb-print-docs-body { display: none !important; }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) { font-size: 10pt; line-height: 1.35; }
-  .bd-main .bd-content .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) h1:first-of-type {
+  body:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) #jb-print-docs-body { display: none !important; }
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) { font-size: 10pt; line-height: 1.35; }
+  .bd-main .bd-content .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) h1:first-of-type {
     display: block; font-size: 18pt; margin: 0 0 .7rem;
   }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) h2 {
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) h2 {
     font-size: 13pt; margin: 1.1rem 0 .6rem; padding-top: .4rem; border-top-width: 1px;
   }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) p { margin-bottom: .55rem; }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) table { margin: .6rem 0; }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) th, .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) td { padding: .3rem .4rem; }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) .admonition { margin: .8rem 0; break-inside: auto; }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) .worked-step { margin-top: .6rem; padding-top: .6rem; }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) .step-label { font-size: 10pt; padding: .2rem .4rem; }
-  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet) .math { margin: .5rem 0; }
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) p { margin-bottom: .55rem; }
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) table { margin: .6rem 0; }
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) th, .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) td { padding: .3rem .4rem; }
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) .admonition { margin: .8rem 0; break-inside: auto; }
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) .worked-step { margin-top: .6rem; padding-top: .6rem; }
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) .step-label { font-size: 10pt; padding: .2rem .4rem; }
+  .bd-article:has(#w1-cheatsheet, #w2-cheatsheet, #w3-cheatsheet, #w4-cheatsheet) .math { margin: .5rem 0; }
 }
 @media (max-width: 767px) {
   .bd-article .lecture-path { grid-template-columns: repeat(2, minmax(0, 1fr)); }

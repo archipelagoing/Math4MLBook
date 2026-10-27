@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="530" viewBox="0 0 1080 530" role="img" aria-labelledby="title desc">
+<title id="title">Four spaces: pair complements within each ambient space</title><desc id="desc">Input Rn splits into row space C(A transpose), dimension r, and null space N(A), dimension n minus r. Output Rm splits into column space C(A), dimension r, and left null space N(A transpose), dimension m minus r. A maps the row space bijectively to the column space and the null space to zero.</desc>
+<rect width="1080" height="530" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="40" class="title" >Four spaces: pair complements within each ambient space</text>
+<text x="38" y="92" class="label" >Input space: ℝⁿ</text>
+<rect x="30" y="115" width="335" height="125" rx="12" fill="#FFF0F6" stroke="#3975DB"/>
+<text x="46" y="157" class="label" >Row space C(Aᵀ)</text>
+<text x="46" y="199" class="small" >Dimension r</text>
+<rect x="30" y="335" width="335" height="125" rx="12" fill="#EFF9E7" stroke="#3975DB"/>
+<text x="46" y="377" class="label" >Null space N(A)</text>
+<text x="46" y="419" class="small" >Dimension n − r</text>
+<path d="M197 245 V330" fill="none" stroke="#3975DB" stroke-width="2" />
+<text x="214" y="282" class="title" >⊥</text>
+<text x="214" y="311" class="small" >complements</text>
+<text x="718" y="92" class="label" >Output space: ℝᵐ</text>
+<rect x="710" y="115" width="335" height="125" rx="12" fill="#FFF0F6" stroke="#3975DB"/>
+<text x="726" y="157" class="label" >Column space C(A)</text>
+<text x="726" y="199" class="small" >Dimension r</text>
+<rect x="710" y="335" width="335" height="125" rx="12" fill="#EFF9E7" stroke="#3975DB"/>
+<text x="726" y="377" class="label" >Left null space N(Aᵀ)</text>
+<text x="726" y="419" class="small" >Dimension m − r</text>
+<path d="M877 245 V330" fill="none" stroke="#3975DB" stroke-width="2" />
+<text x="894" y="282" class="title" >⊥</text>
+<text x="894" y="311" class="small" >complements</text>
+<path d="M380 175 H690" fill="none" stroke="#3975DB" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="410" y="140" class="small" >A: one-to-one and onto</text>
+<text x="435" y="213" class="small" >A x_row = b</text>
+<path d="M380 390 L654 285" fill="none" stroke="#3975DB" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="410" y="305" class="small" >A x_null = 0</text>
+<text x="671" y="291" class="title" >0</text>
+<text x="385" y="440" class="small" >Zero belongs to both output subspaces.</text>
+<text x="30" y="501" class="small" >Schematic for A of size m × n and rank r. Pair perpendicular spaces on the same side.</text>
+</svg>

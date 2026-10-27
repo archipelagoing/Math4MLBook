@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-labelledby="title desc">
+<title id="title">Two Y readings, one shared fitted value</title><desc id="desc">Two equally weighted observations of Y are 2 and 4. Both fit to 3. Observed minus fitted errors are minus one and plus one.</desc>
+<rect width="1000" height="420" rx="16" fill="#FFF9F5"/>
+<style>text{font-family:Georgia,serif;fill:#543124}.title{font-size:27px;font-weight:bold}.label{font-size:21px}.small{font-size:18px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#3975DB"/></marker></defs>
+<defs><marker id="pink" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#C91E70"/></marker></defs>
+<defs><marker id="green" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#357D22"/></marker></defs>
+<text x="25" y="40" class="title" >Two Y readings, one shared fitted value</text>
+<text x="35" y="99" class="small" >Same labeled point · calibrated front and side views</text>
+<text x="35" y="185" class="small" >Front Y reading</text>
+<path d="M300 180 H880" fill="none" stroke="#E3D8D0" stroke-width="2" />
+<path d="M350 173 V187" fill="none" stroke="#3975DB" stroke-width="1" />
+<text x="350" y="214" class="small" text-anchor="middle">2</text>
+<path d="M570 173 V187" fill="none" stroke="#3975DB" stroke-width="1" />
+<text x="570" y="214" class="small" text-anchor="middle">3</text>
+<path d="M790 173 V187" fill="none" stroke="#3975DB" stroke-width="1" />
+<text x="790" y="214" class="small" text-anchor="middle">4</text>
+<path d="M570 180 L350 180" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<circle cx="350" cy="180" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M570 172 L578 180 L570 188 L562 180 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="35" y="280" class="small" >Side Y reading</text>
+<path d="M300 275 H880" fill="none" stroke="#E3D8D0" stroke-width="2" />
+<path d="M350 268 V282" fill="none" stroke="#3975DB" stroke-width="1" />
+<text x="350" y="309" class="small" text-anchor="middle">2</text>
+<path d="M570 268 V282" fill="none" stroke="#3975DB" stroke-width="1" />
+<text x="570" y="309" class="small" text-anchor="middle">3</text>
+<path d="M790 268 V282" fill="none" stroke="#3975DB" stroke-width="1" />
+<text x="790" y="309" class="small" text-anchor="middle">4</text>
+<path d="M570 275 L790 275" fill="none" stroke="#C91E70" stroke-width="3" marker-end="url(#pink)"/>
+<circle cx="790" cy="275" r="7" fill="#FF4FA3" stroke="#C91E70" stroke-width="2"/>
+<path d="M570 267 L578 275 L570 283 L562 275 Z" fill="#8DEB42" stroke="#357D22" stroke-width="2"/>
+<text x="370" y="140" class="small" >e₂ = 2 − 3 = −1</text>
+<text x="600" y="245" class="small" >e₃ = 4 − 3 = +1</text>
+<text x="35" y="352" class="label" >Fitted record: p = (2, 3, 3, 4)</text>
+<text x="35" y="390" class="small" >Residual: e = (0, −1, +1, 0), with Hᵀe = 0</text>
+</svg>
