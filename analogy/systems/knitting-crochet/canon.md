@@ -532,3 +532,12 @@ The [first chapter](../../../book/lecture1/index.md) now uses this canon directl
 [Review evidence](../../../authoring/lecture1-review.md) records checked arithmetic,
 figures and browser output. Later-week mechanisms in this canon remain editorial
 plans. These count diagrams are not loop-accurate technique instruction.
+
+**Concise reader edition.** The owner subsequently requested a concise Lecture 1
+summary in two reading pages: [vectors](../../../book/lecture1/index.md) and
+[matrices](../../../book/lecture1/matrix-guide.md). The detailed mappings above
+now refer to retained expanded sources rather than the current reader navigation.
+
+The owner then required all distinct lecture examples and all listed formulas/topics
+to remain. The two reader guides now retain them; the complete PDF uses four sheets.
+See the [source-coverage audit](../../../authoring/lecture1-coverage.md).

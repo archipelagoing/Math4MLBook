@@ -14,7 +14,11 @@ mathematical scope follow the lecture; the knitting/crochet constructions,
 record-space interpretations, checkpoints, mixed practice, and diagnostic feedback
 are added teaching material.
 
-## Section-level coverage
+## Expanded-source section-level coverage
+
+The current concise reader route is [vectors](index.md) and [matrices](matrix-guide.md).
+The table below identifies retained expanded explanations; the current topic/example
+audit is in `authoring/lecture1-coverage.md` at repository root.
 
 | Lecture pages | Source material | Textbook destination |
 | --- | --- | --- |
@@ -70,6 +74,6 @@ subspaces, eigenvectors, SVD, and PCA are developed in later lectures. This
 chapter provides their prerequisites and occasionally names the next question;
 it does not require those later methods to solve Lecture 1 practice.
 
-Two synthesis problems extend the lecture's operations: symmetric/skew-symmetric
+In the retained expanded practice bank, two synthesis problems extend the lecture's operations: symmetric/skew-symmetric
 decomposition and trace(AB)=trace(BA). They are explicitly derived from the
 introduced definitions rather than presented as assumed background.

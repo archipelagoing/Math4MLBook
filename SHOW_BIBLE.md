@@ -10,7 +10,7 @@ Observed implementation and intended experience are recorded separately.
 | Project | [Math4MLBook](https://github.com/archipelagoing/Math4MLBook) |
 | Working title | Mathematical Foundations of Machine Learning |
 | Premise | A beautiful, rigorous, readable textbook that develops the course's weekly slides into a complete learning experience. |
-| Current stage | Lecture 1 implemented and locally checked; Weeks 2–5 remain to be written. |
+| Current stage | Lecture 1 condensed to two study-guide pages at owner request; expanded sources retained. |
 | Canonical branch | `main`; working tree based on `b1e21f70c9921e91c386f6836f3717498b14da06`. No release verified. |
 | Decision maker | Repository owner; final title and aesthetic preferences remain adjustable. |
 | Last verified | 2026-10-26: local strict build and Lecture 1 desktop/mobile/dark/print checks; live deployment unverified. |
@@ -48,7 +48,7 @@ Observed implementation and intended experience are recorded separately.
 
 | Area | Observed state | Evidence | Caveat |
 | --- | --- | --- | --- |
-| Book | Lecture 1: five teaching sections, synthesis, 24 explained problems, source notes. | `book/lecture1/`, `book/_toc.yml` | Weeks 2–5 and cumulative exam preparation remain unfinished. |
+| Book | Lecture 1: two concise guide pages; expanded chapter and practice retained as source references. | `book/lecture1/`, `book/_toc.yml` | Weeks 2–5 and cumulative exam preparation remain unfinished. |
 | Lectures | Five PDF decks, 191 PDF pages in total. | `resources/lectures/` | Counts include title pages and progressive reveals; these are not 191 distinct lessons. |
 | Supporting materials | Six homework/worksheet/recitation PDFs; seven exam PDFs and a topic list. | `resources/HW/`, `resources/practiceExams/` | Inventory and text extraction completed; full mathematical and visual review remains. |
 | Build stack | Python 3.12, pinned TeachBooks/Jupyter Book v1 and sphinx-design; clean strict local build. | `requirements.txt`, `authoring/lecture1-review.md` | MathJax uses a CDN; deployment is unverified. |
@@ -317,3 +317,17 @@ Update canon only after implementation and verification. Keep the roadmap in syn
 | 2026-10-26 | Strengthened knitting/crochet as the formal teaching backbone using repeated colorwork, uniform/alternating pattern geometry, marked crochet sectors, chart SVD and centered PCA; shadows/light are optional support. |
 
 **Lecture 1 implementation, 2026-10-26.** [Review record](authoring/lecture1-review.md) documents source coverage, numerical checks, rendered checks, and limits. Later-week plans remain plans.
+
+**Reader format decision, 2026-10-26.** The owner requested Lecture 1 be much shorter,
+ideally one or two pages. Its reader route now consists of two concise guides:
+vectors/geometry and matrices/products. Prioritize essential definitions, formulas,
+a brief craft example, and red exam warnings. Earlier expanded sources remain
+available for authoring; the main navigation does not include their long practice
+and solution sections. This is a summary, not the earlier full teaching sequence.
+
+**Coverage clarification, 2026-10-26.** The concise Lecture 1 must retain all listed
+vector/matrix topics, every distinct lecture example, the cosine/orthogonality proof
+relationships, dot-product properties, and all matrix-product properties. Combine
+progressive reveals and shorten prose; do not omit formulas or examples to meet a
+printed page count. Keep two reader pages, allowing additional print sheets for
+legible mathematics. [Coverage audit](authoring/lecture1-coverage.md) is the checklist.

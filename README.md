@@ -3,10 +3,14 @@
 A TeachBooks textbook built from the course materials in `resources/`, using a
 connected knitting-and-crochet sampler to develop the mathematics.
 
-**Available:** [Lecture 1 — Vectors and matrices](book/lecture1/index.md), with
-worked examples, four original diagrams, checkpoints, 24 practice problems,
-explained solutions, and a page-level source map. Weeks 2–5 remain in the authoring
-backlog. The project does not yet constitute complete midterm preparation.
+**Available:** Lecture 1 in two reading pages, retaining every distinct lecture example:
+[vectors and geometry](book/lecture1/index.md) and
+[matrices and multiplication](book/lecture1/matrix-guide.md).
+[Download the complete guide PDF](authoring/lecture1-study-guide.pdf).
+[Source-coverage audit](authoring/lecture1-coverage.md) maps every topic and example.
+Yellow panels highlight essential formulas; red panels flag exam mistakes.
+The earlier expanded explanations and 24-problem bank remain in `book/lecture1/`
+as source references, outside the reader navigation. Weeks 2–5 remain unfinished.
 
 ## Read locally
 

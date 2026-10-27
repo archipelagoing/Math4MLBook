@@ -1,86 +1,125 @@
 (lecture-one)=
-# Vectors and matrices: reading a pattern mathematically
+# Lecture 1 · Vectors
 
-<div class="chapter-kicker">Lecture 1 · The language of linear algebra</div>
+::::{div} lecture-one-brief
 
-A knitting pattern tells your hands what to do. A mathematical representation tells
-you what you can count, compare, and predict about those actions. The two are
-connected, but they are not the same thing: two rows can contain the same number
-of pink stitches while arranging them differently.
+**Part 1 of 2 · All lecture topics and distinct examples; repeated reveal slides combined.**
 
-We will follow a small sampler with **24 stitches across**, divided by markers
-into four sections of six stitches. One row has pink-stitch counts
+A vector is an **ordered list of real numbers**, $\mathbf v\in\mathbb R^n$;
+geometrically, it is a displacement with length and direction.
+Knitting connection: $(3,1,3,1)^T$ can record pink-stitch counts in four six-stitch
+sections. These counts omit stitch order and tension; geometry compares records.
 
-$$
-\mathbf r=\begin{bmatrix}3\\1\\3\\1\end{bmatrix}.
-$$
+## 1. Vector representation, addition, and scaling
 
-The remaining stitches in each section are green. Another row uses
-$\mathbf s=(1,3,1,3)^T$. Both contain eight pink stitches. A single total cannot
-explain their difference; a vector can. Four such rows make a matrix, and matrix
-multiplication lets us summarize many rows or combine several kinds of stitch
-operation at once.
+**Lecture examples (pp. 4–6):** $\mathbf v=(5,2)^T\in\mathbb R^2$,
+$\mathbf w=(1,7,3)^T\in\mathbb R^3$. A house becomes
+$(3,2,2,2008,150000)^T$: bedrooms, bathrooms, floors, year, price.
+Coordinate meanings and units matter. Adding a coordinate, as in
+$(1,2)^T\to(1,2,3)^T$, changes the coordinate space.
 
-```{figure} ../figures/lecture1/sampler.svg
-:name: fig-w1-sampler
-:alt: Four rows of 24 stitch cells grouped into four sections of six. Pink counts alternate between 3,1,3,1 and 1,3,1,3. The adjacent four-by-four count matrix records those counts, with eight pink stitches in every row.
+With standard directions $\mathbf e_1=(1,0)^T$, $\mathbf e_2=(0,1)^T$,
+$(a,b)^T=a\mathbf e_1+b\mathbf e_2$.
+In $\mathbb R^3$, use $\mathbf e_1=(1,0,0)^T$, $\mathbf e_2=(0,1,0)^T$,
+$\mathbf e_3=(0,0,1)^T$ to write $(a,b,c)^T=a\mathbf e_1+b\mathbf e_2+c\mathbf e_3$.
 
-One sampler, several records. Each matrix entry summarizes **six stitches**;
-it is not a single stitch or a shade of pink. Rows are displayed in record order.
-```
+**Addition:** $(\mathbf u+\mathbf v)_i=u_i+v_i$ for matching dimensions.
+Draw it head-to-tail. **Scalar multiplication:** $(\lambda\mathbf v)_i=\lambda v_i$;
+positive scalars stretch/shrink, negative scalars reverse direction, zero gives zero.
 
-This chapter develops the complete first lecture: vectors, combinations, dot
-products, lengths and angles, matrices, special matrices, transpose, trace, and
-matrix multiplication. We retain the lecture's progression and develop the
-reasoning between its examples. You will meet the original geometric examples
-alongside the craft constructions, then practice without either story.
+:::{admonition} Lecture examples · Addition and scalar multiplication (pp. 8–9)
+:class: example
 
-## Before you begin
+For $\mathbf x=(0,2)^T$, $\mathbf y=(2,2)^T$:
+$\mathbf x+\mathbf y=(2,4)^T$ and $\mathbf x-\mathbf y=(-2,0)^T$.
 
-You need arithmetic with signed numbers and fractions, square roots, simple
-algebra, and the idea of Cartesian coordinates. Summation notation is introduced
-when it is needed. You do not need prior knitting or crochet experience: every
-craft action used in a calculation is defined.
-
-Our examples use US crochet terminology. A **plain** operation produces one new
-stitch from one old stitch; a **single increase** produces two from one; a **single
-decrease** produces one from two. These describe selected operations, not every
-possible stitch. Their count records do not determine tension, texture, yarn use,
-or the whole fabric.
-
-:::{admonition} What you will be able to do
-:class: key-result
-
-By the end, you should be able to:
-
-1. Declare what a vector's entries mean and compute with compatible vectors.
-2. Form a linear combination and test a simple membership claim.
-3. Compute dot products, norms, unit vectors, distances, and angles, with their conditions.
-4. Read matrix dimensions and entries; recognize diagonal, identity, symmetric, and skew-symmetric matrices.
-5. Transpose a matrix, compute its trace when defined, and check the shape of every expression.
-6. Multiply a matrix by a vector and another matrix using both entrywise calculations and the column/row interpretations.
-7. Explain a result, catch an invalid operation, and verify a fresh calculation independently.
+Separately, for $\mathbf x=(2,2)^T$:
+$2\mathbf x=(4,4)^T$, $\tfrac12\mathbf x=(1,1)^T$, $-\mathbf x=(-2,-2)^T$.
 :::
 
-## Your route through the chapter
+## 2. Linear combinations: what can the vectors produce?
 
-| Read | The central question |
+A **linear combination** is $c\mathbf u+d\mathbf v+e\mathbf w$, with real coefficients.
+One nonzero direction produces a line through zero; two nonparallel directions
+produce a plane; three independent directions in $\mathbb R^3$ produce all of it.
+Redundant directions add no new reachable points; all-zero generators give only zero.
+
+**Lecture's geometric example (pp. 12–18):**
+$\mathbf u=(1,2,4)^T$, $\mathbf v=(2,1,4)^T$, $\mathbf w=(9,8,7)^T$.
+The records $c\mathbf u$, $c\mathbf u+d\mathbf v$, and
+$c\mathbf u+d\mathbf v+e\mathbf w$ respectively fill a line, plane, and
+$\mathbb R^3$. Here w is outside the plane generated by u,v.
+
+:::{admonition} Lecture example · Plane membership (p. 19)
+:class: example
+
+$$c(1,1,0)^T+d(0,1,1)^T=(c,c+d,d)^T.$$
+
+Thus the plane is **$y=x+z$**: choose $c=x$, $d=z$.
+The source's $(1,2,3)^T$ lies outside because $2\ne1+3$.
+Compare coordinates to test membership; do not guess endlessly.
+:::
+
+## 3. Dot product, angle, length, magnitude, and norm
+
+:::{admonition} Essential formulas · Real Euclidean vectors
+:class: key-result
+
+| Concept | Formula and condition |
 | --- | --- |
-| [Vectors and their meaning](vectors.md) | What does an ordered record retain? |
-| [Combinations and reachable patterns](combinations.md) | What can addition and scaling produce? |
-| [Dot products, lengths, and angles](geometry.md) | How can we compare two records? |
-| [Matrices and special structures](matrices.md) | What changes when we record many rows? |
-| [Multiplication and composition](products.md) | What does a matrix actually do? |
-| [Synthesis and readiness](review.md) | Can you select and check the right operation? |
-| [Practice](practice.md) and [explained solutions](solutions.md) | Can you solve unfamiliar problems unaided? |
+| Dot/inner product | $\mathbf u\cdot\mathbf v=\langle\mathbf u,\mathbf v\rangle=\mathbf u^T\mathbf v=\sum_{i=1}^n u_iv_i$; equal dimensions; **scalar** output |
+| Length = magnitude = norm | $\lVert\mathbf v\rVert=\sqrt{\mathbf v^T\mathbf v}=\sqrt{\sum_i v_i^2}$ |
+| Unit vector | $\widehat{\mathbf v}=\mu\mathbf v$, $\mu=1/\lVert\mathbf v\rVert$; then $\lVert\widehat{\mathbf v}\rVert=1$, for $\mathbf v\ne\mathbf0$ |
+| Cosine formula | $\mathbf u^T\mathbf v=\lVert\mathbf u\rVert\lVert\mathbf v\rVert\cos\theta$ |
+| Angle between two vectors | $\theta=\arccos\!\left(\dfrac{\mathbf u^T\mathbf v}{\lVert\mathbf u\rVert\lVert\mathbf v\rVert}\right)$; both vectors nonzero |
+:::
 
-Read the worked examples with a pencil. Before opening a checkpoint answer, write
-a prediction. After a worked calculation, cover it and reproduce the reasoning.
-The final practice mixes questions so the method is no longer supplied by the
-section title.
+**Dot-product properties (p. 23):** commutative,
+$\mathbf u^T\mathbf v=\mathbf v^T\mathbf u$; distributive,
+$\mathbf u^T(\mathbf v+\mathbf w)=\mathbf u^T\mathbf v+\mathbf u^T\mathbf w$.
+The lecture's **not-associative** warning means an inner product returns a scalar:
+$\mathbf u\cdot(\mathbf v\cdot\mathbf w)$ is not another vector dot product.
+Even interpreting the inner results as scalar multipliers generally gives
+$\mathbf u(\mathbf v^T\mathbf w)\ne(\mathbf u^T\mathbf v)\mathbf w$.
 
-A chapter is useful when you can do the mathematics after leaving the sampler
-behind. That is the purpose of the formal practice at the end.
+**Why orthogonality and cosine work (pp. 24–26):** for perpendicular vectors,
+Pythagoras gives $\lVert\mathbf u-\mathbf v\rVert^2=\lVert\mathbf u\rVert^2+\lVert\mathbf v\rVert^2$.
+In general, compare the algebraic expansion with the cosine law:
 
-[Source notes and lecture coverage](source-notes.md) identify the original lecture
-pages, the added teaching constructions, and the scope of this chapter.
+$$
+\lVert\mathbf u-\mathbf v\rVert^2
+=(\mathbf u-\mathbf v)^T(\mathbf u-\mathbf v)
+=\lVert\mathbf u\rVert^2+\lVert\mathbf v\rVert^2-2\mathbf u^T\mathbf v,
+$$
+$$
+\lVert\mathbf u-\mathbf v\rVert^2
+=\lVert\mathbf u\rVert^2+\lVert\mathbf v\rVert^2
+-2\lVert\mathbf u\rVert\lVert\mathbf v\rVert\cos\theta.
+$$
+
+Equating yields the cosine formula. **Orthogonal means dot product zero**;
+nonzero orthogonal vectors have angle $90^\circ$.
+Positive dot product means angle below $90^\circ$; negative means above it.
+
+:::{admonition} Lecture examples · Dot product, norm, and unit vector (pp. 22, 28–34)
+:class: example
+
+For $\mathbf u=(3,4)^T$, $\mathbf v=(4,3)^T$:
+$\mathbf u^T\mathbf v=3\cdot4+4\cdot3=24$.
+$\lVert\mathbf u\rVert=\sqrt{3^2+4^2}=5$; likewise $\lVert\mathbf v\rVert=5$.
+Thus $\mu=1/5$, $\widehat{\mathbf u}=(3/5,4/5)^T$.
+Applying the lecture's angle formula gives $\cos\theta=24/25$,
+$\theta\approx16.26^\circ$.
+:::
+
+:::{admonition} Exam warnings
+:class: pitfall
+
+Keep the square root in a norm. Zero has no normalized direction or defined angle.
+A raw dot product is not a cosine. In general $\lVert c\mathbf v\rVert=|c|\lVert\mathbf v\rVert$.
+:::
+
+[Continue to matrices and all matrix examples](matrix-guide.md).
+*Source: Erisa Terolli, CS 556, Week 1 “Matrices and Vectors,” pp. 1–34.
+Knitting connection and the numerical angle evaluation are added exposition.*
+::::

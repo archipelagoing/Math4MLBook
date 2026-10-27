@@ -154,48 +154,39 @@ checks, blockers, and whether comparisons use the same target and weights.
 
 ## Latest assessment
 
-**Date:** 2026-10-26.
-**Base commit:** `b1e21f70c9921e91c386f6836f3717498b14da06`; assessment includes
-uncommitted Lecture 1 manuscript, design, build configuration, checks, and documentation.
-**Status:** First locally validated chapter. Same five-week target and weights as
-the initial 10/100 baseline; this is not a student grade or an exam-readiness score.
-**Total:** **56.25/100**, provisional whole-book assessment. The full exam-readiness
-gate remains unmet because later weeks and cumulative/timed practice are absent.
+**Date:** 2026-10-26. **Base commit:** `d32974f00ec255101866c20df1d0ffd13cf1deb6`;
+includes uncommitted concise-edition changes.
 
-| Criterion | Weight | Score / 4 | Contribution | Evidence and included work | Missing / unknown |
-| --- | ---: | ---: | ---: | --- | --- |
-| Weekly coverage and source fidelity | 20 | 2 | 10 | `book/lecture1/source-notes.md`: complete Week 1 deck map and attributed added exposition. | Weeks 2–5, exact supporting-problem mapping, statistics/PCA gap, complete exam blueprint. |
-| Mathematical correctness and precision | 20 | 2 | 10 | Five teaching sections and 24 solutions; 67 recomputation/pairing/figure checks; source image spot checks; hypotheses and derivations reviewed. | Independent reviewer absent; later-week mathematics not authored or audited. |
-| Exposition and learning progression | 20 | 2 | 10 | Objectives, connected craft examples, formal definitions, derivations, method cues, five checkpoints, synthesis and transfer. | Later chapter progression and observed learning effectiveness unverified. |
-| Practice and assessment | 15 | 2 | 7.5 | 24 graduated problems with explained answers, six optional synthesis hints, objective mapping and readiness prompts. | Whole-exam skill coverage, timed mock exam, scoring guide, reader performance. |
-| Visual design and accessibility | 15 | 3 | 11.25 | Custom palette/typography, four SVGs, all reader pages checked at desktop/mobile widths, representative dark/print checks, keyboard answers, explicit contrast pairs. | Full assistive-technology audit, later-week figures, owner/reader aesthetic feedback. |
-| Build integrity and reproducibility | 5 | 4 | 5 | Isolated Python 3.12 setup, pinned direct dependencies, README instructions, clean TeachBooks and strict Jupyter Book builds, valid references/assets. | Hosted CI/deployment unverified; MathJax depends on CDN access. |
-| Editorial completeness and delivery | 5 | 2 | 2.5 | Working identity, reader navigation, source notes, setup guide, chapter conventions and review record. | Final human author credit, whole-book notation/credits, publication and full course coverage. |
-| **Total** | **100** | | **56.25** | | |
+**Current format:** The owner requested Lecture 1 in one or two pages. The reader
+route now has two guides retaining every distinct lecture example, definition, formula,
+and multiplication property, with concise explanations and exam warnings. The expanded manuscript and practice bank are retained as
+source references outside the TOC. Evaluate the concise guide as a summary;
+it does not offer the earlier full independent-study sequence.
 
-**Checks performed:** [Lecture 1 review record](authoring/lecture1-review.md) gives
-source pages, objective-to-practice mapping, checked calculations, dependency
-versions, browser results, contrast pairs, and limitations. The original scaffold
-had one warning; the current reader book builds without warnings. Browser checks
-covered 11 pages at 1440/390 pixels, with 456 rendered math expressions per viewport,
-no MathJax errors, no page-wide overflow, and no JavaScript errors. Practice links
-use valid MyST references. Keyboard checkpoint answers and print expansion work.
-The geometry diagram now uses equal unit scales in its orthonormal coordinates.
+The original five-week preparation criteria and weights remain below. The current
+whole-book score is **52.5/100 provisional**; it measures remaining breadth and
+assessment work, not whether the requested shorter format is preferable.
 
-**Critical gaps:** The book is not complete midterm preparation. Weeks 2–5,
-statistics/PCA placement, visual-only supporting PDFs, cumulative/timed assessment,
-and exact homework/exam mapping remain open. No student outcome, independent
-craft execution, independent math review, or live deployment is claimed.
+| Criterion | Weight | Score / 4 | Contribution | Current evidence and limits |
+| --- | ---: | ---: | ---: | --- |
+| Weekly coverage and source fidelity | 20 | 2 | 10 | Lecture 1 key concepts summarized with source attribution; expanded source map retained. Later weeks and complete exam blueprint remain open. |
+| Mathematical correctness and precision | 20 | 2 | 10 | Definitions, conditions, example calculations, and matrix dimensions checked. Full independent review and later-week work remain open. |
+| Exposition and learning progression | 20 | 2 | 10 | Concise source examples, coordinate interpretations, cosine/orthogonality derivation, and operation-selection warnings; later-week progression remains open. |
+| Practice and assessment | 15 | 1 | 3.75 | Brief self-checks; the 24-problem bank remains in source files rather than reader navigation. Timed/cumulative assessment remains open. |
+| Visual design and accessibility | 15 | 3 | 11.25 | Yellow formulas, red pitfalls, readable palette, mobile and desktop math checks, print layout. Full accessibility audit remains open. |
+| Build integrity and reproducibility | 5 | 4 | 5 | Documented environment, clean strict build, numerical checks, updated browser review script. Live deployment of this revision unverified. |
+| Editorial completeness and delivery | 5 | 2 | 2.5 | Two-page navigation and updated welcome/setup/status documents. Later guides, final credits, and publication remain open. |
+| **Total** | **100** | | **52.5** | |
 
-**Top three next improvements:**
+**Verification:** See [the current edition note](authoring/lecture1-review.md).
+Strict build passed. All three reader pages were checked at 1440/390 pixels:
+no MathJax errors, page-wide overflow, or JavaScript errors. The retained
+expanded-edition checker still passes 77 numerical/structural checks, including restored source examples.
 
-1. Review the first chapter with the owner/student and correct any confusing
-   explanation or visual; gather evidence from unaided formal problems (§4).
-2. Complete the source/notation map and author Lecture 2 using the checked chapter
-   pattern, then continue in weekly order (§§2, 5–8).
-3. Close exam coverage with cumulative practice, a timed mock exam, explained
-   scoring, and targeted revision paths (§§9–10).
+**Next improvements:** review the concise guide with the student; continue to
+Lecture 2 when authorized; resolve the statistics/PCA and exam coverage gaps.
+Student outcomes and independent review remain unverified.
 
-**Change since previous assessment:** +46.25 points against the same weights.
-Credit now rests on a real first chapter and local verification, replacing the
-source/template-only baseline. This gain does not establish an A-level outcome.
+**Comparison:** The earlier 56.25 assessment applied to the expanded reader route; the first compact edition scored 47.5 before source examples and derivations were restored.
+This revision intentionally changes how much exposition/practice is shown;
+the scores are not a direct comparison of the two formats' usefulness.

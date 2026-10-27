@@ -1,9 +1,9 @@
 # Math4MLBook TODO
 
-Last updated: 2026-10-26. Lecture 1 is drafted and locally built with the craft
-backbone, shared styling, four diagrams, and 24 explained practice problems.
-See [review evidence](authoring/lecture1-review.md). Weeks 2–5 and whole-exam
-preparation remain unfinished; no publication or student outcome is claimed.
+Last updated: 2026-10-26. At the owner's request, Lecture 1 has two reader pages
+retaining all requested topics, formulas, and distinct lecture examples. The expanded manuscript and
+24 solutions are retained outside reader navigation. See the current review note
+in [the validation record](authoring/lecture1-review.md). Weeks 2–5 remain unfinished.
 
 ## Maintenance instructions
 
@@ -470,3 +470,25 @@ active; they are not requirements for the five-week milestone.
 - **Decision, 2026-10-26:** Keep the existing stack, expand the slides into a genuine
   textbook, establish the pattern with Week 1, and proceed in weekly order.
 - **Scope of this pass:** Documentation only, completed as bible → rubric → checklist.
+
+## Lecture 1 concise edition
+
+- [x] Condense the reader route to vectors/geometry and matrices/multiplication.
+- [x] Highlight essential formulas in yellow and exam mistakes in red.
+- [x] Retain a short, precise knitting/crochet connection on each page.
+- [x] Preserve the expanded sources outside the concise reader navigation.
+- [x] Update the welcome page and browser-check script for the new route.
+- [x] Verify clean build, desktop/mobile math, and two A4 print pages; save
+  [the combined PDF](authoring/lecture1-study-guide.pdf). Publication remains pending.
+
+## Lecture 1 complete lecture coverage in the concise edition
+
+- [x] Restore every requested vector/matrix topic and every distinct lecture example.
+- [x] Restore both distributive laws, row/column product identities, and dot-product properties.
+- [x] Retain the orthogonality/cosine derivation and the source normalization example.
+- [x] Check original vector coordinates against slide images; record exact source destinations
+  in [the coverage audit](authoring/lecture1-coverage.md).
+- [x] Recompute restored source arithmetic: 77 checks now pass.
+- [x] Verify complete-coverage reader pages on desktop/mobile and regenerate the
+  PDF: four A4 sheets, two per reading page; retain legible math instead of dropping
+  lecture content. Strict build passes; publication remains pending.

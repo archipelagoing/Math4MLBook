@@ -1,17 +1,8 @@
 format: jb-book
 root: intro
 parts:
-  - caption: The textbook
-    numbered: true
+  - caption: Lecture guides
     chapters:
       - file: lecture1/index
         sections:
-          - file: lecture1/vectors
-          - file: lecture1/combinations
-          - file: lecture1/geometry
-          - file: lecture1/matrices
-          - file: lecture1/products
-          - file: lecture1/review
-          - file: lecture1/practice
-          - file: lecture1/solutions
-          - file: lecture1/source-notes
+          - file: lecture1/matrix-guide

@@ -112,6 +112,19 @@ equal(product(A,[[-1],[-1],[1]]),[[0],[0]])
 equal(product(transpose(A),A),[[1,0,1],[0,1,1],[1,1,2]])
 equal(product(A,transpose(A)),[[2,1],[1,2]])
 
+# Original slide examples restored to the concise reader edition.
+equal(add([0,2],[2,2]),[2,4])
+equal(add([0,2],scale(-1,[2,2])),[-2,0])
+equal(scale(2,[2,2]),[4,4])
+equal(scale(F(1,2),[2,2]),[1,1])
+equal(scale(-1,[2,2]),[-2,-2])
+equal(transpose([[1,2],[3,4]]),[[1,3],[2,4]])
+equal(transpose([[3,2,4],[2,5,6],[4,6,8]]),[[3,2,4],[2,5,6],[4,6,8]])
+# A normal to the lecture's u,v plane is (4,4,-3); w lies outside it.
+equal(dot([4,4,-3],[1,2,4]),0)
+equal(dot([4,4,-3],[2,1,4]),0)
+equal(dot([4,4,-3],[9,8,7]),47)
+
 practice=(ROOT/'book/lecture1/practice.md').read_text()
 solutions=(ROOT/'book/lecture1/solutions.md').read_text()
 equal(re.findall(r'^\(w1-p(\d+)\)=',practice,re.M),[f'{n:02}' for n in range(1,25)])
