@@ -114,3 +114,10 @@ _build/
 
 # poetry files
 pyproject.toml
+
+# Local analogy references and agent instructions/configuration
+/analogy/
+AGENTS.md
+AGENTS.override.md
+.agents/
+.codex/
